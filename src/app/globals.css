@@ -1,0 +1,787 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pri-org: #e59623;
+}
+
+body {
+  overflow-x: hidden;
+  background: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+@keyframes expandBackground {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes expandBackground {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.highlight {
+  position: relative;
+  z-index: 1;
+}
+.highlight::after {
+  content: "";
+  display: inline-block;
+  height: 20px;
+  background-color: var(--pri-org);
+  padding: 0 4px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 5px;
+  z-index: -1;
+  animation: expandBackground 1s ease-out forwards;
+}
+.highlight-dark {
+  position: relative;
+  z-index: 1;
+}
+.highlight-dark::after {
+  content: "";
+  display: inline-block;
+  height: 20%;
+  background-color: #606061;
+  padding: 0 4px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 5px;
+  z-index: -1;
+  animation: expandBackground 1s ease-out forwards;
+}
+/*  */
+.transparent-background {
+  background: transparent !important;
+}
+
+.rich-text-container h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+.rich-text-container p {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+@keyframes sidebarAnimate {
+  0% {
+    transform: translateX(100%);
+  }
+  25% {
+    transform: translateX(75%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  75% {
+    transform: translateX(25%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes loginAnimation {
+  0% {
+    top: 0px;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.slick-dots {
+  bottom: -40px !important;
+}
+
+.slick-dots li button:before {
+  font-size: 11px !important;
+  color: #ffbb4d !important;
+  width: 31px !important;
+  height: 31px !important;
+}
+
+.spinner_main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90vh;
+}
+.spinner_main img {
+  width: 280px;
+  height: 200px;
+  object-fit: contain;
+}
+.spinner_main {
+  animation: spin 5s;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+@keyframes spin {
+  0% {
+    transform: scale(0.8, 0.8);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(0.8, 0.8);
+  }
+}
+.clamp-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.clamp-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.clamp-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.clamp-5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+.back-to-top-button {
+  position: fixed;
+  bottom: 56px;
+  right: 25px;
+  display: none;
+  padding: 15px;
+  background-color: #ffbb4d;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 999;
+  /* box-shadow: 0 2px 5px #b3b3b3; */
+  transition: 0.5s;
+}
+.back-to-top-button:hover {
+  background-color: rgb(165, 163, 163);
+}
+.back-to-top-button.visible {
+  display: block;
+}
+/* Add unique styles or animations not covered by Tailwind here */
+@keyframes first {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 80%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+.list-decor li {
+  list-style: none;
+  background-image: url("/assets/thunder-list-style.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 15px 25px;
+  padding-left: 30px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.dynamicTextDesign h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #091f40;
+  padding-bottom: 10px;
+}
+.dynamicTextDesign h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #091f40;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.dynamicTextDesign ul {
+  list-style-type: disc;
+  margin-bottom: 20px;
+}
+
+.dynamicTextDesign li {
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+.dynamicTextDesign a {
+  color: #8d5900;
+  text-decoration: underline;
+}
+
+.m-5 {
+  margin: 1rem;
+}
+
+input,
+textarea {
+  background: #f5f5f5 !important;
+  /* color:#D4D4D4!important; */
+}
+
+.shadow-cus {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.table-of-contents {
+  margin-bottom: 20px;
+}
+
+.table-of-contents ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.table-of-contents li {
+  margin: 5px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/*  */
+
+/* rich text */
+.rich-text-container {
+  /* max-width: 110ch; */
+  /* background-color: #88888811; */
+  margin-inline: auto;
+  /* padding: 12px; */
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 12px;
+  /* box-shadow: 0 0 12px 3px #00000010; */
+  font-family: sans-serif;
+}
+
+.rich-text-container strong {
+  font-weight: 700;
+}
+
+.rich-text-container h1,
+.rich-text-container h2,
+.rich-text-container h3,
+.rich-text-container h4,
+.rich-text-container h5,
+.rich-text-container h6 {
+  margin-top: 42px;
+  /* margin-top: 16px; */
+  margin-bottom: 8px;
+  line-height: 24px;
+  color: #2c2b4b;
+}
+@media screen and (max-width: 768px) {
+  .rich-text-container h1,
+  .rich-text-container h2,
+  .rich-text-container h3,
+  .rich-text-container h4,
+  .rich-text-container h5,
+  .rich-text-container h6 {
+    margin-top: 18px;
+  }
+}
+
+.rich-text-container img {
+  margin-inline: auto;
+  margin-block: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px 6px #00000010;
+}
+
+.rich-text-container h1 {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center !important;
+}
+
+.rich-text-container h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.rich-text-container h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.rich-text-container h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.rich-text-container h5 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.rich-text-container p {
+  font-size: 18px;
+  margin-bottom: 16px;
+  margin-top: 8px;
+  line-height: 24px;
+}
+
+.rich-text-container ul,
+.rich-text-container li {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  line-height: 24px;
+}
+.rich-text-container ul {
+  list-style-type: disc;
+}
+.rich-text-container ul > li,
+.rich-text-container ol > li {
+  padding-left: 8px;
+  margin-left: 32px !important;
+}
+
+.rich-text-container table {
+  border-collapse: collapse;
+}
+
+.rich-text-container table td,
+.rich-text-container table th {
+  padding: 8px;
+}
+
+.rich-text-container table,
+.rich-text-container th,
+.rich-text-container td {
+  border: 1px solid #e59623;
+}
+.rich-text-container table tr:nth-child(1) th,
+.rich-text-container table tr:nth-child(1) td {
+  background: #e59623;
+  color: #eff3f5;
+  font-weight: 600;
+}
+
+/*  */
+
+/*  */
+
+/*  */
+
+.circle-sml {
+  position: absolte;
+  width: 18rem;
+  height: 18rem;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  transform: rotate(270deg);
+}
+.circle-sml > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3em;
+  height: 3em;
+  margin: -1.5em;
+}
+.circle-sml > :nth-of-type(1) {
+  transform: rotate(0deg) translate(9rem) rotate(-270deg);
+}
+.circle-sml > :nth-of-type(2) {
+  transform: rotate(60deg) translate(9rem) rotate(-330deg);
+}
+.circle-sml > :nth-of-type(3) {
+  transform: rotate(120deg) translate(9rem) rotate(-390deg);
+}
+.circle-sml > :nth-of-type(4) {
+  transform: rotate(180deg) translate(9rem) rotate(-450deg);
+}
+.circle-sml > :nth-of-type(5) {
+  transform: rotate(240deg) translate(9rem) rotate(-510deg);
+}
+.circle-sml > :nth-of-type(6) {
+  transform: rotate(300deg) translate(9rem) rotate(-570deg);
+}
+
+.circle-sml {
+  transform: rotate(0deg);
+  animation: circlet-rotate 30s linear infinite both;
+}
+
+@keyframes circlet-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.circle-sml > :nth-of-type(1) {
+  transform: rotate(420deg) translate(9rem) rotate(-420deg);
+  animation: circlet-rotate-child-1 30s linear infinite both;
+}
+
+@keyframes circlet-rotate-child-1 {
+  to {
+    transform: rotate(420deg) translate(9rem) rotate(-780deg);
+  }
+}
+.circle-sml > :nth-of-type(2) {
+  transform: rotate(480deg) translate(9rem) rotate(-480deg);
+  animation: circlet-rotate-child-2 30s linear infinite both;
+}
+
+@keyframes circlet-rotate-child-2 {
+  to {
+    transform: rotate(480deg) translate(9rem) rotate(-840deg);
+  }
+}
+.circle-sml > :nth-of-type(3) {
+  transform: rotate(540deg) translate(9rem) rotate(-540deg);
+  animation: circlet-rotate-child-3 30s linear infinite both;
+}
+
+@keyframes circlet-rotate-child-3 {
+  to {
+    transform: rotate(540deg) translate(9rem) rotate(-900deg);
+  }
+}
+.circle-sml > :nth-of-type(4) {
+  transform: rotate(600deg) translate(9rem) rotate(-600deg);
+  animation: circlet-rotate-child-4 30s linear infinite both;
+}
+
+@keyframes circlet-rotate-child-4 {
+  to {
+    transform: rotate(600deg) translate(9rem) rotate(-960deg);
+  }
+}
+.circle-sml > :nth-of-type(5) {
+  transform: rotate(660deg) translate(9rem) rotate(-660deg);
+  animation: circlet-rotate-child-5 30s linear infinite both;
+}
+
+@keyframes circlet-rotate-child-5 {
+  to {
+    transform: rotate(660deg) translate(9rem) rotate(-1020deg);
+  }
+}
+.circle-sml > :nth-of-type(6) {
+  transform: rotate(720deg) translate(9rem) rotate(-720deg);
+  animation: circlet-rotate-child-6 30s linear infinite both;
+}
+
+@keyframes circlet-rotate-child-6 {
+  to {
+    transform: rotate(720deg) translate(9rem) rotate(-1080deg);
+  }
+}
+
+.circle-sml {
+  border: 0.25em dotted #bbdefb;
+}
+
+/*  */
+/*-----------------------------------------------------------------------------*
+ *  COMPONENT: CIRCLET
+ *-----------------------------------------------------------------------------*
+ *
+ *  Circle container with children positioned along its perimeter.
+ *
+ */
+.circle-md {
+  position: relative;
+  width: 23rem;
+  height: 23rem;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  transform: rotate(270deg);
+}
+.circle-md > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3em;
+  height: 3em;
+  margin: -1.5em;
+}
+.circle-md > :nth-of-type(1) {
+  transform: rotate(0deg) translate(11.5rem) rotate(-270deg);
+}
+.circle-md > :nth-of-type(2) {
+  transform: rotate(60deg) translate(11.5rem) rotate(-330deg);
+}
+.circle-md > :nth-of-type(3) {
+  transform: rotate(120deg) translate(11.5rem) rotate(-390deg);
+}
+.circle-md > :nth-of-type(4) {
+  transform: rotate(180deg) translate(11.5rem) rotate(-450deg);
+}
+.circle-md > :nth-of-type(5) {
+  transform: rotate(240deg) translate(11.5rem) rotate(-510deg);
+}
+.circle-md > :nth-of-type(6) {
+  transform: rotate(300deg) translate(11.5rem) rotate(-570deg);
+}
+
+.circle-md {
+  transform: rotate(0deg);
+  animation: circlet-rotate 30s linear infinite both;
+}
+
+@keyframes circlet-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.circle-md > :nth-of-type(1) {
+  transform: rotate(420deg) translate(11.5rem) rotate(-420deg);
+  animation: circlet-rotate-child-1 30s linear infinite both;
+}
+
+@keyframes circlet-rotate-child-1 {
+  to {
+    transform: rotate(420deg) translate(11.5rem) rotate(-780deg);
+  }
+}
+.circle-md > :nth-of-type(2) {
+  transform: rotate(480deg) translate(11.5rem) rotate(-480deg);
+  animation: circlet-rotate-child-2 30s linear infinite both;
+}
+
+@keyframes circlet-rotate-child-2 {
+  to {
+    transform: rotate(480deg) translate(11.5rem) rotate(-840deg);
+  }
+}
+.circle-md > :nth-of-type(3) {
+  transform: rotate(540deg) translate(11.5rem) rotate(-540deg);
+  animation: circlet-rotate-child-3 30s linear infinite both;
+}
+
+@keyframes circlet-rotate-child-3 {
+  to {
+    transform: rotate(540deg) translate(11.5rem) rotate(-900deg);
+  }
+}
+.circle-md > :nth-of-type(4) {
+  transform: rotate(600deg) translate(11.5rem) rotate(-600deg);
+  animation: circlet-rotate-child-4 30s linear infinite both;
+}
+
+@keyframes circlet-rotate-child-4 {
+  to {
+    transform: rotate(600deg) translate(11.5rem) rotate(-960deg);
+  }
+}
+.circle-md > :nth-of-type(5) {
+  transform: rotate(660deg) translate(11.5rem) rotate(-660deg);
+  animation: circlet-rotate-child-5 30s linear infinite both;
+}
+
+@keyframes circlet-rotate-child-5 {
+  to {
+    transform: rotate(660deg) translate(11.5rem) rotate(-1020deg);
+  }
+}
+.circle-md > :nth-of-type(6) {
+  transform: rotate(720deg) translate(11.5rem) rotate(-720deg);
+  animation: circlet-rotate-child-6 30s linear infinite both;
+}
+
+@keyframes circlet-rotate-child-6 {
+  to {
+    transform: rotate(720deg) translate(11.5rem) rotate(-1080deg);
+  }
+}
+
+.circle-md {
+  border: 0.25em dotted #bbdefb;
+}
+
+/*  */
+/*-----------------------------------------------------------------------------*
+ *  COMPONENT: CIRCLET
+ *-----------------------------------------------------------------------------*
+ *
+ *  Circle container with children positioned along its perimeter.
+ *
+ */
+.circle-lg {
+  position: relative;
+  width: 27rem;
+  height: 27rem;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  transform: rotate(270deg);
+}
+.circle-lg > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3em;
+  height: 3em;
+  margin: -1.5em;
+}
+.circle-lg > :nth-of-type(1) {
+  transform: rotate(0deg) translate(13.5rem) rotate(-270deg);
+}
+.circle-lg > :nth-of-type(2) {
+  transform: rotate(60deg) translate(13.5rem) rotate(-330deg);
+}
+.circle-lg > :nth-of-type(3) {
+  transform: rotate(120deg) translate(13.5rem) rotate(-390deg);
+}
+.circle-lg > :nth-of-type(4) {
+  transform: rotate(180deg) translate(13.5rem) rotate(-450deg);
+}
+.circle-lg > :nth-of-type(5) {
+  transform: rotate(240deg) translate(13.5rem) rotate(-510deg);
+}
+.circle-lg > :nth-of-type(6) {
+  transform: rotate(300deg) translate(13.5rem) rotate(-570deg);
+}
+
+.circle-lg {
+  transform: rotate(0deg);
+  animation: circlet-rotate 30s linear infinite both;
+}
+
+@keyframes circlet-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.circle-lg > :nth-of-type(1) {
+  transform: rotate(420deg) translate(13.5rem) rotate(-420deg);
+  animation: circlet-rotate-child-1 30s linear infinite both;
+}
+
+@keyframes circlet-rotate-child-1 {
+  to {
+    transform: rotate(420deg) translate(13.5rem) rotate(-780deg);
+  }
+}
+.circle-lg > :nth-of-type(2) {
+  transform: rotate(480deg) translate(13.5rem) rotate(-480deg);
+  animation: circlet-rotate-child-2 30s linear infinite both;
+}
+
+@keyframes circlet-rotate-child-2 {
+  to {
+    transform: rotate(480deg) translate(13.5rem) rotate(-840deg);
+  }
+}
+.circle-lg > :nth-of-type(3) {
+  transform: rotate(540deg) translate(13.5rem) rotate(-540deg);
+  animation: circlet-rotate-child-3 30s linear infinite both;
+}
+
+@keyframes circlet-rotate-child-3 {
+  to {
+    transform: rotate(540deg) translate(13.5rem) rotate(-900deg);
+  }
+}
+.circle-lg > :nth-of-type(4) {
+  transform: rotate(600deg) translate(13.5rem) rotate(-600deg);
+  animation: circlet-rotate-child-4 30s linear infinite both;
+}
+
+@keyframes circlet-rotate-child-4 {
+  to {
+    transform: rotate(600deg) translate(13.5rem) rotate(-960deg);
+  }
+}
+.circle-lg > :nth-of-type(5) {
+  transform: rotate(660deg) translate(13.5rem) rotate(-660deg);
+  animation: circlet-rotate-child-5 30s linear infinite both;
+}
+
+@keyframes circlet-rotate-child-5 {
+  to {
+    transform: rotate(660deg) translate(13.5rem) rotate(-1020deg);
+  }
+}
+.circle-lg > :nth-of-type(6) {
+  transform: rotate(720deg) translate(13.5rem) rotate(-720deg);
+  animation: circlet-rotate-child-6 30s linear infinite both;
+}
+
+@keyframes circlet-rotate-child-6 {
+  to {
+    transform: rotate(720deg) translate(13.5rem) rotate(-1080deg);
+  }
+}
+
+.circle-lg {
+  border: 0.25em dotted #bbdefb;
+}
