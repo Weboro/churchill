@@ -1,158 +1,249 @@
 export const UpcomingKeyData = [
   {
-    title: "Continuing Student Enrolment Commences",
-    slug: "event-1",
-    link: "",
-    subTitle:
-      "The enrolment period for continuing students begins, allowing them to register for the upcoming semester's classes and ensure their spots in preferred courses.",
-    image: "/assets/upcoming-key.png",
-    day: "SUN",
-    date: "20",
-    month: "MAY",
-    time: "7:00 AM to 11:00 AM",
-    description: `
-      <h2>Nunc finibus molestie</h2>    
-      <p>Nunc finibus molestie metus at fringilla. Vestibulum a dignissim neque. Morbi mi turpis, gravida sed nisl sed, feugiat hendrerit sem. Nulla elementum ligula a metus aliquam tempus. Morbi finibus volutpat turpis, eget mollis leo consequat semper. Etiam in libero in sem ultricies cursus. Donec in diam pellentesque, scelerisque libero in, accumsan turpis.</p>
-      <h2>Praesent ullamcorper justo ligula</h2>    
-      <p>Praesent ullamcorper justo ligula, quis consequat ipsum dictum quis. Quisque lectus elit, molestie eget quam nec, rutrum pellentesque mi. In a sem tempor, malesuada nulla aliquet, hendrerit arcu. Cras ut nibh sit amet metus porttitor fringilla in fermentum lacus. Nulla consequat, mauris ac gravida ultricies, mauris odio tincidunt mi, non posuere enim lectus sit amet nisl. Etiam pellentesque gravida turpis in pellentesque. Aliquam sagittis nisi ex, id posuere magna vehicula ut. Praesent eget magna feugiat, vulputate sapien vitae, mattis ipsum. Nam eu dignissim tortor. Nam tristique aliquam facilisis. Quisque volutpat malesuada elit non eleifend. Sed mollis ex a metus venenatis, at venenatis neque feugiat. Mauris aliquam, velit at viverra venenatis, tortor nisl rutrum diam, eget ornare sem diam vel neque. Ut volutpat erat at ex sagittis accumsan. Maecenas sollicitudin volutpat elit ut sodales.</p>
-      `,
-    Catagories: [
-      {
-        menutitle: "Student Life",
-      },
-      {
-        menutitle: "Education",
-      },
-    ],
+    date: "2024-01-20",
+    endDate: null,
+    startTime: null,
+    endTime: null,
+    eventName: "Continuing Student Enrolment Commences",
+    description: "",
+    audience: ["Student", "Undergraduate", "Postgraduate"],
+    category: ["Semester dates"],
   },
   {
-    title: "Summer Session Orientation",
-    slug: "event-2",
-    link: "",
-    subTitle:
-      "Orientation event for new students enrolling in the summer session, providing essential information and resources to help them start their academic journey.",
-    image: "/assets/upcoming-key.png",
-    day: "WED",
-    date: "10",
-    month: "JUN",
-    time: "7:00 AM to 11:00 AM",
-    description: `
-    <h2>Nunc finibus molestie</h2>    
-    <p>Nunc finibus molestie metus at fringilla. Vestibulum a dignissim neque. Morbi mi turpis, gravida sed nisl sed, feugiat hendrerit sem. Nulla elementum ligula a metus aliquam tempus. Morbi finibus volutpat turpis, eget mollis leo consequat semper. Etiam in libero in sem ultricies cursus. Donec in diam pellentesque, scelerisque libero in, accumsan turpis.</p>
-    <h2>Praesent ullamcorper justo ligula</h2>    
-    <p>Praesent ullamcorper justo ligula, quis consequat ipsum dictum quis. Quisque lectus elit, molestie eget quam nec, rutrum pellentesque mi. In a sem tempor, malesuada nulla aliquet, hendrerit arcu. Cras ut nibh sit amet metus porttitor fringilla in fermentum lacus. Nulla consequat, mauris ac gravida ultricies, mauris odio tincidunt mi, non posuere enim lectus sit amet nisl. Etiam pellentesque gravida turpis in pellentesque. Aliquam sagittis nisi ex, id posuere magna vehicula ut. Praesent eget magna feugiat, vulputate sapien vitae, mattis ipsum. Nam eu dignissim tortor. Nam tristique aliquam facilisis. Quisque volutpat malesuada elit non eleifend. Sed mollis ex a metus venenatis, at venenatis neque feugiat. Mauris aliquam, velit at viverra venenatis, tortor nisl rutrum diam, eget ornare sem diam vel neque. Ut volutpat erat at ex sagittis accumsan. Maecenas sollicitudin volutpat elit ut sodales.</p>
-    `,
-    Catagories: [
-      {
-        menutitle: "Student Life",
-      },
-      {
-        menutitle: "Education",
-      },
-    ],
+    date: "2024-01-23",
+    endDate: null,
+    startTime: null,
+    endTime: null,
+    eventName: "Continuing Student Enrolment Commences",
+    description: "",
+    audience: ["Student", "Undergraduate", "Postgraduate"],
+    category: ["Semester dates"],
   },
   {
-    title: "Fall Semester Registration Begins",
-    slug: "event-2",
-    link: "",
-    subTitle:
-      "Registration for the fall semester opens, enabling students to sign up for courses and complete any necessary administrative tasks.",
-    image: "/assets/upcoming-key.png",
-    day: "MON",
-    date: "15",
-    month: "JUL",
-    time: "7:00 AM to 11:00 AM",
-    description: `
-    <h2>Nunc finibus molestie</h2>    
-    <p>Nunc finibus molestie metus at fringilla. Vestibulum a dignissim neque. Morbi mi turpis, gravida sed nisl sed, feugiat hendrerit sem. Nulla elementum ligula a metus aliquam tempus. Morbi finibus volutpat turpis, eget mollis leo consequat semper. Etiam in libero in sem ultricies cursus. Donec in diam pellentesque, scelerisque libero in, accumsan turpis.</p>
-    <h2>Praesent ullamcorper justo ligula</h2>    
-    <p>Praesent ullamcorper justo ligula, quis consequat ipsum dictum quis. Quisque lectus elit, molestie eget quam nec, rutrum pellentesque mi. In a sem tempor, malesuada nulla aliquet, hendrerit arcu. Cras ut nibh sit amet metus porttitor fringilla in fermentum lacus. Nulla consequat, mauris ac gravida ultricies, mauris odio tincidunt mi, non posuere enim lectus sit amet nisl. Etiam pellentesque gravida turpis in pellentesque. Aliquam sagittis nisi ex, id posuere magna vehicula ut. Praesent eget magna feugiat, vulputate sapien vitae, mattis ipsum. Nam eu dignissim tortor. Nam tristique aliquam facilisis. Quisque volutpat malesuada elit non eleifend. Sed mollis ex a metus venenatis, at venenatis neque feugiat. Mauris aliquam, velit at viverra venenatis, tortor nisl rutrum diam, eget ornare sem diam vel neque. Ut volutpat erat at ex sagittis accumsan. Maecenas sollicitudin volutpat elit ut sodales.</p>
-    `,
-    Catagories: [
-      {
-        menutitle: "Student Life",
-      },
-      {
-        menutitle: "Education",
-      },
-    ],
+    date: "2024-03-22",
+    endDate: null,
+    startTime: null,
+    endTime: null,
+    eventName: "Orientation",
+    description: "",
+    audience: ["Student", "Undergraduate", "Postgraduate"],
+    category: ["Semester dates"],
   },
   {
-    title: "Faculty Development Workshop",
-    slug: "event-2",
-    link: "",
-    subTitle:
-      "Workshop designed for faculty members to enhance teaching methodologies and stay updated on the latest trends in education.",
-    image: "/assets/upcoming-key.png",
-    day: "TUE",
-    date: "18",
-    month: "AUG",
-    time: "7:00 AM to 11:00 AM",
-    description: `
-    <h2>Nunc finibus molestie</h2>    
-    <p>Nunc finibus molestie metus at fringilla. Vestibulum a dignissim neque. Morbi mi turpis, gravida sed nisl sed, feugiat hendrerit sem. Nulla elementum ligula a metus aliquam tempus. Morbi finibus volutpat turpis, eget mollis leo consequat semper. Etiam in libero in sem ultricies cursus. Donec in diam pellentesque, scelerisque libero in, accumsan turpis.</p>
-    <h2>Praesent ullamcorper justo ligula</h2>    
-    <p>Praesent ullamcorper justo ligula, quis consequat ipsum dictum quis. Quisque lectus elit, molestie eget quam nec, rutrum pellentesque mi. In a sem tempor, malesuada nulla aliquet, hendrerit arcu. Cras ut nibh sit amet metus porttitor fringilla in fermentum lacus. Nulla consequat, mauris ac gravida ultricies, mauris odio tincidunt mi, non posuere enim lectus sit amet nisl. Etiam pellentesque gravida turpis in pellentesque. Aliquam sagittis nisi ex, id posuere magna vehicula ut. Praesent eget magna feugiat, vulputate sapien vitae, mattis ipsum. Nam eu dignissim tortor. Nam tristique aliquam facilisis. Quisque volutpat malesuada elit non eleifend. Sed mollis ex a metus venenatis, at venenatis neque feugiat. Mauris aliquam, velit at viverra venenatis, tortor nisl rutrum diam, eget ornare sem diam vel neque. Ut volutpat erat at ex sagittis accumsan. Maecenas sollicitudin volutpat elit ut sodales.</p>
-    `,
-    Catagories: [
-      {
-        menutitle: "Student Life",
-      },
-      {
-        menutitle: "Education",
-      },
-    ],
+    date: "2024-03-25",
+    endDate: "2024-05-05",
+    startTime: null,
+    endTime: null,
+    eventName: "Classes (Week 1 to 6)",
+    description: "",
+    audience: ["Student", "Undergraduate", "Postgraduate"],
+    category: ["Semester dates"],
   },
   {
-    title: "Mid-Term Exams",
-    slug: "event-2",
-    link: "",
-    subTitle:
-      "Mid-term examinations for various courses, assessing students' understanding and knowledge gained during the first half of the semester.",
-    image: "/assets/upcoming-key.png",
-    day: "THU",
-    date: "23",
-    month: "SEP",
-    time: "7:00 AM to 11:00 AM",
-    description: `
-    <h2>Nunc finibus molestie</h2>    
-    <p>Nunc finibus molestie metus at fringilla. Vestibulum a dignissim neque. Morbi mi turpis, gravida sed nisl sed, feugiat hendrerit sem. Nulla elementum ligula a metus aliquam tempus. Morbi finibus volutpat turpis, eget mollis leo consequat semper. Etiam in libero in sem ultricies cursus. Donec in diam pellentesque, scelerisque libero in, accumsan turpis.</p>
-    <h2>Praesent ullamcorper justo ligula</h2>    
-    <p>Praesent ullamcorper justo ligula, quis consequat ipsum dictum quis. Quisque lectus elit, molestie eget quam nec, rutrum pellentesque mi. In a sem tempor, malesuada nulla aliquet, hendrerit arcu. Cras ut nibh sit amet metus porttitor fringilla in fermentum lacus. Nulla consequat, mauris ac gravida ultricies, mauris odio tincidunt mi, non posuere enim lectus sit amet nisl. Etiam pellentesque gravida turpis in pellentesque. Aliquam sagittis nisi ex, id posuere magna vehicula ut. Praesent eget magna feugiat, vulputate sapien vitae, mattis ipsum. Nam eu dignissim tortor. Nam tristique aliquam facilisis. Quisque volutpat malesuada elit non eleifend. Sed mollis ex a metus venenatis, at venenatis neque feugiat. Mauris aliquam, velit at viverra venenatis, tortor nisl rutrum diam, eget ornare sem diam vel neque. Ut volutpat erat at ex sagittis accumsan. Maecenas sollicitudin volutpat elit ut sodales.</p>
-    `,
-    Catagories: [
-      {
-        menutitle: "Student Life",
-      },
-      {
-        menutitle: "Education",
-      },
-    ],
+    date: "2024-04-12",
+    endDate: null,
+    startTime: null,
+    endTime: null,
+    eventName: "Census Date",
+    description: "",
+    audience: ["Student", "Undergraduate", "Postgraduate"],
+    category: ["Semester dates"],
   },
   {
-    title: "Alumni Homecoming Weekend",
-    slug: "event-2",
-    link: "",
-    subTitle:
-      "Annual event inviting alumni back to campus to reconnect with former classmates, faculty, and staff.",
-    image: "/assets/upcoming-key.png",
-    day: "FRI",
-    date: "20",
-    month: "SEP",
-    time: "7:00 AM to 11:00 AM",
-    description: `
-    <h2>Nunc finibus molestie</h2>    
-    <p>Nunc finibus molestie metus at fringilla. Vestibulum a dignissim neque. Morbi mi turpis, gravida sed nisl sed, feugiat hendrerit sem. Nulla elementum ligula a metus aliquam tempus. Morbi finibus volutpat turpis, eget mollis leo consequat semper. Etiam in libero in sem ultricies cursus. Donec in diam pellentesque, scelerisque libero in, accumsan turpis.</p>
-    <h2>Praesent ullamcorper justo ligula</h2>    
-    <p>Praesent ullamcorper justo ligula, quis consequat ipsum dictum quis. Quisque lectus elit, molestie eget quam nec, rutrum pellentesque mi. In a sem tempor, malesuada nulla aliquet, hendrerit arcu. Cras ut nibh sit amet metus porttitor fringilla in fermentum lacus. Nulla consequat, mauris ac gravida ultricies, mauris odio tincidunt mi, non posuere enim lectus sit amet nisl. Etiam pellentesque gravida turpis in pellentesque. Aliquam sagittis nisi ex, id posuere magna vehicula ut. Praesent eget magna feugiat, vulputate sapien vitae, mattis ipsum. Nam eu dignissim tortor. Nam tristique aliquam facilisis. Quisque volutpat malesuada elit non eleifend. Sed mollis ex a metus venenatis, at venenatis neque feugiat. Mauris aliquam, velit at viverra venenatis, tortor nisl rutrum diam, eget ornare sem diam vel neque. Ut volutpat erat at ex sagittis accumsan. Maecenas sollicitudin volutpat elit ut sodales.</p>
-    `,
-    Catagories: [
-      {
-        menutitle: "Student Life",
-      },
-      {
-        menutitle: "Education",
-      },
-    ],
+    date: "2024-05-06",
+    endDate: "2024-05-12",
+    startTime: null,
+    endTime: null,
+    eventName: "Mid Semester Break",
+    description: "",
+    audience: ["Student", "Undergraduate", "Postgraduate"],
+    category: ["Semester dates"],
+  },
+  {
+    date: "2024-05-13",
+    endDate: "2024-06-23",
+    startTime: null,
+    endTime: null,
+    eventName: "Classes (Week 7 to 12)",
+    description: "",
+    audience: ["Student", "Undergraduate", "Postgraduate"],
+    category: ["Semester dates"],
+  },
+  {
+    date: "2024-06-24",
+    endDate: "2024-06-30",
+    startTime: null,
+    endTime: null,
+    eventName: "Study Break",
+    description: "",
+    audience: ["Student", "Undergraduate", "Postgraduate"],
+    category: ["Semester dates"],
+  },
+  {
+    date: "2024-07-01",
+    endDate: "2024-07-14",
+    startTime: null,
+    endTime: null,
+    eventName: "Examination Weeks",
+    description: "",
+    audience: ["Student", "Undergraduate", "Postgraduate"],
+    category: ["Semester dates"],
+  },
+  {
+    date: "2024-07-15",
+    endDate: "2024-07-28",
+    startTime: null,
+    endTime: null,
+    eventName: "Mid Year Break",
+    description: "",
+    audience: ["Student", "Undergraduate", "Postgraduate"],
+    category: ["Semester dates"],
+  },
+  {
+    date: "2024-07-26",
+    eventName: "Orientation (for commencing students only)",
+    description: "",
+    audience: ["Student", "Undergraduate", "Postgraduate"],
+    category: ["Semester dates"],
+  },
+  {
+    date: "2024-07-29",
+    endDate: "2024-09-08",
+    startTime: null,
+    endTime: null,
+    eventName: "Classes (Week 1 to 6)",
+    description: "",
+    audience: ["Student", "Undergraduate", "Postgraduate"],
+    category: ["Semester dates"],
+  },
+  {
+    date: "2024-08-16",
+    endDate: null,
+    startTime: null,
+    endTime: null,
+    eventName: "Census Date",
+    description: "",
+    audience: ["Student", "Undergraduate", "Postgraduate"],
+    category: ["Semester dates"],
+  },
+  {
+    date: "2024-09-09",
+    endDate: "2024-09-15",
+    startTime: null,
+    endTime: null,
+    eventName: "Mid Semester Break",
+    description: "",
+    audience: ["Student", "Undergraduate", "Postgraduate"],
+    category: ["Semester dates"],
+  },
+  {
+    date: "2024-09-16",
+    endDate: "2024-10-27",
+    startTime: null,
+    endTime: null,
+    eventName: "Classes (Week 7 to 12)",
+    description: "",
+    audience: ["Student", "Undergraduate", "Postgraduate"],
+    category: ["Semester dates"],
+  },
+  {
+    date: "2024-10-28",
+    endDate: "2024-11-03",
+    startTime: null,
+    endTime: null,
+    eventName: "Study Break",
+    description: "",
+    audience: ["Student", "Undergraduate", "Postgraduate"],
+    category: ["Semester dates"],
+  },
+  {
+    date: "2024-11-04",
+    endDate: "2024-11-17",
+    startTime: null,
+    endTime: null,
+    eventName: "Examination Weeks",
+    description: "",
+    audience: ["Student", "Undergraduate", "Postgraduate"],
+    category: ["Semester dates"],
+  },
+  {
+    date: "2024-03-29",
+    endDate: null,
+    startTime: null,
+    endTime: null,
+    eventName: "Good Friday",
+    description: "",
+    audience: ["Staff", "Student", "Undergraduate", "Postgraduate"],
+    category: ["Days of Interest"],
+  },
+  {
+    date: "2024-04-01",
+    endDate: null,
+    startTime: null,
+    endTime: null,
+    eventName: "Easter Monday",
+    description: "",
+    audience: ["Staff", "Student", "Undergraduate", "Postgraduate"],
+    category: ["Days of Interest"],
+  },
+  {
+    date: "2024-04-25",
+    endDate: null,
+    startTime: null,
+    endTime: null,
+    eventName: "Anzac Day",
+    description: "",
+    audience: ["Staff", "Student", "Undergraduate", "Postgraduate"],
+    category: ["Days of Interest"],
+  },
+  {
+    date: "2024-06-10",
+    endDate: null,
+    endTime: null,
+    startTime: null,
+    eventName: "King's Birthday",
+    description: "",
+    audience: ["Staff", "Student", "Undergraduate", "Postgraduate"],
+    category: ["Days of Interest"],
+  },
+  {
+    date: "2024-10-07",
+    endDate: null,
+    startTime: null,
+    endTime: null,
+    eventName: "Labour Day",
+    description: "",
+    audience: ["Staff", "Student", "Undergraduate", "Postgraduate"],
+    category: ["Days of Interest"],
+  },
+  {
+    date: "2024-12-25",
+    endDate: null,
+    startTime: null,
+    endTime: null,
+    eventName: "Christmas Day",
+    description: "",
+    audience: ["Staff", "Student", "Undergraduate", "Postgraduate"],
+    category: ["Days of Interest"],
+  },
+  {
+    date: "2024-12-26",
+    endDate: null,
+    startTime: null,
+    endTime: null,
+    eventName: "Boxing Day",
+    description: "",
+    audience: ["Staff", "Student", "Undergraduate", "Postgraduate"],
+    category: ["Days of Interest"],
+  },
+  {
+    date: "2024-12-26",
+    endDate: null,
+    startTime: null,
+    endTime: null,
+    eventName: "Boxing Day",
+    description: "",
+    audience: ["Staff", "Student", "Undergraduate", "Postgraduate"],
+    category: ["Days of Interest"],
   },
 ];

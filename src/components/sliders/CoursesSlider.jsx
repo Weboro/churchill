@@ -39,7 +39,14 @@ const CoursesSlider = () => {
     autoplay: true,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1550,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1100,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -48,7 +55,7 @@ const CoursesSlider = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -81,18 +88,19 @@ const CoursesSlider = () => {
         {courcesData?.map((item, index) => (
           <div className="px-[11px] my-[11px]" key={index}>
             <CoursesCard
-              icon={`${item?.icon}`}
-              subTitle={item?.subTitleA}
-              title={item?.menuTitle}
               key={index}
+              icon={`${item?.icon}`}
+              faculty={item?.subTitleA}
+              title={item?.menuTitle}
+              subTitle={item?.subTitle}
               link={`/courses/${item?.slug}`}
             />
           </div>
         ))}
       </Slider>
       <div>
-        <div className="flex flex-col lg:flex-row justify-between gap-4 items-center">
-          <div className="block lg:hidden">
+        <div className="flex flex-row-reverse justify-between gap-4 items-center">
+          <div className="">
             <div className="flex gap-[24px]">
               <button
                 className={`rounded-full w-[54px] h-[54px] flex items-center justify-center ${
@@ -127,30 +135,6 @@ const CoursesSlider = () => {
                   styleType="secondary"
                 />
               </Link>
-            </div>
-          </div>
-          <div className="hidden lg:block">
-            <div className="flex gap-[24px]">
-              <button
-                className={`rounded-full w-[54px] h-[54px] flex items-center justify-center ${
-                  currentSlide === 0
-                    ? "bg-[#848484] text-white border border-[#848484]"
-                    : "hover:bg-[#848484] hover:text-white bg-transparent text-[#202917] border border-[#202917]"
-                }`}
-                onClick={goToPreviousSlide}
-              >
-                <BiChevronLeft className="text-[24px]" />
-              </button>
-              <button
-                className={`rounded-full w-[54px] h-[54px] flex items-center justify-center ${
-                  currentSlide === totalSlides - 1
-                    ? "bg-[#848484] text-white border border-[#848484]"
-                    : "hover:bg-[#848484] hover:text-white bg-transparent text-[#202917] border border-[#202917]"
-                }`}
-                onClick={goToNextSlide}
-              >
-                <BiChevronRight className="text-[24px]" />
-              </button>
             </div>
           </div>
         </div>

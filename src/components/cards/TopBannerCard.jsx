@@ -17,6 +17,7 @@ const TopBannerCard = ({
   beforeTitle,
   imageAStyle,
   courseCode,
+  handleRightBtn,
 }) => {
   return (
     <div
@@ -58,27 +59,23 @@ const TopBannerCard = ({
                 {subTitle}
               </p>
               <div className="flex gap-1 md:gap-3 flex-col md:flex-row">
-                <Link href={`${linkA}`}>
-                  <Button
-                    btnName={BtnBText}
-                    icon={<FaArrowRight />}
-                    styleA={"flex items-center gap-1"}
-                    style={
-                      "border rounded-lg text-[#ffffff] font-bold text-[18px] border-2 border-[#606060] px-4 md:px-8 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
-                    }
-                  />
-                </Link>
-
                 <Link href={`${link}`}>
                   <Button
                     btnName={BtnAText}
                     icon={<FaArrowRight />}
                     styleA={"flex items-center gap-1"}
-                    style={
-                      "border rounded-lg text-[#ffffff] font-bold text-[18px] border-2 border-[#606060] px-4 md:px-8 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
-                    }
                   />
                 </Link>
+
+                <div onClick={handleRightBtn}>
+                  <Link href={`${linkA}`}>
+                    <Button
+                      btnName={BtnBText}
+                      icon={<FaArrowRight />}
+                      styleA={"flex items-center gap-1"}
+                    />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

@@ -11,7 +11,8 @@ export const navItems = [
   {
     title: "About Us",
     slug: "about-us",
-    headerDesc: "a short description will be added here.",
+    headerDesc:
+      "Discover comprehensive insights into Churchill, mission, values in one space.",
     link: "",
     page: {
       missionVision: [
@@ -207,7 +208,7 @@ export const navItems = [
   {
     title: "Student",
     slug: "student",
-    headerDesc: "a short description will be added here. student",
+    headerDesc: "Quick access to access necessary links for our students. ",
     link: "",
     Catagories: [
       {
@@ -292,7 +293,8 @@ export const navItems = [
     link: "",
     page: {},
     slug: "courses",
-    headerDesc: "a short description will be added here.",
+    headerDesc:
+      "Explore our diverse range of courses, each carefully designed to excel you in your chosen career path.",
     tabTitle: [
       { title: "Overview" },
       { title: "Entry Requirements" },
@@ -471,7 +473,8 @@ export const navItems = [
             description: "<p> [ TBA ]  - - - - How To Apply</p>",
           },
           {
-            description: "<p> [ TBA ]  - - - - Fees and Scholarship</p>",
+            description:
+              "<h1>Bachelor of Business</h1><h2>Information Systems</h2><table border=1><thead><tr><th>Information Systems<th>Per Course<th>Per Semester<th>Per Year<th>Total Cost<tbody><tr><td>Domestic Students<td>$1,950<td>$7,800<td>$15,600<td>$46,800<tr><td>International Students<td>$2,150<td>$8,600<td>$17,200<td>$51,600</table><h2>Supplementary Fees</h2><table border=1><thead><tr><th>Item<th>Fee<th>Notes<tbody><tr><td>Re-Issue of Student Card<td>$20.00<td><tr><td>Re-Issue of Academic Transcript<td>$50.00<td><tr><td>Re-Issue of Testamur /Certificate<td>$50.00<td><tr><td>Re-Issue of CoE after cancellation<td>$250.00<td><tr><td>Re-exam or Reassessment Fee<td>$200.00 per subject<td><tr><td>Late payment of tuition fees<td>$100.00 per instalment<td>This fee is applicable when tuition fees have not been paid as per the due date published on Letter of Offer<tr><td>Change of course fee<td>$200.00<td>Including change of Major/ Or change to double major<tr><td>Document processing Fees<td>$50.00<td>Enrolment Letter/ Leave letter</table>",
           },
         ],
       },
@@ -534,7 +537,7 @@ export const navItems = [
             description: "<p> [ TBA ]  - - - - How To Apply</p>",
           },
           {
-            description: "<p> [ TBA ]  - - - - Fees and Scholarship</p>",
+            description: `<h1>Bachelor of Business</h1><h2> Hospitality</h2><table border=1><thead><tr><th>Hospitality<th>Per Course<th>Per Semester<th>Per Year<th>Total Cost<tbody><tr><td>Domestic Students<td>$1,950<td>$7,800<td>$15,600<td>$46,800<tr><td>International Students<td>$2,150<td>$8,600<td>$17,200<td>$51,600</table><h2>Supplementary Fees</h2><table border=1><thead><tr><th>Item<th>Fee<th>Notes<tbody><tr><td>Re-Issue of Student Card<td>$20.00<td><tr><td>Re-Issue of Academic Transcript<td>$50.00<td><tr><td>Re-Issue of Testamur /Certificate<td>$50.00<td><tr><td>Re-Issue of CoE after cancellation<td>$250.00<td><tr><td>Re-exam or Reassessment Fee<td>$200.00 per subject<td><tr><td>Late payment of tuition fees<td>$100.00 per instalment<td>This fee is applicable when tuition fees have not been paid as per the due date published on Letter of Offer<tr><td>Change of course fee<td>$200.00<td>Including change of Major/ Or change to double major<tr><td>Document processing Fees<td>$50.00<td>Enrolment Letter/ Leave letter</table>`,
           },
         ],
       },
@@ -597,7 +600,7 @@ export const navItems = [
             description: "<p> [ TBA ]  - - - - How To Apply</p>",
           },
           {
-            description: "<p> [ TBA ]  - - - - Fees and Scholarship</p>",
+            description: `<h1>Bachelor of Business</h1><h2>Management</h2><table border=1><thead><tr><th>Management<th>Per Course<th>Per Semester<th>Per Year<th>Total Cost<tbody><tr><td>Domestic Students<td>$1,950<td>$7,800<td>$15,600<td>$46,800<tr><td>International Students<td>$2,150<td>$8,600<td>$17,200<td>$51,600</table><h2>Supplementary Fees</h2><table border=1><thead><tr><th>Item<th>Fee<th>Notes<tbody><tr><td>Re-Issue of Student Card<td>$20.00<td><tr><td>Re-Issue of Academic Transcript<td>$50.00<td><tr><td>Re-Issue of Testamur /Certificate<td>$50.00<td><tr><td>Re-Issue of CoE after cancellation<td>$250.00<td><tr><td>Re-exam or Reassessment Fee<td>$200.00 per subject<td><tr><td>Late payment of tuition fees<td>$100.00 per instalment<td>This fee is applicable when tuition fees have not been paid as per the due date published on Letter of Offer<tr><td>Change of course fee<td>$200.00<td>Including change of Major/ Or change to double major<tr><td>Document processing Fees<td>$50.00<td>Enrolment Letter/ Leave letter</table>`,
           },
         ],
       },
@@ -653,7 +656,8 @@ export const navItems = [
     link: "",
     page: {},
     slug: "login",
-    headerDesc: "a short description will be added here.",
+    headerDesc:
+      "Login to access the Student, Agent, Library, and Staff portals.",
     Catagories: [
       {
         icon: <RiExchangeDollarFill />,

@@ -19,7 +19,7 @@ const PopUpDetailsCard = ({ data, handlePopUpClose }) => {
                 alt={"use-links-icon-image"}
                 width={400}
                 height={400}
-                className="object-cover w-full h-[400px] rounded-[24px]"
+                className="object-cover w-full h-[400px] rounded-md"
               />
               <div>
                 <div className="flex flex-col gap-1">

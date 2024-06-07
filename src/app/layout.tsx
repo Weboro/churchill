@@ -3,12 +3,8 @@ import "./globals.css";
 import { CookieBanner, Footer, Header } from "@/components";
 
 export const metadata: Metadata = {
-  // title: {
-  // default:'fsf',
-  // template:'%s - sdfsd | sdfs'
-  // },
-  title: "sdf | sdf | sfd",
-  description: "sdfsd",
+  title: "Churchill Institute",
+  description: "",
 };
 
 export default function RootLayout({
@@ -52,11 +48,10 @@ export default function RootLayout({
           sizes="16x16"
           href="/assets/favicon-16x16.png"
         />
-        <link rel="manifest" href="/site.webmanifest" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
         />
 

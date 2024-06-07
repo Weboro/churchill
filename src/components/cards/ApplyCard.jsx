@@ -7,13 +7,13 @@ import Link from "next/link";
 const ApplyCard = ({ title, description, image }) => {
   return (
     <div
-      className="rounded-[32px] px-8 pt-[32px] lg:pb-0 pb-[32px] h-full flex flex-col gap-5"
+      className="rounded-md px-8 pt-[32px] lg:pb-0 pb-[32px] h-full flex flex-col gap-5"
       style={{
         backgroundImage: `linear-gradient(to bottom right, rgb(187, 171, 223), rgb(187 171 223 / 43%) 100%)`,
       }}
     >
-      <div className="flex-1 flex flex-col gap-3 justify-between">
-        <h2 className="font-bold text-[36px] text-[#2C2B4B] leading-[46px]">
+      <div className="flex-1 flex flex-col gap-5 justify-between">
+        <h2 className="font-bold text-[36px] text-[#2C2B4B] leading-[38px]">
           {title}
         </h2>
         <p>{description}</p>
@@ -23,9 +23,6 @@ const ApplyCard = ({ title, description, image }) => {
               btnName={"Apply Now"}
               icon={<FaArrowRight />}
               styleA={"flex items-center gap-1"}
-              style={
-                "border border-2 border-[#606060] rounded-full px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
-              }
             />
           </Link>
         </div>
@@ -35,9 +32,9 @@ const ApplyCard = ({ title, description, image }) => {
           <Image
             src={`${image}`}
             alt={"use-links-icon-image"}
-            width={400}
-            height={400}
-            className="w-[285px] h-full object-cover"
+            width={500}
+            height={370}
+            className="w-[260px] h-full object-cover"
           />
         </div>
       </div>

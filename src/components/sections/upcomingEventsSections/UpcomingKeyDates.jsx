@@ -5,7 +5,18 @@ import Button from "@/components/button";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
-const EventsSection = () => {
+const UpcomingKeyDates = () => {
+  const filteredDates = UpcomingKeyData?.filter((item) => {
+    const year = parseInt(item.date.split("-")[0]);
+    const month = parseInt(item.date.split("-")[1]) - 1;
+    const day = parseInt(item.date.split("-")[2]);
+
+    const eventDate = new Date(year, month, day);
+    const currentDate = new Date();
+
+    return eventDate >= currentDate;
+  });
+
   return (
     <div className="container mx-auto px-5">
       <div className="flex flex-col gap-[32px] lg:gap-[44px]">
@@ -13,14 +24,17 @@ const EventsSection = () => {
           Upcoming Key Dates
         </h2>
         <div className="grid md:grid-cols-2 gap-5">
-          {UpcomingKeyData?.slice(0, 6)?.map((item, index) => (
+          {filteredDates?.slice(0, 6)?.map((item, index) => (
             <KeyDatesCard
               key={index}
-              title={item?.title}
-              subTitle={item?.subTitle}
-              day={item?.day}
               date={item?.date}
-              displayMonth={item?.month}
+              endDate={item?.endDate}
+              startTime={item?.startTime}
+              endTime={item?.endTime}
+              eventName={item?.eventName}
+              description={item?.description}
+              audience={item?.audience}
+              category={item?.category}
             />
           ))}
         </div>
@@ -46,4 +60,4 @@ const EventsSection = () => {
   );
 };
 
-export default EventsSection;
+export default UpcomingKeyDates;

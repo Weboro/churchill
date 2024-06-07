@@ -58,7 +58,7 @@ const IndivisualEventsPage = ({ slug }) => {
                 />
               </section>
             </div>
-          </div>{" "}
+          </div>
         </>
       )}
     </>

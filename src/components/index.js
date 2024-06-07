@@ -29,7 +29,7 @@ import UpcomingEventsSection from "./sections/upcomingEventsSections/UpcomingEve
 import CoursesSlider from "./sliders/CoursesSlider";
 import AboutSlider from "./sliders/AboutSlider";
 import EnquirySection from "./sections/homeSections/EnquirySection";
-import EventsSection from "./sections/upcomingEventsSections/EventsSection";
+import UpcomingKeyDates from "./sections/upcomingEventsSections/UpcomingKeyDates";
 import BlogSection from "./sections/blogSections/BlogSection";
 import RelatedSection from "./sections/aboutUsSections/RelatedSection";
 import CoreValuesSection from "./sections/aboutUsSections/CoreValuesSection";
@@ -58,6 +58,8 @@ import Search from "./search/index";
 import IndivisualBlogPage from "./sections/blogSections/IndivisualBlogPage";
 import IndivisualEventsPage from "./sections/EventsSection/IndivisualEventsPage";
 import CookieBanner from "./globals/acceptCookie/CookieBanner";
+import Loading from "./loading/Loading";
+import BlogItemCard from "./cards/BlogItemCard";
 
 export {
   Button,
@@ -90,7 +92,7 @@ export {
   UpcomingEventsSection,
   CoursesSlider,
   EnquirySection,
-  EventsSection,
+  UpcomingKeyDates,
   BlogSection,
   KeyDatesCard,
   CourseDetails,
@@ -120,4 +122,6 @@ export {
   IndivisualBlogPage,
   IndivisualEventsPage,
   CookieBanner,
+  Loading,
+  BlogItemCard,
 };

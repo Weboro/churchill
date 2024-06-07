@@ -24,7 +24,7 @@ const CoursesSection = () => {
                 // onChange={(e) => {
                 //   setSearch(e.target.value);
                 // }}
-                className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pr-8 pl-3 py-3 rounded-full"
+                className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pr-8 pl-3 py-3 rounded-md"
               />
             </div> */}
           </div>

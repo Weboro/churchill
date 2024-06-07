@@ -25,7 +25,7 @@ const page = () => {
                 }
               >
                 <div className="p-4 rounded-2xl bg-red-100 flex flex-col gap-4">
-                  <div className="w-14 h-14 mx-auto bg-white rounded-full grid place-items-center">
+                  <div className="w-14 h-14 mx-auto bg-white rounded-md grid place-items-center">
                     <i className={`text-2xl ${item?.headerIcon}`}></i>
                   </div>
                   <p className="text-xl font-bold text-center">

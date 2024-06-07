@@ -28,22 +28,15 @@ const UnderConstruction = () => {
                         btnName={"Go to Home Page"}
                         icon={<FaArrowRight />}
                         styleA={"flex items-center gap-1"}
-                        style={
-                          "border border-2 border-[#606060] rounded-full px-4 py-3 bg-[#E59623] hover:text-black hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
-                        }
+                        // style={
+                        //   "border border-2 border-[#606060] rounded-md px-4 py-3 bg-[#E59623] hover:text-black hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
+                        // }
                       />
                     </Link>
                   </div>
                 </div>
                 <div className="hidden lg:block">
                   <div className="flex justify-center items-center">
-                    {/* <Image
-                      src={`/assets/page-under-construction.png`}
-                      alt={"use-links-icon-image"}
-                      width={400}
-                      height={400}
-                      className="w-full h-auto object-cover"
-                    /> */}
                     {<Lottie animationData={Animation} loop={true} />}
                   </div>
                 </div>

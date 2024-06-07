@@ -5,7 +5,7 @@ import {
   RequestFormSection,
   UpcomingEvents,
   CoursesSection,
-  EventsSection,
+  UpcomingKeyDates,
   BlogSection,
 } from "@/components";
 import React from "react";
@@ -21,7 +21,7 @@ const Home = () => {
           <CoursesSection />
         </div>
         <div>
-          <EventsSection />
+          <UpcomingKeyDates />
         </div>
         <div>
           <EnquirySection />

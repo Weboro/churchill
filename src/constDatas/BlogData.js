@@ -53,7 +53,8 @@ export const BlogData = [
   {
     id: 2,
     slug: "stay-safe-stay-informed-water-safety-at-beaches",
-    title: "Stay Safe, Stay Informed: Water Safety at Beaches",
+    title:
+      "Stay Safe, Stay Informed: Water Safety at Beaches, Take care of you and your family!",
     subTitle:
       "Welcome to Churchill As a hub of academic excellence and student well-being, we prioritize not only your educational journey but also your safety and welfare. With our campus located in close proximity to some of Australia's most stunning beaches, it's important for our students to be well-informed about water safety practices to ensure enjoyable beach experiences while minimizing risks. Whether you're a seasoned beachgoer or exploring the shores for the first time, this guide is designed to equip you with essential knowledge and tips for staying safe at the beach.",
 

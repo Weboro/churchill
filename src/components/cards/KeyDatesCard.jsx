@@ -1,69 +1,69 @@
-// import React from "react";
-
-// const KeyDatesCard = ({ title, subTitle, day, date, displayMonth }) => {
-//   return (
-//     <>
-//       <div className="flex flex-col lg:flex-row justify-between items-center md:items-stretch rounded-[10px] bg-[#F3E4E4] relative">
-//         <div className="w-[100px] mt-2 lg:mt-0 mx-auto lg:m-0">
-//           <div className="flex flex-col text-center text-white bg-[#E59623] rounded-[12px] p-2 font-bold h-full justify-center">
-//             <p>{day}</p>
-//             <p className="text-[32px] leading-[28px]">{date}</p>
-//             <p>{displayMonth}</p>
-//           </div>
-//         </div>
-
-//         <div className="flex flex-1 flex-col lg:flex-row gap-3 items-center py-2 mx-4 ">
-//           <div>
-//             <div className="text-center lg:text-start">
-//               <h2 className="font-bold text-[20px] text-[#2C2B4B]">{title}</h2>
-//               <p>{subTitle}</p>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default KeyDatesCard;
 "use client";
+import React from "react";
 
-import React, { useEffect } from "react";
-import { useState } from "react";
-
-const KeyDatesCard = ({ title, subTitle, day, date, displayMonth, year }) => {
-  //   const [width, setWidth] = useState(window.innerWidth);
-  //   const isSmallSize = width < 768;
-
-  //   useEffect(() => {
-  //     const handleResize = () => {
-  //       setWidth(window.innerWidth);
-  //     };
-
-  //     window.addEventListener("resize", handleResize);
-
-  //     return () => {
-  //       window.removeEventListener("resize", handleResize);
-  //     };
-  //   }, []);
-  const isSmallSize = false;
+const monthArray = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+const KeyDatesCard = ({
+  date,
+  endDate,
+  startTime,
+  endTime,
+  eventName,
+  description,
+  audience,
+  category,
+}) => {
+  const month = parseInt(date.split("-")[1]) - 1;
+  const day = parseInt(date.split("-")[2]);
+  const displayMonth = monthArray[month];
 
   return (
     <>
-      <div className="bg-[#FAF4F4] flex items-center flex-col md:justify-center h-full rounded-[16px]">
-        <div className="flex items-center w-full gap-2 p-2">
-          <div className="flex flex-col text-center text-white bg-[#E59623] rounded-[12px] font-bold w-20 h-20 justify-center">
-            <p>{day}</p>
-            <p className="text-[32px] leading-[28px]">{date}</p>
-            <p>{displayMonth}</p>
+      <div className="bg-[#FAF4F4] rounded-md p-4 flex flex-col justify-between gap-6">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+          <div className="text-white bg-primary-orange w-32 py-2 px-3 rounded-md flex gap-2 font-bold">
+            <i className="fi fi-rr-calendar-day flex text-2xl"></i>
+            <span>
+              {day}
+              {day === 1 ? "st" : day === 2 ? "nd" : day === 3 ? "rd" : "th"}
+            </span>
+            <span>{displayMonth}</span>
           </div>
-          <div className="flex-1 p-2">
-            <h2 className="font-bold text-[20px] text-[#2C2B4B]">{title}</h2>
-            {!isSmallSize && <p>{subTitle}</p>}
-          </div>
+          <h2 className="font-bold text-[22px] text-[#2C2B4B] leading-6">
+            {eventName}
+          </h2>
         </div>
 
-        {isSmallSize && <p className="p-2">{subTitle}</p>}
+        <div className="flex gap-2 items-center flex-wrap text-sm">
+          {audience.map((item, index) => (
+            <p
+              className="bg-primary-orange/20 text-neutral-950/75 px-3 py-1 rounded-full whitespace-nowrap"
+              key={index}
+            >
+              {item}
+            </p>
+          ))}
+          {category.map((item, index) => (
+            <p
+              className="bg-primary-orange/20 text-neutral-950/75 px-3 py-1 rounded-full whitespace-nowrap"
+              key={index}
+            >
+              {item}
+            </p>
+          ))}
+        </div>
       </div>
     </>
   );

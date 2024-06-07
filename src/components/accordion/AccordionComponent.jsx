@@ -10,7 +10,7 @@ const AccordionComponent = ({ data }) => {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col py-4 md:px-2 rounded-md bg-primary-orange/10 border-2 border-primary-orange">
       {data?.map((item, index) => {
         const isActive = activeIndex == index ? true : false;
 

@@ -45,7 +45,7 @@ export const AgentInfoCard = ({
                 icon={<FaArrowRight />}
                 styleA={" flex items-center gap-4 "}
                 style={
-                  "w-fit mx-auto md:m-0 border border-2 border-[#606060] font-semibold text-[14px] rounded-full px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
+                  "w-fit mx-auto md:m-0 border border-2 border-[#606060] font-semibold text-[14px] rounded-md px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
                 }
               />
             </Link>

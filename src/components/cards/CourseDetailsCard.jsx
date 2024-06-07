@@ -5,11 +5,11 @@ import Link from "next/link";
 
 const CourseDetailsCard = ({ menuTitle, subTitle, slug }) => {
   return (
-    <div className="bg-[#FAF4F4] flex flex-col gap-8 md:gap-2 md:flex-row md:items-center p-4 rounded-[24px]">
+    <div className="bg-[#FAF4F4] flex flex-col gap-8 md:gap-2 md:flex-row md:items-center p-4 rounded-md">
       <div className="flex-1 flex flex-col gap-2 md:gap-4">
         <h2 className="font-extrabold text-2xl lg:text-3xl">{menuTitle}</h2>
         <p>{subTitle}</p>
-        <span className="bg-[#F2CF9C] px-3 py-1 text-sm rounded-full capitalize w-fit">
+        <span className="bg-[#F2CF9C] px-3 py-1 text-sm rounded-md capitalize w-fit">
           {/* {slug?.split("-")?.join(" ")} */}
           Bachelors of Business
         </span>

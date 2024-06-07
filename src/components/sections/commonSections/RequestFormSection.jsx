@@ -29,7 +29,7 @@ const RequestFormSection = ({ isButtonActive }) => {
                   // onChange={(e) => {
                   //   setSearch(e.target.value);
                   // }}
-                  className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pr-8 pl-3 py-3 rounded-full"
+                  className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pr-8 pl-3 py-3 rounded-md"
                 />
               </div> */}
             </div>
@@ -38,7 +38,7 @@ const RequestFormSection = ({ isButtonActive }) => {
             {/* </div> */}
           </div>
         </div>
-        <div className="rounded-[32px]">
+        <div className="rounded-md">
           <div className="flex flex-col gap-5">
             {requestLists?.map((item, index) => (
               <RequestFormCard

@@ -13,7 +13,7 @@ const TabbedPane = ({ tabbedPaneHeaders, tabbedPaneData }) => {
             <div
               className={`${
                 selectedIndex === index ? "bg-[#E59623] border-2" : ""
-              } text-[#2C2B4B] font-bold border-2 border-[#E59623] px-6 py-2 rounded-full transition-all hover:cursor-pointer select-none text-center`}
+              } text-[#2C2B4B] font-bold border-2 border-[#E59623] px-6 py-2 rounded-md transition-all hover:cursor-pointer select-none text-center`}
               key={index}
               onClick={() => setSelectedIndex(index)}
             >
@@ -22,11 +22,11 @@ const TabbedPane = ({ tabbedPaneHeaders, tabbedPaneData }) => {
           ))}
         </div>
 
-        <div className="w-full bg-[#F3E4E4] px-4 py-3 mt-4 rounded-[24px]">
+        <div className="w-full bg-[#F3E4E4] px-4 py-3 mt-4 rounded-md">
           {tabbedPaneData?.map(
             (data, index) =>
               selectedIndex === index && (
-                <div className="w-full rounded-full m-2 pb-4" key={index}>
+                <div className="w-full rounded-md m-2 pb-4" key={index}>
                   <div
                     className="rich-text-container"
                     dangerouslySetInnerHTML={{ __html: data.description }}

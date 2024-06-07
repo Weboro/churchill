@@ -15,7 +15,6 @@ const IndivisualBlogPage = ({ slug }) => {
 
       <div className="-translate-y-8">
         <div className="container mx-auto px-5">
-          {/* flex flex-col gap-[32px] lg:gap-[64px] */}
           <Image
             width={1240}
             height={1240}

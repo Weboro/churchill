@@ -33,7 +33,7 @@ const AboutSection = () => {
               alt={"use-links-icon-image"}
               width={400}
               height={400}
-              className={`w-full lg:h-[500px] rounded-[32px] object-cover ${
+              className={`w-full lg:h-[500px] rounded-md object-cover ${
                 index % 2 === 0 ? "order-2" : "order-1"
               }`}
             />

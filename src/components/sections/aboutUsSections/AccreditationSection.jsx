@@ -33,7 +33,7 @@ const AccreditationSection = () => {
                           icon={<FaArrowRight />}
                           styleA={"flex items-center gap-1"}
                           style={
-                            "border border-2 border-[#606060] rounded-full px-4 py-3 bg-[#E59623] hover:text-black hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
+                            "border border-2 border-[#606060] rounded-md px-4 py-3 bg-[#E59623] hover:text-black hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
                           }
                         />
                       </Link>

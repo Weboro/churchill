@@ -1,10 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
-import { Search, Button, StyledHeroCard } from "@/components";
-import { FaArrowRight } from "react-icons/fa";
+import { Search, BlogItemCard, StyledHeroCard } from "@/components";
 import { BlogData } from "@/constDatas/BlogData";
-import Link from "next/link";
 
 const BlogsPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -27,8 +24,9 @@ const BlogsPage = () => {
         <>Loading</>
       ) : (
         <>
-          <div className="container mx-auto px-5 flex flex-col gap-[32px] lg:gap-[64px]">
-            <StyledHeroCard title="Blogs" />
+          <div className="container mx-auto px-5 flex flex-col gap-[32px] lg:gap-[64px] mb-[48px]">
+            <StyledHeroCard title="Blogs" showSearch={false} />
+
             <div className="container mx-auto px-5 flex flex-col gap-[32px] lg:gap-[64px]">
               <section>
                 <div className="flex flex-col lg:flex-row gap-5">
@@ -38,7 +36,7 @@ const BlogsPage = () => {
                     </h3>
                     <Search
                       text={searchQuery}
-                      onSetText={setSearchQuery}
+                      onSearchText={setSearchQuery}
                       placeholderText="Search"
                     />
                   </div>
@@ -48,7 +46,7 @@ const BlogsPage = () => {
                       {tags.map((tag, index) => (
                         <span
                           key={index}
-                          className="bg-[#F2CF9C] px-3 py-1 rounded-full"
+                          className="bg-[#F2CF9C] px-3 py-1 rounded-md"
                         >
                           {tag.tag}
                         </span>
@@ -59,56 +57,21 @@ const BlogsPage = () => {
               </section>
               <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
                 {BlogData.map((data, index) => {
-                  const shouldShow =
-                    !query || data.title.trim().toLowerCase().includes(query);
-
-                  if (shouldShow)
+                  if (
+                    !query ||
+                    data?.title.trim().toLowerCase().includes(query)
+                  )
                     return (
-                      <div
+                      <BlogItemCard
                         key={index}
-                        className=" bg-[#F3E4E4] rounded-3xl overflow-hidden"
-                      >
-                        <Link href={`/events/blogs/${data.slug}`}>
-                          <Image
-                            width={400}
-                            height={400}
-                            alt={`Image for ${data?.title}`}
-                            src={data.image}
-                            // className="h-[300px] w-full object-cover"
-                            className="w-full aspect-[3/2]"
-                          />
-                        </Link>
-                        <div className="p-4 flex flex-col gap-5">
-                          <div className="flex-1 flex flex-col gap-3">
-                            <p>{data.date}</p>
-                            <h4 className="font-bold text-2xl leading-7 line-clamp-3">
-                              {data.title}
-                            </h4>
-                            <h3 className="line-clamp-5">{data?.subTitle}</h3>
-                            {/* <p dangerouslySetInnerHTML={{ __html: data?.description }}></p> */}
-                            <div className="mt-4">
-                              <Link href={`/blogs/${data.slug}`}>
-                                <Button
-                                  btnName="Learn More"
-                                  icon={<FaArrowRight />}
-                                  styleA={"flex items-center gap-1"}
-                                  styleType="secondary"
-                                />
-                              </Link>
-                            </div>
-                          </div>
-                          <div className="flex items-start gap-2 flex-wrap">
-                            {data?.tags?.map((item, index) => (
-                              <span
-                                className="bg-[#F2CF9C] px-3 py-1 rounded-full"
-                                key={index}
-                              >
-                                {item.tag}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
+                        slug={data?.slug}
+                        title={data?.title}
+                        image={data?.image}
+                        date={data?.date}
+                        tags={data?.tags}
+                        subTitle={data?.subTitle}
+                        index={data?.index}
+                      />
                     );
                 })}
               </section>

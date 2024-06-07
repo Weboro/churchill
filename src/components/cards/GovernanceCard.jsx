@@ -7,7 +7,7 @@ import { FaArrowRight } from "react-icons/fa";
 const GovernanceCard = ({ data, handleBtnClick }) => {
   const { image, title, subTitle, description } = data;
   return (
-    <div className="bg-[#FAF4F4] outline outline-0 hover:outline-2 hover:outline-[#606060] p-5 rounded-[24px]">
+    <div className="bg-[#FAF4F4] outline outline-0 hover:outline-2 hover:outline-[#606060] p-5 rounded-md">
       <div className="flex flex-col gap-2">
         <span className="relative">
           <Image
@@ -15,7 +15,7 @@ const GovernanceCard = ({ data, handleBtnClick }) => {
             alt={"use-links-icon-image"}
             width={400}
             height={400}
-            className="object-cover w-full h-[250px] rounded-[24px]"
+            className="object-cover w-full h-[250px] rounded-md"
           />
         </span>
         <h3 className="font-bold text-[20px] clamp-1 text-[#2C2B4B] leading-[28px]">

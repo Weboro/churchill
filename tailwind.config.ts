@@ -13,7 +13,7 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      textColor: {
+      colors: {
         "primary-orange": "#E59623",
         "primary-green": "#223E29",
         "matte-purple": "#2C2B4B",

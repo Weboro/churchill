@@ -10,7 +10,7 @@ const SelectComponent = ({ title, data }) => {
       <div className="w-full flex flex-col gap-3">
         <div
           onClick={() => setIsActive(!isActive)}
-          className="w-full bg-[#FAF4F4] rounded-full py-2 px-4 flex items-center justify-between cursor-pointer select-none hover:outline outline-neutral-900/20"
+          className="w-full bg-[#FAF4F4] rounded-md py-2 px-4 flex items-center justify-between cursor-pointer select-none hover:outline outline-neutral-900/20"
         >
           <span>{title}</span>
           <span

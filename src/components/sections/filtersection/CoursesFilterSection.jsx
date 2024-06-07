@@ -44,14 +44,12 @@ const CoursesFilterSection = () => {
 
               if (shouldShow)
                 return (
-                  <>
-                    <CourseDetailsCard
-                      key={index}
-                      menuTitle={data?.menuTitle}
-                      subTitle={data?.subTitle}
-                      slug={data?.slug}
-                    />
-                  </>
+                  <CourseDetailsCard
+                    key={index}
+                    menuTitle={data?.menuTitle}
+                    subTitle={data?.subTitle}
+                    slug={data?.slug}
+                  />
                 );
             })}
           </div>

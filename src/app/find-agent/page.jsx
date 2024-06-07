@@ -47,12 +47,12 @@ const FindAgent = () => {
           </h3>
         </section>
 
-        <section className="bg-[#F3E4E4] rounded-3xl md:rounded-full flex flex-col gap-4 px-3 py-4 md:flex-row lg:w-fit lg:mx-auto">
+        <section className="bg-[#F3E4E4] rounded-3xl md:rounded-md flex flex-col gap-4 px-3 py-4 md:flex-row lg:w-fit lg:mx-auto">
           <input
             type="text"
             name="Your Address"
             placeholder="Your Address"
-            className=" rounded-full px-4 py-3 outline outline-neutral-900/20 flex-1 w-full lg:w-[280px]"
+            className=" rounded-md px-4 py-3 outline outline-neutral-900/20 flex-1 w-full lg:w-[280px]"
           />
           <input
             type="text"
@@ -60,14 +60,14 @@ const FindAgent = () => {
             value={searchByName}
             onChange={(e) => setSearchByName(e.target.value)}
             placeholder="Agent/Representative Name"
-            className=" rounded-full px-4 py-3 outline outline-neutral-900/20 flex-1 w-full lg:w-[280px]"
+            className=" rounded-md px-4 py-3 outline outline-neutral-900/20 flex-1 w-full lg:w-[280px]"
           />
           <Button
             btnName={"Find an Agent"}
             icon={<FaSearch />}
             styleA={" flex items-center gap-4"}
             style={
-              "border border-2 border-[#606060] font-semibold text-[14px] rounded-full px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
+              "border border-2 border-[#606060] font-semibold text-[14px] rounded-md px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
             }
           />
         </section>
@@ -123,7 +123,7 @@ const FindAgent = () => {
                 icon={<FaArrowRight m ght />}
                 styleA={" flex items-center gap-4"}
                 style={
-                  "mx-auto md:m-0 border border-2 border-[#606060] font-semibold text-[14px] rounded-full px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
+                  "mx-auto md:m-0 border border-2 border-[#606060] font-semibold text-[14px] rounded-md px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
                 }
               />
             </Link>

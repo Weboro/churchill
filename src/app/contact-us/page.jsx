@@ -38,7 +38,7 @@ const ContactUs = () => {
                 icon={<FaArrowRight />}
                 styleA={"flex items-center gap-1"}
                 style={
-                  "border font-semibold text-[14px] border-2 border-[#606060] rounded-full px-6 md:px-8 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
+                  "border font-semibold text-[14px] border-2 border-[#606060] rounded-md px-6 md:px-8 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
                 }
               />
             </Link>
@@ -48,7 +48,7 @@ const ContactUs = () => {
                 icon={<FaArrowRight />}
                 styleA={"flex items-center gap-1"}
                 style={
-                  "border font-semibold text-[14px] border-2 border-[#606060] rounded-full px-4 py-3 hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
+                  "border font-semibold text-[14px] border-2 border-[#606060] rounded-md px-4 py-3 hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
                 }
               />
             </Link>
@@ -89,7 +89,7 @@ const ContactUs = () => {
                   icon={<FaArrowRight />}
                   styleA={"flex items-center gap-1"}
                   style={
-                    "border font-semibold text-[14px] border-2 border-[#606060] rounded-full px-4 py-3 hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
+                    "border font-semibold text-[14px] border-2 border-[#606060] rounded-md px-4 py-3 hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
                   }
                 />
               </Link>

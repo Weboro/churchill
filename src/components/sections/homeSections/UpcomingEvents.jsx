@@ -14,20 +14,21 @@ const UpcomingEvents = () => {
             Upcoming Events
           </h2>
         </div>
-        <div className="flex flex-col gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {eventsData?.slice(0, 4)?.map((item, index) => (
             <EventsCard
-              day={item?.day}
+              key={index}
               image={item?.image}
-              month={item?.month}
-              subTitle={item?.subTitle}
-              time={item?.time}
               title={item?.title}
+              subTitle={item?.subTitle}
+              day={item?.day}
+              month={item?.month}
+              time={item?.time}
               date={item?.date}
               link={item?.link}
               slug={item?.slug}
-              UpcomingKeyData={item?.Catagories}
-              key={index}
+              catagories={item?.catagories}
+              duration={item?.duration}
             />
           ))}
         </div>

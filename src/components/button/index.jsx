@@ -14,11 +14,13 @@ const Button = ({
   return (
     <button
       type={type && type}
-      className={`text-center border-2  ${
+      className={`text-center flex justify-center group border-2 rounded-md ${
         styleType == "primary"
-          ? "border font-semibold text-[14px] border-[#606060] rounded-full px-6 md:px-8 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
+          ? "border font-semibold text-[14px] border-[#606060] px-6 md:px-8 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
           : styleType == "secondary"
-          ? " border-[#606060] rounded-full px-4 py-3 hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
+          ? " border-[#606060] px-5 py-3 hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
+          : styleType == "tertiary"
+          ? "py-2 border-hidden text-primary-orange hover:text-[#ce8720] font-bold"
           : ""
       } ${style} `}
     >
@@ -30,7 +32,13 @@ const Button = ({
             {contact ? contact : ""}
           </p>
         </div>
-        <div className={`${styleB ? styleB : ""} `}>{icon ? icon : ""}</div>
+        <div
+          className={`${
+            styleB ? styleB : ""
+          } group-hover:translate-x-2 transition-all `}
+        >
+          {icon ? icon : ""}
+        </div>
       </div>
     </button>
   );

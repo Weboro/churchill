@@ -1,3 +1,4 @@
+"use client";
 import {
   FilterComponent,
   EnquirySection,
@@ -6,9 +7,34 @@ import {
   CoursesFilterSection,
 } from "@/components";
 import {} from "@/components";
-import React from "react";
+import React, { useRef } from "react";
+
+// function scrollFn() {
+//   window.scrollTo({
+//     top: 650,
+//     left: 0,
+//     behavior: "smooth",
+//   });
+// }
 
 const Courses = () => {
+  const ScrollRef = useRef();
+
+  function handleRightBtn() {
+    scrollToSection("scrollToCourse");
+  }
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = element.offsetTop - 170;
+      window.scroll({
+        top: offset,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div className="flex flex-col gap-[32px] lg:gap-[64px]">
       <TopBannerCard
@@ -22,11 +48,13 @@ const Courses = () => {
         BtnAText="Apply Now"
         BtnBText="View Courses"
         link="/apply-now"
-        linkA="#courses"
+        linkA=""
+        handleRightBtn={handleRightBtn}
       />
 
-      <CoursesFilterSection />
+      <span id="scrollToCourse" />
 
+      <CoursesFilterSection />
       <EnquirySection />
       <NewsSection />
     </div>

@@ -54,7 +54,7 @@ const ReportFormSection = ({ slug }) => {
                     {data?.menuTitle}
                   </h2>
                 </div>
-                <div className="bg-[#E9E9E9] px-[44px] py-[54px] rounded-[24px]">
+                <div className="bg-[#E9E9E9] px-[44px] py-[54px] rounded-md">
                   <div>
                     {slug === "refund-request" && <RefundRequestForm />}
                   </div>

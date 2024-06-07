@@ -10,7 +10,7 @@ const ContactUsCard = ({
 }) => {
   return (
     <>
-      <div className="bg-[#E9E9E9] h-full p-4 md:p-6 rounded-[24px] flex flex-col gap-4 hover:outline hover:outline-neutral-900/20">
+      <div className="bg-[#E9E9E9] h-full p-4 md:p-6 rounded-md flex flex-col gap-4 hover:outline hover:outline-neutral-900/20">
         <Image
           src={iconUrl}
           width={100}

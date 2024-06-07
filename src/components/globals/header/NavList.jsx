@@ -5,8 +5,7 @@ import TopInfo from "./TopInfo";
 import { navItems } from "@/constDatas/navItems";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
-
+import { Button } from "@/components";
 const NavList = ({
   style,
   isDropdownActive,
@@ -68,55 +67,60 @@ const NavList = ({
                   {isDropdownActive && (
                     <div className="z-20 hidden px-5 py-3 w-[80vw] lg:w-[100vw] border-t-4 border-t-[#eb9320] group-hover:block lg:absolute lg:left-0 top-[100%] shadow-xl whitespace-wrap transition delay-150 bg-white">
                       <div className="flex flex-col lg:flex-row gap-4 container mx-auto py-4">
-                        <div className="flex-[20%] flex flex-col gap-4 md:flex-row lg:flex-col lg:gap-2 justify-between lg:justify-center">
-                          <div className="flex flex-col gap-0">
-                            <h2 className="text-xl">{item.title}</h2>
-                            <p className="font-[500] font-base">
-                              {item.headerDesc}
-                            </p>
-                          </div>
+                        <div className="flex-[20%] flex flex-col gap-5 md:flex-row lg:flex-col lg:gap-2 justify-between lg:justify-center">
+                          <h2 className="text-xl">{item.title}</h2>
+
+                          <p className="font-[500] font-base pt-1 pb-2">
+                            {item.headerDesc}
+                          </p>
+
                           <Link href={`/${item.slug}`}>
-                            <button className="px-4 py-2 border-2 border-[#E59623] hover:bg-[#E59623] transition-all font-bold rounded-xl">
+                            <Button btnName="Learn More" />
+                            {/* <button className="px-4 py-2 border-2 border-[#E59623] hover:bg-[#E59623] transition-all font-bold rounded-xl">
                               Learn More
-                            </button>
+                            </button> */}
                           </Link>
                         </div>
-                        <ul className="flex-[78%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-2 ">
-                          {item.Catagories.map((subItem, index) => (
-                            <Link
-                              target={`${
-                                subItem?.redirectLink ? "_blank" : ""
-                              }`}
-                              key={index}
-                              href={
-                                subItem?.redirectLink
-                                  ? subItem?.redirectLink
-                                  : subItem?.link
-                                  ? subItem?.link
-                                  : `/${item.slug}/${subItem.slug}`
-                              }
-                              className="w-full h-full lg:max-h-[6rem] flex"
-                            >
-                              <li
-                                className="hover:bg-[#eb9320]/20 transition-all rounded-md flex flex-1 items-center gap-2 px-2 py-1"
+                        <div className="flex-[78%]">
+                          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-2 ">
+                            {item.Catagories.map((subItem, index) => (
+                              <Link
+                                target={`${
+                                  subItem?.redirectLink ? "_blank" : ""
+                                }`}
                                 key={index}
+                                href={
+                                  subItem?.redirectLink
+                                    ? subItem?.redirectLink
+                                    : subItem?.link
+                                    ? subItem?.link
+                                    : `/${item.slug}/${subItem.slug}`
+                                }
+                                className="w-full h-full lg:max-h-[6rem] flex"
                               >
-                                <div className="w-10 h-10 bg-[#eb9320]/20 rounded-full grid place-items-center">
-                                  <i className={subItem.headerIcon}></i>
-                                </div>
+                                <li
+                                  className="hover:bg-[#eb9320]/20 transition-all rounded-md flex flex-1 items-center gap-2 px-2 py-1"
+                                  key={index}
+                                >
+                                  <div className="w-10 h-10 bg-[#eb9320]/20 rounded-full grid place-items-center">
+                                    <i
+                                      className={`${subItem.headerIcon} m-0 flex items-center `}
+                                    />
+                                  </div>
 
-                                <div className="flex flex-1 flex-col gap-1">
-                                  <h3 className="leading-5 font-xl capitalize">
-                                    {subItem.menuTitle}
-                                  </h3>
-                                  <p className=" text-sm font-[500]">
-                                    {subItem.headerDesc}
-                                  </p>
-                                </div>
-                              </li>
-                            </Link>
-                          ))}
-                        </ul>
+                                  <div className="flex flex-1 flex-col gap-1">
+                                    <h3 className="leading-5 font-xl capitalize">
+                                      {subItem.menuTitle}
+                                    </h3>
+                                    <p className=" text-sm font-[500]">
+                                      {subItem.headerDesc}
+                                    </p>
+                                  </div>
+                                </li>
+                              </Link>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   )}
@@ -155,7 +159,7 @@ const NavList = ({
                   </span>
                   <input
                     placeholder="Search here..."
-                    className="w-full h-auto font-inter text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-3 pr-[44px] py-3 rounded-full"
+                    className="w-full h-auto font-inter text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-3 pr-[44px] py-3 rounded-md"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     onKeyPress={handleSearchKeyPress}
@@ -345,7 +349,7 @@ export default NavList;
 //                   </span>
 //                   <input
 //                     placeholder="Search here..."
-//                     className="w-full h-auto font-inter text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-3 pr-[44px] py-3 rounded-full"
+//                     className="w-full h-auto font-inter text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-3 pr-[44px] py-3 rounded-md"
 //                     value={searchQuery}
 //                     onChange={(e) => setSearchQuery(e.target.value)}
 //                     onKeyPress={handleSearchKeyPress}

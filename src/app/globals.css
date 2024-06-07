@@ -9,15 +9,21 @@
 }
 
 :root {
-  --pri-org: #e59623;
+  --highlight-orange: #f2cb91;
+  --primary-orange: #e59623;
+  --primary-green: #223e29;
+  --matte-purple: #2c2b4b;
+  --normal-grey: #e9e9e9;
+  --light-grey: #f3e4e4;
 }
 
 body {
   overflow-x: hidden;
   background: #fff;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
 }
+
 @keyframes expandBackground {
   0% {
     width: 0;
@@ -34,15 +40,36 @@ body {
     width: 100%;
   }
 }
+
+.hover-highlight {
+  position: relative;
+  z-index: 1;
+}
+
+.hover-highlight:hover::after {
+  content: "";
+  display: inline-block;
+  height: 13px;
+  background-color: var(--highlight-orange);
+  padding: 0 4px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -6px;
+  z-index: -1;
+  animation: expandBackground 0.6s ease-out forwards;
+}
+
 .highlight {
   position: relative;
   z-index: 1;
 }
+
 .highlight::after {
   content: "";
   display: inline-block;
   height: 20px;
-  background-color: var(--pri-org);
+  background-color: var(--primary-orange);
   padding: 0 4px;
   position: absolute;
   width: 100%;
@@ -434,354 +461,3 @@ tr:nth-child(even) {
 /*  */
 
 /*  */
-
-/*  */
-
-.circle-sml {
-  position: absolte;
-  width: 18rem;
-  height: 18rem;
-  margin: 0;
-  padding: 0;
-  border-radius: 50%;
-  transform: rotate(270deg);
-}
-.circle-sml > * {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 3em;
-  height: 3em;
-  margin: -1.5em;
-}
-.circle-sml > :nth-of-type(1) {
-  transform: rotate(0deg) translate(9rem) rotate(-270deg);
-}
-.circle-sml > :nth-of-type(2) {
-  transform: rotate(60deg) translate(9rem) rotate(-330deg);
-}
-.circle-sml > :nth-of-type(3) {
-  transform: rotate(120deg) translate(9rem) rotate(-390deg);
-}
-.circle-sml > :nth-of-type(4) {
-  transform: rotate(180deg) translate(9rem) rotate(-450deg);
-}
-.circle-sml > :nth-of-type(5) {
-  transform: rotate(240deg) translate(9rem) rotate(-510deg);
-}
-.circle-sml > :nth-of-type(6) {
-  transform: rotate(300deg) translate(9rem) rotate(-570deg);
-}
-
-.circle-sml {
-  transform: rotate(0deg);
-  animation: circlet-rotate 30s linear infinite both;
-}
-
-@keyframes circlet-rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
-.circle-sml > :nth-of-type(1) {
-  transform: rotate(420deg) translate(9rem) rotate(-420deg);
-  animation: circlet-rotate-child-1 30s linear infinite both;
-}
-
-@keyframes circlet-rotate-child-1 {
-  to {
-    transform: rotate(420deg) translate(9rem) rotate(-780deg);
-  }
-}
-.circle-sml > :nth-of-type(2) {
-  transform: rotate(480deg) translate(9rem) rotate(-480deg);
-  animation: circlet-rotate-child-2 30s linear infinite both;
-}
-
-@keyframes circlet-rotate-child-2 {
-  to {
-    transform: rotate(480deg) translate(9rem) rotate(-840deg);
-  }
-}
-.circle-sml > :nth-of-type(3) {
-  transform: rotate(540deg) translate(9rem) rotate(-540deg);
-  animation: circlet-rotate-child-3 30s linear infinite both;
-}
-
-@keyframes circlet-rotate-child-3 {
-  to {
-    transform: rotate(540deg) translate(9rem) rotate(-900deg);
-  }
-}
-.circle-sml > :nth-of-type(4) {
-  transform: rotate(600deg) translate(9rem) rotate(-600deg);
-  animation: circlet-rotate-child-4 30s linear infinite both;
-}
-
-@keyframes circlet-rotate-child-4 {
-  to {
-    transform: rotate(600deg) translate(9rem) rotate(-960deg);
-  }
-}
-.circle-sml > :nth-of-type(5) {
-  transform: rotate(660deg) translate(9rem) rotate(-660deg);
-  animation: circlet-rotate-child-5 30s linear infinite both;
-}
-
-@keyframes circlet-rotate-child-5 {
-  to {
-    transform: rotate(660deg) translate(9rem) rotate(-1020deg);
-  }
-}
-.circle-sml > :nth-of-type(6) {
-  transform: rotate(720deg) translate(9rem) rotate(-720deg);
-  animation: circlet-rotate-child-6 30s linear infinite both;
-}
-
-@keyframes circlet-rotate-child-6 {
-  to {
-    transform: rotate(720deg) translate(9rem) rotate(-1080deg);
-  }
-}
-
-.circle-sml {
-  border: 0.25em dotted #bbdefb;
-}
-
-/*  */
-/*-----------------------------------------------------------------------------*
- *  COMPONENT: CIRCLET
- *-----------------------------------------------------------------------------*
- *
- *  Circle container with children positioned along its perimeter.
- *
- */
-.circle-md {
-  position: relative;
-  width: 23rem;
-  height: 23rem;
-  margin: 0;
-  padding: 0;
-  border-radius: 50%;
-  transform: rotate(270deg);
-}
-.circle-md > * {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 3em;
-  height: 3em;
-  margin: -1.5em;
-}
-.circle-md > :nth-of-type(1) {
-  transform: rotate(0deg) translate(11.5rem) rotate(-270deg);
-}
-.circle-md > :nth-of-type(2) {
-  transform: rotate(60deg) translate(11.5rem) rotate(-330deg);
-}
-.circle-md > :nth-of-type(3) {
-  transform: rotate(120deg) translate(11.5rem) rotate(-390deg);
-}
-.circle-md > :nth-of-type(4) {
-  transform: rotate(180deg) translate(11.5rem) rotate(-450deg);
-}
-.circle-md > :nth-of-type(5) {
-  transform: rotate(240deg) translate(11.5rem) rotate(-510deg);
-}
-.circle-md > :nth-of-type(6) {
-  transform: rotate(300deg) translate(11.5rem) rotate(-570deg);
-}
-
-.circle-md {
-  transform: rotate(0deg);
-  animation: circlet-rotate 30s linear infinite both;
-}
-
-@keyframes circlet-rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
-.circle-md > :nth-of-type(1) {
-  transform: rotate(420deg) translate(11.5rem) rotate(-420deg);
-  animation: circlet-rotate-child-1 30s linear infinite both;
-}
-
-@keyframes circlet-rotate-child-1 {
-  to {
-    transform: rotate(420deg) translate(11.5rem) rotate(-780deg);
-  }
-}
-.circle-md > :nth-of-type(2) {
-  transform: rotate(480deg) translate(11.5rem) rotate(-480deg);
-  animation: circlet-rotate-child-2 30s linear infinite both;
-}
-
-@keyframes circlet-rotate-child-2 {
-  to {
-    transform: rotate(480deg) translate(11.5rem) rotate(-840deg);
-  }
-}
-.circle-md > :nth-of-type(3) {
-  transform: rotate(540deg) translate(11.5rem) rotate(-540deg);
-  animation: circlet-rotate-child-3 30s linear infinite both;
-}
-
-@keyframes circlet-rotate-child-3 {
-  to {
-    transform: rotate(540deg) translate(11.5rem) rotate(-900deg);
-  }
-}
-.circle-md > :nth-of-type(4) {
-  transform: rotate(600deg) translate(11.5rem) rotate(-600deg);
-  animation: circlet-rotate-child-4 30s linear infinite both;
-}
-
-@keyframes circlet-rotate-child-4 {
-  to {
-    transform: rotate(600deg) translate(11.5rem) rotate(-960deg);
-  }
-}
-.circle-md > :nth-of-type(5) {
-  transform: rotate(660deg) translate(11.5rem) rotate(-660deg);
-  animation: circlet-rotate-child-5 30s linear infinite both;
-}
-
-@keyframes circlet-rotate-child-5 {
-  to {
-    transform: rotate(660deg) translate(11.5rem) rotate(-1020deg);
-  }
-}
-.circle-md > :nth-of-type(6) {
-  transform: rotate(720deg) translate(11.5rem) rotate(-720deg);
-  animation: circlet-rotate-child-6 30s linear infinite both;
-}
-
-@keyframes circlet-rotate-child-6 {
-  to {
-    transform: rotate(720deg) translate(11.5rem) rotate(-1080deg);
-  }
-}
-
-.circle-md {
-  border: 0.25em dotted #bbdefb;
-}
-
-/*  */
-/*-----------------------------------------------------------------------------*
- *  COMPONENT: CIRCLET
- *-----------------------------------------------------------------------------*
- *
- *  Circle container with children positioned along its perimeter.
- *
- */
-.circle-lg {
-  position: relative;
-  width: 27rem;
-  height: 27rem;
-  margin: 0;
-  padding: 0;
-  border-radius: 50%;
-  transform: rotate(270deg);
-}
-.circle-lg > * {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 3em;
-  height: 3em;
-  margin: -1.5em;
-}
-.circle-lg > :nth-of-type(1) {
-  transform: rotate(0deg) translate(13.5rem) rotate(-270deg);
-}
-.circle-lg > :nth-of-type(2) {
-  transform: rotate(60deg) translate(13.5rem) rotate(-330deg);
-}
-.circle-lg > :nth-of-type(3) {
-  transform: rotate(120deg) translate(13.5rem) rotate(-390deg);
-}
-.circle-lg > :nth-of-type(4) {
-  transform: rotate(180deg) translate(13.5rem) rotate(-450deg);
-}
-.circle-lg > :nth-of-type(5) {
-  transform: rotate(240deg) translate(13.5rem) rotate(-510deg);
-}
-.circle-lg > :nth-of-type(6) {
-  transform: rotate(300deg) translate(13.5rem) rotate(-570deg);
-}
-
-.circle-lg {
-  transform: rotate(0deg);
-  animation: circlet-rotate 30s linear infinite both;
-}
-
-@keyframes circlet-rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
-.circle-lg > :nth-of-type(1) {
-  transform: rotate(420deg) translate(13.5rem) rotate(-420deg);
-  animation: circlet-rotate-child-1 30s linear infinite both;
-}
-
-@keyframes circlet-rotate-child-1 {
-  to {
-    transform: rotate(420deg) translate(13.5rem) rotate(-780deg);
-  }
-}
-.circle-lg > :nth-of-type(2) {
-  transform: rotate(480deg) translate(13.5rem) rotate(-480deg);
-  animation: circlet-rotate-child-2 30s linear infinite both;
-}
-
-@keyframes circlet-rotate-child-2 {
-  to {
-    transform: rotate(480deg) translate(13.5rem) rotate(-840deg);
-  }
-}
-.circle-lg > :nth-of-type(3) {
-  transform: rotate(540deg) translate(13.5rem) rotate(-540deg);
-  animation: circlet-rotate-child-3 30s linear infinite both;
-}
-
-@keyframes circlet-rotate-child-3 {
-  to {
-    transform: rotate(540deg) translate(13.5rem) rotate(-900deg);
-  }
-}
-.circle-lg > :nth-of-type(4) {
-  transform: rotate(600deg) translate(13.5rem) rotate(-600deg);
-  animation: circlet-rotate-child-4 30s linear infinite both;
-}
-
-@keyframes circlet-rotate-child-4 {
-  to {
-    transform: rotate(600deg) translate(13.5rem) rotate(-960deg);
-  }
-}
-.circle-lg > :nth-of-type(5) {
-  transform: rotate(660deg) translate(13.5rem) rotate(-660deg);
-  animation: circlet-rotate-child-5 30s linear infinite both;
-}
-
-@keyframes circlet-rotate-child-5 {
-  to {
-    transform: rotate(660deg) translate(13.5rem) rotate(-1020deg);
-  }
-}
-.circle-lg > :nth-of-type(6) {
-  transform: rotate(720deg) translate(13.5rem) rotate(-720deg);
-  animation: circlet-rotate-child-6 30s linear infinite both;
-}
-
-@keyframes circlet-rotate-child-6 {
-  to {
-    transform: rotate(720deg) translate(13.5rem) rotate(-1080deg);
-  }
-}
-
-.circle-lg {
-  border: 0.25em dotted #bbdefb;
-}

@@ -5,11 +5,6 @@ const Spiner = () => {
   return (
     <div className="spinner_main">
       <div className="logo_main">
-        {/* <Image
-          src={``}
-          alt="spinner"
-          className=""
-        /> */}
         <Image
           src={`/assets/logo.svg`}
           width={400}

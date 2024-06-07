@@ -19,7 +19,7 @@ const EnquirySection = () => {
           />
         </div>
         <div
-          className="rounded-[32px] flex gap-4 justify-between px-8"
+          className="rounded-md flex gap-4 justify-between px-8"
           style={{
             backgroundImage: `linear-gradient(to bottom left, rgb(235, 124, 158), rgb(235 124 158 / 43%) 100%)`,
           }}
@@ -38,7 +38,7 @@ const EnquirySection = () => {
           <div className="flex flex-col gap-5 justify-center">
             <div className="pt-[32px] flex flex-col gap-5">
               <div className="flex justify-between gap-4 flex-col lg:flex-row items-center">
-                <h2 className="font-bold text-[36px] text-[#2C2B4B] leading-[46px]">
+                <h2 className="font-bold text-[36px] text-[#2C2B4B] leading-[38px]">
                   Choosing the right degree starts here
                 </h2>
               </div>
@@ -51,7 +51,7 @@ const EnquirySection = () => {
                     icon={<FaArrowRight />}
                     styleA={"flex items-center gap-1"}
                     style={
-                      "border border-2 border-[#606060] rounded-full px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
+                      "border border-2 border-[#606060] rounded-md px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
                     }
                   />
                 </Link>
@@ -60,7 +60,7 @@ const EnquirySection = () => {
           </div>
         </div>
         <div
-          className="rounded-[32px] flex gap-4 justify-between px-8 "
+          className="rounded-md flex gap-4 justify-between px-8 "
           style={{
             backgroundImage: `linear-gradient(to bottom right, rgb(244, 213, 107), rgb(244 213 107 / 43%) 100%)`,
           }}
@@ -68,7 +68,7 @@ const EnquirySection = () => {
           <div className="flex flex-col gap-5 justify-center">
             <div className="pt-[32px] flex flex-col gap-5">
               <div className="flex justify-between gap-4 flex-col lg:flex-row items-center">
-                <h2 className="font-bold text-[36px] text-[#2C2B4B] leading-[46px]">
+                <h2 className="font-bold text-[36px] text-[#2C2B4B] leading-[38px]">
                   Have a question? We're here to help.
                 </h2>
               </div>
@@ -84,7 +84,7 @@ const EnquirySection = () => {
                     icon={<FaArrowRight />}
                     styleA={"flex items-center gap-1"}
                     style={
-                      "border border-2 border-[#606060] rounded-full px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
+                      "border border-2 border-[#606060] rounded-md px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
                     }
                   />
                 </Link>

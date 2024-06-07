@@ -15,7 +15,7 @@ const ApplyConsiderationForm = () => {
               <span className="absolute right-5 top-3">
                 <FaIdCard />
               </span>
-              <input className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-8 pr-3 py-3 rounded-full" />
+              <input className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-8 pr-3 py-3 rounded-md" />
             </div>
           </div>
           <div className="flex flex-col gap-2">
@@ -26,7 +26,7 @@ const ApplyConsiderationForm = () => {
               <span className="absolute right-5 top-3">
                 <FaIdCard />
               </span>
-              <input className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-8 pr-3 py-3 rounded-full" />
+              <input className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-8 pr-3 py-3 rounded-md" />
             </div>
           </div>
           <div className="flex flex-col gap-2">
@@ -37,7 +37,7 @@ const ApplyConsiderationForm = () => {
               <span className="absolute right-5 top-3">
                 <FaIdCard />
               </span>
-              <input className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-8 pr-3 py-3 rounded-full" />
+              <input className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-8 pr-3 py-3 rounded-md" />
             </div>
           </div>
           <div className="flex flex-col gap-2">
@@ -48,7 +48,7 @@ const ApplyConsiderationForm = () => {
               <span className="absolute right-5 top-3">
                 <FaIdCard />
               </span>
-              <input className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-8 pr-3 py-3 rounded-full" />
+              <input className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-8 pr-3 py-3 rounded-md" />
             </div>
           </div>
           <div className="flex flex-col gap-2">
@@ -59,7 +59,7 @@ const ApplyConsiderationForm = () => {
               <span className="absolute right-5 top-3">
                 <FaIdCard />
               </span>
-              <input className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-8 pr-3 py-3 rounded-full" />
+              <input className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-8 pr-3 py-3 rounded-md" />
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@ const ApplyConsiderationForm = () => {
             icon={<FaArrowRight />}
             styleA={"flex items-center gap-1"}
             style={
-              "border border-black rounded-full px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
+              "border border-black rounded-md px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
             }
           />
         </div>

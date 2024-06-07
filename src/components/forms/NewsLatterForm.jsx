@@ -15,7 +15,7 @@ const NewsLatterForm = () => {
               <span className="absolute right-5 top-3">
                 {/* <FaIdCard /> */}
               </span>
-              <input className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-8 pr-3 py-3 rounded-full" />
+              <input className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-8 pr-3 py-3 rounded-md" />
             </div>
           </div>
           <div className="flex flex-col gap-2">
@@ -26,7 +26,7 @@ const NewsLatterForm = () => {
               <span className="absolute right-5 top-3">
                 {/* <FaIdCard /> */}
               </span>
-              <input className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-8 pr-3 py-3 rounded-full" />
+              <input className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-8 pr-3 py-3 rounded-md" />
             </div>
           </div>
           <div className="flex flex-col gap-2">
@@ -37,7 +37,7 @@ const NewsLatterForm = () => {
               <span className="absolute right-5 top-3">
                 {/* <FaIdCard /> */}
               </span>
-              <input className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-8 pr-3 py-3 rounded-full" />
+              <input className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pl-8 pr-3 py-3 rounded-md" />
             </div>
           </div>
           <div className="flex flex-col gap-2">
@@ -45,7 +45,7 @@ const NewsLatterForm = () => {
               I am a <span className="text-[#FF0000]">*</span>
             </label>
             <div>
-              <select className="w-full h-auto font-inter text-[12px] text-[#021327] bg-[#f5f5f5] border border-[#ABABAB] outline-0 px-8 py-3 rounded-full">
+              <select className="w-full h-auto font-inter text-[12px] text-[#021327] bg-[#f5f5f5] border border-[#ABABAB] outline-0 px-8 py-3 rounded-md">
                 <option>-- Select here--</option>
                 <option>High school student</option>
                 <option>Non high School student</option>
@@ -82,7 +82,7 @@ const NewsLatterForm = () => {
             icon={<FaArrowRight />}
             styleA={"flex items-center gap-1"}
             style={
-              "border border-black rounded-full px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
+              "border border-black rounded-md px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
             }
           />
         </div>

@@ -22,7 +22,7 @@ const ApplyNow = () => {
           </h2>
           <form action="#" method="POST">
             <div className="mb-4">
-              <label for="username" className="block text-gray-600">
+              <label htmlFor="username" className="block text-gray-600">
                 Username
               </label>
               <input
@@ -30,11 +30,11 @@ const ApplyNow = () => {
                 id="username"
                 name="username"
                 className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
-                autocomplete="off"
+                autoComplete="off"
               />
             </div>
             <div className="mb-4">
-              <label for="password" className="block text-gray-600">
+              <label htmlFor="password" className="block text-gray-600">
                 Password
               </label>
               <input
@@ -42,7 +42,7 @@ const ApplyNow = () => {
                 id="password"
                 name="password"
                 className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
-                autocomplete="off"
+                autoComplete="off"
               />
             </div>
             <div className="mb-4 flex items-center">
@@ -52,7 +52,7 @@ const ApplyNow = () => {
                 name="remember"
                 className="text-blue-500"
               />
-              <label for="remember" className="text-gray-600 ml-2">
+              <label htmlFor="remember" className="text-gray-600 ml-2">
                 Remember Me
               </label>
             </div>
@@ -68,7 +68,7 @@ const ApplyNow = () => {
                   icon={<FaArrowRight />}
                   styleA={"flex items-center justify-center gap-1"}
                   style={
-                    "border w-full font-semibold text-[14px] hover:text-[#2C2B4B] border-2 border-[#606060] rounded-full px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
+                    "border w-full font-semibold text-[14px] hover:text-[#2C2B4B] border-2 border-[#606060] rounded-md px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
                   }
                 />
               </Link>
