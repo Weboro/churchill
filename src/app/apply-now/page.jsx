@@ -1,4 +1,5 @@
 import { Button } from "@/components";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
@@ -8,7 +9,9 @@ const ApplyNow = () => {
     <div>
       <div className="bg-gray-100 flex justify-center items-center h-screen">
         <div className="w-1/2 h-screen hidden lg:block">
-          <img
+          <Image
+            width={500}
+            height={500}
             src="/assets/apply-now-login.jpeg"
             alt="Placeholder Image"
             className="object-cover w-full h-full"

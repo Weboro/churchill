@@ -24,7 +24,7 @@ const CourseDetailsCard = ({
 
         <div className="flex gap-4">
           {courseDetails?.slice(0, 3)?.map((item, index) => (
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center" key={index}>
               <div className="w-14 h-14 grid place-items-center bg-white rounded-full text-4xl">
                 <p className="text-[#E59623]">{item?.icon}</p>
               </div>

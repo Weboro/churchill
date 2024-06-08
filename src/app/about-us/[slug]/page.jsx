@@ -1,19 +1,9 @@
 "use client";
+import { PoliciesSection, StyledHeroCard } from "@/components";
+import React, { useState } from "react";
 
-import UnderConstruction from "@/app/under-construction/page";
-import {
-  AboutInfoSection,
-  AccreditationSection,
-  GovernancePageSection,
-  PoliciesSection,
-  StyledHeroCard,
-  Search,
-} from "@/components";
-import React, { useEffect, useState } from "react";
-
-const page = ({ params }) => {
+const Page = ({ params }) => {
   const { slug } = params;
-  const [isLoading, setIsLoading] = useState(false);
 
   const [searchText, setSearchText] = useState("");
   const query = searchText.trim().toLowerCase();
@@ -36,6 +26,7 @@ const page = ({ params }) => {
     </>
   );
 };
+
 //       {slug === "governance-and-leadership" ? (
 //         <GovernancePageSection slug={slug} />
 //       ) : slug === "policies-and-procedures" ? (
@@ -50,4 +41,4 @@ const page = ({ params }) => {
 //       )}
 //       {slug === "policies-and-procedures" && <PoliciesSection />}
 
-export default page;
+export default Page;

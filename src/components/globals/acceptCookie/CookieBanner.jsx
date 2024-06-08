@@ -11,18 +11,13 @@ const CookieBanner = () => {
     if (!cookies.hasAllowedCookie) {
       setTimeout(() => {
         setIsVisible("translate-y-0");
-        // console.log("cookie Panel Shown");
       }, 800);
     }
-    // else {
-    //   console.log("Cookie already set");
-    // }
 
-    // auto hide after minute
     setTimeout(() => {
       setIsVisible("translate-y-[200%]");
     }, 60 * 1000);
-  }, []);
+  }, [cookies.hasAllowedCookie]);
 
   function handleClick() {
     setIsVisible("translate-y-[200%]");
