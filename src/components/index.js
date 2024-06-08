@@ -58,8 +58,9 @@ import Search from "./search/index";
 import IndivisualBlogPage from "./sections/blogSections/IndivisualBlogPage";
 import IndivisualEventsPage from "./sections/EventsSection/IndivisualEventsPage";
 import CookieBanner from "./globals/acceptCookie/CookieBanner";
-import Loading from "./loading/Loading";
+import Loading from "./globals/loading/Loading";
 import BlogItemCard from "./cards/BlogItemCard";
+import DataNotFound from "./globals/DataNotFound/DataNotFound";
 
 export {
   Button,
@@ -124,4 +125,5 @@ export {
   CookieBanner,
   Loading,
   BlogItemCard,
+  DataNotFound,
 };

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 // import { navItems } from "@/constDatas/navItems";
 import { eventsData } from "@/constDatas/eventsData";
-import { EventsCard } from "@/components";
+import { DataNotFound, EventsCard } from "@/components";
 
 import {
   CheckBoxList,
@@ -16,6 +16,10 @@ const EventsFilterSection = () => {
 
   const [searchQuery, setSearchQuery] = useState("");
   const query = searchQuery.trim().toLowerCase();
+
+  const filteredArray = eventsData.filter((item) =>
+    item.title.toLowerCase().includes(query)
+  );
 
   const tags = [
     { title: "Business" },
@@ -43,27 +47,28 @@ const EventsFilterSection = () => {
         </FilterComponent>
 
         <div className="flex-1">
-          <div className="flex flex-col gap-8">
-            {eventsData?.slice(0, 4)?.map((item, index) => {
-              if (!query || item?.title.trim().toLowerCase().includes(query))
-                return (
-                  <EventsCard
-                    key={index}
-                    image={item?.image}
-                    title={item?.title}
-                    subTitle={item?.subTitle}
-                    day={item?.day}
-                    month={item?.month}
-                    time={item?.time}
-                    date={item?.date}
-                    link={item?.link}
-                    slug={item?.slug}
-                    catagories={item?.catagories}
-                    duration={item?.duration}
-                  />
-                );
-            })}
-          </div>
+          {filteredArray.length > 0 ? (
+            <div className="flex flex-col gap-8">
+              {filteredArray?.map((item, index) => (
+                <EventsCard
+                  key={index}
+                  image={item?.image}
+                  title={item?.title}
+                  subTitle={item?.subTitle}
+                  day={item?.day}
+                  month={item?.month}
+                  time={item?.time}
+                  date={item?.date}
+                  link={item?.link}
+                  slug={item?.slug}
+                  catagories={item?.catagories}
+                  duration={item?.duration}
+                />
+              ))}
+            </div>
+          ) : (
+            <DataNotFound />
+          )}
         </div>
       </div>
 

@@ -28,9 +28,6 @@ const CoursesSection = () => {
               />
             </div> */}
           </div>
-          {/* <div> */}
-          {/* <Search /> */}
-          {/* </div> */}
         </div>
         <div>
           <CoursesSlider />

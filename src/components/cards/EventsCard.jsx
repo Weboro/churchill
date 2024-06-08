@@ -44,7 +44,10 @@ const EventsCard = ({
           {title}
         </h2>
 
-        <p className="line-clamp-5 md:line-clamp-6">{subTitle}</p>
+        <div
+          dangerouslySetInnerHTML={{ __html: subTitle }}
+          className="line-clamp-5 md:line-clamp-6"
+        />
 
         <Link href={`/events/${slug}`} className="w-fit">
           <Button

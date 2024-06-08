@@ -1,6 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import { Search, BlogItemCard, StyledHeroCard } from "@/components";
+import {
+  Search,
+  BlogItemCard,
+  StyledHeroCard,
+  DataNotFound,
+} from "@/components";
 import { BlogData } from "@/constDatas/BlogData";
 
 const BlogsPage = () => {
@@ -17,6 +22,10 @@ const BlogsPage = () => {
 
   const [searchQuery, setSearchQuery] = useState("");
   const query = searchQuery.trim().toLowerCase();
+
+  const filteredArray = BlogData.filter((item) =>
+    item.title.toLowerCase().includes(query)
+  );
 
   return (
     <>
@@ -55,26 +64,24 @@ const BlogsPage = () => {
                   </div>
                 </div>
               </section>
-              <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-                {BlogData.map((data, index) => {
-                  if (
-                    !query ||
-                    data?.title.trim().toLowerCase().includes(query)
-                  )
-                    return (
-                      <BlogItemCard
-                        key={index}
-                        slug={data?.slug}
-                        title={data?.title}
-                        image={data?.image}
-                        date={data?.date}
-                        tags={data?.tags}
-                        subTitle={data?.subTitle}
-                        index={data?.index}
-                      />
-                    );
-                })}
-              </section>
+              {filteredArray.length > 0 ? (
+                <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+                  {filteredArray.map((data, index) => (
+                    <BlogItemCard
+                      key={index}
+                      slug={data?.slug}
+                      title={data?.title}
+                      image={data?.image}
+                      date={data?.date}
+                      tags={data?.tags}
+                      subTitle={data?.subTitle}
+                      index={data?.index}
+                    />
+                  ))}
+                </section>
+              ) : (
+                <DataNotFound />
+              )}
             </div>
           </div>
         </>

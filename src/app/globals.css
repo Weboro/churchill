@@ -344,14 +344,10 @@ tr:nth-child(even) {
 
 /* rich text */
 .rich-text-container {
-  /* max-width: 110ch; */
-  /* background-color: #88888811; */
   margin-inline: auto;
-  /* padding: 12px; */
   font-size: 16px;
   line-height: 24px;
   border-radius: 12px;
-  /* box-shadow: 0 0 12px 3px #00000010; */
   font-family: sans-serif;
 }
 

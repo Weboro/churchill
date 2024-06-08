@@ -4,55 +4,44 @@ import { navItems } from "@/constDatas/navItems";
 import CourseDetailsCard from "@/components/cards/CourseDetailsCard";
 import FilterComponent from "@/components/filter/FilterComponent";
 
-import { CheckBoxList, SelectComponent } from "@/components";
+import { CheckBoxList, DataNotFound, SelectComponent } from "@/components";
 
 const CoursesFilterSection = () => {
   const data = navItems[2]?.Catagories;
 
-  const DegreeType = [{ title: "undergraduate" }, { title: "postgraduate" }];
-  const courseData = [{ title: "course 1" }, { title: "a very long course" }];
-
   const [searchQuery, setSearchQuery] = useState("");
-  const query = searchQuery.trim().toLowerCase();
+
+  const filteredArray = data.filter((item) =>
+    item.menuTitle.toLowerCase().includes(searchQuery.trim().toLowerCase())
+  );
 
   return (
     <div className="container mx-auto px-5 flex flex-col gap-[32px] lg:gap-[64px]">
-      {/* <h3 className="text-center font-bold text-3xl mx-auto">
-        Your career pathway starts here
-      </h3> */}
-
-      <div className="flex flex-col lg:flex-row gap-8 relative">
+      <div className="flex flex-col lg:flex-row gap-6 relative">
         <FilterComponent
           searchQuery={searchQuery}
           onSearchQuery={setSearchQuery}
-        >
-          {/* <SelectComponent
-            title="Courses"
-            data={courseData ? courseData : []}
-          />
-          <CheckBoxList
-            title="Degree Type"
-            data={DegreeType ? DegreeType : []}
-          /> */}
-        </FilterComponent>
+        ></FilterComponent>
 
         <div className="flex-1">
-          <div className="flex flex-col gap-8">
-            {data.map((data, index) => {
-              const shouldShow =
-                !query || data.menuTitle.trim().toLowerCase().includes(query);
-
-              if (shouldShow)
-                return (
-                  <CourseDetailsCard
-                    key={index}
-                    menuTitle={data?.menuTitle}
-                    subTitle={data?.subTitle}
-                    slug={data?.slug}
-                  />
-                );
-            })}
-          </div>
+          {filteredArray.length > 0 ? (
+            <div className="flex flex-col gap-8">
+              {filteredArray.map((data, index) => (
+                <CourseDetailsCard
+                  key={index}
+                  faculty={data?.faculty}
+                  menuTitle={data?.menuTitle}
+                  subTitle={data?.subTitle}
+                  slug={data?.slug}
+                  courseDetails={data?.courseDetails}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="w-[50%] mx-auto grid place-items-center">
+              <DataNotFound />
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ const CourseOverviewSection = ({ overviewData }) => {
           {overviewData?.map((item, index) => (
             <div
               key={index}
-              className="flex bg-normal-grey px-2 lg:px-4 py-3 rounded-[22px] gap-4 items-center bg-[#E9E9E9]"
+              className="flex px-2 lg:px-4 py-3 rounded-[22px] gap-4 items-center bg-[#E9E9E9]"
             >
               <div className="w-14 h-14 grid place-items-center bg-white rounded-full text-4xl">
                 <p className="text-[#E59623]">{item?.icon}</p>

@@ -303,56 +303,12 @@ export const navItems = [
       { title: "Fees and Scholarship" },
     ],
     Catagories: [
-      // {
-      //   icon: <RiExchangeDollarFill />,
-      //   menuTitle: "Bachelor of Business",
-      //   subTitle: "Access your timetable, results, trimester invoices.",
-      //   slug: "bachelor-of-business",
-      //   link: "",
-      // faculty : "Bachelors of Business",
-      //   courseDetails: [
-      //     {
-      //       title: "duration",
-      //       description: "3 Years",
-      //       icon: <RiExchangeDollarFill />,
-      //     },
-      //     {
-      //       title: "Delivery Mode",
-      //       description: "Face To Face",
-      //       icon: <RiExchangeDollarFill />,
-      //     },
-      //     {
-      //       title: "Credit points to complete",
-      //       description: "240",
-      //       icon: <RiExchangeDollarFill />,
-      //     },
-      //   ],
-      //   tabbedPaneData: [
-      //     {
-      //       description: "<p> [ TBA ]  - - - - Overview </p>",
-      //     },
-      //     {
-      //       description: "<p> [ TBA ]  - - - - Entry Requirements .</p>",
-      //     },
-      //     {
-      //       description: "<p> [ TBA ]  - - - - Course Structure </p>",
-      //     },
-      //     {
-      //       description: "<p> [ TBA ]  - - - - How To Apply</p>",
-      //     },
-      //     {
-      //       description: "<p> [ TBA ]  - - - - Fees and Scholarship</p>",
-      //     },
-      //   ],
-
-      // },
       {
         icon: <RiExchangeDollarFill />,
         menuTitle: "Accounting Major",
         headerIcon: "fi fi-rr-calculator-math-tax",
         subTitle:
           "Master the language of business, ensuring financial integrity and making informed decisions that drive organizational success.          ",
-        subTitleA: "Bachelor of Business",
         slug: "accounting-major",
         link: "",
         icon: "/assets/course-a.png",
@@ -420,7 +376,6 @@ export const navItems = [
         headerIcon: "fi fi-rs-guide-alt",
         subTitle:
           "Harness the power of technology, transforming data into strategic insights that shape the digital future and innovate industries.",
-        subTitleA: "Bachelor of Business",
         slug: "major-in-information-systems",
         link: "",
         icon: "/assets/course-c.png",
@@ -484,7 +439,6 @@ export const navItems = [
         headerIcon: "fi fi-rr-customer-care",
         subTitle:
           "Create unforgettable experiences and lead with excellence, crafting the future of the vibrant and dynamic hospitality industry.",
-        subTitleA: "Bachelor of Business",
         slug: "major-in-hospitality",
         link: "",
         icon: "/assets/course-d.png",
@@ -547,7 +501,6 @@ export const navItems = [
         headerIcon: "fi fi-rr-user-gear",
         subTitle:
           "Develop visionary leadership skills, inspiring teams and driving sustainable organizational success in a constantly evolving business landscape.",
-        subTitleA: "Bachelor of Business",
         slug: "major-in-management",
         link: "",
         icon: "/assets/course-b.png",
@@ -606,51 +559,6 @@ export const navItems = [
       },
     ],
   },
-  // {
-  // title: "Apply",
-  // link: "",
-  // page: {},
-  // slug: "apply",
-  // headerDesc: "a short description will be added here.",
-  // Catagories: [
-  //   {
-  //     icon: <RiExchangeDollarFill />,
-  //     menuTitle: "Apply to study at CIHE",
-  //     headerIcon: "",
-  //     subTitle: "Access your timetable, results, trimester invoices.",
-  //     slug: "apply-to-study-at-CIHE",
-  //     link: "https://zfrmz.com.au/RXpN4XUu8RZhAhUoWzI3",
-  //     image: "/assets/hero-image.jpeg",
-  //   },
-  //   {
-  //     icon: <RiRefund2Fill />,
-  //     menuTitle: "Entry Requirements Domestic Students",
-  //     headerIcon: "",
-  //     subTitle: "Access your timetable, results, trimester invoices.",
-  //     slug: "entry-requirements-domestic-students",
-  //     link: "https://zfrmz.com.au/HpBjIJRs3cplcqIb4Ny1",
-  //     image: "/assets/hero-image.jpeg",
-  //   },
-  //   {
-  //     icon: <PiCourtBasketballBold />,
-  //     menuTitle: "Entry Requirements International Students",
-  //     headerIcon: "",
-  //     subTitle: "Access your timetable, results, trimester invoices.",
-  //     slug: "entry-requirements-international-students",
-  //     link: "https://zfrmz.com.au/CaS3QBzTw3l18bsh3jPG",
-  //     image: "/assets/hero-image.jpeg",
-  //   },
-  //   {
-  //     icon: <RiExchangeDollarFill />,
-  //     menuTitle: "Mature-age Admission Entry Arrangements",
-  //     headerIcon: "",
-  //     subTitle: "Access your timetable, results, trimester invoices.",
-  //     slug: "mature-age-admission-entry-arrangements",
-  //     link: "https://zfrmz.com.au/X9AZvkNqzDFBpBES0ivh",
-  //     image: "/assets/hero-image.jpeg",
-  //   },
-  // ],
-  // },
   {
     title: "Login",
     link: "",

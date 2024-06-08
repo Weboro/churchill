@@ -1,4 +1,3 @@
-// "use client";
 import StyledHeroCard from "@/components/cards/StyledHeroSection";
 import { BlogData } from "@/constDatas/BlogData";
 import Image from "next/image";

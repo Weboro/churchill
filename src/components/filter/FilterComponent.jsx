@@ -11,7 +11,7 @@ const FilterComponent = ({
   onSearchQuery,
 }) => {
   return (
-    <div className="p-4 rounded-xl bg-[#F3E4E4] lg:w-[21rem] h-fit flex flex-col gap-5">
+    <div className="p-4 rounded-xl bg-[#FAF4F4] lg:w-[21rem] h-fit flex flex-col gap-5">
       <h1 className="font-extrabold text-xl lg:text-2xl w-fit flex gap-3 items-center">
         <span className="bg-[#E59623] rounded-full w-12 h-12 text-white grid place-items-center">
           <LuSettings2 />
@@ -20,19 +20,6 @@ const FilterComponent = ({
       </h1>
 
       <Search text={searchQuery} onSearchText={onSearchQuery} />
-
-      {/* <div className="w-full bg-[#FAF4F4] rounded-md overflow-hidden px-4 flex items-center justify-between cursor-pointer select-none hover:outline outline-neutral-900/20">
-        <input
-          type="text"
-          placeholder="Search"
-          className="w-full flex-1 px-3 py-4 transparent-background outline-none"
-          value={searchQuery}
-          onChange={(e) => onSearchQuery(e.target.value)}
-        />
-        <div className="w-10 h-10 grid place-items-center text-lg ">
-          <FaSearch />
-        </div>
-      </div> */}
 
       {children}
 
