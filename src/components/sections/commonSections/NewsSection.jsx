@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const NewsSection = () => {
   return (
-    <div className="container relative mx-auto mb-[48px]">
+    <div className="container relative mx-auto mb-[48px] rounded-md group hover-shadow">
       <div className="flex flex-col md:flex-row bg-[#F3E4E4] relative overflow-hidden rounded-md">
         <div className="flex z-[10] flex-1 flex-col gap-6 pt-8 pl-8 md:py-20 md:pl-20">
           <h3 className="relative leading-10 font-bold text-[36px]  text-[#2C2B4B]">
@@ -32,7 +32,7 @@ const NewsSection = () => {
           <Image
             width={600}
             height={600}
-            className="absolute z-[0] translate-y-1/2 translate-x-1/2 bottom-16 -left-1/2 md:left-auto md:right-48"
+            className="absolute z-[0] translate-y-1/2 translate-x-1/2 bottom-16 -left-1/2 md:left-auto md:right-48 group-hover:scale-105 transition-all"
             src="/assets/churchil-circle.webp"
             alt="alt image for churchil circle"
           />

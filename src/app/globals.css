@@ -22,6 +22,55 @@ body {
   background: #fff;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
+  color: var(--matte-purple);
+}
+
+.hover-shadow:hover {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, #f2cb91a2 0px 0px 0px 1px;
+}
+
+.translate-gradient {
+  background-size: 200%;
+  background-position: 100% 100%;
+  transition: 0.2s ease;
+}
+.translate-gradient:hover {
+  cursor: pointer;
+  background-position: 0% 0%;
+}
+.btn-translate:hover .btn-translate-child {
+  --tw-translate-x: 0.5rem /* 8px */;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.container-blog {
+  width: 100%;
+  margin-inline: auto;
+}
+
+@media (min-width: 640px) {
+  .container-blog {
+    max-width: 490px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-blog {
+    max-width: 618px;
+  }
+}
+@media (min-width: 1024px) {
+  .container-blog {
+    max-width: 874px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-blog {
+    max-width: 1030px;
+  }
 }
 
 @keyframes expandBackground {

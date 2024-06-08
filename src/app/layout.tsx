@@ -96,6 +96,10 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-straight/css/uicons-regular-straight.css"
         ></link>
+        <link
+          rel="stylesheet"
+          href="https://cdn-uicons.flaticon.com/2.4.0/uicons-brands/css/uicons-brands.css"
+        ></link>
       </head>
       <body>
         <Header />

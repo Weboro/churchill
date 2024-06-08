@@ -1,8 +1,13 @@
-"use client";
 import Image from "next/image";
 import { eventsData } from "@/constDatas/eventsData";
-import { NewsSection, StyledHeroCard } from "@/components";
-import { useState, useEffect } from "react";
+import { NewsSection } from "@/components";
+import Link from "next/link";
+
+export const metadata = {
+  title: "Churchill",
+  description: "This is description",
+  openGraph: "/assets/logo.png",
+};
 
 const monthArray = [
   "Jan",
@@ -34,90 +39,157 @@ const IndivisualEventsPage = ({ slug }) => {
     day === 1 ? "st" : day === 2 ? "nd" : day === 3 ? "rd" : "th"
   }`;
 
+  const readTime = Math.ceil(data.description.length / 300);
+
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
   return (
     <>
-      <div className="container mx-auto px-5 flex flex-col gap-[32px] md:gap-[64px]">
-        <section className="flex flex-col gap-3 mt-[48px]">
-          <div className="flex items-center gap-3">
-            <p className="flex items-center gap-[3px]">
-              <i className="fi fi-rr-calendar-day flex text-xl" />
-              <span>{displayMonth}</span>
-              <span>{displayDay}</span>
-              <span>{year}</span>
-            </p>
-            <p>·</p>
-            <p className="flex items-center gap-[3px]">
-              <i class="fi fi-rr-circle-user flex text-xl" />
-              <span>{data.author}</span>
-            </p>
+      <section className="mx-auto lg:py-20 py-8 sm:py-16">
+        <div className="px-5 flex flex-col gap-[32px] md:gap-[64px]">
+          <article className="flex flex-col gap-6">
+            <div className="container-blog flex flex-col gap-5">
+              <nav className="font-semibold">
+                <Link
+                  className="hover:text-primary-orange transition-all"
+                  href="/"
+                >
+                  Home
+                </Link>{" "}
+                /{" "}
+                <Link
+                  className="hover:text-primary-orange transition-all"
+                  href="/events"
+                >
+                  Events
+                </Link>{" "}
+                / {data.title}{" "}
+              </nav>
+              <hr className="border-2 w-[60px]  border-primary-orange" />
+
+              <div className="flex flex-col md:flex-row md:items-center gap-3">
+                <p className="flex items-center gap-2">
+                  <i className="fi fi-rr-calendar-day flex text-xl" />
+                  <span>{displayMonth}</span>``
+                  <span>{displayDay}</span>
+                  <span>{year}</span>
+                  <p>·</p>
+                </p>
+
+                <p className="flex items-center gap-2">
+                  <i className="fi fi-rr-circle-user flex text-xl" />
+                  <span>{data.author}</span>
+                  <p>·</p>
+                </p>
+
+                <p className="flex items-center gap-2">
+                  <i className="fi fi-rr-clock-three flex"></i>
+                  <span>{readTime}</span>
+                  <span>min read</span>
+                </p>
+              </div>
+
+              <h2 className="text-4xl leading-[40px] lg:text-6xl lg:leading-[62px] font-bold">
+                {data.title}
+              </h2>
+
+              <h4 dangerouslySetInnerHTML={{ __html: data.subTitle }} />
+            </div>
+
+            <div className="container mx-auto">
+              <Image
+                width={2000}
+                height={1500}
+                src={data.image}
+                alt={`event image for ${data.title}`}
+                className="w-full aspect-[1.78/1] lg:w-[75%] mx-auto object-cover rounded-md"
+              />
+            </div>
+
+            <div className="container-blog">
+              <div
+                className="rich-text-container"
+                dangerouslySetInnerHTML={{ __html: data.description }}
+              />
+            </div>
+          </article>
+
+          <div className="container mx-auto px-5 flex flex-col gap-[32px]">
+            <hr className="border border-black/20" />
+            <div className="flex gap-4 md:items-center md:justify-between flex-col md:flex-row">
+              <div className="flex flex-row flex-wrap gap-2">
+                {data.catagories?.map((item, index) => (
+                  <p
+                    key={index}
+                    className="font-semibold bg-[#F2CF9C] text-[#2C2B4B] rounded-full text-[14px] px-3 py-1 h-fit"
+                  >
+                    {item?.title}
+                  </p>
+                ))}
+              </div>
+
+              <div className="flex gap-2">
+                <p>Share To:</p>
+                <div className="flex gap-2 text-2xl flex-wrap ">
+                  <a
+                    href={`mailto:?subject=Check this out&body=Here's the link: ${siteUrl}`}
+                    className="hover:text-primary-orange transition-all social-button email"
+                  >
+                    <i className="flex fi fi-rr-envelope"></i>
+                  </a>
+                  <a
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${siteUrl}`}
+                    target="_blank"
+                    className="hover:text-primary-orange transition-all social-button facebook"
+                  >
+                    <i className="flex fi fi-brands-facebook"></i>
+                  </a>
+                  <a
+                    href={`https://twitter.com/intent/tweet?url=${siteUrl}`}
+                    target="_blank"
+                    className="hover:text-primary-orange transition-all social-button twitter"
+                  >
+                    <i className="flex fi fi-brands-twitter-alt"></i>
+                  </a>
+                  <a
+                    href={`https://www.linkedin.com/shareArticle?mini=true&url=${siteUrl}`}
+                    target="_blank"
+                    className="hover:text-primary-orange transition-all social-button linkedin"
+                  >
+                    <i className="flex fi fi-brands-linkedin"></i>
+                  </a>
+                  <a
+                    href={`https://api.whatsapp.com/send?text=Check this out: ${siteUrl}`}
+                    target="_blank"
+                    className="hover:text-primary-orange transition-all social-button whatsapp"
+                  >
+                    <i className="flex fi fi-brands-whatsapp"></i>
+                  </a>
+                  <a
+                    href={`fb-messenger://share/?link=${siteUrl}`}
+                    target="_blank"
+                    className="hover:text-primary-orange transition-all social-button messenger"
+                  >
+                    <i className="flex fi fi-brands-facebook-messenger"></i>
+                  </a>
+                  <a
+                    href="#"
+                    onclick="copyLink()"
+                    className="hover:text-primary-orange transition-all social-button copy-link"
+                  >
+                    <i className="fi fi-rr-copy-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <h2 className="text-4xl leading-[38px] font-bold">{data.title}</h2>
-          <h4 dangerouslySetInnerHTML={{ __html: data.subTitle }} />
-
-          <Image
-            width={2000}
-            height={1500}
-            src={data.image}
-            alt={`event image for ${data.title}`}
-            className="w-full aspect-[3/1.2] object-cover rounded-md"
-          />
-          <div
-            className="rich-text-container"
-            dangerouslySetInnerHTML={{ __html: data.description }}
-          />
-        </section>
-
-        {/*  */}
-        <NewsSection />
-      </div>
+          {/*  */}
+          <NewsSection />
+        </div>
+      </section>
     </>
   );
 };
 
 export default IndivisualEventsPage;
-
-//  <>
-//       {isLoading ? (
-//         <>loading</>
-//       ) : (
-//         <>
-//           <StyledHeroCard
-//             title={data?.title}
-//             breadcrumbs={`Home > Events > ${data?.title}`}
-//           />
-//           <Image
-//             width={1240}
-//             height={700}
-//             src="/assets/upcoming-key.png"
-//             alt={data?.title}
-//             className="w-screen h-[24rem] object-cover"
-//           />
-//           <div className="container mx-auto px-5 flex flex-col gap-[32px] lg:gap-[64px]">
-//             <div className="bg-white -translate-y-16 p-4 rounded-tl-[16px] rounded-tr-[16px] flex flex-col gap-5">
-//               <div className="flex gap-3 items-start md:items-center">
-//                 <div className="flex aspect-square w-[3rem] md:w-[5rem] flex-col text-center text-white bg-[#E59623] rounded-md p-1 md:p-2 font-bold">
-//                   <p className="text-[14px]">{data?.day}</p>
-//                   <p className="text-[18px] leading-[28px]">{data?.date}</p>
-//                   <p className="text-[14px]">
-//                     {data?.month?.substring(0, 3)?.toUpperCase()}
-//                   </p>
-//                 </div>
-//                 <div className="flex flex-col gap-1">
-//                   <span className="text-sm md:text-base">{data?.time}</span>
-//                   <h2 className="text-xl md:text-3xl font-bold">
-//                     {data?.title}
-//                   </h2>
-//                 </div>
-//               </div>
-//               <section className="flex flex-col gap-4">
-//                 <div
-//                   className="rich-text-container"
-//                   dangerouslySetInnerHTML={{ __html: data?.description }}
-//                 />
-//               </section>
-//             </div>
-//           </div>
-//         </>
-//       )}
-//     </>

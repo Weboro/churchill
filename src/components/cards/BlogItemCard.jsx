@@ -5,16 +5,19 @@ import Button from "@/components/button";
 
 const BlogItemCard = ({ slug, title, image, date, tags, subTitle, index }) => {
   return (
-    <div key={index} className=" rounded-md overflow-hidden">
-      <Link href={`/blogs/${slug}`}>
-        <Image
-          width={400}
-          height={400}
-          alt={`Image for ${title}`}
-          src={image}
-          className="w-full aspect-[3/2]"
-        />
-      </Link>
+    <div key={index} className="rounded-md overflow-hidden group">
+      <div className="overflow-hidden rounded-md">
+        <Link href={`/blogs/${slug}`}>
+          <Image
+            width={400}
+            height={400}
+            alt={`Image for ${title}`}
+            src={image}
+            className="w-full aspect-[3/2] group-hover:scale-105 transition-all"
+          />
+        </Link>
+      </div>
+
       <div className="flex flex-col gap-4">
         <div className="pt-5 flex items-center justify-between">
           <p className="flex items-center gap-2">
@@ -28,9 +31,11 @@ const BlogItemCard = ({ slug, title, image, date, tags, subTitle, index }) => {
           </p>
         </div>
 
-        <h4 className="font-bold text-2xl leading-7 line-clamp-3 text-matte-purple">
-          {title}
-        </h4>
+        <Link href={`/blogs/${slug}`} className="w-fit">
+          <h4 className="font-bold text-2xl leading-7 line-clamp-3 text-matte-purple hover:text-primary-orange transition-all">
+            {title}
+          </h4>
+        </Link>
 
         <p className="line-clamp-3 text-lg">{subTitle}</p>
 

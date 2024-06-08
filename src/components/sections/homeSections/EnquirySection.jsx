@@ -19,7 +19,7 @@ const EnquirySection = () => {
           />
         </div>
         <div
-          className="rounded-md flex gap-4 justify-between px-8"
+          className="rounded-md flex gap-4 justify-between px-8 translate-gradient group overflow-hidden "
           style={{
             backgroundImage: `linear-gradient(to bottom left, rgb(235, 124, 158), rgb(235 124 158 / 43%) 100%)`,
           }}
@@ -31,7 +31,7 @@ const EnquirySection = () => {
                 alt={"use-links-icon-image"}
                 width={400}
                 height={400}
-                className="w-[400px] h-auto object-contain"
+                className="w-[400px] h-auto object-contain transition-all group-hover:scale-105"
               />
             </div>
           </div>
@@ -59,8 +59,9 @@ const EnquirySection = () => {
             </div>
           </div>
         </div>
+
         <div
-          className="rounded-md flex gap-4 justify-between px-8 "
+          className="rounded-md flex gap-4 justify-between px-8 translate-gradient group overflow-hidden"
           style={{
             backgroundImage: `linear-gradient(to bottom right, rgb(244, 213, 107), rgb(244 213 107 / 43%) 100%)`,
           }}
@@ -83,9 +84,6 @@ const EnquirySection = () => {
                     btnName={"Enquiry Now"}
                     icon={<FaArrowRight />}
                     styleA={"flex items-center gap-1"}
-                    style={
-                      "border border-2 border-[#606060] rounded-md px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
-                    }
                   />
                 </Link>
               </div>
@@ -98,7 +96,7 @@ const EnquirySection = () => {
                 alt={"use-links-icon-image"}
                 width={400}
                 height={400}
-                className="w-[350px] object-cover"
+                className="w-[350px] object-cover transition-all group-hover:scale-105 "
               />
             </div>
           </div>

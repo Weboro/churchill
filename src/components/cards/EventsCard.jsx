@@ -18,15 +18,15 @@ const EventsCard = ({
   duration,
 }) => {
   return (
-    <div className="flex rounded-md border border-gray-500/40 overflow-hidden flex-col md:flex-row gap-3 first:lg:col-span-2">
+    <div className="group flex rounded-md border cursor-pointer bg-neutral-50 hover-shadow border-gray-500/40 overflow-hidden flex-col md:flex-row gap-3 first:lg:col-span-2">
       <div className="relative">
-        <div className="aspect-[4/2] md:w-[16rem] md:aspect-auto md:h-full">
+        <div className="aspect-[4/2] md:w-[16rem] overflow-hidden md:aspect-auto md:h-full">
           <Image
             src={`${image}`}
             alt={"use-links-icon-image"}
             width={600}
             height={600}
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full group-hover:scale-105 transition-all"
           />
         </div>
         <div className="absolute top-2 left-2 rounded-md flex gap-2 bg-primary-orange p-2 text-white font-bold ">
@@ -40,9 +40,11 @@ const EventsCard = ({
       </div>
 
       <div className="flex-1 py-4 md:py-6 px-4 flex flex-col justify-between gap-4">
-        <h2 className="font-bold text-xl md:text-3xl text-[#2C2B4B] leading-[28px] line-clamp-3">
-          {title}
-        </h2>
+        <Link href={`/events/${slug}`} className="w-fit">
+          <h3 className="font-bold text-xl md:text-3xl text-[#2C2B4B] leading-[28px] line-clamp-3 transition-all hover:text-primary-orange">
+            {title}
+          </h3>
+        </Link>
 
         <div
           dangerouslySetInnerHTML={{ __html: subTitle }}

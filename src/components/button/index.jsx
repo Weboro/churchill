@@ -14,7 +14,7 @@ const Button = ({
   return (
     <button
       type={type && type}
-      className={`text-center flex justify-center group border-2 rounded-md ${
+      className={`text-center flex justify-center btn-translate border-2 rounded-md ${
         styleType == "primary"
           ? "border font-semibold text-[14px] border-[#606060] px-6 md:px-8 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
           : styleType == "secondary"
@@ -35,7 +35,7 @@ const Button = ({
         <div
           className={`${
             styleB ? styleB : ""
-          } group-hover:translate-x-2 transition-all `}
+          } btn-translate-child transition-all `}
         >
           {icon ? icon : ""}
         </div>

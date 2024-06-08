@@ -4,11 +4,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
-import { navItems } from "@/constDatas/navItems";
-// import { usefulLinksData } from "@/constDatas/usefulLinksData";
-import CoursesCard from "../cards/CoursesCard";
-import Button from "../button";
 import { FaArrowRight } from "react-icons/fa";
+
+import { navItems } from "@/constDatas/navItems";
+import { Button, CoursesCard } from "@/components";
 import Link from "next/link";
 
 const CoursesSlider = () => {
@@ -18,7 +17,6 @@ const CoursesSlider = () => {
   const [totalSlides, setTotalSlides] = useState(0);
 
   useEffect(() => {
-    // Update the total number of slides whenever the slider content changes
     const handleSliderUpdate = () => {
       if (sliderRef.current) {
         setTotalSlides(sliderRef.current.props.children.length);
@@ -90,7 +88,7 @@ const CoursesSlider = () => {
             <CoursesCard
               key={index}
               icon={`${item?.icon}`}
-              faculty={item?.subTitleA}
+              faculty={item?.faculty}
               title={item?.menuTitle}
               subTitle={item?.subTitle}
               link={`/courses/${item?.slug}`}

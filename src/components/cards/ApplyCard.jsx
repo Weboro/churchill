@@ -7,7 +7,7 @@ import Link from "next/link";
 const ApplyCard = ({ title, description, image }) => {
   return (
     <div
-      className="rounded-md px-8 pt-[32px] lg:pb-0 pb-[32px] h-full flex flex-col gap-5"
+      className="rounded-md px-8 pt-[32px] lg:pb-0 pb-[32px] h-full flex flex-col gap-5 group translate-gradient overflow-hidden"
       style={{
         backgroundImage: `linear-gradient(to bottom right, rgb(187, 171, 223), rgb(187 171 223 / 43%) 100%)`,
       }}
@@ -28,7 +28,7 @@ const ApplyCard = ({ title, description, image }) => {
         </div>
       </div>
       <div className="hidden lg:block lg:flex-1">
-        <div className="h-full flex justify-end items-end">
+        <div className="h-full flex justify-end items-end group-hover:scale-105 transition-all">
           <Image
             src={`${image}`}
             alt={"use-links-icon-image"}

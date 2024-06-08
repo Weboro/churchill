@@ -31,9 +31,9 @@ const KeyDatesCard = ({
 
   return (
     <>
-      <div className="bg-[#FAF4F4] rounded-md p-4 flex flex-col justify-between gap-6">
+      <div className="bg-[#FAF4F4] rounded-md p-4 flex flex-col justify-between gap-6 transition-all hover-shadow hover:-translate-y-[6px]">
         <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-          <div className="text-white bg-primary-orange w-32 py-2 px-3 rounded-md flex gap-2 font-bold">
+          <div className="text-white bg-primary-orange w-32 py-2 px-3 rounded-md flex items-center gap-2 font-bold">
             <i className="fi fi-rr-calendar-day flex text-2xl"></i>
             <span>
               {day}

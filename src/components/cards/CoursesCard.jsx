@@ -7,23 +7,26 @@ import { FaArrowRight } from "react-icons/fa";
 const CoursesCard = ({ icon, title, faculty, subTitle, link }) => {
   return (
     <div className="rounded-md">
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 group">
         <span className="relative">
-          <Image
-            src={`${icon}`}
-            alt={"use-links-icon-image"}
-            width={400}
-            height={400}
-            className="object-cover aspect-[1/1] rounded-md"
-          />
-          <p className="absolute font-semibold top-3 right-3 bg-[#F2CF9C] text-[#2C2B4B] rounded-md text-[12px] px-3 py-1">
+          <div className="overflow-hidden rounded-md">
+            <Image
+              src={`${icon}`}
+              alt={"use-links-icon-image"}
+              width={400}
+              height={400}
+              className="object-cover aspect-[1/1]  transition-all group-hover:scale-105 relative"
+            />
+            <div className="absolute rounded-md bg-primary-orange/0 group-hover:bg-primary-orange/50 transition-all w-full h-full z-[8] top-0 left-0" />
+          </div>
+          <p className="z-[10] absolute font-semibold top-3 right-3 bg-[#F2CF9C] text-[#2C2B4B] rounded-md text-[12px] px-3 py-1">
             {faculty}
           </p>
         </span>
 
         <div className="flex flex-col gap-4 justify-between">
           <Link href={`${link}`}>
-            <h3 className="font-bold text-2xl clamp-2 text-[#2C2B4B] w-fit leading-[28px] hover-highlight">
+            <h3 className="font-bold text-2xl clamp-2 text-[#2C2B4B] w-fit leading-[28px] transition-all hover:text-primary-orange">
               {title}
             </h3>
           </Link>
