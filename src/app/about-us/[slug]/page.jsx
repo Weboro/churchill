@@ -19,7 +19,7 @@ const Page = ({ params }) => {
       />
 
       {slug === "policies-and-procedures" ? (
-        <PoliciesSection isLoading={isLoading} searchQuery={query} />
+        <PoliciesSection searchQuery={query} />
       ) : (
         <>not found</>
       )}

@@ -16,26 +16,6 @@ const RequestFormSection = ({ isButtonActive }) => {
             <h2 className="font-bold text-[36px] text-[#2C2B4B]">
               Request Form
             </h2>
-            <div>
-              {/* <div className="relative">
-                <span className="absolute right-3 top-3 text-[20px] flex items-center justify-center text-black/65">
-                  <FaSearch />
-                </span>
-                <input
-                  type="text"
-                  placeholder="Search for links"
-                  // id="search"
-                  // value={search}
-                  // onChange={(e) => {
-                  //   setSearch(e.target.value);
-                  // }}
-                  className="w-full h-auto font-inter text-[12px] text-[#021327] bg-transparent border border-[#ABABAB] outline-0 pr-8 pl-3 py-3 rounded-md"
-                />
-              </div> */}
-            </div>
-            {/* <div> */}
-            {/* <Search /> */}
-            {/* </div> */}
           </div>
         </div>
         <div className="rounded-md">
