@@ -25,16 +25,18 @@ const PoliciesSection = ({ searchQuery }) => {
               item?.menuTitle.trim().toLowerCase().includes(searchQuery)
             ) {
               return (
-                <RequestFormCard
-                  key={index}
-                  icon={item?.icon}
-                  link={item?.link}
-                  menuTitle={item?.menuTitle}
-                  slug={`/policies/${item?.slug}`}
-                  subTitle={item?.subTitle}
-                  btnTitle={"View"}
-                  iconStyles={item?.iconStyles}
-                />
+                <>
+                  <RequestFormCard
+                    key={index}
+                    icon={item?.icon}
+                    link={item?.link}
+                    menuTitle={item?.menuTitle}
+                    slug={`/policies/${item?.slug}`}
+                    subTitle={item?.subTitle}
+                    btnTitle={"View"}
+                    iconStyles={item?.iconStyles}
+                  />
+                </>
               );
             }
           })}

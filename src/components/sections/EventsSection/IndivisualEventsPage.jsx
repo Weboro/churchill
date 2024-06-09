@@ -41,7 +41,7 @@ const IndivisualEventsPage = ({ slug }) => {
 
   const readTime = Math.ceil(data.description.length / 300);
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  const siteUrl = process.env.NEXT_PUBLIC_CHURCHILL_URL;
 
   return (
     <>
