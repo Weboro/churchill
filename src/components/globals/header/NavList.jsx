@@ -37,7 +37,6 @@ const NavList = ({
             (pathname.includes(item?.slug) && item?.slug?.length > 1) ||
             pathname === item?.slug;
           const hasSubcategories = item?.Catagories?.length > 0;
-          // console.log(item);
           return (
             <div key={index}>
               {hasSubcategories ? (

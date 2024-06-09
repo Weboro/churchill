@@ -12,31 +12,32 @@ const CourseDetailsCard = ({
   courseDetails,
 }) => {
   return (
-    <div className="bg-[#FAF4F4] flex flex-col gap-8 md:gap-2 md:flex-row md:items-center p-4 rounded-md">
-      <div className="flex-1 flex flex-col gap-1 md:gap-3">
+    <div className="bg-[#FAF4F4] flex flex-col gap-4 md:gap-3 md:flex-row md:items-center p-4 rounded-md">
+      <div className="flex-1 flex flex-col gap-3">
         <span className="bg-[#F2CF9C] px-3 py-1 text-sm rounded-md capitalize w-fit">
           {faculty}
         </span>
+
         <h2 className="font-extrabold text-2xl lg:text-3xl text-matte-purple">
           {menuTitle}
         </h2>
+
         <p>{subTitle}</p>
 
-        <div className="flex gap-4">
+        <div className="flex justify-around md:justify-start gap-3 md:gap-10">
           {courseDetails?.slice(0, 3)?.map((item, index) => (
-            <div className="flex flex-col items-center" key={index}>
+            <div className="flex flex-col gap-2 items-center" key={index}>
               <div className="w-14 h-14 grid place-items-center bg-white rounded-full text-4xl">
                 <p className="text-[#E59623]">{item?.icon}</p>
               </div>
-              <h3 className="text-[#2C2B4B] font-bold text-xl lg:text-2xl">
-                {item?.description}
+              <h3 className="text-[#2C2B4B] font-bold text-xl lg:text-2xl text-center">
+                {item?.description} {index === 2 ? "credits" : ""}
               </h3>
             </div>
           ))}
         </div>
-        {/*  */}
       </div>
-      <div className="max-w-fit flex md:flex-col gap-3">
+      <div className="max-w-fit flex flex-col gap-3">
         <Link href={"/apply-now"} className="w-full flex-1">
           <Button
             btnName="Apply Now"

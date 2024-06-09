@@ -55,22 +55,22 @@ const IndivisualEventsPage = ({ slug }) => {
                   href="/"
                 >
                   Home
-                </Link>{" "}
-                /{" "}
+                </Link>
+                /
                 <Link
                   className="hover:text-primary-orange transition-all"
                   href="/events"
                 >
                   Events
-                </Link>{" "}
-                / {data.title}{" "}
+                </Link>
+                / {data.title}
               </nav>
               <hr className="border-2 w-[60px]  border-primary-orange" />
 
               <div className="flex flex-col md:flex-row md:items-center gap-3">
                 <p className="flex items-center gap-2">
                   <i className="fi fi-rr-calendar-day flex text-xl" />
-                  <span>{displayMonth}</span>``
+                  <span>{displayMonth}</span>
                   <span>{displayDay}</span>
                   <span>{year}</span>
                   <p>·</p>

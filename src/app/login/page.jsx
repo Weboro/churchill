@@ -5,7 +5,6 @@ import Link from "next/link";
 
 const page = () => {
   const loginData = navItems[3];
-  console.log(loginData.Catagories);
 
   return (
     <div>

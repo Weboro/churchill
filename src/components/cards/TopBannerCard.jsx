@@ -33,10 +33,10 @@ const TopBannerCard = ({
       className="lg:h-[80vh] mt-8 md:mt-0 flex items-center justify-center"
     >
       <div className="container mx-auto px-5 mt-8 md:m-0">
-        <div className="flex flex-col lg:grid lg:grid-cols-2">
+        <div className="flex flex-col gap-14 lg:gap-0 lg:grid lg:grid-cols-2">
           <div className="lg:pt-0 pt-[8vh]">
             <div className="flex lg:h-[80vh] h-[44vh] flex-col justify-center gap-4 md:gap-7 ">
-              <div>
+              <div className="sm:mt-28 lg:m-0">
                 {beforeTitle && (
                   <p className="text-white px-[2px] pt-[2px] pb-[1px] text-xl font-extrabold highlight w-fit">
                     {beforeTitle}
@@ -46,12 +46,11 @@ const TopBannerCard = ({
                   {titleSpan} {title}
                 </h2>
                 {courseCode && (
-                  <p
-                    className="text-white underline-[#2C2B4B] pb-1 px-[2px] mt-5 text-xl font-extrabold w-fit relative
-             before:absolute before:w-full before:h-1 before:bg-[#E59623] before:bottom-0 before:left-0
-              "
-                  >
-                    {courseCode}
+                  <p className="text-white underline-[#2C2B4B] pb-1 px-[2px] mt-5 text-xl font-extrabold w-fit ">
+                    Course Code:{" "}
+                    <span className="relative before:absolute before:w-full before:h-1 before:bg-[#E59623] before:bottom-0 before:left-0">
+                      {courseCode}
+                    </span>
                   </p>
                 )}
               </div>

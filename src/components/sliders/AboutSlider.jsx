@@ -77,7 +77,6 @@ const AboutSlider = () => {
     <div className="flex flex-col gap-4 lg:gap-[40px]">
       <Slider {...settings} ref={sliderRef}>
         {aboutLists?.Catagories?.map((item, index) => {
-          // console.log(item);
           return (
             <div className="px-[11px] my-[11px]" key={index}>
               <AboutUsCard

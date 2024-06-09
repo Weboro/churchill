@@ -10,12 +10,10 @@ const AboutInfoSection = () => {
   return (
     <div className="flex flex-col gap-[32px] lg:gap-[64px]">
       <TopBannerCard
-        // image={``}
-        // imageA={"/assets/hero-image.jpeg"}
         image={"/assets/hero-image.jpeg"}
         titleSpan={
           <span>
-            About <span className="highlight">Churchill</span>
+            Meet Our <span className="highlight">Team</span>
           </span>
         }
         title={""}
