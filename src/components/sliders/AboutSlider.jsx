@@ -80,7 +80,7 @@ const AboutSlider = () => {
       <Slider {...settings} ref={sliderRef}>
         {aboutLists?.Catagories?.map((item, index) => {
           return (
-            <FadeUpAnimation delay={0.1 * index}>
+            <FadeUpAnimation key={index} delay={0.1 * index}>
               <div className="px-[11px] my-[11px]" key={index}>
                 <AboutUsCard
                   icon={item?.headerIcon}

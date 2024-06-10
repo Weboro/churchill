@@ -30,7 +30,7 @@ const UpcomingKeyDates = () => {
         </h2>
         <div className="grid md:grid-cols-2 gap-5">
           {filteredDates?.slice(0, 6)?.map((item, index) => (
-            <FadeUpAnimation delay={0.1 * index}>
+            <FadeUpAnimation key={index} delay={0.1 * index}>
               <KeyDatesCard
                 key={index}
                 date={item?.date}

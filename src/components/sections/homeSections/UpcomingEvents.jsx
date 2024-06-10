@@ -17,7 +17,7 @@ const UpcomingEvents = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {eventsData?.slice(0, 4)?.map((item, index) => (
             <div className="first:lg:col-span-2">
-              <FadeUpAnimation delay={item * index}>
+              <FadeUpAnimation key={index} delay={item * index}>
                 <EventsCard
                   key={index}
                   image={item?.image}
