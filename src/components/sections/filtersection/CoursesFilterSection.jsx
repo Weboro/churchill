@@ -1,10 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { navItems } from "@/constDatas/navItems";
-import CourseDetailsCard from "@/components/cards/CourseDetailsCard";
-import FilterComponent from "@/components/filter/FilterComponent";
-
-import { CheckBoxList, DataNotFound, SelectComponent } from "@/components";
+import { DataNotFound, CourseDetailsCard, FilterComponent } from "@/components";
+import FadeUpAnimation from "@/animations/FadeUp";
 
 const CoursesFilterSection = () => {
   const data = navItems[2]?.Catagories;
@@ -27,14 +25,15 @@ const CoursesFilterSection = () => {
           {filteredArray.length > 0 ? (
             <div className="flex flex-col gap-8">
               {filteredArray.map((data, index) => (
-                <CourseDetailsCard
-                  key={index}
-                  faculty={data?.faculty}
-                  menuTitle={data?.menuTitle}
-                  subTitle={data?.subTitle}
-                  slug={data?.slug}
-                  courseDetails={data?.courseDetails}
-                />
+                <FadeUpAnimation delay={index * 0.1} key={index}>
+                  <CourseDetailsCard
+                    faculty={data?.faculty}
+                    menuTitle={data?.menuTitle}
+                    subTitle={data?.subTitle}
+                    slug={data?.slug}
+                    courseDetails={data?.courseDetails}
+                  />
+                </FadeUpAnimation>
               ))}
             </div>
           ) : (

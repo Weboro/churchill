@@ -1,14 +1,15 @@
 import { navItems } from "@/constDatas/navItems";
 import Image from "next/image";
 import React from "react";
+import FadeUpAnimation from "@/animations/FadeUp";
 
 const MissionVisionsection = () => {
   const aboutLists = navItems[0]?.page;
 
   return (
-    <div>
-      <div className="grid md:grid-cols-2 gap-5">
-        {aboutLists?.missionVision?.map((item, index) => (
+    <div className="grid md:grid-cols-2 gap-5">
+      {aboutLists?.missionVision?.map((item, index) => (
+        <FadeUpAnimation delay={0.2 * index}>
           <div className="bg-[#F3E4E4] p-8 rounded-md" key={index}>
             <div className="flex flex-col gap-2">
               <Image
@@ -24,8 +25,8 @@ const MissionVisionsection = () => {
               <p>{item?.subTitle}</p>
             </div>
           </div>
-        ))}
-      </div>
+        </FadeUpAnimation>
+      ))}
     </div>
   );
 };

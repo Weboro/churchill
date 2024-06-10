@@ -10,7 +10,7 @@ const TabbedPane = ({ tabbedPaneHeaders, tabbedPaneData }) => {
         {/* <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 text-center"> */}
         <div className="flex flex-col gap-3 lg:flex-row lg:justify-center lg:items-center">
           {tabbedPaneHeaders?.map((header, index) => (
-            <>
+            <div key={index}>
               <div
                 className={`flex items-center justify-between px-2 py-2 border rounded-md border-primary-orange transition-all font-bold ${
                   selectedIndex == index ? "bg-[#E59623] " : ""
@@ -23,7 +23,7 @@ const TabbedPane = ({ tabbedPaneHeaders, tabbedPaneData }) => {
                 {header.title}
 
                 <i
-                  class={`lg:hidden text-2xl fi fi-rr-cross-small flex transition-all ${
+                  className={`lg:hidden text-2xl fi fi-rr-cross-small flex transition-all ${
                     selectedIndex === index ? "rotate-0" : "rotate-[45deg]"
                   }`}
                 ></i>
@@ -46,7 +46,7 @@ const TabbedPane = ({ tabbedPaneHeaders, tabbedPaneData }) => {
                   )}
                 </div>
               )}
-            </>
+            </div>
           ))}
         </div>
 

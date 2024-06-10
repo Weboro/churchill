@@ -8,6 +8,21 @@
   box-sizing: border-box;
 }
 
+/* @layer utilities {
+  .fade-in-animation {
+    animation: fade-in 500ms forwards ease-in;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+
 :root {
   --highlight-orange: #f2cb91;
   --primary-orange: #e59623;
@@ -26,7 +41,8 @@ body {
 }
 
 .hover-shadow:hover {
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, #f2cb91a2 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.02) 0px 2px 4px -1px;
 }
 
 .translate-gradient {
@@ -34,10 +50,12 @@ body {
   background-position: 100% 100%;
   transition: 0.2s ease;
 }
+
 .translate-gradient:hover {
   cursor: pointer;
   background-position: 0% 0%;
 }
+
 .btn-translate:hover .btn-translate-child {
   --tw-translate-x: 0.5rem /* 8px */;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y))
@@ -371,7 +389,7 @@ textarea {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 20px 0;
+  /* margin: 20px 0; */
 }
 
 table,
@@ -404,6 +422,10 @@ tr:nth-child(even) {
   font-weight: 700;
 }
 
+.rich-text-container h1 {
+  line-height: 34px;
+}
+
 .rich-text-container h1,
 .rich-text-container h2,
 .rich-text-container h3,
@@ -411,10 +433,12 @@ tr:nth-child(even) {
 .rich-text-container h5,
 .rich-text-container h6 {
   margin-top: 42px;
-  /* margin-top: 16px; */
   margin-bottom: 8px;
-  line-height: 24px;
   color: #2c2b4b;
+}
+
+.rich-text-container > table {
+  overflow-x: scroll;
 }
 @media screen and (max-width: 768px) {
   .rich-text-container h1,

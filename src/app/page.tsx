@@ -13,7 +13,7 @@ import React from "react";
 const Home = () => {
   return (
     <main className="">
-      <div className="flex flex-col gap-[32px] lg:gap-[64px]">
+      <div className="flex flex-col gap-[32px] lg:gap-[100px]">
         <div className="">
           <HeroSection />
         </div>

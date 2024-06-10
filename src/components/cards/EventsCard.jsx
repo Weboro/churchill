@@ -18,7 +18,7 @@ const EventsCard = ({
   duration,
 }) => {
   return (
-    <div className="group flex rounded-md border cursor-pointer bg-neutral-50 hover-shadow border-gray-500/40 overflow-hidden flex-col md:flex-row gap-3 first:lg:col-span-2">
+    <div className="group flex rounded-md border cursor-pointer bg-neutral-50 hover-shadow border-gray-500/40 overflow-hidden flex-col md:flex-row gap-3 ">
       <div className="relative">
         <div className="aspect-[4/2] md:w-[16rem] overflow-hidden md:aspect-auto md:h-full">
           <Image

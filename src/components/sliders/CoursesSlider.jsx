@@ -10,6 +10,8 @@ import { navItems } from "@/constDatas/navItems";
 import { Button, CoursesCard } from "@/components";
 import Link from "next/link";
 
+import FadeUpAnimation from "@/animations/FadeUp";
+
 const CoursesSlider = () => {
   const courcesData = navItems[2]?.Catagories;
   const sliderRef = useRef(null);
@@ -78,6 +80,7 @@ const CoursesSlider = () => {
       sliderRef.current.slickNext();
     }
   };
+
   const serviceLocaton = navItems[2]?.Catagories;
 
   return (
@@ -85,19 +88,21 @@ const CoursesSlider = () => {
       <Slider {...settings} ref={sliderRef}>
         {courcesData?.map((item, index) => (
           <div className="px-[11px] my-[11px]" key={index}>
-            <CoursesCard
-              key={index}
-              icon={`${item?.icon}`}
-              faculty={item?.faculty}
-              title={item?.menuTitle}
-              subTitle={item?.subTitle}
-              link={`/courses/${item?.slug}`}
-            />
+            <FadeUpAnimation delay={index * 0.1}>
+              <CoursesCard
+                key={index}
+                icon={`${item?.icon}`}
+                faculty={item?.faculty}
+                title={item?.menuTitle}
+                subTitle={item?.subTitle}
+                link={`/courses/${item?.slug}`}
+              />
+            </FadeUpAnimation>
           </div>
         ))}
       </Slider>
       <div>
-        <div className="flex flex-row-reverse justify-between gap-4 items-center">
+        <div className="flex flex-col-reverse gap-4 sm:flex-row-reverse sm:justify-between sm:items-center">
           <div className="">
             <div className="flex gap-[24px]">
               <button

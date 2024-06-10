@@ -1,7 +1,11 @@
+"use client";
 import Image from "next/image";
 import { eventsData } from "@/constDatas/eventsData";
 import { NewsSection } from "@/components";
 import Link from "next/link";
+import { motion, useScroll } from "framer-motion";
+import { ToastComponent } from "@/components";
+import { useRef } from "react";
 
 export const metadata = {
   title: "Churchill",
@@ -27,7 +31,7 @@ const monthArray = [
 const IndivisualEventsPage = ({ slug }) => {
   const data = eventsData?.find((item) => item.slug === slug);
 
-  const startDate = data.duration.startDate.split("-");
+  const startDate = data?.duration.startDate.split("-");
   const year = parseInt(startDate[0]);
   const month = parseInt(startDate[1]) - 1;
   const day = parseInt(startDate[2]);
@@ -43,11 +47,32 @@ const IndivisualEventsPage = ({ slug }) => {
 
   const siteUrl = process.env.NEXT_PUBLIC_CHURCHILL_URL;
 
+  const containerRef = useRef(null);
+
+  //-- animation
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end end"],
+  });
+
+  const toastRef = useRef();
+
   return (
     <>
-      <section className="mx-auto lg:py-20 py-8 sm:py-16">
+      <ToastComponent
+        toastMessage="Copied To Clipboard"
+        toastType="success"
+        ref={toastRef}
+      />
+
+      <motion.div
+        className="h-[8px] z-[100] fixed bottom-[-1px] left-0 right-0 bg-primary-orange"
+        style={{ scaleX: scrollYProgress }}
+      />
+
+      <section className="mx-auto py-[7rem] lg:py-20">
         <div className="px-5 flex flex-col gap-[32px] md:gap-[64px]">
-          <article className="flex flex-col gap-6">
+          <article className="flex flex-col gap-6" ref={containerRef}>
             <div className="container-blog flex flex-col gap-5">
               <nav className="font-semibold">
                 <Link
@@ -67,26 +92,19 @@ const IndivisualEventsPage = ({ slug }) => {
               </nav>
               <hr className="border-2 w-[60px]  border-primary-orange" />
 
-              <div className="flex flex-col md:flex-row md:items-center gap-3">
-                <p className="flex items-center gap-2">
-                  <i className="fi fi-rr-calendar-day flex text-xl" />
-                  <span>{displayMonth}</span>
-                  <span>{displayDay}</span>
-                  <span>{year}</span>
-                  <p>·</p>
-                </p>
+              <div className="flex flex-wrap flex-row items-center gap-1">
+                <i className="fi fi-rr-calendar-day flex" />
+                <span>{displayMonth}</span>
+                <span>{displayDay}</span>
+                <span>{year}</span>
+                <span>·</span>
 
-                <p className="flex items-center gap-2">
-                  <i className="fi fi-rr-circle-user flex text-xl" />
-                  <span>{data.author}</span>
-                  <p>·</p>
-                </p>
+                <i className="fi fi-rr-circle-user flex" />
+                <span>{data.author}</span>
+                <span>·</span>
 
-                <p className="flex items-center gap-2">
-                  <i className="fi fi-rr-clock-three flex"></i>
-                  <span>{readTime}</span>
-                  <span>min read</span>
-                </p>
+                <i className="fi fi-rr-clock-three flex"></i>
+                <>{readTime} min read</>
               </div>
 
               <h2 className="text-4xl leading-[40px] lg:text-6xl lg:leading-[62px] font-bold">
@@ -128,9 +146,9 @@ const IndivisualEventsPage = ({ slug }) => {
                 ))}
               </div>
 
-              <div className="flex gap-2">
+              <div className="flex flex-col md:flex-row gap-2">
                 <p>Share To:</p>
-                <div className="flex gap-2 text-2xl flex-wrap ">
+                <div className="flex gap-2 text-2xl flex-wrap">
                   <a
                     href={`mailto:?subject=Check this out&body=Here's the link: ${siteUrl}`}
                     className="hover:text-primary-orange transition-all social-button email"
@@ -172,19 +190,21 @@ const IndivisualEventsPage = ({ slug }) => {
                   >
                     <i className="flex fi fi-brands-facebook-messenger"></i>
                   </a>
-                  <a
-                    href="#"
-                    onclick="copyLink()"
+                  <div
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigator.clipboard.writeText(window.location.href);
+                      toastRef.current.showToast();
+                    }}
                     className="hover:text-primary-orange transition-all social-button copy-link"
                   >
                     <i className="fi fi-rr-copy-alt"></i>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/*  */}
           <NewsSection />
         </div>
       </section>

@@ -8,6 +8,8 @@ import { navItems } from "@/constDatas/navItems";
 import { usefulLinksData } from "@/constDatas/usefulLinksData";
 import AboutUsCard from "../cards/AboutUsCard";
 
+import FadeUpAnimation from "@/animations/FadeUp";
+
 const AboutSlider = () => {
   // const aboutLists = navItems[0]?.page;
   const aboutLists = navItems[0];
@@ -78,14 +80,16 @@ const AboutSlider = () => {
       <Slider {...settings} ref={sliderRef}>
         {aboutLists?.Catagories?.map((item, index) => {
           return (
-            <div className="px-[11px] my-[11px]" key={index}>
-              <AboutUsCard
-                icon={item?.headerIcon}
-                title={item?.menuTitle}
-                key={index}
-                link={item?.slug}
-              />
-            </div>
+            <FadeUpAnimation delay={0.1 * index}>
+              <div className="px-[11px] my-[11px]" key={index}>
+                <AboutUsCard
+                  icon={item?.headerIcon}
+                  title={item?.menuTitle}
+                  key={index}
+                  link={item?.slug}
+                />
+              </div>
+            </FadeUpAnimation>
           );
         })}
       </Slider>

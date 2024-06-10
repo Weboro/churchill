@@ -4,6 +4,8 @@ import React from "react";
 import Button from "../button";
 import { FaArrowRight } from "react-icons/fa";
 
+import FadeUpAnimation from "@/animations/FadeUp";
+
 const TopBannerCard = ({
   image,
   title,
@@ -22,7 +24,6 @@ const TopBannerCard = ({
   return (
     <div
       style={{
-        // backgroundImage: `linear-gradient(45deg, rgba(0, 0, 0, .5) 30%, rgb(97 96 96 / 39%) 100%), url(${image})`,
         backgroundImage: `linear-gradient(241deg, rgba(229, 150, 35, 0) 10%, rgb(97 96 96 / 74%) 100%), url(${image})`,
         backgroundRepeat: "no-repeat",
         objectFit: "cover",
@@ -30,34 +31,44 @@ const TopBannerCard = ({
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="lg:h-[80vh] mt-8 md:mt-0 flex items-center justify-center"
+      className="lg:h-[75vh] flex items-center justify-center fade-in-animation"
     >
-      <div className="container mx-auto px-5 mt-8 md:m-0">
-        <div className="flex flex-col gap-14 lg:gap-0 lg:grid lg:grid-cols-2">
-          <div className="lg:pt-0 pt-[8vh]">
-            <div className="flex lg:h-[80vh] h-[44vh] flex-col justify-center gap-4 md:gap-7 ">
-              <div className="sm:mt-28 lg:m-0">
-                {beforeTitle && (
-                  <p className="text-white px-[2px] pt-[2px] pb-[1px] text-xl font-extrabold highlight w-fit">
-                    {beforeTitle}
-                  </p>
-                )}
-                <h2 className="text-4xl font-extrabold md:text-[70px] leading-8 md:leading-[70px] text-[#ffffff]">
-                  {titleSpan} {title}
-                </h2>
-                {courseCode && (
-                  <p className="text-white underline-[#2C2B4B] pb-1 px-[2px] mt-5 text-xl font-extrabold w-fit ">
-                    Course Code:{" "}
-                    <span className="relative before:absolute before:w-full before:h-1 before:bg-[#E59623] before:bottom-0 before:left-0">
-                      {courseCode}
-                    </span>
-                  </p>
-                )}
-              </div>
-              <p className="font-semibold text-[#ffffff] text-md md:text-[24px]">
+      <div className="container mt-[84px] lg:mt-4 mx-auto px-5">
+        <div className="grid items-center grid-cols-1 md:grid-cols-2">
+          <div className="py-6 flex flex-col gap-3">
+            {beforeTitle && (
+              <FadeUpAnimation delay={0}>
+                <p className="text-white px-[2px] pt-[2px] pb-[1px] text-xl font-extrabold highlight w-fit">
+                  {beforeTitle}
+                </p>
+              </FadeUpAnimation>
+            )}
+
+            <FadeUpAnimation delay={0}>
+              <h2 className="text-4xl font-extrabold md:text-[70px] leading-8 md:leading-[72px] text-[#ffffff]">
+                {titleSpan} {title}
+              </h2>
+            </FadeUpAnimation>
+
+            {courseCode && (
+              <FadeUpAnimation delay={0.15}>
+                <p className="text-white underline-[#2C2B4B] pb-1 px-[2px] mt-5 text-xl font-extrabold w-fit ">
+                  Course Code:{" "}
+                  <span className="relative before:absolute before:w-full before:h-1 before:bg-[#E59623] before:bottom-0 before:left-0">
+                    {courseCode}
+                  </span>
+                </p>
+              </FadeUpAnimation>
+            )}
+
+            <FadeUpAnimation delay={0.2}>
+              <p className="font-semibold text-[#ffffff] text-md md:text-[22px] leading-[24px]">
                 {subTitle}
               </p>
-              <div className="flex gap-1 md:gap-3 flex-col md:flex-row">
+            </FadeUpAnimation>
+
+            <div className="flex gap-1 md:gap-3 flex-col md:flex-row">
+              <FadeUpAnimation delay={0.3}>
                 <Link href={`${link}`}>
                   <Button
                     btnName={BtnAText}
@@ -65,8 +76,10 @@ const TopBannerCard = ({
                     styleA={"flex items-center gap-1"}
                   />
                 </Link>
+              </FadeUpAnimation>
 
-                <div onClick={handleRightBtn}>
+              <div onClick={handleRightBtn}>
+                <FadeUpAnimation delay={0.35}>
                   <Link href={`${linkA}`}>
                     <Button
                       btnName={BtnBText}
@@ -74,21 +87,23 @@ const TopBannerCard = ({
                       styleA={"flex items-center gap-1"}
                     />
                   </Link>
-                </div>
+                </FadeUpAnimation>
               </div>
             </div>
           </div>
+
           {imageA && (
-            <div className="flex justify-center items-center">
-              <Image
-                src={`${imageA}`}
-                alt=""
-                width={400}
-                height={400}
-                // className={`hidden lg:block object-contain w-[450px] aspect-square ${imageAStyle}`}
-                className={` object-contain w-[450px] aspect-square ${imageAStyle}`}
-              />
-            </div>
+            <FadeUpAnimation delay={0.2}>
+              <div className="flex justify-center items-center">
+                <Image
+                  src={`${imageA}`}
+                  alt=""
+                  width={400}
+                  height={400}
+                  className={` object-contain w-[450px] aspect-square ${imageAStyle}`}
+                />
+              </div>
+            </FadeUpAnimation>
           )}
         </div>
       </div>

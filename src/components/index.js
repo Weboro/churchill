@@ -61,6 +61,7 @@ import CookieBanner from "./globals/acceptCookie/CookieBanner";
 import Loading from "./globals/loading/Loading";
 import BlogItemCard from "./cards/BlogItemCard";
 import DataNotFound from "./globals/DataNotFound/DataNotFound";
+import ToastComponent from "./toast/Toast";
 
 export {
   Button,
@@ -126,4 +127,5 @@ export {
   Loading,
   BlogItemCard,
   DataNotFound,
+  ToastComponent,
 };

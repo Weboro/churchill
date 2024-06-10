@@ -25,6 +25,7 @@ const AboutInfoSection = () => {
         BtnAText={"Explore Our Courses"}
         BtnBText={"Apply Now"}
       />
+
       <div className="container mx-auto px-5">
         <div className="flex flex-col gap-[32px] lg:gap-[64px]">
           <MissionVisionsection />

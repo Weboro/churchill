@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const CoursesCard = ({ icon, title, faculty, subTitle, link }) => {
   return (
-    <div className="rounded-md">
+    <div className="rounded-md w-full">
       <div className="flex flex-col gap-8 group">
         <span className="relative">
           <div className="overflow-hidden rounded-md">
@@ -15,7 +15,7 @@ const CoursesCard = ({ icon, title, faculty, subTitle, link }) => {
               alt={"use-links-icon-image"}
               width={400}
               height={400}
-              className="object-cover aspect-[1/1]  transition-all group-hover:scale-105 relative"
+              className="object-cover w-full aspect-[4/2] md:aspect-[1/1]  transition-all group-hover:scale-105 relative"
             />
             <div className="absolute rounded-md bg-primary-orange/0 group-hover:bg-primary-orange/50 transition-all w-full h-full z-[8] top-0 left-0" />
           </div>

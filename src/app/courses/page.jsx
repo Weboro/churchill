@@ -9,14 +9,6 @@ import {
 import {} from "@/components";
 import React, { useRef } from "react";
 
-// function scrollFn() {
-//   window.scrollTo({
-//     top: 650,
-//     left: 0,
-//     behavior: "smooth",
-//   });
-// }
-
 const Courses = () => {
   const ScrollRef = useRef();
 
