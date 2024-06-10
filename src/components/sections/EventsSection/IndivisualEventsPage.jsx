@@ -31,7 +31,8 @@ const monthArray = [
 const IndivisualEventsPage = ({ slug }) => {
   const data = eventsData?.find((item) => item.slug === slug);
 
-  const startDate = data?.duration.startDate.split("-");
+  const startDate = data?.duration?.startDate?.split("-");
+
   const year = parseInt(startDate[0]);
   const month = parseInt(startDate[1]) - 1;
   const day = parseInt(startDate[2]);

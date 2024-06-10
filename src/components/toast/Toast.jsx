@@ -53,7 +53,7 @@ const ToastComponent = (
   if (!isShown) return null;
 
   return (
-    <div className="fixed z-[100] w-full bottom-0 left-0 md:w-fit md:bottom-4 md:right-4 overflow-hidden">
+    <div className="fixed z-[100] w-full bottom-0 right-0 md:w-fit md:bottom-4 md:right-4 overflow-hidden">
       <motion.div
         initial={{ opacity: 0, translateY: "100%" }}
         animate={

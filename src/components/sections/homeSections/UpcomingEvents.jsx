@@ -33,7 +33,6 @@ const UpcomingEvents = () => {
                   duration={item?.duration}
                 />
               </FadeUpAnimation>
-              ``
             </div>
           ))}
         </div>
