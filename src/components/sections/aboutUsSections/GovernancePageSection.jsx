@@ -33,7 +33,11 @@ const GovernancePageSection = ({ slug }) => {
         <div className="container mx-auto px-5 mt-[48px]">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {data?.map((item, index) => (
-              <FadeUpAnimation delay={index * 0.1} className="h-full">
+              <FadeUpAnimation
+                key={index}
+                delay={index * 0.1}
+                className="h-full"
+              >
                 <GovernanceCard
                   data={item}
                   key={index}
