@@ -14,7 +14,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="z-40 bg-white shadow-lg ">
+    <div className="z-40 relative bg-white shadow-lg ">
       <div
         className={`z-40 bg-white hidden lg:block shadow-lg ${
           offset > 100 ? "fixed top-0 w-full bg-white flex" : ""

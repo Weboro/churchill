@@ -8,7 +8,7 @@ const TopInfo = () => {
   return (
     <div className="">
       <ul className="flex gap-4 text-[14px] font-semibold text-[#424242]">
-        <Link href="/">
+        <Link href="/student-support">
           <li className="flex gap-2 items-center cursor-pointer">
             <p className="text-matte-purple">Student Support</p>
             <i className="fi fi-rr-student flex"></i>

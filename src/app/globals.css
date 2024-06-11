@@ -206,6 +206,13 @@ body {
     transform: translate(-50%, -50%);
   }
 }
+
+@media screen and (min-width: 768px) {
+  .md-hexagon {
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 10% 75%, 10% 25%);
+  }
+}
+
 .slick-dots {
   bottom: -40px !important;
 }

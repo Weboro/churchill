@@ -5,20 +5,20 @@ import { AccordionComponent } from "@/components";
 
 const ContactUsFAQ = () => {
   return (
-    <div className="flex flex-col gap-[32px] lg:gap-[64px]">
+    <>
       <StyledHeroCard
         title="Frequently Asked Questions"
         breadcrumbs="Home > Contact > Faqs"
       />
 
-      <div className="container mx-auto px-5">
-        <div className="flex flex-col gap-[32px] lg:gap-[64px]">
+      <div className="flex flex-col gap-[32px] lg:gap-[64px]">
+        <div className="container mx-auto px-5">
           <AccordionComponent data={contactFaqs} />
         </div>
-      </div>
 
-      <NewsSection />
-    </div>
+        <NewsSection />
+      </div>
+    </>
   );
 };
 export default ContactUsFAQ;
