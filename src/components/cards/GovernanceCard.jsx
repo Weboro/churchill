@@ -5,11 +5,11 @@ import Button from "../button";
 import { FaArrowRight } from "react-icons/fa";
 
 const GovernanceCard = ({ data, handleBtnClick }) => {
-  const { image, title, subTitle, description } = data;
+  const { image, title, subTitle, description, slug } = data;
   return (
-    <div className="h-full flex flex-col gap-3 justify-between group">
-      <div className="flex flex-col gap-3">
-        <span className="relative overflow-hidden  rounded-md ">
+    <div className="h-full justify-between group">
+      <div>
+        <div className="relative overflow-hidden rounded-md">
           <Image
             src={`${image}`}
             alt={`Image of ${title}`}
@@ -17,24 +17,31 @@ const GovernanceCard = ({ data, handleBtnClick }) => {
             height={400}
             className="object-cover w-full aspect-square group-hover:scale-105 transition-all"
           />
-        </span>
-        <h3 className="font-bold text-[20px]  text-[#2C2B4B] leading-[28px]">
+        </div>
+      </div>
+      <div className="-translate-y-8 group-hover:-translate-y-12 flex flex-col gap-3 p-6 md:mx-4 bg-[#f5f3ef] group-hover:bg-primary-orange  transition-all rounded-lg">
+        <h3 className="font-bold text-2xl text-[#302f36] transition-all">
           {title}
         </h3>
-        <p className="font-bold text-[16px] text-[#E59623]">{subTitle}</p>
+        <p className="font-bold text-[16px] text-[#302f36]transition-all ">
+          {subTitle}
+        </p>
         <p
           className="clamp-3"
           dangerouslySetInnerHTML={{ __html: description }}
         />
-      </div>
-
-      <div onClick={() => handleBtnClick(title, subTitle, image, description)}>
-        <Button
-          btnName={"Learn More"}
-          icon={<FaArrowRight />}
-          styleA={"flex items-center gap-1"}
-          styleType="tertiary"
-        />
+        <Link
+          className="w-fit group-hover:text-white"
+          href={`/about-us/teams/${slug}`}
+        >
+          <Button
+            btnName={"Learn More"}
+            icon={<FaArrowRight />}
+            styleA={"flex items-center gap-1"}
+            styleType="tertiary"
+            style={"group-hover:text-white"}
+          />
+        </Link>
       </div>
     </div>
   );

@@ -62,6 +62,7 @@ import Loading from "./globals/loading/Loading";
 import BlogItemCard from "./cards/BlogItemCard";
 import DataNotFound from "./globals/DataNotFound/DataNotFound";
 import ToastComponent from "./toast/Toast";
+import IndivisualMemberDetailsPage from "./sections/aboutUsSections/IndivisualMemberDetailsPage";
 
 export {
   Button,
@@ -128,4 +129,5 @@ export {
   BlogItemCard,
   DataNotFound,
   ToastComponent,
+  IndivisualMemberDetailsPage,
 };

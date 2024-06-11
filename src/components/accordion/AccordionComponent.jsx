@@ -10,15 +10,18 @@ const AccordionComponent = ({ data }) => {
   };
 
   return (
-    <div className="flex flex-col py-4 md:px-2 rounded-md bg-primary-orange/10 border-2 border-primary-orange">
+    <div className="flex flex-col py-4 md:px-10 rounded-md bg-primary-orange/10 border border-primary-orange/50">
       {data?.map((item, index) => {
         const isActive = activeIndex == index ? true : false;
 
         return (
-          <div key={index} className=" border-y border-y-neutral-800/25">
+          <div
+            key={index}
+            className="py-3 border-b border-b-neutral-800/25 last:border-none"
+          >
             <h2
               onClick={() => handleToggle(index)}
-              className={`text-2xl font-bold px-4 py-2 flex items-center justify-between cursor-pointer select-none hover:bg-zinc-200/20
+              className={`text-2xl font-bold py-2 flex items-center justify-between cursor-pointer select-none hover:bg-zinc-200/20
                ${isActive ? "border-b-neutral-800/25 border-b" : ""}`}
             >
               <span>{item.title}</span>

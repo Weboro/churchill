@@ -95,7 +95,7 @@ const FindAgent = () => {
           })}
         </section>
 
-        <section className="bg-[#F3E4E4] rounded-[20px] flex flex-col gap-6 md:gap-4 md:flex-row px-5 pt-5">
+        <section className="bg-[#F3E4E4] rounded-[20px] flex flex-col gap-6 md:gap-4 md:flex-row px-5 pt-5 mb-[6px]">
           <Image
             src="/assets/find-agent-page.png"
             width={250}
@@ -120,7 +120,7 @@ const FindAgent = () => {
             >
               <Button
                 btnName={"Fill up a Quick Form"}
-                icon={<FaArrowRight m ght />}
+                icon={<FaArrowRight />}
                 styleA={" flex items-center gap-4"}
                 style={
                   "mx-auto md:m-0 border border-2 border-[#606060] font-semibold text-[14px] rounded-md px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
