@@ -22,7 +22,7 @@ const StyledHeroCard = ({
       />
       <div className="w-full h-full flex items-center justify-center flex-col gap-4 px-5 relative z-[2]">
         <p className="text-matte-purple text-center">{breadcrumbs}</p>
-        <h2 className="text-matte-purple text-2xl md:text-3xl font-bold text-center w-[90vw] md:w-[80vw] ">
+        <h2 className="text-matte-purple capitalize text-2xl md:text-3xl font-bold text-center w-[90vw] md:w-[80vw] ">
           {title}
         </h2>
         {showSearch && (
@@ -30,7 +30,7 @@ const StyledHeroCard = ({
             <Search
               text={searchText}
               onSearchText={onSearchText}
-              placeholderText="Search for Policies"
+              placeholderText="Type Here to Search"
             />
           </div>
         )}

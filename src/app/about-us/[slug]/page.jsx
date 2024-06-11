@@ -1,5 +1,10 @@
 "use client";
-import { PoliciesSection, StyledHeroCard } from "@/components";
+import {
+  PoliciesSection,
+  GovernancePageSection,
+  StyledHeroCard,
+  UnderConstruction,
+} from "@/components";
 import React, { useState } from "react";
 
 const Page = ({ params }) => {
@@ -11,17 +16,25 @@ const Page = ({ params }) => {
   return (
     <>
       <StyledHeroCard
-        title="Policy And Procedures"
-        breadcrumbs="Home > About us > Policy And Procedures"
+        title={`${slug?.split("-").join(" ")}`}
+        breadcrumbs={`Home > About us > ${slug?.split("-").join(" ")}`}
         searchText={searchText}
-        onSearchText={setSearchText}
         showSearch={true}
+        onSearchText={setSearchText}
       />
 
       {slug === "policies-and-procedures" ? (
         <PoliciesSection searchQuery={query} />
+      ) : slug === "governance-and-leadership" ? (
+        <GovernancePageSection searchQuery={query} slug={slug} />
       ) : (
-        <>not found</>
+        <>
+          <h2 className="text-2xl my-32 text-center mx-auto w-fit">
+            Error: Page not found
+            <br />
+            This Page is under Construction
+          </h2>
+        </>
       )}
     </>
   );
