@@ -63,6 +63,8 @@ import BlogItemCard from "./cards/BlogItemCard";
 import DataNotFound from "./globals/DataNotFound/DataNotFound";
 import ToastComponent from "./toast/Toast";
 import IndivisualMemberDetailsPage from "./sections/aboutUsSections/IndivisualMemberDetailsPage";
+import AIHelpSection from "./sections/commonSections/AIHelpSection";
+import YouTubeLinksSection from "./sections/commonSections/YouTubeLinksSection";
 
 export {
   Button,
@@ -130,4 +132,6 @@ export {
   DataNotFound,
   ToastComponent,
   IndivisualMemberDetailsPage,
+  AIHelpSection,
+  YouTubeLinksSection,
 };

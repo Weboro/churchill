@@ -1,5 +1,11 @@
 import React from "react";
-import { NewsSection, EnquirySection, Button } from "@/components";
+import {
+  NewsSection,
+  EnquirySection,
+  Button,
+  AIHelpSection,
+  YouTubeLinksSection,
+} from "@/components";
 import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 
@@ -42,6 +48,10 @@ const page = () => {
       </section>
 
       <div className="container mx-auto px-5 flex flex-col gap-[32px] lg:gap-[64px]">
+        <AIHelpSection />
+
+        <YouTubeLinksSection />
+
         <EnquirySection />
 
         <NewsSection />

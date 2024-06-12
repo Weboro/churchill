@@ -5,6 +5,9 @@ import { MdQuestionAnswer } from "react-icons/md";
 import Link from "next/link";
 
 const TopInfo = () => {
+  const NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL =
+    process.env.NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL;
+
   return (
     <div className="">
       <ul className="flex gap-4 text-[14px] font-semibold text-[#424242]">
@@ -27,10 +30,7 @@ const TopInfo = () => {
             <i className="fi fi-rr-book flex"></i>
           </li>
         </Link>
-        <Link
-          href="https://churchill-student-hub-eight.vercel.app/"
-          target="_blank"
-        >
+        <Link href={NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL} target="_blank">
           <li className="flex gap-1 items-center cursor-pointer">
             <p className="text-matte-purple">Student Hub</p>
             <i className="fi fi-rr-globe-alt flex"></i>
