@@ -5,12 +5,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { navItems } from "@/constDatas/navItems";
-import { usefulLinksData } from "@/constDatas/usefulLinksData";
-import AboutUsCard from "../cards/AboutUsCard";
+
+import { YoutubeSliderCard } from "@/components";
 
 import FadeUpAnimation from "@/animations/FadeUp";
 
-const AboutSlider = () => {
+const YoutubeSlider = () => {
   const aboutLists = navItems[0];
 
   const sliderRef = useRef(null);
@@ -78,15 +78,13 @@ const AboutSlider = () => {
   return (
     <div className="flex flex-col gap-4 lg:gap-[40px]">
       <Slider {...settings} ref={sliderRef}>
-        {aboutLists?.Catagories?.map((item, index) => {
+        {YoutubeRedirectLinks?.map((item, index) => {
           return (
             <FadeUpAnimation key={index} delay={0.1 * index}>
-              <div className="px-[11px] my-[11px]" key={index}>
-                <AboutUsCard
-                  icon={item?.headerIcon}
-                  title={item?.menuTitle}
-                  key={index}
-                  link={item?.slug}
+              <div className="px-[11px] my-[11px]">
+                <YoutubeSliderCard
+                  title={item?.title}
+                  videoId={item?.videoId}
                 />
               </div>
             </FadeUpAnimation>
@@ -126,4 +124,23 @@ const AboutSlider = () => {
   );
 };
 
-export default AboutSlider;
+const YoutubeRedirectLinks = [
+  {
+    title: "Kevin's Story: Cheating is never the right answer",
+    videoId: "1ryxB4YJT1g",
+  },
+  {
+    title: "Lucy's Story: Cheating is never the right answer",
+    videoId: "3wi_Ui4aJrc",
+  },
+  {
+    title: "Ben's Story: Cheating is never the right answer",
+    videoId: "WpFWZ3U-yj0",
+  },
+  {
+    title: "Sue's Story: Cheating is never the right answer",
+    videoId: "FlMS0UgA-tE",
+  },
+];
+
+export default YoutubeSlider;

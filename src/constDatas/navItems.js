@@ -6,6 +6,8 @@ import { MdOutlineGrade } from "react-icons/md";
 import { CiViewList } from "react-icons/ci";
 import { LuScanFace } from "react-icons/lu";
 import { MdOutlineAccessTime } from "react-icons/md";
+const NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL =
+  process.env.NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL;
 
 export const navItems = [
   {
@@ -271,7 +273,7 @@ export const navItems = [
         headerIcon: "fi fi-rr-student",
         image: "/assets/course-b.png",
         link: "",
-        redirectLink: "https://churchill-student-hub-eight.vercel.app/",
+        redirectLink: NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL,
       },
       {
         menuTitle: "faqs",
@@ -304,8 +306,7 @@ export const navItems = [
         headerIcon: "fi fi-rr-form",
         image: "/assets/course-b.png",
         link: "/blogs",
-        redirectLink:
-          "https://churchill-student-hub-eight.vercel.app/request-form",
+        redirectLink: `${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}/request-form`,
       },
       {
         menuTitle: "blogs",
@@ -329,8 +330,7 @@ export const navItems = [
         headerIcon: "fi fi-rr-calendar",
         image: "/assets/course-b.png",
         link: "",
-        redirectLink:
-          "https://churchill-student-hub-eight.vercel.app/upcoming-key-dates",
+        redirectLink: `${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}/upcoming-key-dates`,
       },
     ],
   },

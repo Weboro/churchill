@@ -6,6 +6,9 @@ import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
+  const NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL =
+    process.env.NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL;
+
   return (
     <div className="">
       <div
@@ -139,7 +142,7 @@ const Footer = () => {
                   <li>
                     <Link
                       target="_blank"
-                      href={"https://churchill-student-hub-eight.vercel.app/"}
+                      href={NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}
                     >
                       Student Hub
                     </Link>
@@ -165,9 +168,7 @@ const Footer = () => {
                   <li>
                     <Link
                       target="_blank"
-                      href={
-                        "https://churchill-student-hub-eight.vercel.app/request-form"
-                      }
+                      href={`${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}/request-form`}
                     >
                       Request Form
                     </Link>
@@ -181,9 +182,7 @@ const Footer = () => {
                   <li>
                     <Link
                       target="_blank"
-                      href={
-                        "https://churchill-student-hub-eight.vercel.app/upcoming-key-dates"
-                      }
+                      href={`${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}/upcoming-key-dates`}
                     >
                       Upcoming Key Dates
                     </Link>
@@ -202,9 +201,7 @@ const Footer = () => {
                     <Link href={"/find-agent"}>Find Agent</Link>
                   </li>
                   <li>
-                    <Link
-                      href={"https://churchill-student-hub-eight.vercel.app/"}
-                    >
+                    <Link href={`${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}`}>
                       Student Hub
                     </Link>
                   </li>
