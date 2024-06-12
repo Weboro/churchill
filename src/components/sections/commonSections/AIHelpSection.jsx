@@ -77,7 +77,7 @@ const AIHelpSection = () => {
             Institute.
           </p>
           <Link
-            href={`${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}/`}
+            href={`${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}/assets/Policy-and-procedure/SupportforStudentsPolicy.pdf`}
             className="w-fit"
             target="_blank"
           >

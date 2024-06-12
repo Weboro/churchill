@@ -8,11 +8,13 @@ import {
 } from "@/components";
 import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 const page = () => {
   return (
     <>
-      <section className="mb-[48px] mt-[148px]">
+      {/* <section className=" mt-[148px]"> */}
+      <section className="mt-[100px] mb-[48px]">
         <div className="container mb-[25px] px-5 mx-auto flex flex-col gap-8 items-center justify-center text-center">
           <h1 className="text-matte-purple text-3xl leading-[32px] font-bold lg:text-[54px] lg:leading-[56px]">
             Enhance Your Churchill Experience
@@ -24,18 +26,16 @@ const page = () => {
             the help you need, wherever you are.
           </p>
           <div className="flex flex-col gap-4 md:flex-row md:gap-5">
-            <Button
-              btnName="Apply Now"
-              icon={<FaArrowRight />}
-              styleA={"flex items-center gap-1"}
-            />
-
-            <Button
-              type="secondary"
-              btnName="Explore Our Courses"
-              icon={<FaArrowRight />}
-              styleA={"flex items-center gap-1"}
-            />
+            <Link
+              target="_blank"
+              href="https://forms.zohopublic.com.au/CIHE/form/StudentHubEnquiry/formperma/XilFJje5kQ-h7f4saQYbSV4kJ-kAMiG7p1QNfWEvDXs"
+            >
+              <Button
+                btnName="Enquire Now"
+                icon={<FaArrowRight />}
+                styleA={"flex items-center gap-1"}
+              />
+            </Link>
           </div>
         </div>
         <Image

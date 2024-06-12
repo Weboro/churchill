@@ -65,6 +65,8 @@ import ToastComponent from "./toast/Toast";
 import IndivisualMemberDetailsPage from "./sections/aboutUsSections/IndivisualMemberDetailsPage";
 import AIHelpSection from "./sections/commonSections/AIHelpSection";
 import YouTubeLinksSection from "./sections/commonSections/YouTubeLinksSection";
+import YoutubeSlider from "./sliders/YoutubeSlider";
+import YoutubeSliderCard from "./cards/YoutubeSliderCard";
 
 export {
   Button,
@@ -134,4 +136,6 @@ export {
   IndivisualMemberDetailsPage,
   AIHelpSection,
   YouTubeLinksSection,
+  YoutubeSlider,
+  YoutubeSliderCard,
 };
