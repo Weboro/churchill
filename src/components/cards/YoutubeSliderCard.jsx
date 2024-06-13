@@ -28,7 +28,7 @@ const YoutubeSliderCard = ({ videoId, title }) => {
             />
           </div>
         </div>
-        <h4 className="font-bold text-lg leading-[22px] pt-3 group-hover:underline transition-all">
+        <h4 className="font-bold text-lg leading-[22px] pt-3 hover:underline transition-all">
           {title}
         </h4>
       </div>
