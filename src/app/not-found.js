@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import Button from "@/components/button";
-import Animation from "@/constDatas/PageNotFound.json";
+import Animation from "@/constDatas/animations/PageNotFound.json";
 import Lottie from "lottie-react";
 
 export default function NotFound() {

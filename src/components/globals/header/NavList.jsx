@@ -16,12 +16,6 @@ const NavList = ({
   const [openSearch, setOpenSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
-  // const handleSearchKeyPress = (event) => {
-  //   if (event.key === "Enter") {
-  //     window.open(`https://www.google.com/search?q=${searchQuery}`, "_blank");
-  //     setOpenSearch(false);
-  //   }
-  // };
   useEffect(() => {
     if (openSearch) {
       const script = document.createElement("script");

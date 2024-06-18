@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { NewsSection } from "@/components";
 import Lottie from "lottie-react";
 
-import Animation from "@/constDatas/Animation.json";
+import Animation from "@/constDatas/animations/Animation.json";
 
 const UnderConstruction = () => {
   return (

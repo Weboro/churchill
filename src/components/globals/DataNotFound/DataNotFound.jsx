@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "lottie-react";
-import DataNotFoundAnimation from "@/constDatas/data-not-found.json";
+import DataNotFoundAnimation from "@/constDatas/animations/data-not-found.json";
 
 const DataNotFound = () => {
   return (

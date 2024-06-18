@@ -229,7 +229,12 @@ const Footer = () => {
                 </h3>
                 <ul className="flex flex-col gap-1 text-[14px]">
                   <li>
-                    <Link href={""}>Student Portal</Link>
+                    <Link
+                      target="_blank"
+                      href={"https://churchill.instructure.com/login"}
+                    >
+                      Student Portal
+                    </Link>
                   </li>
                   <li>
                     <Link href={"https://churchill.softlinkhosting.com.au/"}>

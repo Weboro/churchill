@@ -1,7 +1,7 @@
 "use client";
 import { Button, PoliciesSection, GovernancePageSection } from "@/components";
 import { FaArrowRight } from "react-icons/fa";
-import Animation from "@/constDatas/Animation.json";
+import Animation from "@/constDatas/animations/PageNotFound.json";
 import Lottie from "lottie-react";
 import Link from "next/link";
 
