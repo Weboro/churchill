@@ -24,11 +24,12 @@ const YoutubeSliderCard = ({ videoId, title }) => {
               height={300}
               className="w-14 aspect-square object-contain transition-all group-hover:scale-[1.025] group-hover:-translate-y-2"
               // className="w-16 aspect-square object-contain absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              alt={`Youtube Video Url for ${title}`}
               src="/assets/YoutubeIcon.svg"
             />
           </div>
         </div>
-        <h4 className="font-bold text-lg leading-[22px] pt-3 group-hover:underline transition-all">
+        <h4 className="font-bold text-lg leading-[22px] pt-3 hover:underline transition-all">
           {title}
         </h4>
       </div>
