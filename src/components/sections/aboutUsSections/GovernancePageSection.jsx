@@ -41,15 +41,16 @@ const GovernancePageSection = ({ slug }) => {
                 <GovernanceCard
                   data={item}
                   key={index}
-                  handleBtnClick={(title, subTitle, image, description) => {
-                    setOpenDetails(true);
-                    setComment({
-                      title,
-                      subTitle,
-                      image,
-                      description,
-                    });
-                  }}
+
+                  // handleBtnClick={(title, subTitle, image, description) => {
+                  //   setOpenDetails(true);
+                  //   setComment({
+                  //     title,
+                  //     subTitle,
+                  //     image,
+                  //     description,
+                  //   });
+                  // }}
                 />
               </FadeUpAnimation>
             ))}

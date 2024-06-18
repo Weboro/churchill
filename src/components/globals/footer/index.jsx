@@ -40,24 +40,36 @@ const Footer = () => {
                   <strong>Churchill Institute of Higher Education</strong>
                 </h3>
 
-                <Link href={""} className="flex gap-2 items-center text-[14px]">
+                <Link
+                  href={"tel:+61-02-8856-2997"}
+                  className="flex gap-2 items-center text-[14px]"
+                >
                   <span>
                     <FaPhoneAlt />
                   </span>
                   +61 (02) 8856 2997
                 </Link>
-                <Link href={""} className="flex gap-2 items-center text-[14px]">
+                <Link
+                  href={"mailto:info@churchill.nsw.edu.au"}
+                  className="flex gap-2 items-center text-[14px]"
+                >
                   <span>
                     <MdEmail />
                   </span>
                   info@churchill.nsw.edu.au
                 </Link>
-                <p className="flex gap-2 items-center text-[14px]">
-                  <span>
-                    <FaLocationDot />
-                  </span>
-                  Level 1, 16-18 Wentworth Street Parramatta NSW 2150
-                </p>
+
+                <Link
+                  href={"https://maps.app.goo.gl/h7FJyoQfasvUvck79"}
+                  target="_blank"
+                >
+                  <p className="flex gap-2 items-center text-[14px]">
+                    <span>
+                      <FaLocationDot />
+                    </span>
+                    Level 1, 16-18 Wentworth Street Parramatta NSW 2150
+                  </p>
+                </Link>
               </div>
             </div>
             <div className="flex flex-col lg:flex-row justify-between gap-5 text-white">
@@ -87,7 +99,10 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href={"/about-us/policies-and-procedures"}>
+                    <Link
+                      target="_blank"
+                      href={`${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}/policies`}
+                    >
                       Policies and Procedures
                     </Link>
                   </li>
@@ -98,9 +113,6 @@ const Footer = () => {
                     <Link href={"/about-us/approved-agents"}>
                       Approved Agents
                     </Link>
-                  </li>
-                  <li>
-                    <Link href={"/policies"}> Policies and Procedures</Link>
                   </li>
                 </ul>
               </div>
@@ -191,7 +203,7 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-[16px] pb-4">
-                  <strong>Courses</strong>
+                  <strong>Quick Links</strong>
                 </h3>
                 <ul className="flex flex-col gap-1 text-[14px]">
                   <li>
@@ -210,22 +222,25 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
+
               <div>
                 <h3 className="text-[16px] pb-4">
                   <strong>Login</strong>
                 </h3>
                 <ul className="flex flex-col gap-1 text-[14px]">
                   <li>
-                    <Link href={""}>Student Hub</Link>
-                  </li>
-                  <li>
-                    <Link href={""}>Staff Login</Link>
-                  </li>
-                  <li>
-                    <Link href={""}>Library</Link>
-                  </li>
-                  <li>
                     <Link href={""}>Student Portal</Link>
+                  </li>
+                  <li>
+                    <Link href={"https://churchill.softlinkhosting.com.au/"}>
+                      Library Portal
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={""}>Staff Portal</Link>
+                  </li>
+                  <li>
+                    <Link href={""}>Agent Portal</Link>
                   </li>
                 </ul>
               </div>

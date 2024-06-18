@@ -65,7 +65,7 @@ const BlogsPage = () => {
                 </div>
               </section>
               {filteredArray.length > 0 ? (
-                <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+                <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-[3rem] gap-4">
                   {filteredArray.map((data, index) => (
                     <BlogItemCard
                       key={index}

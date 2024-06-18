@@ -4,8 +4,9 @@ import React from "react";
 import Button from "../button";
 import { FaArrowRight } from "react-icons/fa";
 
-const GovernanceCard = ({ data, handleBtnClick }) => {
+const GovernanceCard = ({ data }) => {
   const { image, title, subTitle, description, slug } = data;
+
   return (
     <div className="h-full justify-between group">
       <div>
@@ -15,7 +16,7 @@ const GovernanceCard = ({ data, handleBtnClick }) => {
             alt={`Image of ${title}`}
             width={400}
             height={400}
-            className="object-cover w-full aspect-square group-hover:scale-105 transition-all"
+            className="object-cover w-full aspect-square group-hover:scale-105 transition-all duration-500"
           />
         </div>
       </div>
