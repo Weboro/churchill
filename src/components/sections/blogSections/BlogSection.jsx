@@ -14,7 +14,7 @@ function BlogSection() {
           <FadeByWordAnimation>Latest Blogs</FadeByWordAnimation>
         </h2>
         <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 md:gap-4">
-          {BlogData.map((data, index) => (
+          {BlogData?.slice(0, 3)?.map((data, index) => (
             <FadeUpAnimation key={index} delay={index * 0.2}>
               <BlogItemCard
                 slug={data?.slug}
