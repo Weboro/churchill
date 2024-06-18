@@ -8,6 +8,7 @@ import {
   AccordionComponent,
   AskAQeustionForm,
 } from "@/components";
+import FadeByWordAnimation from "@/animations/FadeByWord";
 
 const ContactUs = () => {
   return (
@@ -75,9 +76,11 @@ const ContactUs = () => {
             </div>
           </section>
 
-          <section className="flex flex-col gap-5">
-            <h2 className="text-black text-3xl md:text-4xl font-bold text-center">
-              Frequently aksed Questions
+          <section className="flex flex-col gap-12 mt-[32px]">
+            <h2 className="text-black text-3xl md:text-4xl font-bold text-center w-fit mx-auto">
+              <FadeByWordAnimation>
+                Frequently aksed Questions
+              </FadeByWordAnimation>
             </h2>
 
             <AccordionComponent data={contactFaqs?.slice(0, 4)} />
@@ -96,17 +99,11 @@ const ContactUs = () => {
             </span>
           </section>
 
-          {/* <section className="flex flex-col gap-5">
-            <h2 className="text-black text-3xl md:text-4xl font-bold text-center">
-              Ask A Question
-            </h2>
-            
-            <TODO: FORM />
-          </section> */}
-
           <EnquirySection />
         </div>
       </div>
+
+      <hr className="mb-[64px]" />
     </>
   );
 };
