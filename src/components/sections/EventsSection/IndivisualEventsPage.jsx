@@ -53,7 +53,7 @@ const IndivisualEventsPage = ({ slug }) => {
   //-- animation
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end end"],
+    offset: [".3 end", "end end"],
   });
 
   const toastRef = useRef();
@@ -75,7 +75,7 @@ const IndivisualEventsPage = ({ slug }) => {
         <div className="px-5 flex flex-col gap-[32px] md:gap-[64px]">
           <article className="flex flex-col gap-6" ref={containerRef}>
             <div className="container-blog flex flex-col gap-5">
-              <nav className="font-semibold">
+              <nav className="font-semibold flex gap-1">
                 <Link
                   className="hover:text-primary-orange transition-all"
                   href="/"

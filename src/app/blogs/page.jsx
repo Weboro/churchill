@@ -7,18 +7,10 @@ import {
   DataNotFound,
 } from "@/components";
 import { BlogData } from "@/constDatas/BlogData";
+import { BlogTags } from "@/constDatas/BlogTags";
 
 const BlogsPage = () => {
   const [isLoading, setIsLoading] = useState(false);
-
-  const tags = [
-    { tag: "busineess" },
-    { tag: "science" },
-    { tag: "law" },
-    { tag: "education" },
-    { tag: "technology" },
-    { tag: "design" },
-  ];
 
   const [searchQuery, setSearchQuery] = useState("");
   const query = searchQuery.trim().toLowerCase();
@@ -52,7 +44,7 @@ const BlogsPage = () => {
                   <div className="flex-[30%] flex flex-col gap-3">
                     <h3 className="text-xl font-bold">Tags</h3>
                     <div className="flex flex-wrap gap-3">
-                      {tags.map((tag, index) => (
+                      {BlogTags.map((tag, index) => (
                         <span
                           key={index}
                           className="bg-[#F2CF9C] px-3 py-1 rounded-md"
@@ -80,7 +72,9 @@ const BlogsPage = () => {
                   ))}
                 </section>
               ) : (
-                <DataNotFound />
+                <div className="w-1/2 mx-auto">
+                  <DataNotFound />
+                </div>
               )}
             </div>
           </div>

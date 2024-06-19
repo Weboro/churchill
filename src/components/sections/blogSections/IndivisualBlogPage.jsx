@@ -1,40 +1,212 @@
-import StyledHeroCard from "@/components/cards/StyledHeroSection";
+"use client";
+import { NewsSection } from "@/components";
 import { BlogData } from "@/constDatas/BlogData";
 import Image from "next/image";
+import Link from "next/link";
+import { useRef } from "react";
+import { motion, useScroll } from "framer-motion";
 
 const IndivisualBlogPage = ({ slug }) => {
   const data = BlogData?.find((data) => data.slug === slug);
 
+  const readTime = Math.ceil(data.description.length / 300);
+
+  //-- animation
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: [".3 end", "end end"],
+  });
+
+  // kept in env for easy changing
+  const siteUrl = process.env.NEXT_PUBLIC_CHURCHILL_URL;
+
   return (
     <>
-      <StyledHeroCard
-        title={data.title}
-        breadcrumbs={`Events > Blogs > ${data.slug.split("-").join(" ")}`}
+      <motion.div
+        className="h-[8px] z-[100] fixed bottom-[-1px] left-0 right-0 bg-primary-orange"
+        style={{ scaleX: scrollYProgress }}
       />
+      <section className="mx-auto py-[7rem] lg:py-20">
+        <div className="px-5 flex flex-col gap-[32px] md:gap-[64px]">
+          <article className="flex flex-col gap-6" ref={containerRef}>
+            <div className="container-blog flex flex-col gap-5">
+              <nav className="font-semibold flex gap-1">
+                <Link
+                  className="hover:text-primary-orange transition-all"
+                  href="/"
+                >
+                  Home
+                </Link>
+                /
+                <Link
+                  className="hover:text-primary-orange transition-all"
+                  href="/blogs"
+                >
+                  Blogs
+                </Link>
+                / {data.title}
+              </nav>
+              <hr className="border-2 w-[60px]  border-primary-orange" />
 
-      <div className="-translate-y-8">
-        <div className="container mx-auto px-5">
-          <Image
-            width={1240}
-            height={1240}
-            src={data.image}
-            alt={`Hero image for ${data.title}`}
-            className="w-full aspect-[3/2] rounded-tl-[24px] rounded-tr-[24px]"
-          />
-          <div className="bg-[#FFFFFFFF] p-4 -translate-y-16 rounded-tl-[32px] rounded-tr-[32px] flex flex-col gap-4">
-            <p>{data.date}</p>
-            <h2 className=" text-matte-purple leading-7 md:leading-none text-2xl md:text-3xl font-bold">
-              {data.title}
-            </h2>
-            <div
-              className="rich-text-container"
-              dangerouslySetInnerHTML={{ __html: data?.description }}
-            />
+              <div className="flex flex-wrap flex-row items-center gap-1">
+                <i className="fi fi-rr-calendar-day flex" />
+                <span>{data.date}</span>
+                {/* <span>{displayMonth}</span><span>{displayDay}</span><span>{year}</span>*/}
+                <span>·</span>
+
+                <i className="fi fi-rr-circle-user flex" />
+                <span>{data.author}</span>
+                <span>·</span>
+
+                <i className="fi fi-rr-clock-three flex"></i>
+                <>{readTime} min read</>
+              </div>
+
+              <h2 className="text-4xl leading-[40px] lg:text-6xl lg:leading-[62px] font-bold">
+                {data.title}
+              </h2>
+
+              <h4 dangerouslySetInnerHTML={{ __html: data.subTitle }} />
+            </div>
+
+            <div className="container mx-auto">
+              <Image
+                width={2000}
+                height={1500}
+                src={data.image}
+                alt={`event image for ${data.title}`}
+                className="w-full aspect-[1.78/1] lg:w-[75%] mx-auto object-cover rounded-md"
+              />
+            </div>
+
+            <div className="container-blog">
+              <div
+                className="rich-text-container"
+                dangerouslySetInnerHTML={{ __html: data.description }}
+              />
+            </div>
+          </article>
+
+          <div className="container mx-auto px-5 flex flex-col gap-[32px]">
+            <hr className="border border-black/20" />
+            <div className="flex gap-4 md:items-center md:justify-between flex-col md:flex-row">
+              <div className="flex flex-row flex-wrap gap-2">
+                {data.tags?.map((item, index) => (
+                  <p
+                    key={index}
+                    className="font-semibold bg-[#F2CF9C] text-[#2C2B4B] rounded-full text-[14px] px-3 py-1 h-fit"
+                  >
+                    {item?.tag}
+                  </p>
+                ))}
+              </div>
+
+              <div className="flex flex-col md:flex-row gap-2">
+                <p>Share To:</p>
+                <div className="flex gap-2 text-2xl flex-wrap">
+                  <a
+                    href={`mailto:?subject=Check this out&body=Here's the link: ${siteUrl}`}
+                    className="hover:text-primary-orange transition-all social-button email"
+                  >
+                    <i className="flex fi fi-rr-envelope"></i>
+                  </a>
+                  <a
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${siteUrl}`}
+                    target="_blank"
+                    className="hover:text-primary-orange transition-all social-button facebook"
+                  >
+                    <i className="flex fi fi-brands-facebook"></i>
+                  </a>
+                  <a
+                    href={`https://twitter.com/intent/tweet?url=${siteUrl}`}
+                    target="_blank"
+                    className="hover:text-primary-orange transition-all social-button twitter"
+                  >
+                    <i className="flex fi fi-brands-twitter-alt"></i>
+                  </a>
+                  <a
+                    href={`https://www.linkedin.com/shareArticle?mini=true&url=${siteUrl}`}
+                    target="_blank"
+                    className="hover:text-primary-orange transition-all social-button linkedin"
+                  >
+                    <i className="flex fi fi-brands-linkedin"></i>
+                  </a>
+                  <a
+                    href={`https://api.whatsapp.com/send?text=Check this out: ${siteUrl}`}
+                    target="_blank"
+                    className="hover:text-primary-orange transition-all social-button whatsapp"
+                  >
+                    <i className="flex fi fi-brands-whatsapp"></i>
+                  </a>
+                  <a
+                    href={`fb-messenger://share/?link=${siteUrl}`}
+                    target="_blank"
+                    className="hover:text-primary-orange transition-all social-button messenger"
+                  >
+                    <i className="flex fi fi-brands-facebook-messenger"></i>
+                  </a>
+                  <div
+                  // onClick={(e) => {
+                  //   e.preventDefault();
+                  //   navigator.clipboard.writeText(window.location.href);
+                  //   toastRef.current.showToast();
+                  // }}
+                  // className="hover:text-primary-orange transition-all social-button copy-link"
+                  >
+                    <i className="fi fi-rr-copy-alt"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <NewsSection />
         </div>
-      </div>
+      </section>
     </>
   );
 };
 
 export default IndivisualBlogPage;
+
+// import StyledHeroCard from "@/components/cards/StyledHeroSection";
+// import { BlogData } from "@/constDatas/BlogData";
+// import Image from "next/image";
+
+// const IndivisualBlogPage = ({ slug }) => {
+//   const data = BlogData?.find((data) => data.slug === slug);
+
+//   return (
+//     <>
+//       <StyledHeroCard
+//         title={data.title}
+//         breadcrumbs={`Events > Blogs > ${data.slug.split("-").join(" ")}`}
+//       />
+
+//       <div className="-translate-y-8">
+//         <div className="container mx-auto px-5">
+//           <Image
+//             width={1240}
+//             height={1240}
+//             src={data.image}
+//             alt={`Hero image for ${data.title}`}
+//             className="w-full aspect-[3/2] rounded-tl-[24px] rounded-tr-[24px]"
+//           />
+//           <div className="bg-[#FFFFFFFF] p-4 -translate-y-16 rounded-tl-[32px] rounded-tr-[32px] flex flex-col gap-4">
+//             <p>{data.date}</p>
+//             <h2 className=" text-matte-purple leading-7 md:leading-none text-2xl md:text-3xl font-bold">
+//               {data.title}
+//             </h2>
+//             <div
+//               className="rich-text-container"
+//               dangerouslySetInnerHTML={{ __html: data?.description }}
+//             />
+//           </div>
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
+// export default IndivisualBlogPage;
