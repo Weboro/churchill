@@ -12,7 +12,7 @@ const MobileNav = () => {
 
   return (
     <div className="">
-      <div className="z-40 fixed top-0 left-0 right-0">
+      <div className="z-40 fixed top-0 left-0 right-0 bottom-0 w-screen h-screen overflow-x-hidden overflow-y-scroll">
         <div className="flex justify-between gap-8 items-center px-[24px] py-2 shadow bg-white w-full">
           <div className="py-2">
             <Link href={"/"}>

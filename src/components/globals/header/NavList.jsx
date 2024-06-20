@@ -89,7 +89,7 @@ const NavList = ({
                           </Link>
                         </div>
                         <div className="flex-[78%]">
-                          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-2 ">
+                          <ul className="h-[180px] md:h-auto overflow-y-scroll grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-2">
                             {item.Catagories.map((subItem, index) => (
                               <Link
                                 target={`${
