@@ -3,7 +3,6 @@ import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
 import Button from "@/components/button";
 import { BlogItemCard } from "@/components";
-import FadeByWordAnimation from "@/animations/FadeByWord";
 import FadeUpAnimation from "@/animations/FadeUp";
 
 function BlogSection() {
@@ -11,22 +10,24 @@ function BlogSection() {
     <div className="container mx-auto px-5 ">
       <div className="flex flex-col gap-[32px] lg:gap-[44px]">
         <h2 className="font-bold text-[36px] text-center mx-auto text-[#2C2B4B]">
-          <FadeByWordAnimation>Latest Blogs</FadeByWordAnimation>
+          Latest Blogs
         </h2>
         <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 md:gap-4">
-          {BlogData?.slice(0, 3)?.map((data, index) => (
-            <FadeUpAnimation key={index} delay={index * 0.2}>
-              <BlogItemCard
-                slug={data?.slug}
-                title={data?.title}
-                image={data?.image}
-                date={data?.date}
-                tags={data?.tags}
-                subTitle={data?.subTitle}
-                index={data?.index}
-              />
-            </FadeUpAnimation>
-          ))}
+          {BlogData?.reverse()
+            ?.slice(0, 3)
+            ?.map((data, index) => (
+              <FadeUpAnimation key={index} delay={index * 0.2}>
+                <BlogItemCard
+                  slug={data?.slug}
+                  title={data?.title}
+                  image={data?.image}
+                  date={data?.date}
+                  tags={data?.tags}
+                  subTitle={data?.subTitle}
+                  index={data?.index}
+                />
+              </FadeUpAnimation>
+            ))}
         </section>
         <div>
           <div className="flex justify-center">

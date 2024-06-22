@@ -1,5 +1,5 @@
 "use client";
-import { NewsSection } from "@/components";
+import { NewsSection, MoreBlogsSection } from "@/components";
 import { BlogData } from "@/constDatas/BlogData";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,7 +18,6 @@ const IndivisualBlogPage = ({ slug }) => {
     offset: [".3 end", "end end"],
   });
 
-  // kept in env for easy changing
   const siteUrl = process.env.NEXT_PUBLIC_CHURCHILL_URL;
 
   return (
@@ -161,6 +160,8 @@ const IndivisualBlogPage = ({ slug }) => {
             </div>
           </div>
 
+          <MoreBlogsSection />
+
           <NewsSection />
         </div>
       </section>
@@ -169,44 +170,3 @@ const IndivisualBlogPage = ({ slug }) => {
 };
 
 export default IndivisualBlogPage;
-
-// import StyledHeroCard from "@/components/cards/StyledHeroSection";
-// import { BlogData } from "@/constDatas/BlogData";
-// import Image from "next/image";
-
-// const IndivisualBlogPage = ({ slug }) => {
-//   const data = BlogData?.find((data) => data.slug === slug);
-
-//   return (
-//     <>
-//       <StyledHeroCard
-//         title={data.title}
-//         breadcrumbs={`Events > Blogs > ${data.slug.split("-").join(" ")}`}
-//       />
-
-//       <div className="-translate-y-8">
-//         <div className="container mx-auto px-5">
-//           <Image
-//             width={1240}
-//             height={1240}
-//             src={data.image}
-//             alt={`Hero image for ${data.title}`}
-//             className="w-full aspect-[3/2] rounded-tl-[24px] rounded-tr-[24px]"
-//           />
-//           <div className="bg-[#FFFFFFFF] p-4 -translate-y-16 rounded-tl-[32px] rounded-tr-[32px] flex flex-col gap-4">
-//             <p>{data.date}</p>
-//             <h2 className=" text-matte-purple leading-7 md:leading-none text-2xl md:text-3xl font-bold">
-//               {data.title}
-//             </h2>
-//             <div
-//               className="rich-text-container"
-//               dangerouslySetInnerHTML={{ __html: data?.description }}
-//             />
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default IndivisualBlogPage;

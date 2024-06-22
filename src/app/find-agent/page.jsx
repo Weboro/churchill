@@ -95,15 +95,8 @@ const FindAgent = () => {
           })}
         </section>
 
-        <section className="bg-[#F3E4E4] rounded-[20px] flex flex-col gap-6 md:gap-4 md:flex-row px-5 pt-5 mb-[6px]">
-          <Image
-            src="/assets/find-agent-page.png"
-            width={250}
-            height={250}
-            alt="find agent page image"
-            className="mx-auto md:m-0 md:w-[24rem]"
-          />
-          <div className="pb-5 flex-1 flex flex-col justify-center items-start gap-5 text-center md:text-left">
+        <section className="bg-[#F3E4E4] rounded-md flex flex-col md:flex-row">
+          <div className="flex-1 p-12 flex flex-col gap-8 justify-center">
             <h3 className="font-bold text-3xl md:text-4xl mx-auto md:m-0">
               Interested in becoming an agent?
             </h3>
@@ -128,8 +121,18 @@ const FindAgent = () => {
               />
             </Link>
           </div>
+
+          <Image
+            src="/assets/find-agent-page.png"
+            width={250}
+            height={250}
+            alt="find agent page image"
+            className="mx-auto md:m-0 md:w-[24rem]"
+          />
         </section>
       </div>
+
+      <div className="mb-[64px]"></div>
     </>
   );
 };

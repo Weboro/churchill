@@ -13,7 +13,7 @@ const BlogItemCard = ({ slug, title, image, date, tags, subTitle, index }) => {
             height={400}
             alt={`Image for ${title}`}
             src={image}
-            className="w-full aspect-[3/2] group-hover:scale-105 transition-all"
+            className="w-full aspect-[3/2] object-cover group-hover:scale-105 transition-all"
           />
         </Link>
       </div>

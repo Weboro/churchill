@@ -173,7 +173,12 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link target="_blank" href={"/student/grievance-form"}>
+                    <Link
+                      target="_blank"
+                      href={
+                        "https://forms.zohopublic.com.au/CIHE/form/Grievanceform/formperma/5jf5-XC5SXb47VhUMTlxv30fih-aqYAUbQh8V3lncvQ"
+                      }
+                    >
                       Grievance Form
                     </Link>
                   </li>

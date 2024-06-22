@@ -4,7 +4,6 @@ import Button from "@/components/button";
 import { FaArrowRight, FaSearch } from "react-icons/fa";
 import Link from "next/link";
 import CoursesSlider from "@/components/sliders/CoursesSlider";
-import FadeByWordAnimation from "@/animations/FadeByWord";
 
 const CoursesSection = () => {
   return (
@@ -12,7 +11,7 @@ const CoursesSection = () => {
       <div className="flex flex-col gap-[32px] lg:gap-[44px]">
         <div className="flex justify-between gap-4 flex-col lg:flex-row items-center">
           <h2 className="font-bold leading-9 text-center mx-auto text-[36px] text-[#2C2B4B]">
-            <FadeByWordAnimation>Our Courses</FadeByWordAnimation>
+            Our Courses
           </h2>
         </div>
         <div>
