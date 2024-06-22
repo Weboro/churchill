@@ -1,14 +1,21 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavList from "./NavList";
 import Link from "next/link";
 import { CgMenuRight } from "react-icons/cg";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 
 const MobileNav = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [isDropdownActive, setIsDropdownActive] = useState(false);
+
+  const { slug } = useParams();
+
+  useEffect(() => {
+    setIsDropdownActive(false);
+  }, [slug]);
 
   return (
     <div className="">
@@ -46,10 +53,7 @@ const MobileNav = () => {
               animation: "sidebarAnimate linear 0.2s",
             }}
           >
-            <Link
-              href={"/"}
-              className="flex justify-between gap-8 items-center"
-            >
+            <div className="flex justify-between gap-8 items-center">
               <Image
                 src={`/assets/logo.svg`}
                 width={400}
@@ -69,7 +73,7 @@ const MobileNav = () => {
               >
                 <IoMdCloseCircleOutline />
               </div>
-            </Link>
+            </div>
             <div className="flex flex-col gap-8">
               <NavList
                 style={`flex flex-col gap-2`}
