@@ -1,10 +1,9 @@
 "use client";
 import Image from "next/image";
-import { eventsData } from "@/constDatas/eventsData";
-import { NewsSection } from "@/components";
 import Link from "next/link";
+import { eventsData } from "@/constDatas/eventsData";
+import { MoreEventsSection, NewsSection, ToastComponent } from "@/components";
 import { motion, useScroll } from "framer-motion";
-import { ToastComponent } from "@/components";
 import { useRef } from "react";
 
 export const metadata = {
@@ -53,7 +52,7 @@ const IndivisualEventsPage = ({ slug }) => {
   //-- animation
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: [".3 end", "end end"],
+    offset: [".33 end", "end end"],
   });
 
   const toastRef = useRef();
@@ -205,6 +204,8 @@ const IndivisualEventsPage = ({ slug }) => {
               </div>
             </div>
           </div>
+
+          <MoreEventsSection />
 
           <NewsSection />
         </div>

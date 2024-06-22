@@ -4,7 +4,6 @@ import { FaArrowRight } from "react-icons/fa";
 import { eventsData } from "@/constDatas/eventsData";
 import Link from "next/link";
 import EventsCard from "@/components/cards/EventsCard";
-import FadeByWordAnimation from "@/animations/FadeByWord";
 import FadeUpAnimation from "@/animations/FadeUp";
 
 const UpcomingEvents = () => {
@@ -12,7 +11,7 @@ const UpcomingEvents = () => {
     <div className="container mx-auto px-5">
       <div className="flex flex-col gap-[32px] lg:gap-[44px]">
         <h2 className="font-bold text-[36px] leading-9 text-center mx-auto text-[#2C2B4B]">
-          <FadeByWordAnimation>Upcoming Events</FadeByWordAnimation>
+          Upcoming Events
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {eventsData?.slice(0, 4)?.map((item, index) => (
