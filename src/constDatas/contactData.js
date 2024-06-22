@@ -25,7 +25,8 @@ export const contactData = [
     title: "lodge a complain",
     description: "Fill a quick form",
     iconUrl: "/assets/complaint.svg",
-    // redirect: "/",
+    redirect:
+      "https://forms.zohopublic.com.au/CIHE/form/Grievanceform/formperma/5jf5-XC5SXb47VhUMTlxv30fih-aqYAUbQh8V3lncvQ",
   },
   {
     title: "Connect with us",

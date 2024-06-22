@@ -298,7 +298,8 @@ export const navItems = [
         headerIcon: "fi fi-rr-sad",
         image: "/assets/course-b.png",
         link: "",
-        redirectLink: "", //
+        redirectLink:
+          "https://forms.zohopublic.com.au/CIHE/form/Grievanceform/formperma/5jf5-XC5SXb47VhUMTlxv30fih-aqYAUbQh8V3lncvQ", //
       },
       {
         menuTitle: "request form",

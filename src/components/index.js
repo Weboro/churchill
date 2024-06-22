@@ -68,7 +68,7 @@ import YouTubeLinksSection from "./sections/commonSections/YouTubeLinksSection";
 import YoutubeSlider from "./sliders/YoutubeSlider";
 import YoutubeSliderCard from "./cards/YoutubeSliderCard";
 import MoreEventsSection from "./sections/EventsSection/MoreEventsSection";
-
+import MoreBlogsSection from "./sections/blogSections/MoreBlogsSection";
 export {
   Button,
   Spiner,
@@ -140,4 +140,5 @@ export {
   YoutubeSlider,
   YoutubeSliderCard,
   MoreEventsSection,
+  MoreBlogsSection,
 };

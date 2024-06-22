@@ -13,7 +13,6 @@ import Link from "next/link";
 const page = () => {
   return (
     <>
-      {/* <section className=" mt-[148px]"> */}
       <section className="mt-[100px] mb-[48px]">
         <div className="container mb-[25px] px-5 mx-auto flex flex-col gap-8 items-center justify-center text-center">
           <h1 className="text-matte-purple text-3xl leading-[32px] font-bold lg:text-[54px] lg:leading-[56px]">
@@ -40,8 +39,8 @@ const page = () => {
         </div>
         <Image
           src="/assets/border-hero-image.png"
-          width={1000}
-          height={400}
+          width={1600}
+          height={1000}
           alt="image"
           className="md:w-full h-[28vh] md:h-[50vh] object-cover"
         />
