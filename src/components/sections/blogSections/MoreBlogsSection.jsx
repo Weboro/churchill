@@ -6,13 +6,10 @@ import { BlogItemCard } from "@/components";
 
 const MoreBlogsSection = () => {
   const { slug } = useParams();
-  console.log(slug);
 
   return (
     <div className="container mx-auto px-5">
       <h3 className="font-bold text-3xl mb-12">More Blogs</h3>
-
-      {/* {router.query.slug} */}
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {BlogData?.slice()

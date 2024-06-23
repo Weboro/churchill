@@ -31,7 +31,7 @@ const CookieBanner = () => {
     <CookiesProvider>
       <div
         onClick={() => handleClick()}
-        className={`w-full md:w-[80vw] fixed bottom-0 md:bottom-8 left-1/2 -translate-x-1/2 flex flex-col md:flex-row items-center justify-between bg-[#ffffff] p-3 md:px-8 md:py-4 rounded-2xl shadow-2xl border border-neutral-900/20 duration-1000 gap-4 md:gap-2 ${isVisible}`}
+        className={`w-full md:w-[80vw] fixed bottom-0 md:bottom-8 z-[9999] left-1/2 -translate-x-1/2 flex flex-col md:flex-row items-center justify-between bg-[#ffffff] p-3 md:px-8 md:py-4 rounded-2xl shadow-2xl border border-neutral-900/20 duration-1000 gap-4 md:gap-2 ${isVisible}`}
       >
         <div className="flex items-end gap-3">
           <h2 className="text-lg">

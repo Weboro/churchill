@@ -167,17 +167,6 @@ body {
   background: transparent !important;
 }
 
-.rich-text-container h2 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  margin-top: 1rem;
-  font-weight: 700;
-}
-.rich-text-container p {
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-}
-
 @keyframes sidebarAnimate {
   0% {
     transform: translateX(100%);
@@ -417,6 +406,17 @@ tr:nth-child(even) {
 /*  */
 
 /* rich text */
+.rich-text-container h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+.rich-text-container p {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
 .rich-text-container {
   margin-inline: auto;
   font-size: 16px;
