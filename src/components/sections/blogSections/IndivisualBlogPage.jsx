@@ -145,14 +145,7 @@ const IndivisualBlogPage = ({ slug }) => {
                   >
                     <i className="flex fi fi-brands-facebook-messenger"></i>
                   </a>
-                  <div
-                  // onClick={(e) => {
-                  //   e.preventDefault();
-                  //   navigator.clipboard.writeText(window.location.href);
-                  //   toastRef.current.showToast();
-                  // }}
-                  // className="hover:text-primary-orange transition-all social-button copy-link"
-                  >
+                  <div>
                     <i className="fi fi-rr-copy-alt"></i>
                   </div>
                 </div>

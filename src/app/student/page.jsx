@@ -7,9 +7,9 @@ const page = () => {
 
   return (
     <div className="flex flex-col gap-[32px] lg:gap-[64px]">
-      <StyledHeroCard title="Student" />
+      {/* <StyledHeroCard title="Student" /> */}
 
-      <div className="container mx-auto px-5">
+      <div className="container mx-auto px-5 mt-[48px]">
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
           {data.Catagories.map((subItem, index) => (
             <Link

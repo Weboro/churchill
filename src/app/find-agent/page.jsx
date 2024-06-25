@@ -9,6 +9,7 @@ import { CHIEAgentData } from "@/constDatas/CHIEAgentData";
 import { AgentInfoCard } from "../../components/cards/AgentInfoCard";
 import Image from "next/image";
 import Link from "next/link";
+import FadeUpAnimation from "@/animations/FadeUp";
 
 const FindAgent = () => {
   const [searchByName, setSearchByName] = useState("");
@@ -95,41 +96,44 @@ const FindAgent = () => {
           })}
         </section>
 
-        <section className="bg-[#F3E4E4] rounded-md flex flex-col md:flex-row">
-          <div className="flex-1 p-12 flex flex-col gap-8 justify-center">
-            <h3 className="font-bold text-3xl md:text-4xl mx-auto md:m-0">
-              Interested in becoming an agent?
-            </h3>
-            <p>
-              If you would like to become an authorised representative of CIHE
-              Sydney, please submit an Expression of Interest. Expression of
-              interests will be assessed by the relevant Regional Recruitment
-              Manager.
-            </p>
-            <Link
-              href={"https://zfrmz.com.au/ZKkopYxKWUmCGMefPqt9"}
-              target="_blank"
-              className={""}
-            >
-              <Button
-                btnName={"Fill up a Quick Form"}
-                icon={<FaArrowRight />}
-                styleA={" flex items-center gap-4"}
-                style={
-                  "mx-auto md:m-0 border border-2 border-[#606060] font-semibold text-[14px] rounded-md px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
-                }
+        <FadeUpAnimation>
+          <div className="w-full flex flex-col md:flex-row bg-[#F3E4E4] relative hover-shadow overflow-hidden rounded-md">
+            <div className="flex z-[10] flex-1 flex-col gap-6 pt-8 pl-8 md:py-20 md:pl-20">
+              <h3 className="relative leading-10 font-bold text-[36px]  text-[#2C2B4B]">
+                Interested in becoming an agent?
+              </h3>
+              <p>
+                If you would like to become an authorised representative of CIHE
+                Sydney, please submit an Expression of Interest. Expression of
+                interests will be assessed by the relevant Regional Recruitment
+                Manager.
+              </p>
+              <Link
+                href={`https://forms.zohopublic.com.au/CIHE/form/duplicatedonottouchAgencyRequestApplicationForm/formperma/Z-cwJzbSBI4l1IJbFvia5ZwzHFxyNw2AoPgQAstZl80`}
+                target="_blank"
+                className="w-max"
+              >
+                <Button
+                  btnName={"Fill Up A Quick Form"}
+                  icon={<FaArrowRight />}
+                  styleA={"flex items-center gap-1"}
+                  style={
+                    "border border-2 border-[#606060] rounded-md px-4 py-3 bg-[#E59623] hover:text-black hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
+                  }
+                />
+              </Link>
+            </div>
+            <div className="flex-1 pb-48 md:flex-0">
+              <Image
+                width={600}
+                height={600}
+                className="absolute z-[0] translate-y-1/2 translate-x-1/2 bottom-16 -left-1/2 md:left-auto md:right-48 group-hover:scale-105 transition-all"
+                src="/assets/churchil-circle.webp"
+                alt="alt image for churchil circle"
               />
-            </Link>
+            </div>
           </div>
-
-          <Image
-            src="/assets/find-agent-page.png"
-            width={250}
-            height={250}
-            alt="find agent page image"
-            className="mx-auto md:m-0 md:w-[24rem]"
-          />
-        </section>
+        </FadeUpAnimation>
       </div>
 
       <div className="mb-[64px]"></div>

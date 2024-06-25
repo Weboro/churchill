@@ -14,7 +14,7 @@ const MoreBlogsSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {BlogData?.slice()
           .reverse()
-          .slice(0, 4)
+          .slice(0, 3)
           .map((item, index) => {
             if (item.slug !== slug) {
               return (

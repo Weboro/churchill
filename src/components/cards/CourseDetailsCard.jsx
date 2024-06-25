@@ -2,7 +2,6 @@ import React from "react";
 import Button from "@/components/button";
 import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
-import CourseOverviewSection from "./CourseOverviewCard";
 
 const CourseDetailsCard = ({
   menuTitle,
@@ -24,15 +23,19 @@ const CourseDetailsCard = ({
 
         <p>{subTitle}</p>
 
-        <div className="flex justify-around md:justify-start gap-3 md:gap-10">
+        <div className="flex justify-around md:justify-start gap-5 md:gap-12">
           {courseDetails?.slice(0, 3)?.map((item, index) => (
-            <div className="flex flex-col gap-2 items-center" key={index}>
+            <div className="flex flex-row gap-3 items-center" key={index}>
               <div className="w-12 h-12 grid place-items-center bg-white rounded-full text-2xl">
                 <p className="text-[#E59623]">{item?.icon}</p>
               </div>
-              <h3 className="text-[#2C2B4B] font-bold text-lg lg:text-xl text-center">
-                {item?.description} {index === 2 ? "credits" : ""}
-              </h3>
+
+              <div className="">
+                <h3 className="text-[#2C2B4B] font-bold text-lg">
+                  {item?.description}
+                </h3>
+                <p className="text-[#2C2B4B]">{item?.title}</p>
+              </div>
             </div>
           ))}
         </div>

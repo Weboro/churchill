@@ -32,9 +32,21 @@ export const contactData = [
     title: "Connect with us",
     iconUrl: "/assets/connect.svg",
     socialLinks: [
-      { title: "Facebook", icon: <FaFacebook />, url: "/" },
-      { title: "LinkedIn", icon: <FaLinkedin />, url: "/" },
-      { title: "Instagram", icon: <FaSquareInstagram />, url: "/" },
+      {
+        title: "Facebook",
+        icon: <FaFacebook />,
+        url: "https://www.facebook.com/CIHEAustralia/",
+      },
+      {
+        title: "LinkedIn",
+        icon: <FaLinkedin />,
+        url: "https://www.linkedin.com/company/churchill-institute-of-higher-education/",
+      },
+      {
+        title: "Instagram",
+        icon: <FaSquareInstagram />,
+        url: "https://www.instagram.com/ciheaustralia/",
+      },
     ],
   },
   {
