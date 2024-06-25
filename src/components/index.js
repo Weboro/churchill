@@ -69,6 +69,8 @@ import YoutubeSlider from "./sliders/YoutubeSlider";
 import YoutubeSliderCard from "./cards/YoutubeSliderCard";
 import MoreEventsSection from "./sections/EventsSection/MoreEventsSection";
 import MoreBlogsSection from "./sections/blogSections/MoreBlogsSection";
+import AgentInfoCard from "./cards/AgentInfoCard";
+
 export {
   Button,
   Spiner,

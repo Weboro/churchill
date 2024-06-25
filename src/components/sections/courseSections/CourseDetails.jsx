@@ -6,6 +6,7 @@ import {
   EnquirySection,
   NewsSection,
   TopBannerCard,
+  CoursesSlider,
 } from "@/components";
 
 const CourseDetails = ({ slug }) => {
@@ -34,6 +35,14 @@ const CourseDetails = ({ slug }) => {
         tabbedPaneHeaders={tabbedPaneHeaders}
         tabbedPaneData={data?.tabbedPaneData}
       />
+
+      <div className="container mx-auto px-5">
+        <h2 className="font-bold leading-9 mb-6 text-[36px] text-[#2C2B4B]">
+          Browse Other Courses
+        </h2>
+
+        <CoursesSlider />
+      </div>
 
       <EnquirySection />
 

@@ -25,14 +25,14 @@ const BlogsPage = () => {
         <>Loading</>
       ) : (
         <>
-          <div className="container mx-auto px-5 flex flex-col gap-[32px] lg:gap-[64px] mb-[48px]">
-            <StyledHeroCard title="Blogs" showSearch={false} />
+          <div className="container mx-auto px-5 flex flex-col gap-[32px] lg:gap-[64px] mb-[48px] mt-[48px]">
+            {/* <StyledHeroCard title="Blogs" showSearch={false} /> */}
 
             <div className="container mx-auto px-5 flex flex-col gap-[32px] lg:gap-[64px]">
               <section>
                 <div className="flex flex-col lg:flex-row gap-5">
                   <div className="flex-[65%] flex flex-col gap-5">
-                    <h3 className="text-xl font-bold">
+                    <h3 className="text-2xl font-bold">
                       Search for blogs you want to explore.
                     </h3>
                     <Search

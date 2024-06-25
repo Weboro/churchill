@@ -15,14 +15,14 @@ export const AgentInfoCard = ({
 }) => {
   return (
     <>
-      <div className="bg-[#F3E4E4] w-full rounded-[20px] px-4 py-3 md:px-8 lg:py-4 flex flex-col gap-8 lg:flex-row items-center justify-between lg:gap-6">
+      <div className="bg-[#F3E4E4] w-full rounded-md px-4 py-3 md:px-8 lg:py-4 flex flex-col gap-8 lg:flex-row items-center justify-between lg:gap-6">
         <div className="max-w-36 ">
           <Image
             src={imageUrl}
             width={250}
             height={250}
             alt={`logo of ${title}`}
-            className="h-full aspect-square object-contain"
+            className="h-full aspect-square object-contain mix-blend-multiply"
           />
         </div>
         <div className="flex-1 flex flex-col justify-center gap-2 text-center lg:text-left">
