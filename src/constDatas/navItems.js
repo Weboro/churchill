@@ -113,7 +113,7 @@ export const navItems = [
         slug: "CIHE-governance-structure",
         link: "",
         image: "/assets/course-b.png",
-        redirectLink: "/assets/CIHE-Governance-Structure-December-2022.pdf",
+        // redirectLink: "/assets/CIHE-Governance-Structure-December-2022.pdf",
         CatagoriesItem: [],
       },
       {
@@ -212,7 +212,7 @@ export const navItems = [
             email: "angela-hecimovic@churchil.mail",
             subTitle: "Member of Audit and Risk management",
             image: "/assets/staff/dr-angela-hecimovic.jpg",
-            description: `<span>TO BE ADDED</span>`,
+            description: `<p>Dr Angela Hecimovic BEcon(Hons) Sydney; PhD Macq.; GCHEd Sydney, CA, PMIAA University of Sydney Business School Senior Lecturer & Dalyell Program Director, and Chair of IIA Australia's Education Committee. Her educational practice challenges students to critically evaluate the role of Audit and Assurance in meeting society’s expectations and to join the profession. Her research delves into contemporary factors like non-financial information, sustainability, ESG reporting, and AI's impact on the audit profession.</p>`,
           },
         ],
       },

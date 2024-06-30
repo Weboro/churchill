@@ -1,4 +1,4 @@
-import { NewsSection, StyledHeroCard } from "@/components";
+import { NewsletterSection, StyledHeroCard } from "@/components";
 import { navItems } from "@/constDatas/navItems";
 import Link from "next/link";
 
@@ -45,7 +45,7 @@ const page = () => {
         </div>
       </div>
 
-      <NewsSection />
+      <NewsletterSection />
     </div>
   );
 };

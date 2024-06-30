@@ -22,7 +22,7 @@ import HelpSection from "./sections/homeSections/HelpSection";
 import UpcomingEvents from "./sections/homeSections/UpcomingEvents";
 import RequestFormSection from "./sections/commonSections/RequestFormSection";
 import ReportFormSection from "./sections/ReportFormSections/ReportFormSection";
-import NewsSection from "./sections/commonSections/NewsSection";
+import NewsletterSection from "./sections/commonSections/NewsletterSection";
 import PoliciesDetails from "./sections/policiesSections/PoliciesDetails";
 import GuideDetails from "./sections/guideSections/GuideDetails";
 import UpcomingEventsSection from "./sections/upcomingEventsSections/UpcomingEventsSection";
@@ -69,7 +69,8 @@ import YoutubeSlider from "./sliders/YoutubeSlider";
 import YoutubeSliderCard from "./cards/YoutubeSliderCard";
 import MoreEventsSection from "./sections/EventsSection/MoreEventsSection";
 import MoreBlogsSection from "./sections/blogSections/MoreBlogsSection";
-import AgentInfoCard from "./cards/AgentInfoCard";
+import NewsSection from "./sections/homeSections/NewsSection";
+import NewsItemCard from "./cards/NewsItemCard";
 
 export {
   Button,
@@ -96,7 +97,7 @@ export {
   RequestFormSection,
   ReportFormSection,
   UpcomingEvents,
-  NewsSection,
+  NewsletterSection,
   PoliciesDetails,
   GuideDetails,
   UpcomingEventsSection,
@@ -143,4 +144,6 @@ export {
   YoutubeSliderCard,
   MoreEventsSection,
   MoreBlogsSection,
+  NewsSection,
+  NewsItemCard,
 };

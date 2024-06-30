@@ -1,7 +1,7 @@
 "use client";
 import { navItems } from "@/constDatas/navItems";
 import React, { useEffect, useState } from "react";
-import { GovernanceCard, NewsSection, DataNotFound } from "@/components";
+import { GovernanceCard, NewsletterSection, DataNotFound } from "@/components";
 import FadeUpAnimation from "@/animations/FadeUp";
 import Image from "next/image";
 
@@ -56,7 +56,7 @@ const GovernancePageSection = ({ slug }) => {
             ))}
           </div>
         </div>
-        <NewsSection />
+        <NewsletterSection />
       </div>
     </>
   );

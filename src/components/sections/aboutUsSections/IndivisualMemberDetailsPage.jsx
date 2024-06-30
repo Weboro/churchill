@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { navItems } from "@/constDatas/navItems";
 import Image from "next/image";
-import { Loading, NewsSection } from "@/components";
+import { Loading, NewsletterSection } from "@/components";
 
 const IndivisualMemberDetailsPage = ({ slug }) => {
   const [data, setData] = useState([]);
@@ -58,7 +58,7 @@ const IndivisualMemberDetailsPage = ({ slug }) => {
             </div>
           </div>
         </main>
-        <NewsSection />
+        <NewsletterSection />
       </div>
     );
   }

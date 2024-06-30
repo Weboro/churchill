@@ -14,6 +14,8 @@ const Page = ({ params }) => {
         <PoliciesSection slug={slug} />
       ) : slug === "governance-and-leadership" ? (
         <GovernancePageSection slug={slug} />
+      ) : slug === "CIHE-governance-structure" ? (
+        <></>
       ) : (
         <div className="container mx-auto px-5">
           <div className="flex flex-col gap-[32px] lg:gap-[44px]">
