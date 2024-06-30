@@ -20,13 +20,6 @@ export const eventsData = [
       endMonth: "May",
     },
 
-    catagories: [
-      {
-        title: "Student Life",
-      },
-      {
-        title: "Education",
-      },
-    ],
+    catagories: [{ title: "Student Life" }, { title: "Education" }],
   },
 ];

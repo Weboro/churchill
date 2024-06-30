@@ -7,13 +7,11 @@ import { DataNotFound, EventsCard } from "@/components";
 import {
   CheckBoxList,
   FilterComponent,
-  NewsSection,
+  NewsletterSection,
   SelectComponent,
 } from "@/components";
 
 const EventsFilterSection = () => {
-  // const data = navItems[2]?.Catagories;
-
   const [searchQuery, setSearchQuery] = useState("");
   const query = searchQuery.trim().toLowerCase();
 
@@ -72,7 +70,7 @@ const EventsFilterSection = () => {
         </div>
       </div>
 
-      <NewsSection />
+      <NewsletterSection />
     </div>
   );
 };

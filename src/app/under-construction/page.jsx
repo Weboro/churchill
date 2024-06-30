@@ -3,7 +3,7 @@ import React from "react";
 import Button from "@/components/button";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-import { NewsSection } from "@/components";
+import { NewsletterSection } from "@/components";
 import Lottie from "lottie-react";
 
 import Animation from "@/constDatas/animations/Animation.json";
@@ -38,7 +38,7 @@ const UnderConstruction = () => {
         </div>
       </div>
       <div>
-        <NewsSection />
+        <NewsletterSection />
       </div>
     </div>
   );

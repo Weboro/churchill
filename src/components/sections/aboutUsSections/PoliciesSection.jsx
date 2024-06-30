@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { requestList } from "@/constDatas/requestList";
 import {
-  NewsSection,
+  NewsletterSection,
   RequestFormCard,
   Loading,
   StyledHeroCard,
@@ -41,7 +41,7 @@ const PoliciesSection = ({ slug }) => {
         </div>
 
         <div>
-          <NewsSection />
+          <NewsletterSection />
         </div>
       </div>
     </>

@@ -1,5 +1,5 @@
 import React from "react";
-import { NewsSection, StyledHeroCard } from "@/components";
+import { NewsletterSection, StyledHeroCard } from "@/components";
 import { contactFaqs } from "@/constDatas/contactData";
 import { AccordionComponent } from "@/components";
 
@@ -16,7 +16,7 @@ const ContactUsFAQ = () => {
           <AccordionComponent data={contactFaqs} />
         </div>
 
-        <NewsSection />
+        <NewsletterSection />
       </div>
     </>
   );

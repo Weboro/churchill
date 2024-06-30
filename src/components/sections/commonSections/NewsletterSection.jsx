@@ -5,7 +5,7 @@ import Link from "next/link";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
-const NewsSection = () => {
+const NewsletterSection = () => {
   return (
     <FadeUpAnimation>
       <div className="container md:px-5 mx-auto mb-[48px] rounded-md ">
@@ -45,4 +45,4 @@ const NewsSection = () => {
   );
 };
 
-export default NewsSection;
+export default NewsletterSection;

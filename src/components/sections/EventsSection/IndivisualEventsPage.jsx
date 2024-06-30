@@ -2,7 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { eventsData } from "@/constDatas/eventsData";
-import { MoreEventsSection, NewsSection, ToastComponent } from "@/components";
+import {
+  MoreEventsSection,
+  NewsletterSection,
+  ToastComponent,
+} from "@/components";
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 
@@ -207,7 +211,7 @@ const IndivisualEventsPage = ({ slug }) => {
 
           <MoreEventsSection />
 
-          <NewsSection />
+          <NewsletterSection />
         </div>
       </section>
     </>

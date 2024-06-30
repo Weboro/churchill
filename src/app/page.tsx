@@ -1,7 +1,7 @@
 import {
   EnquirySection,
   HeroSection,
-  NewsSection,
+  NewsletterSection,
   RequestFormSection,
   UpcomingEvents,
   CoursesSection,
@@ -36,7 +36,7 @@ const Home = () => {
           <BlogSection />
         </div>
         <div>
-          <NewsSection />
+          <NewsletterSection />
         </div>
       </div>
     </main>

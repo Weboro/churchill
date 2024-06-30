@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  NewsSection,
+  NewsletterSection,
   EnquirySection,
   Button,
   AIHelpSection,
@@ -53,7 +53,7 @@ const page = () => {
 
         <EnquirySection />
 
-        <NewsSection />
+        <NewsletterSection />
       </div>
     </>
   );

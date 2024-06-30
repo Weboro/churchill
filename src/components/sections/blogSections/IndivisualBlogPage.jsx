@@ -1,5 +1,5 @@
 "use client";
-import { NewsSection, MoreBlogsSection } from "@/components";
+import { NewsletterSection, MoreBlogsSection } from "@/components";
 import { BlogData } from "@/constDatas/BlogData";
 import Image from "next/image";
 import Link from "next/link";
@@ -155,7 +155,7 @@ const IndivisualBlogPage = ({ slug }) => {
 
           <MoreBlogsSection />
 
-          <NewsSection />
+          <NewsletterSection />
         </div>
       </section>
     </>

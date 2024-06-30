@@ -4,7 +4,7 @@ import {
   TabbedPane,
   CourseOverviewSection,
   EnquirySection,
-  NewsSection,
+  NewsletterSection,
   TopBannerCard,
   CoursesSlider,
 } from "@/components";
@@ -46,7 +46,7 @@ const CourseDetails = ({ slug }) => {
 
       <EnquirySection />
 
-      <NewsSection />
+      <NewsletterSection />
     </div>
   );
 };

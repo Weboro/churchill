@@ -4,7 +4,7 @@ import MissionVisionsection from "./MissionVisionsection";
 import CoreValuesSection from "./CoreValuesSection";
 import AboutSection from "./AboutSection";
 import RelatedSection from "./RelatedSection";
-import NewsSection from "../commonSections/NewsSection";
+import NewsletterSection from "../commonSections/NewsletterSection";
 
 const AboutInfoSection = () => {
   return (
@@ -32,7 +32,7 @@ const AboutInfoSection = () => {
           <CoreValuesSection />
           <AboutSection />
           <RelatedSection />
-          <NewsSection />
+          <NewsletterSection />
         </div>
       </div>
     </div>

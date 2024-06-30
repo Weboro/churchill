@@ -2,7 +2,7 @@
 import {
   FilterComponent,
   EnquirySection,
-  NewsSection,
+  NewsletterSection,
   TopBannerCard,
   CoursesFilterSection,
 } from "@/components";
@@ -48,7 +48,7 @@ const Courses = () => {
 
       <CoursesFilterSection />
       <EnquirySection />
-      <NewsSection />
+      <NewsletterSection />
     </div>
   );
 };
