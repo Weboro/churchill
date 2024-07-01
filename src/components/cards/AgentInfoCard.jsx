@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 
-export const AgentInfoCard = ({
+const AgentInfoCard = ({
   title,
   designation,
   agentName,
@@ -12,46 +12,38 @@ export const AgentInfoCard = ({
   addressLine2,
   phone,
   imageUrl,
+  email,
 }) => {
   return (
     <>
-      <div className="bg-[#F3E4E4] w-full rounded-md px-4 py-3 md:px-8 lg:py-4 flex flex-col gap-8 lg:flex-row items-center justify-between lg:gap-6">
-        <div className="max-w-36 ">
+      <div className="bg-light-grey flex flex-col items-center justify-between gap-4 p-6">
+        <div className="flex flex-col">
           <Image
             src={imageUrl}
             width={250}
             height={250}
             alt={`logo of ${title}`}
-            className="h-full aspect-square object-contain mix-blend-multiply"
+            className="w-28 mx-auto aspect-square object-contain mix-blend-multiply"
           />
-        </div>
-        <div className="flex-1 flex flex-col justify-center gap-2 text-center lg:text-left">
-          <h2 className="text-2xl font-extrabold">{title}</h2>
-          <p>{addressLine1}</p>
-          <p>
-            {addressLine2}
-            {phone}
+          <h2 className="text-xl font-bold my-6">{title}</h2>
+          {agentName && <p className="font-[600]">Contact: {agentName}</p>}
+          {designation && <p className="font-[600]">{designation}</p>}
+
+          {(addressLine1 || addressLine2) && (
+            <p className="font-[600]">
+              Address: <span>{addressLine1}</span>,<span>{addressLine2}</span>
+            </p>
+          )}
+          <p className="font-[600]">
+            Phone : <a href={`tel:${phone}`}>{phone}</a>
           </p>
-        </div>
-        <div className="flex flex-col w-full lg:w-fit md:flex-row md:items-center md:justify-between lg:flex-col lg:justify-center lg:items-start gap-2 md:gap-4">
-          <p className="flex flex-col md:flex-row md:items-end md:gap-2 lg:gap-0 lg:items-start lg:flex-col text-center lg:text-left">
-            <span className="text-sm uppercase">{designation}</span>
-            <span className="text-xl font-bold">{agentName}</span>
+          <p className="font-[600]">
+            Email : <a href={`mailto:${email}`}>{email}</a>
           </p>
-          <div className="mx-auto md:mx-0">
-            <Link href="/">
-              <Button
-                btnName={"Request A Call Back"}
-                icon={<FaArrowRight />}
-                styleA={" flex items-center gap-4 "}
-                style={
-                  "w-fit mx-auto md:m-0 border border-2 border-[#606060] font-semibold text-[14px] rounded-md px-4 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
-                }
-              />
-            </Link>
-          </div>
         </div>
       </div>
     </>
   );
 };
+
+export default AgentInfoCard;

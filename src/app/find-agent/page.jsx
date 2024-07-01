@@ -1,12 +1,10 @@
 "use client";
 
-import { TopBannerCard } from "@/components";
+import { PatternBannerCard, AgentInfoCard, Button } from "@/components";
 import React, { useState } from "react";
-import { Button } from "@/components";
 import { FaArrowRight } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { CHIEAgentData } from "@/constDatas/CHIEAgentData";
-import { AgentInfoCard } from "../../components/cards/AgentInfoCard";
 import Image from "next/image";
 import Link from "next/link";
 import FadeUpAnimation from "@/animations/FadeUp";
@@ -15,23 +13,19 @@ const FindAgent = () => {
   const [searchByName, setSearchByName] = useState("");
   const nameQuery = searchByName.trim().toLowerCase();
 
+  // const filteredData
+
   return (
     <>
-      <TopBannerCard
-        title={
-          <span>
-            Find a CIHE <span className={`highlight`}>AGENT</span>
-          </span>
-        }
-        image={`/assets/hero-image.jpeg`}
-        imageA={"/assets/hero-image-Find-CHIE-agent.png"}
-        titleSpan=""
-        subTitle="Get in touch with one of our official CIHE agents."
+      <PatternBannerCard
+        title="Find a CIHE AGENT"
+        description="Get in touch with one of our official CIHE agents."
         BtnAText="Find an Agent"
+        BtnALink="https://zfrmz.com.au/ZKkopYxKWUmCGMefPqt9"
         BtnBText="Become an Agent"
-        linkA={"https://zfrmz.com.au/ZKkopYxKWUmCGMefPqt9"}
-        link={"#search-agent"}
+        BtnBLink="#search-agent"
       />
+
       <div
         className="container mx-auto px-5 flex flex-col gap-[32px] lg:gap-[64px]"
         id="search-agent"
@@ -73,27 +67,20 @@ const FindAgent = () => {
           />
         </section>
 
-        <section className="flex flex-col gap-4 items-center">
-          {CHIEAgentData.map((data, index) => {
-            const shouldShow =
-              !nameQuery ||
-              data?.agentName.trim().toLowerCase().includes(nameQuery) ||
-              data?.title.trim().toLowerCase().includes(nameQuery);
-
-            if (shouldShow)
-              return (
-                <AgentInfoCard
-                  key={index}
-                  title={data?.title}
-                  designation={data?.designation}
-                  agentName={data?.agentName}
-                  addressLine1={data?.addressLine1}
-                  addressLine2={data?.addressLine2}
-                  phone={data?.phone}
-                  imageUrl={data?.imageUrl}
-                />
-              );
-          })}
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {CHIEAgentData.map((data, index) => (
+            <AgentInfoCard
+              key={index}
+              title={data?.title}
+              designation={data?.designation}
+              agentName={data?.agentName}
+              addressLine1={data?.addressLine1}
+              addressLine2={data?.addressLine2}
+              phone={data?.phone}
+              imageUrl={data?.imageUrl}
+              email={data?.email}
+            />
+          ))}
         </section>
 
         <FadeUpAnimation>

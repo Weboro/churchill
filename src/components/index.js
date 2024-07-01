@@ -71,6 +71,8 @@ import MoreEventsSection from "./sections/EventsSection/MoreEventsSection";
 import MoreBlogsSection from "./sections/blogSections/MoreBlogsSection";
 import NewsSection from "./sections/homeSections/NewsSection";
 import NewsItemCard from "./cards/NewsItemCard";
+import PatternBannerCard from "./cards/PatternBannerCard";
+import AgentInfoCard from "./cards/AgentInfoCard";
 
 export {
   Button,
@@ -146,4 +148,6 @@ export {
   MoreBlogsSection,
   NewsSection,
   NewsItemCard,
+  PatternBannerCard,
+  AgentInfoCard,
 };
