@@ -7,17 +7,12 @@ import Link from "next/link";
 const TopInfo = () => {
   const NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL =
     process.env.NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL;
+  const NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL =
+    process.env.NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL;
 
   return (
     <div className="">
       <ul className="flex gap-4 text-[14px] font-semibold text-[#424242]">
-        <Link href="/student-support">
-          <li className="flex gap-2 items-center cursor-pointer">
-            <p className="text-matte-purple">Student Support</p>
-            <i className="fi fi-rr-student flex"></i>
-          </li>
-        </Link>
-
         <Link href="/find-agent">
           <li className="flex gap-2 items-center cursor-pointer">
             <p className="text-matte-purple">Find Agent</p>
@@ -32,10 +27,18 @@ const TopInfo = () => {
         </Link>
         <Link href={NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL} target="_blank">
           <li className="flex gap-1 items-center cursor-pointer">
-            <p className="text-matte-purple">Student Hub</p>
-            <i className="fi fi-rr-globe-alt flex"></i>
+            <p className="text-matte-purple">Student Support</p>
+            <i className="fi fi-rr-student flex"></i>
           </li>
         </Link>
+
+        <Link href={NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL} target="_blank">
+          <li className="flex gap-1 items-center cursor-pointer">
+            <p className="text-matte-purple">Agent Hub</p>
+            <i class="fi fi-rs-employee-man-alt flex"></i>
+          </li>
+        </Link>
+
         <Link href="/contact-us">
           <li className="flex gap-1 items-center cursor-pointer">
             <p className="text-matte-purple">Contact Us</p>
