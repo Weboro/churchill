@@ -35,7 +35,7 @@ const TopInfo = () => {
         <Link href={NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL} target="_blank">
           <li className="flex gap-1 items-center cursor-pointer">
             <p className="text-matte-purple">Agent Hub</p>
-            <i class="fi fi-rs-employee-man-alt flex"></i>
+            <i className="fi fi-rs-employee-man-alt flex"></i>
           </li>
         </Link>
 

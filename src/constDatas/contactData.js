@@ -67,12 +67,10 @@ export const contactFaqs = [
         Churchill offers a wide range of undergraduate and postgraduate programs across various fields, including:
       </p>
       <ul>
-        <li>Business and Management</li>
-        <li>Engineering and Technology</li>
-        <li>Arts and Humanities</li>
-        <li>Science and Health</li>
-        <li>Social Sciences</li>
-        <li>Education</li>
+        <li>Major In Accounting</li>
+        <li>Major In Information Systems</li>
+        <li>Major In Hospitality</li>
+        <li>Major In Management</li>
       </ul>
     `,
   },

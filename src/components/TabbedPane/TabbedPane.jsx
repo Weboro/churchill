@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { Button } from "@/components";
 
 const TabbedPane = ({ tabbedPaneHeaders, tabbedPaneData }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -41,6 +42,27 @@ const TabbedPane = ({ tabbedPaneHeaders, tabbedPaneData }) => {
                               __html: data.description,
                             }}
                           />
+                          {selectedIndex === 3 && (
+                            <>
+                              <h2 className="text-xl capitalize mt-6 font-bold mb-3">
+                                Ready to start your journey with churchill?
+                              </h2>
+                              <div className="flex flex-col gap-2 ">
+                                <a href="/apply-now">
+                                  <Button
+                                    btnName={"Apply Yourself"}
+                                    style={"w-fit"}
+                                  />
+                                </a>
+                                <a href="/find-agent">
+                                  <Button
+                                    btnName={"Find Agent"}
+                                    style={"w-fit"}
+                                  />
+                                </a>
+                              </div>
+                            </>
+                          )}
                         </div>
                       )
                   )}
@@ -50,7 +72,7 @@ const TabbedPane = ({ tabbedPaneHeaders, tabbedPaneData }) => {
           ))}
         </div>
 
-        <div className="w-full hidden lg:block bg-[#F3E4E4] px-4 py-3 mt-4 rounded-md">
+        <div className="w-full hidden lg:block bg-[#F3E4E4] px-6 py-3 mt-4 pb-10 rounded-md">
           {tabbedPaneData?.map(
             (data, index) =>
               selectedIndex === index && (
@@ -59,6 +81,21 @@ const TabbedPane = ({ tabbedPaneHeaders, tabbedPaneData }) => {
                     className="rich-text-container"
                     dangerouslySetInnerHTML={{ __html: data.description }}
                   />
+                  {selectedIndex === 3 && (
+                    <>
+                      <h2 className="text-xl capitalize font-bold mt-6 mb-3">
+                        Ready to start your journey with churchill?
+                      </h2>
+                      <div className="flex gap-2 items-center">
+                        <a href="/apply-now">
+                          <Button btnName={"Apply Yourself"} style={"w-fit"} />
+                        </a>
+                        <a href="/find-agent">
+                          <Button btnName={"Find Agent"} style={"w-fit"} />
+                        </a>
+                      </div>
+                    </>
+                  )}
                 </div>
               )
           )}

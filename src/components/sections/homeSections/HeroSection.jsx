@@ -8,12 +8,15 @@ const HeroSection = () => {
         image={`/assets/banner-peroson.jpg`}
         titleSpan={
           <span>
-            Transforming <span className={`highlight`}>Dreams</span> into
-            Degrees.
+            Empowering A Brighter <span className={`highlight`}>Tomorrow</span>
           </span>
         }
         title={""}
-        subTitle={"Explore our innovative programs and transform your career."}
+        subTitle={
+          <p className="my-4">
+            Explore our innovative programs and transform your career.
+          </p>
+        }
         link={`/courses`}
         linkA={`/apply-now`}
         BtnAText={"Explore Our Courses"}
