@@ -1,11 +1,12 @@
 import React from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 const Button = ({
   btnName,
   type,
   style,
-  styleA,
-  icon,
+  styleA = "flex items-center gap-1",
+  icon = <FaArrowRight />,
   styleB,
   iconA,
   contact,

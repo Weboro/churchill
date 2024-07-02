@@ -73,6 +73,9 @@ import NewsSection from "./sections/homeSections/NewsSection";
 import NewsItemCard from "./cards/NewsItemCard";
 import PatternBannerCard from "./cards/PatternBannerCard";
 import AgentInfoCard from "./cards/AgentInfoCard";
+import AccredentialSection from "./sections/courseSections/AccredentialSection";
+import GovernanceStructure from "./sections/aboutUsSections/GovernanceStructure";
+import OrganisationalChartSection from "./sections/aboutUsSections/OrganisationalChartSection";
 
 export {
   Button,
@@ -150,4 +153,7 @@ export {
   NewsItemCard,
   PatternBannerCard,
   AgentInfoCard,
+  AccredentialSection,
+  GovernanceStructure,
+  OrganisationalChartSection,
 };

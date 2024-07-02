@@ -26,23 +26,28 @@ const PatternBannerCard = ({
           <h2 className="text-3xl md:text-5xl font-bold text-center text-[#eb9320]">
             {title}
           </h2>
+
           <p className="w-fit text-center mx-auto">{description}</p>
 
-          <div className="flex gap-4 items-center justify-center">
-            <a href={BtnALink}>
-              <Button
-                btnName={BtnAText}
-                icon={<FaArrowRight />}
-                styleA={"flex items-center gap-1"}
-              />
-            </a>
-            <a href={BtnBLink}>
-              <Button
-                btnName={BtnBText}
-                icon={<FaArrowRight />}
-                styleA={"flex items-center gap-1"}
-              />
-            </a>
+          <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
+            {BtnAText && (
+              <a href={BtnALink}>
+                <Button
+                  btnName={BtnAText}
+                  icon={<FaArrowRight />}
+                  styleA={"flex items-center gap-1"}
+                />
+              </a>
+            )}
+            {BtnBText && (
+              <a href={BtnBLink}>
+                <Button
+                  btnName={BtnBText}
+                  icon={<FaArrowRight />}
+                  styleA={"flex items-center gap-1"}
+                />
+              </a>
+            )}
           </div>
         </div>
       </div>

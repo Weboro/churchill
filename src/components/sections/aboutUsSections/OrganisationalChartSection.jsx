@@ -1,16 +1,17 @@
 import PatternBannerCard from "@/components/cards/PatternBannerCard";
 import Image from "next/image";
 
-const GovernanceStructure = ({ slug }) => {
+const OrganisationalChartSection = ({ slug }) => {
   return (
     <div>
-      <PatternBannerCard title="Governance Structure" />
+      <PatternBannerCard title="Organisational Chart" />
+
       <div className="container mx-auto px-5">
         <Image
           width={1000}
           height={800}
           alt="organizational chart"
-          src="/assets/CIHE-Governance-Struct.svg"
+          src="/assets/Churchill-IHE-Org-Char.svg"
           className="w-full"
         />
       </div>
@@ -18,4 +19,4 @@ const GovernanceStructure = ({ slug }) => {
   );
 };
 
-export default GovernanceStructure;
+export default OrganisationalChartSection;

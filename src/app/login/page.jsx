@@ -9,7 +9,8 @@ const page = () => {
 
   return (
     <div>
-      <StyledHeroCard title="Login" />
+      /
+      <PatternBannerCard title="Login" />
       <div className="container mx-auto px-5 my-[64px]">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
           {loginData.Catagories?.map((item, index) => (

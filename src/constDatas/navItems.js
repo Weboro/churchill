@@ -6,6 +6,7 @@ import { MdOutlineGrade } from "react-icons/md";
 import { CiViewList } from "react-icons/ci";
 import { LuScanFace } from "react-icons/lu";
 import { MdOutlineAccessTime } from "react-icons/md";
+
 const NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL =
   process.env.NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL;
 
@@ -122,7 +123,7 @@ export const navItems = [
         slug: "CIHE-organisational-chart",
         link: "",
         image: "/assets/course-c.png",
-        redirectLink: "/assets/Churchill-IHE-Org-Chart_v2.1-13-Dec-2021.pdf",
+        // redirectLink: "/assets/Churchill-IHE-Org-Chart_v2.1-13-Dec-2021.pdf",
         CatagoriesItem: [],
       },
       {
@@ -238,9 +239,9 @@ export const navItems = [
         menuTitle: "Accreditation",
         headerIcon: "fi fi-rr-legal",
         slug: "accreditation",
-        link: "",
+        // link: "/assets/accredited.jpg",
         image: "/assets/course-c.png",
-        // redirectLink: "/assets/",
+        // redirectLink: "/assets/accredited.jpg",
         CatagoriesItem: [],
       },
       // {
@@ -362,6 +363,11 @@ export const navItems = [
         courseCode: "CIHE427",
         heroImage: "/assets/banner-one.png",
         faculty: "Bachelors of Business",
+        isAccredited: true,
+        accredited: [
+          "/assets/Chartered_Accountants.png",
+          "/assets/cpa-australia.png",
+        ],
         courseDetails: [
           {
             title: "duration",
@@ -477,8 +483,7 @@ export const navItems = [
               "<h2>How to Apply</h2><p>Applications for admission to a course by Domestic or International students can be made directly to Churchill Institute of Higher Education. The admission applications must be submitted to the Admissions Manager before the application closing date. All applications must include:<ul><li>completed Admission Application form;<li>academic record of study previously undertaken;<li>proof of English language proficiency;<li>a copy of the applicant's passport;<li>any documentary evidence that admission criteria are met</ul>",
           },
           {
-            description: `<h3>Year 1</h3><table><tr><th>Semester 1</th><th></th><th>Semester 2</th><th></th><th></th></tr><tr><td>ACC101</td><td>Accounting for Decision Making</td><td>LAW101</td><td>Business and Company Law</td></tr><tr><td>BUS101</td><td>Business Communication</td><td>ECO101</td><td>Business Economics</td></tr><tr><td>INF101</td><td>Business Information System</td><td>MKT101</td><td>Principles of Marketing</td></tr><tr><td>MGN101</td><td>Foundation of Management</td><td>BST101</td><td>Business Statistics and Data Analytics</td></tr></table><h3>Year 2</h3><table><tr><th>Semester 1</th><th></th><th>Semester 2</th><th></th><th></th></tr><tr><td>INF201</td><td>Principles of Programming</td><td>MNG201</td><td>Project Management</td></tr><tr><td>INF202</td><td>User Interface Design</td><td>INF203</td><td>Database Design and Management</td></tr><tr><td></td><td>Elective 1  Level 200 Unit</td><td></td><td>Elective 3  Level 200 Unit</td></tr><tr><td></td><td>Elective 2  Level 200 Unit</td><td></td><td>Elective 4  Level 200 Unit</td></tr></table><h3>Year 3</h3><table><tr><th>Semester 1</th><th></th><th>Semester 2</th><th></th><th></th></tr><tr><td>INF301</td><td>System Analysis and Design</td><td>INF303</td><td>Business Intelligence and Analytics</td></tr><tr><td>INF302</td><td>IT Strategic Management</td><td>INF304</td><td>Information System Project</td></tr><tr><td>MGN301</td><td>Leadership and Management</td><td>MGN302</td><td>Corporate Social Responsibility</td></tr><tr><td></td><td>Elective 5  Level 300 Unit</td><td></td><td>Elective 6  Level 300 Unit</td></tr></table>
-`,
+            description: `<h3>Year 1</h3><table><tr><th>Semester 1</th><th></th><th>Semester 2</th><th></th><th></th></tr><tr><td>ACC101</td><td>Accounting for Decision Making</td><td>LAW101</td><td>Business and Company Law</td></tr><tr><td>BUS101</td><td>Business Communication</td><td>ECO101</td><td>Business Economics</td></tr><tr><td>INF101</td><td>Business Information System</td><td>MKT101</td><td>Principles of Marketing</td></tr><tr><td>MGN101</td><td>Foundation of Management</td><td>BST101</td><td>Business Statistics and Data Analytics</td></tr></table><h3>Year 2</h3><table><tr><th>Semester 1</th><th></th><th>Semester 2</th><th></th><th></th></tr><tr><td>INF201</td><td>Principles of Programming</td><td>MNG201</td><td>Project Management</td></tr><tr><td>INF202</td><td>User Interface Design</td><td>INF203</td><td>Database Design and Management</td></tr><tr><td></td><td>Elective 1  Level 200 Unit</td><td></td><td>Elective 3  Level 200 Unit</td></tr><tr><td></td><td>Elective 2  Level 200 Unit</td><td></td><td>Elective 4  Level 200 Unit</td></tr></table><h3>Year 3</h3><table><tr><th>Semester 1</th><th></th><th>Semester 2</th><th></th><th></th></tr><tr><td>INF301</td><td>System Analysis and Design</td><td>INF303</td><td>Business Intelligence and Analytics</td></tr><tr><td>INF302</td><td>IT Strategic Management</td><td>INF304</td><td>Information System Project</td></tr><tr><td>MGN301</td><td>Leadership and Management</td><td>MGN302</td><td>Corporate Social Responsibility</td></tr><tr><td></td><td>Elective 5  Level 300 Unit</td><td></td><td>Elective 6  Level 300 Unit</td></tr></table>`,
           },
         ],
       },
