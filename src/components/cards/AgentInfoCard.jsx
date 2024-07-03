@@ -1,52 +1,57 @@
 import React from "react";
 import { Button } from "@/components";
 import { FaArrowRight } from "react-icons/fa";
-import Image from "next/image";
-import Link from "next/link";
+// import Image from "next/image";
+// import Link from "next/link";
 
 const AgentInfoCard = ({
-  title,
-  phone,
-  website,
-  address,
-  country,
-  email,
-  agentName,
-  imageUrl,
+  RecruitmentAgentOwner,
+  RecruitmentAgentName,
+  Phone,
+  Website,
+  BillingStreet,
+  Billingcity,
+  BillingState,
+  BillingCode,
+  Description,
+  RecruitmentAgencyEmail,
+  RepresentativeContactName,
 }) => {
   return (
     <div className="bg-light-grey p-4 rounded-md">
-      <Image
+      {/* <Image
         src={imageUrl}
         width={250}
         height={250}
-        alt={`logo of ${title}`}
+        alt={`logo of ${RecruitmentAgentOwner}`}
         className="w-28 mx-auto aspect-square object-contain mix-blend-multiply"
-      />
+      /> */}
       <a
         target="_blank"
-        href={website?.includes("https://") ? website : `https://${website}`}
+        href={Website?.includes("https://") ? Website : `https://${Website}`}
       >
-        <h2 className="text-xl leading-[22px] font-bold mt-4 mb-2">{title}</h2>
+        <h2 className="text-xl leading-[22px] font-bold mt-4 mb-2">
+          {RecruitmentAgentName}
+        </h2>
       </a>
 
       <p className="font-[500] capitalize break-words">
-        Agent Name: {agentName}
+        Agent Name: {RepresentativeContactName}
       </p>
       <p className="font-[500] capitalize break-words">
-        Address: {address} {country}
+        Address: {Billingcity} {BillingState} {BillingStreet}
       </p>
 
       <p className="font-[500] capitalize break-words">
         email:
-        <a className="font-[600]" href={`mailto:${email}`}>
-          {email}
+        <a className="font-[600]" href={`mailto:${RecruitmentAgencyEmail}`}>
+          {RecruitmentAgencyEmail}
         </a>
       </p>
       <p className="font-[500] capitalize break-words">
         phone:
-        <a className="font-[600]" href={`tel:${phone}`}>
-          {phone}
+        <a className="font-[600]" href={`tel:${Phone}`}>
+          {Phone}
         </a>
       </p>
     </div>
