@@ -1,6 +1,4 @@
-import {
-  AboutInfoSection,
-} from "@/components";
+import { AboutInfoSection } from "@/components";
 import React from "react";
 
 const AboutUs = () => {

@@ -29,9 +29,9 @@ const Button = ({
         <div className={`${styleB ? styleB : ""} `}>{iconA ? iconA : ""}</div>
         <div className="flex flex-col">
           <div className="whitespace-nowrap">{btnName}</div>
-          <p className="text-[16px] whitespace-nowrap">
+          <span className="block text-[16px] whitespace-nowrap">
             {contact ? contact : ""}
-          </p>
+          </span>
         </div>
         <div
           className={`${

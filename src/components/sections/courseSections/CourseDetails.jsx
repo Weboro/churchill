@@ -7,6 +7,7 @@ import {
   NewsletterSection,
   TopBannerCard,
   CoursesSlider,
+  StudentProspectusSection,
 } from "@/components";
 
 const CourseDetails = ({ slug }) => {
@@ -36,6 +37,10 @@ const CourseDetails = ({ slug }) => {
         tabbedPaneData={data?.tabbedPaneData}
       />
 
+      <EnquirySection />
+
+      {/* <div className="container mx-auto px-5"><StudentProspectusSection /></div> */}
+
       <div className="container mx-auto px-5">
         <h2 className="font-bold leading-9 mb-6 text-[36px] text-[#2C2B4B]">
           Browse Other Courses
@@ -43,8 +48,6 @@ const CourseDetails = ({ slug }) => {
 
         <CoursesSlider />
       </div>
-
-      <EnquirySection />
 
       <NewsletterSection />
     </div>

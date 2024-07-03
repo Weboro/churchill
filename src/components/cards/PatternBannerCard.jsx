@@ -55,6 +55,4 @@ const PatternBannerCard = ({
   );
 };
 
-//
-
 export default PatternBannerCard;

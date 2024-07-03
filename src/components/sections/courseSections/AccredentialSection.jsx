@@ -1,7 +1,7 @@
 import React from "react";
-import { navItems } from "@/constDatas/navItems";
-import PatternBannerCard from "@/components/cards/PatternBannerCard";
 import Image from "next/image";
+import { navItems } from "@/constDatas/navItems";
+import { PatternBannerCard } from "@/components";
 
 const AccredentialSection = ({ slug }) => {
   const data = navItems[2];
