@@ -1,6 +1,6 @@
 import React from "react";
 import { navItems } from "@/constDatas/navItems";
-import { StyledHeroCard, Button } from "@/components";
+import { PatternBannerCard, Button } from "@/components";
 import Link from "next/link";
 import FadeUpAnimation from "@/animations/FadeUp";
 

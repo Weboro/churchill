@@ -511,6 +511,10 @@ tr:nth-child(even) {
   list-style-image: url("/assets/bullet-point.svg");
 }
 
+.rich-text-container ol {
+  list-style: decimal;
+}
+
 .rich-text-container ul > li::first-letter,
 .rich-text-container ol > li::first-letter {
   text-transform: capitalize;
@@ -536,13 +540,10 @@ tr:nth-child(even) {
 .rich-text-container td {
   border: 1px solid #e59623;
 }
+
 .rich-text-container table tr:nth-child(1) th,
 .rich-text-container table tr:nth-child(1) td {
   background: #e59623;
   color: #eff3f5;
   font-weight: 600;
 }
-
-/*  */
-
-/*  */

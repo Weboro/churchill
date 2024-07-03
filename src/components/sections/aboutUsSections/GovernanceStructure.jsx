@@ -1,4 +1,4 @@
-import PatternBannerCard from "@/components/cards/PatternBannerCard";
+import { PatternBannerCard } from "@/components";
 import Image from "next/image";
 
 const GovernanceStructure = ({ slug }) => {
