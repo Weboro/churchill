@@ -1,15 +1,15 @@
 "use client";
-
 import {
   PatternBannerCard,
   AgentInfoCard,
   Button,
   DataNotFound,
 } from "@/components";
+
 import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
-import { CHIEAgentData } from "@/constDatas/CHIEAgentData";
+import { AgentUserData } from "@/constDatas/AgentUserData";
 import Image from "next/image";
 import Link from "next/link";
 import FadeUpAnimation from "@/animations/FadeUp";
@@ -21,18 +21,27 @@ function formatText(text) {
 const FindAgent = () => {
   const [searchByName, setSearchByName] = useState("");
   const [searchByCountry, setSearchByCountry] = useState("");
-  const [filteredData, setFilteredData] = useState(CHIEAgentData);
+
+  const [filteredData, setFilteredData] = useState(AgentUserData);
   const [isLoading, setIsLoading] = useState(false);
 
   function handleClick() {
     setIsLoading(true);
     try {
-      const filteredData = CHIEAgentData.filter(
+      const filteredData = AgentUserData.filter(
         (item) =>
-          formatText(item.agentName).includes(formatText(searchByName)) &&
-          formatText(item.country).includes(formatText(searchByCountry))
+          formatText(item.RecruitmentAgentName).includes(
+            formatText(searchByName)
+          ) &&
+          formatText(searchByCountry).includes(
+            formatText(item.Country) ||
+              formatText(item.BillingStreet) ||
+              formatText(item.Billingcity) ||
+              formatText(item.BillingState)
+          )
       );
       setFilteredData(filteredData);
+      console.log(filteredData);
     } finally {
       setIsLoading(false);
     }
@@ -69,7 +78,7 @@ const FindAgent = () => {
           <input
             type="text"
             name="search-country"
-            placeholder="Search by country"
+            placeholder="Search by street/city"
             value={searchByCountry}
             onChange={(e) => setSearchByCountry(e.target.value)}
             className=" rounded-md px-4 py-3 outline outline-neutral-900/20 flex-1 w-full lg:w-[280px]"
@@ -96,33 +105,49 @@ const FindAgent = () => {
           </div>
         </section>
 
-        {filteredData.length > 0 ? (
-          <>
-            {isLoading ? (
-              <>Loading </>
-            ) : (
-              <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                {filteredData.map((data, index) => (
-                  <AgentInfoCard
-                    key={index}
-                    title={data?.title}
-                    phone={data?.phone}
-                    website={data?.website}
-                    address={data?.address}
-                    country={data?.country}
-                    email={data?.email}
-                    agentName={data?.agentName}
-                    imageUrl={data?.imageUrl}
-                  />
-                ))}
-              </section>
-            )}
-          </>
-        ) : (
-          <div className="grid place-items-center w-full">
-            <DataNotFound />
-          </div>
-        )}
+        <>
+          {isLoading ? (
+            <>Loading </>
+          ) : (
+            <>
+              {filteredData.length > 0 ? (
+                <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                  {filteredData.map((data, index) => (
+                    <AgentInfoCard
+                      key={index}
+                      // title={data?.title}
+                      // phone={data?.phone}
+                      // website={data?.website}
+                      // address={data?.address}
+                      // country={data?.country}
+                      // email={data?.email}
+                      // agentName={data?.agentName}
+                      // imageUrl={data?.imageUrl}
+
+                      RecruitmentAgentOwner={data?.RecruitmentAgentOwner}
+                      RecruitmentAgentName={data?.RecruitmentAgentName}
+                      Phone={data?.Phone}
+                      Website={data?.Website}
+                      BillingStreet={data?.BillingStreet}
+                      Billingcity={data?.Billingcity}
+                      BillingState={data?.BillingState}
+                      BillingCode={data?.BillingCode}
+                      Description={data?.Description}
+                      RecruitmentAgencyEmail={data?.RecruitmentAgencyEmail}
+                      RepresentativeContactName={
+                        data?.RepresentativeContactName
+                      }
+                    />
+                  ))}
+                </section>
+              ) : (
+                <div className="grid place-items-center w-full">
+                  <DataNotFound />
+                </div>
+              )}
+            </>
+          )}
+        </>
 
         <FadeUpAnimation>
           <div className="w-full flex flex-col md:flex-row bg-[#F3E4E4] relative hover-shadow overflow-hidden rounded-md">
