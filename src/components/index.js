@@ -76,7 +76,6 @@ import AgentInfoCard from "./cards/AgentInfoCard";
 import AccredentialSection from "./sections/courseSections/AccredentialSection";
 import GovernanceStructure from "./sections/aboutUsSections/GovernanceStructure";
 import OrganisationalChartSection from "./sections/aboutUsSections/OrganisationalChartSection";
-import StudentProspectusSection from "./sections/commonSections/StudentProspectusSection";
 
 export {
   Button,
@@ -157,5 +156,4 @@ export {
   AccredentialSection,
   GovernanceStructure,
   OrganisationalChartSection,
-  StudentProspectusSection,
 };

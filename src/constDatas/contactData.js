@@ -53,6 +53,7 @@ export const contactData = [
     title: "Meet in Person",
     description: "Make an Appointment",
     iconUrl: "/assets/event.svg",
+    redirect: "https://cihe.zohobookings.com.au/",
   },
 ];
 
@@ -62,17 +63,7 @@ export const contactData = [
 export const contactFaqs = [
   {
     title: "What programs and courses does Churchill offer?",
-    description: `
-      <p>
-        Churchill offers a wide range of undergraduate and postgraduate programs across various fields, including:
-      </p>
-      <ul>
-        <li>Major In Accounting</li>
-        <li>Major In Information Systems</li>
-        <li>Major In Hospitality</li>
-        <li>Major In Management</li>
-      </ul>
-    `,
+    description: `<p>  Churchill offers a wide range of undergraduate and postgraduate programs across various fields, including:</p><ul>  <li>Major In Accounting</li>  <li>Major In Information Systems</li>  <li>Major In Hospitality</li>  <li>Major In Management</li></ul>`,
   },
   {
     title: "How do I apply to Churchill?",
