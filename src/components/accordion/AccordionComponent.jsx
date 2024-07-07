@@ -21,7 +21,7 @@ const AccordionComponent = ({ data }) => {
           >
             <h2
               onClick={() => handleToggle(index)}
-              className={`text-2xl font-bold py-2 flex items-center justify-between cursor-pointer select-none hover:bg-zinc-200/20
+              className={`text-lg md:text-2xl font-bold py-1 md:py-2 px-2 flex items-center justify-between cursor-pointer select-none hover:bg-zinc-200/20
                ${isActive ? "border-b-neutral-800/25 border-b" : ""}`}
             >
               <span>{item.title}</span>

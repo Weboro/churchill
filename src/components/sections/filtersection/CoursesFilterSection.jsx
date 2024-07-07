@@ -22,6 +22,13 @@ const CoursesFilterSection = () => {
         ></FilterComponent>
 
         <div className="flex-1">
+          {filteredArray.length > 0 && (
+            <p className="mb-2 lg:hidden">
+              Showing {filteredArray.length} Item
+              {filteredArray.length > 1 ? "s" : ""}
+            </p>
+          )}
+
           {filteredArray.length > 0 ? (
             <div className="flex flex-col gap-8">
               {filteredArray.map((data, index) => (

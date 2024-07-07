@@ -15,7 +15,14 @@ const BlogsPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const query = searchQuery.trim().toLowerCase();
 
-  const filteredArray = BlogData.filter((item) =>
+  const sortedArray = BlogData.sort((prev, next) => {
+    const prevDate = new Date(prev.date);
+    const nextDate = new Date(next.date);
+
+    return nextDate - prevDate;
+  });
+
+  const filteredArray = sortedArray.filter((item) =>
     item.title.toLowerCase().includes(query)
   );
 

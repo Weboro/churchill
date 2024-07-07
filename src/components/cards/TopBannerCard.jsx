@@ -38,9 +38,9 @@ const TopBannerCard = ({
           <div className="py-6 flex flex-col gap-3">
             {beforeTitle && (
               <FadeUpAnimation delay={0}>
-                <p className="text-white px-[2px] pt-[2px] pb-[1px] text-xl font-extrabold highlight w-fit">
+                <div className="text-white px-[2px] pt-[2px] pb-[1px] text-xl font-extrabold highlight w-fit">
                   {beforeTitle}
-                </p>
+                </div>
               </FadeUpAnimation>
             )}
 
@@ -62,9 +62,9 @@ const TopBannerCard = ({
             )}
 
             <FadeUpAnimation delay={0.2}>
-              <p className="font-semibold text-[#ffffff] text-md md:text-[22px] leading-[24px]">
+              <div className="font-semibold text-[#ffffff] text-md md:text-[22px] leading-[24px]">
                 {subTitle}
-              </p>
+              </div>
             </FadeUpAnimation>
 
             <div className="flex gap-1 md:gap-3 flex-col md:flex-row">

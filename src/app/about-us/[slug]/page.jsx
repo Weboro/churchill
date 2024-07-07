@@ -28,7 +28,7 @@ const Page = ({ params }) => {
       ) : slug === "CIHE-organisational-chart" ? (
         <OrganisationalChartSection slug={slug} />
       ) : (
-        <div className="container mx-auto px-5">
+        <div className="container mx-auto px-5 mb-[32px]">
           <div className="flex flex-col gap-[32px] lg:gap-[44px]">
             <div className="pt-[12vh] lg:pt-[8vh]"></div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-[32px]">

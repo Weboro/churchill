@@ -23,7 +23,7 @@ const CourseDetailsCard = ({
 
         <p>{subTitle}</p>
 
-        <div className="flex justify-around md:justify-start gap-5 md:gap-12">
+        <div className="flex flex-col lg:flex-row justify-around md:justify-start gap-5 md:gap-12">
           {courseDetails?.slice(0, 3)?.map((item, index) => (
             <div className="flex flex-row gap-3 items-center" key={index}>
               <div className="w-12 h-12 grid place-items-center bg-white rounded-full text-2xl">

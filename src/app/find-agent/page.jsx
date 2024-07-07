@@ -6,7 +6,7 @@ import {
   DataNotFound,
 } from "@/components";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { AgentUserData } from "@/constDatas/AgentUserData";
@@ -25,23 +25,34 @@ const FindAgent = () => {
   const [filteredData, setFilteredData] = useState(AgentUserData);
   const [isLoading, setIsLoading] = useState(false);
 
+  useEffect(() => {
+    if (!formatText(searchByName) && !formatText(searchByCountry)) {
+      setFilteredData(AgentUserData);
+    }
+  }, [searchByName, searchByCountry]);
+
   function handleClick() {
     setIsLoading(true);
+
     try {
-      const filteredData = AgentUserData.filter(
-        (item) =>
-          formatText(item.RecruitmentAgentName).includes(
-            formatText(searchByName)
-          ) &&
-          formatText(searchByCountry).includes(
-            formatText(item.Country) ||
-              formatText(item.BillingStreet) ||
-              formatText(item.Billingcity) ||
-              formatText(item.BillingState)
-          )
-      );
+      const formattedSearchByName = formatText(searchByName);
+      const formattedSearchByCountry = formatText(searchByCountry);
+
+      const filteredData = AgentUserData.filter((item) => {
+        const nameMatches = formatText(item.RecruitmentAgentName).includes(
+          formattedSearchByName
+        );
+
+        const countryMatches =
+          formatText(item.Country).includes(formattedSearchByCountry) ||
+          formatText(item.BillingStreet).includes(formattedSearchByCountry) ||
+          formatText(item.Billingcity).includes(formattedSearchByCountry) ||
+          formatText(item.BillingState).includes(formattedSearchByCountry);
+
+        return nameMatches && countryMatches;
+      });
+
       setFilteredData(filteredData);
-      console.log(filteredData);
     } finally {
       setIsLoading(false);
     }
@@ -53,9 +64,9 @@ const FindAgent = () => {
         title="Find a CIHE AGENT"
         description="Get in touch with one of our official CIHE agents."
         BtnAText="Find an Agent"
-        BtnALink="https://zfrmz.com.au/ZKkopYxKWUmCGMefPqt9"
+        BtnALink="#search-agent"
         BtnBText="Become an Agent"
-        BtnBLink="#search-agent"
+        BtnBLink="https://zfrmz.com.au/JgLxavLkXBxSFGUch5E6"
       />
 
       <div
@@ -74,7 +85,8 @@ const FindAgent = () => {
           </h3>
         </section>
 
-        <section className="bg-[#F3E4E4] rounded-3xl md:rounded-md flex flex-col gap-4 px-3 py-4 md:flex-row lg:w-fit lg:mx-auto">
+        {/* className="bg-[#F3E4E4] rounded-md flex flex-col gap-4 px-3 py-4 md:flex-row lg:w-fit lg:mx-auto" */}
+        <section className="container-blog bg-light-grey flex flex-col md:flex-row gap-4 px-4 py-4 rounded-md">
           <input
             type="text"
             name="search-country"
@@ -111,19 +123,10 @@ const FindAgent = () => {
           ) : (
             <>
               {filteredData.length > 0 ? (
-                <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
                   {filteredData.map((data, index) => (
                     <AgentInfoCard
                       key={index}
-                      // title={data?.title}
-                      // phone={data?.phone}
-                      // website={data?.website}
-                      // address={data?.address}
-                      // country={data?.country}
-                      // email={data?.email}
-                      // agentName={data?.agentName}
-                      // imageUrl={data?.imageUrl}
-
                       RecruitmentAgentOwner={data?.RecruitmentAgentOwner}
                       RecruitmentAgentName={data?.RecruitmentAgentName}
                       Phone={data?.Phone}
@@ -141,7 +144,7 @@ const FindAgent = () => {
                   ))}
                 </section>
               ) : (
-                <div className="grid place-items-center w-full">
+                <div className="grid place-items-center md:w-1/2 mx-auto">
                   <DataNotFound />
                 </div>
               )}
