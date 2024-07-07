@@ -10,6 +10,9 @@ import { MdOutlineAccessTime } from "react-icons/md";
 const NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL =
   process.env.NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL;
 
+const NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL =
+  process.env.NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL;
+
 export const navItems = [
   {
     title: "About Us",
@@ -277,8 +280,8 @@ export const navItems = [
         redirectLink: NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL,
       },
       {
-        menuTitle: "faqs",
-        slug: "faqs",
+        menuTitle: "FAQ",
+        slug: "faq",
         headerIcon: "fi fi-rr-comments-question",
         image: "/assets/course-b.png",
         link: "/contact-us/faq",
@@ -407,7 +410,7 @@ export const navItems = [
           },
           {
             description:
-              "<h3>Admission Requirements</h3><p>The admission applications must be submitted to the Admissions Manager before the application closing date. All applications must include:<ol><li>completed Admission Application form for international students;<li>academic record of study previously undertaken;<li>where applicable, proof of English language proficiency;<li>a copy of the applicant's passport/photo ID;<li>other documentation to demonstrate admission criteria are met.</ol><h3><h3>Test Acceptable Score</h3><ul><li>IELTS 6.0 (or better) (no component lower than 5.5)<li>TOEFL (paper-based) 550 (or better) (with minimum test of written English score of 4.5)<li>TOEFL (electronic) 213 (or better) (with essay rating of at least 4.5) TOEFL (internet-based) 80 (or better) (with 19 minimum in all bands)<li>Pearson (PTE Academic) 50 (or better) (no communicative score lower than 45)<li>Successful completion of an approved English for Academic Purposes (EAP) course</ul>",
+              "<h3>Admission Requirements</h3><p>The admission applications must be submitted to the Admissions Manager before the application closing date. All applications must include:<u<l><li>completed Admission Application form for international students;<li>academic record of study previously undertaken;<li>where applicable, proof of English language proficiency;<li>a copy of the applicant's passport/photo ID;<li>other documentation to demonstrate admission criteria are met.</u<l><h3><h3>Test Acceptable Score</h3><ul><li>IELTS 6.0 (or better) (no component lower than 5.5)<li>TOEFL (paper-based) 550 (or better) (with minimum test of written English score of 4.5)<li>TOEFL (electronic) 213 (or better) (with essay rating of at least 4.5) TOEFL (internet-based) 80 (or better) (with 19 minimum in all bands)<li>Pearson (PTE Academic) 50 (or better) (no communicative score lower than 45)<li>Successful completion of an approved English for Academic Purposes (EAP) course</ul>",
           },
           {
             description: `<h3>Year 1</h3><table><tr><th>Semester 1</th><th></th><th>Semester 2</th><th></th></tr><tr><td>ACC101</td><td>Accounting for Decision Making</td><td>LAW101</td><td>Business and Company Law</td></tr><tr><td>BUS101</td><td>Business Communication</td><td>ECO101</td><td>Business Economics</td></tr><tr><td>INF101</td><td>Business Information System</td><td>MKT101</td><td>Principles of Marketing</td></tr><tr><td>MGN101</td><td>Foundation of Management</td><td>BST101</td><td>Business Statistics and Data Analytics</td></tr></table><h3>Year 2</h3><table><tr><th>Semester 1</th><th></th><th>Semester 2</th><th></th></tr><tr><td>ACC201</td><td>Financial Accounting</td><td>ACC203</td><td>Corporate Financial Reporting</td></tr><tr><td>ACC202</td><td>Managerial Accounting</td><td>ACC204</td><td>Accounting Theory</td></tr><tr><td></td><td>Elective 1  Level 200 Unit</td><td></td><td>Elective 3  Level 200 Unit</td></tr><tr><td></td><td>Elective 2  Level 200 Unit</td><td></td><td>Elective 4  Level 200 Unit</td></tr></table><h3>Year 3</h3><table><tr><th>Semester 1</th><th></th><th>Semester 2</th><th></th></tr><tr><td>ACC301</td><td>Corporate Accounting</td><td>ACC302</td><td>Auditing</td></tr><tr><td>TAX301</td><td>Taxation</td><td>FIN301</td><td>Business Finance</td></tr><tr><td>MGN301</td><td>Leadership and Management</td><td>MGN302</td><td>Corporate Social Responsibility</td></tr><tr><td></td><td>Elective 5  Level 300 Unit</td><td></td><td>Elective 6  Level 300 Unit</td></tr></table>`,
@@ -628,7 +631,7 @@ export const navItems = [
     Catagories: [
       {
         icon: <RiExchangeDollarFill />,
-        menuTitle: "Student Portal",
+        menuTitle: "Canvas Portal",
         headerIcon: "fi fi-rr-student",
         subTitle: "Access your timetable, results, trimester invoices.",
         slug: "student-login",
@@ -642,8 +645,8 @@ export const navItems = [
         headerIcon: "fi fi-rr-employee-man-alt",
         subTitle: "Access your timetable, results, trimester invoices.",
         slug: "agent-login",
-        redirectLink: "",
-        link: "/",
+        redirectLink: NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL,
+        link: "",
         image: "/assets/hero-image.jpeg",
       },
       {
@@ -662,7 +665,7 @@ export const navItems = [
         headerIcon: "fi fi-rr-employee-man",
         subTitle: "Access your timetable, results, trimester invoices.",
         slug: "staff-login",
-        redirectLink: "",
+        redirectLink: "https://www.office.com/",
         link: "/",
         image: "/assets/hero-image.jpeg",
       },

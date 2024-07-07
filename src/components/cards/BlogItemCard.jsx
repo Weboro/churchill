@@ -48,13 +48,13 @@ const BlogItemCard = ({ slug, title, image, date, tags, subTitle, index }) => {
           />
         </Link>
 
-        <div className="flex items-start gap-2 flex-wrap">
+        {/* <div className="flex items-start gap-2 flex-wrap">
           {tags?.map((item, index) => (
             <span className="bg-[#F2CF9C] px-3 py-1 rounded-md" key={index}>
               {item.tag}
             </span>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

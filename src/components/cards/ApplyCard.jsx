@@ -18,7 +18,10 @@ const ApplyCard = ({ title, description, image }) => {
         </h2>
         <p>{description}</p>
         <div>
-          <Link href={"/apply-now"} className="w-max">
+          <Link
+            href={"https://agentportal.galaxy360.com.au/application-overview"}
+            className="w-max"
+          >
             <Button
               btnName={"Apply Now"}
               icon={<FaArrowRight />}

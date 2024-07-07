@@ -19,7 +19,7 @@ const PatternBannerCard = ({
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="lg:h-[50vh] h-[44vh] flex items-center"
+      className="min-h-[30vh] flex items-center"
     >
       <div className="container mx-auto px-5">
         <div className="flex flex-col gap-4">

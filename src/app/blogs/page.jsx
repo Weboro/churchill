@@ -38,8 +38,8 @@ const BlogsPage = () => {
             <div className="container mx-auto px-5 flex flex-col gap-[32px] lg:gap-[64px]">
               <section>
                 <div className="flex flex-col lg:flex-row gap-5">
-                  <div className="flex-[65%] flex flex-col gap-5">
-                    <h3 className="text-2xl font-bold">
+                  <div className="flex-[65%] flex flex-col gap-5 md:max-w-[50%]">
+                    <h3 className="text-2xl font-bold ">
                       Search for blogs you want to explore.
                     </h3>
                     <Search
@@ -48,7 +48,7 @@ const BlogsPage = () => {
                       placeholderText="Search"
                     />
                   </div>
-                  <div className="flex-[30%] flex flex-col gap-3">
+                  {/* <div className="flex-[30%] flex flex-col gap-3">
                     <h3 className="text-xl font-bold">Tags</h3>
                     <div className="flex flex-wrap gap-3">
                       {BlogTags.map((tag, index) => (
@@ -60,7 +60,7 @@ const BlogsPage = () => {
                         </span>
                       ))}
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </section>
               {filteredArray.length > 0 ? (

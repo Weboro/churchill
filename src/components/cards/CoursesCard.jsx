@@ -34,7 +34,10 @@ const CoursesCard = ({ icon, title, faculty, subTitle, link }) => {
           <p className="clamp-3">{subTitle}</p>
 
           <div className="flex  pb-2 justify-center sm:justify-between flex-col items-center sm:flex-row gap-3">
-            <Link className="w-full" href={"/apply-now"}>
+            <Link
+              className="w-full"
+              href={"https://agentportal.galaxy360.com.au/application-overview"}
+            >
               <Button
                 btnName={"Apply Now"}
                 icon={<FaArrowRight />}

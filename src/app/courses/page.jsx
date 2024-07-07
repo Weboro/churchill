@@ -39,7 +39,7 @@ const Courses = () => {
         subTitle="Explore our innovative programs and transform your career."
         BtnAText="Apply Now"
         BtnBText="View Courses"
-        link="/apply-now"
+        link="https://agentportal.galaxy360.com.au/application-overview"
         linkA=""
         handleRightBtn={handleRightBtn}
       />

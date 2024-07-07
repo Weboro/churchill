@@ -12,7 +12,7 @@ const ApplyNow = () => {
           <Image
             width={500}
             height={500}
-            src="/assets/apply-now-login.jpeg"
+            src="/assetshttps://agentportal.galaxy360.com.au/application-overview-login.jpeg"
             alt="Placeholder Image"
             className="object-cover w-full h-full"
           />

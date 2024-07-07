@@ -42,8 +42,8 @@ const AgentInfoCard = ({
         Address: {Billingcity} {BillingState} {BillingStreet}
       </p>
 
-      <p className="font-[500] capitalize break-words">
-        email:
+      <p className="font-[500] break-words">
+        Email:{" "}
         <a className="font-[600]" href={`mailto:${RecruitmentAgencyEmail}`}>
           {RecruitmentAgencyEmail}
         </a>

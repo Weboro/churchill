@@ -21,7 +21,7 @@ const ContactUs = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="lg:h-[60vh] h-[44vh]"
+        className=" h-[44vh]"
       >
         <div className="container mx-auto px-5 h-full flex flex-col items-center justify-center gap-5">
           <h2 className="text-[40px] leading-[48px] font-bold">Contact Us</h2>
@@ -44,7 +44,7 @@ const ContactUs = () => {
             </Link>
             <Link href={"/contact-us/faq"}>
               <Button
-                btnName="FAQ's"
+                btnName="FAQ"
                 icon={<FaArrowRight />}
                 styleA={"flex items-center gap-1"}
                 style={
@@ -76,16 +76,16 @@ const ContactUs = () => {
           </section>
 
           <section className="flex flex-col gap-12 mt-[32px]">
-            <h2 className="text-black text-3xl md:text-4xl font-bold text-center w-fit mx-auto">
-              Frequently aksed Questions
+            <h2 className=" text-3xl md:text-4xl font-bold text-center w-fit mx-auto">
+              Frequently Asked Questions
             </h2>
 
-            <AccordionComponent data={contactFaqs?.slice(0, 4)} />
+            <AccordionComponent data={contactFaqs?.slice(0, 3)} />
 
             <span className="w-fit mx-auto">
               <Link href="/contact-us/faq">
                 <Button
-                  btnName="Load More FAQ's"
+                  btnName="Load More FAQ"
                   icon={<FaArrowRight />}
                   styleA={"flex items-center gap-1"}
                   style={

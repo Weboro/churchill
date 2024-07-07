@@ -98,8 +98,8 @@ const TopBannerCard = ({
                 <Image
                   src={`${imageA}`}
                   alt=""
-                  width={100}
-                  height={100}
+                  width={1000}
+                  height={1000}
                   className={` object-contain w-[450px] aspect-square ${imageAStyle}`}
                 />
               </div>
