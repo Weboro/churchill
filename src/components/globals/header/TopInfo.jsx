@@ -12,7 +12,7 @@ const TopInfo = () => {
 
   return (
     <div className="">
-      <ul className="flex gap-4 text-[14px] font-semibold text-[#424242]">
+      <ul className="flex flex-col lg:flex-row gap-4 text-[14px] font-semibold text-[#424242]">
         <Link href="/find-agent">
           <li className="flex gap-2 items-center cursor-pointer">
             <p className="text-matte-purple">Find Agent</p>

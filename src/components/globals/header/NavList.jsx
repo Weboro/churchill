@@ -52,16 +52,6 @@ const NavList = ({
                     handleOnclickA();
                   }}
                 >
-                  {/* <Link href={item?.slug}> */}
-                  {/* <div
-                    className={`flex gap-1 items-center  ${
-                      isActive && "text-[#eb9320]"
-                    } cursor-pointer pb-5 hover:text-[#eb9320]`}
-                  >
-                    <p className="">{item?.title}</p>
-                    <span className="rotate-180 group-hover:rotate-0 transition-all">
-                      <FaAngleDown />
-                    </span> */}
                   <div
                     className={`flex gap-1 pb-3 items-center group cursor-pointer`}
                   >
@@ -83,13 +73,10 @@ const NavList = ({
 
                           <Link href={`/${item.slug}`}>
                             <Button btnName="Learn More" />
-                            {/* <button className="px-4 py-2 border-2 border-[#E59623] hover:bg-[#E59623] transition-all font-bold rounded-xl">
-                              Learn More
-                            </button> */}
                           </Link>
                         </div>
                         <div className="flex-[78%]">
-                          <ul className="h-[180px] md:h-auto overflow-y-scroll grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-2">
+                          <ul className="h-[110px] md:h-auto overflow-y-scroll grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-2">
                             {item.Catagories.map((subItem, index) => (
                               <Link
                                 target={`${

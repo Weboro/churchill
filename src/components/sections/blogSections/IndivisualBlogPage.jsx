@@ -30,21 +30,20 @@ const IndivisualBlogPage = ({ slug }) => {
         <div className="px-5 flex flex-col gap-[32px] md:gap-[64px]">
           <article className="flex flex-col gap-6" ref={containerRef}>
             <div className="container-blog flex flex-col gap-5">
-              <nav className="font-semibold flex gap-1">
+              <nav className="font-semibold flex flex-wrap text-wrap gap-1">
                 <Link
                   className="hover:text-primary-orange transition-all"
                   href="/"
                 >
-                  Home
+                  Home /
                 </Link>
-                /
                 <Link
                   className="hover:text-primary-orange transition-all"
                   href="/blogs"
                 >
-                  Blogs
+                  Blogs /
                 </Link>
-                / {data.title}
+                {data.title}
               </nav>
               <hr className="border-2 w-[60px]  border-primary-orange" />
 

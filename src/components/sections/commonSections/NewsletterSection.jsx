@@ -8,7 +8,7 @@ import { FaArrowRight } from "react-icons/fa";
 const NewsletterSection = () => {
   return (
     <FadeUpAnimation>
-      <div className="container md:px-5 mx-auto mb-[48px] rounded-md ">
+      <div className="container px-5 mx-auto mb-[48px] rounded-md ">
         <div className="w-full flex flex-col md:flex-row bg-[#F3E4E4] relative hover-shadow overflow-hidden rounded-md">
           <div className="flex z-[10] flex-1 flex-col gap-6 pt-8 pl-8 md:py-20 md:pl-20">
             <h3 className="relative leading-10 font-bold text-[36px]  text-[#2C2B4B]">

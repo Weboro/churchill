@@ -1,7 +1,12 @@
 "use client";
 import { navItems } from "@/constDatas/navItems";
 import React, { useEffect, useState } from "react";
-import { GovernanceCard, NewsletterSection, DataNotFound } from "@/components";
+import {
+  GovernanceCard,
+  NewsletterSection,
+  DataNotFound,
+  PatternBannerCard,
+} from "@/components";
 import FadeUpAnimation from "@/animations/FadeUp";
 import Image from "next/image";
 
@@ -24,9 +29,14 @@ const GovernancePageSection = ({ slug }) => {
 
   return (
     <>
-      <TextBanner
+      {/* <TextBanner
         title={slug?.split("-").join(" ")}
         subTitle="Churchill's senior leaders guide our institution towards big goals, focusing on excellence and innovative teaching to help our community, country, and the world."
+      />
+       */}
+      <PatternBannerCard
+        title={slug?.split("-").join(" ")}
+        description="Churchill's senior leaders guide our institution towards big goals, focusing on excellence and innovative teaching to help our community, country, and the world."
       />
 
       <div className="flex flex-col gap-[32px] lg:gap-[64px]">
@@ -38,20 +48,7 @@ const GovernancePageSection = ({ slug }) => {
                 delay={index * 0.1}
                 className="h-full"
               >
-                <GovernanceCard
-                  data={item}
-                  key={index}
-
-                  // handleBtnClick={(title, subTitle, image, description) => {
-                  //   setOpenDetails(true);
-                  //   setComment({
-                  //     title,
-                  //     subTitle,
-                  //     image,
-                  //     description,
-                  //   });
-                  // }}
-                />
+                <GovernanceCard data={item} key={index} />
               </FadeUpAnimation>
             ))}
           </div>

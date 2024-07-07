@@ -37,7 +37,7 @@ const TabbedPane = ({ tabbedPaneHeaders, tabbedPaneData }) => {
                       selectedIndex === index && (
                         <div className="w-full rounded-md" key={index}>
                           <div
-                            className="rich-text-container"
+                            className="rich-text-container w-full overflow-x-scroll"
                             dangerouslySetInnerHTML={{
                               __html: data.description,
                             }}

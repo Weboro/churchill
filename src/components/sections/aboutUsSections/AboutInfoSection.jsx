@@ -32,9 +32,10 @@ const AboutInfoSection = () => {
           <CoreValuesSection />
           <AboutSection />
           <RelatedSection />
-          <NewsletterSection />
         </div>
       </div>
+
+      <NewsletterSection />
     </div>
   );
 };

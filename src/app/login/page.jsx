@@ -9,10 +9,10 @@ const page = () => {
 
   return (
     <div>
-      /
       <PatternBannerCard title="Login" />
-      <div className="container mx-auto px-5 my-[64px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+
+      <div className="container mx-auto px-5 mb-[32px]">
+        <div className="grid grid-cols-2 xl:grid-cols-4 gap-4">
           {loginData.Catagories?.map((item, index) => (
             <FadeUpAnimation delay={0.1 * index} key={index}>
               <Link
@@ -24,19 +24,15 @@ const page = () => {
                     ? item?.link
                     : ""
                 }
+                className="w-full h-full"
               >
-                <div className="p-4 rounded-2xl bg-light-grey flex flex-col gap-4">
+                <div className="p-4 h-full rounded-md bg-light-grey flex flex-col capitalize gap-4">
                   <div className="w-14 h-14 mx-auto bg-white rounded-full grid place-items-center">
                     <i className={`text-2xl flex ${item?.headerIcon}`}></i>
                   </div>
-                  <p className="text-xl font-bold text-center">
+                  <p className="text-xl leading-[22px] font-bold text-center">
                     {item?.menuTitle}
                   </p>
-                  <Button
-                    btnName="Login"
-                    style="w-fit mx-auto"
-                    type="primary"
-                  />
                 </div>
               </Link>
             </FadeUpAnimation>
