@@ -89,7 +89,7 @@ const IndivisualBlogPage = ({ slug }) => {
           <div className="container mx-auto px-5 flex flex-col gap-[32px]">
             <hr className="border border-black/20" />
             <div className="flex gap-4 md:items-center md:justify-between flex-col md:flex-row">
-              <div className="flex flex-row flex-wrap gap-2">
+              {/* <div className="flex flex-row flex-wrap gap-2">
                 {data.tags?.map((item, index) => (
                   <p
                     key={index}
@@ -98,7 +98,7 @@ const IndivisualBlogPage = ({ slug }) => {
                     {item?.tag}
                   </p>
                 ))}
-              </div>
+              </div> */}
 
               <div className="flex flex-col md:flex-row gap-2">
                 <p>Share To:</p>

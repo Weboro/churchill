@@ -48,7 +48,7 @@ const TabbedPane = ({ tabbedPaneHeaders, tabbedPaneData }) => {
                                 Ready to start your journey with churchill?
                               </h2>
                               <div className="flex flex-col gap-2 ">
-                                <a href="/apply-now">
+                                <a href="https://agentportal.galaxy360.com.au/application-overview">
                                   <Button
                                     btnName={"Apply Yourself"}
                                     style={"w-fit"}
@@ -87,7 +87,7 @@ const TabbedPane = ({ tabbedPaneHeaders, tabbedPaneData }) => {
                         Ready to start your journey with churchill?
                       </h2>
                       <div className="flex gap-2 items-center">
-                        <a href="/apply-now">
+                        <a href="https://agentportal.galaxy360.com.au/application-overview">
                           <Button btnName={"Apply Yourself"} style={"w-fit"} />
                         </a>
                         <a href="/find-agent">

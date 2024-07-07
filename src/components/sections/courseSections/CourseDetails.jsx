@@ -24,7 +24,7 @@ const CourseDetails = ({ slug }) => {
         subTitle={data?.subTitle}
         BtnAText="Apply Now"
         BtnBText="Enquire More"
-        link={`/apply-now`}
+        link={`https://agentportal.galaxy360.com.au/application-overview`}
         linkA={`https://forms.zohopublic.com.au/CIHE/form/StudentHubEnquiry/formperma/XilFJje5kQ-h7f4saQYbSV4kJ-kAMiG7p1QNfWEvDXs`}
         imageAStyle={`lg:scale-[135%]`}
       />
