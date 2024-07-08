@@ -10,16 +10,10 @@ const AboutSection = () => {
       <div className="flex flex-col gap-[32px] lg:gap-[44px]">
         {aboutLists?.message?.map((item, index) => (
           <div
-            className={`grid grid-cols-1 md:grid-cols-2 gap-5 ${
-              index % 2 === 0 ? "md:grid-flow-col" : "md:grid-flow-row-dense"
-            }`}
+            className={`flex items-center gap-5 flex-col lg:flex-row odd:lg:flex-row-reverse`}
             key={index}
           >
-            <div
-              className={`flex flex-col gap-2 ${
-                index % 2 === 0 ? "order-1" : "order-2"
-              }`}
-            >
+            <div className={`flex flex-col gap-2 flex-1`}>
               <h2 className="font-bold text-[36px] text-[#2C2B4B]">
                 {item?.title}
               </h2>
@@ -28,14 +22,13 @@ const AboutSection = () => {
                 dangerouslySetInnerHTML={{ __html: item?.description }}
               />
             </div>
+
             <Image
               src={item?.image}
               alt={"use-links-icon-image"}
               width={400}
               height={400}
-              className={`w-full lg:h-[500px] rounded-md object-cover ${
-                index % 2 === 0 ? "order-2" : "order-1"
-              }`}
+              className={`w-full lg:h-[500px] rounded-md object-cover flex-1`}
             />
           </div>
         ))}

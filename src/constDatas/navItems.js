@@ -66,7 +66,7 @@ export const navItems = [
         },
         {
           title: "About Our Institute",
-          image: "/assets/about-image.jpg",
+          image: "/assets/churchill-building.webp",
           description:
             "Churchill Institute of Higher Education's campus is located at Level 1, 16-18 Wentworth Street Parramatta NSW 2150 a major urban area of Sydney with ample access to employment, social and accommodation opportunities. The Campus is walking distance to the main public transport located at Parramatta Station, close to business facilities with touristic locations of Sydney a short train ride away. The Campus is spacious and well-equipped. The campus pro vides facilities specifically designed to provide students and staff with premises and equipment to promote and foster excellence in teaching and learning. Its facilities are allocated for teaching purpose and all other essential academic activities such as student services and academic activities as well as all general administration. New students joining Churchill Institute of Higher Education will attend the Orientation Program conducted at the beginning of each semester where details about living, getting around and about, and studying in Parramatta and Sydney are provided. The Campus is equipped with an in-house Library where students and staff have access to a number of textbooks and online databases for their reference. The library will ensure adequate computers are available for students to access online databases and the library catalogue.",
         },
