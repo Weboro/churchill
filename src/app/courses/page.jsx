@@ -30,7 +30,7 @@ const Courses = () => {
   return (
     <div className="flex flex-col gap-[32px] lg:gap-[64px]">
       <TopBannerCard
-        image={`/assets/courses-banner.jpg`}
+        image={`/assets/courses-banner.webp`}
         titleSpan={
           <span>
             Study at <span className="highlight">Churchill</span>

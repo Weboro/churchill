@@ -14,7 +14,7 @@ const HelpSection = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-[32px]">
         <div className="bg-[#F3E4E4] rounded-md">
           <HelpCard
-            image={"/assets/help.png"}
+            image={"/assets/help.webp"}
             title={"Need Help?"}
             description={
               "If you would like to become an authorised representative of CIHE Sydney, please submit an Expression of Interest. Expression of interests will be assessed by the relevant Regional Recruitment Manager."

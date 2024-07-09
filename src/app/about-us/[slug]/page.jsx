@@ -6,6 +6,7 @@ import {
   AccredentialSection,
   GovernanceStructure,
   OrganisationalChartSection,
+  GalleryPage,
 } from "@/components";
 import { FaArrowRight } from "react-icons/fa";
 import Animation from "@/constDatas/animations/PageNotFound.json";
@@ -27,6 +28,8 @@ const Page = ({ params }) => {
         <GovernanceStructure slug={slug} />
       ) : slug === "CIHE-organisational-chart" ? (
         <OrganisationalChartSection slug={slug} />
+      ) : slug === "gallery" ? (
+        <GalleryPage />
       ) : (
         <div className="container mx-auto px-5 mb-[32px]">
           <div className="flex flex-col gap-[32px] lg:gap-[44px]">

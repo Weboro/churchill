@@ -37,7 +37,7 @@ const AIHelpSection = () => {
               </div>
               <div className="flex items-center px-4 justify-end">
                 <Image
-                  src="/assets/AI-image.png"
+                  src="/assets/AI-image.webp"
                   width={600}
                   height={600}
                   alt="ai image"
