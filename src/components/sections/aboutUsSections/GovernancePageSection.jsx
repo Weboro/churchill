@@ -59,25 +59,4 @@ const GovernancePageSection = ({ slug }) => {
   );
 };
 
-const TextBanner = ({ title, subTitle }) => {
-  return (
-    <div className="mt-[175px] md:mt-[32px] relative">
-      <div className=" container mx-auto px-5 flex items-center">
-        <div className="flex flex-col gap-6">
-          <h1 className="text-3xl md:text-4xl font-semibold capitalize">
-            {title}
-          </h1>
-          <h2 className="md:text-lg font-semibold lg:w-2/3">{subTitle}</h2>
-        </div>
-      </div>
-      <Image
-        width={400}
-        height={400}
-        alt={"churchil half logo"}
-        src="/assets/churchil-hex-half-logo.png"
-        className="hidden md:block absolute top-[-200%] right-[-80px] -rotate-[32deg] z-[10]"
-      />
-    </div>
-  );
-};
 export default GovernancePageSection;

@@ -37,7 +37,7 @@ const ApplyCard = ({ title, description, image }) => {
             alt={"use-links-icon-image"}
             width={500}
             height={370}
-            className="w-[260px] h-full object-cover"
+            className="w-[280px] h-full object-cover"
           />
         </div>
       </div>

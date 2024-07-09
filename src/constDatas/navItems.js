@@ -362,9 +362,9 @@ export const navItems = [
           "Master the language of business, ensuring financial integrity and making informed decisions that drive organizational success.          ",
         slug: "major-in-accounting",
         link: "",
-        icon: "/assets/course-a.png",
+        icon: "/assets/courses/major-accounting.webp",
         courseCode: "CIHE427",
-        heroImage: "/assets/banner-one.png",
+        heroImage: "/assets/course-a.webp",
         faculty: "Bachelors of Business",
         isAccredited: true,
         accredited: [
@@ -433,9 +433,9 @@ export const navItems = [
           "The Information Systems (IS) Major aims to provide students with a comprehensive understanding of information technology concepts.",
         slug: "major-in-information-systems",
         link: "",
-        icon: "/assets/course-c.png",
+        icon: "/assets/courses/major-it.webp",
         courseCode: "CIHE427",
-        heroImage: "/assets/banner-two.png",
+        heroImage: "/assets/course-b.webp",
         faculty: "Bachelors of Business",
         courseDetails: [
           {
@@ -498,9 +498,9 @@ export const navItems = [
           "Create unforgettable experiences and lead with excellence, crafting the future of the vibrant and dynamic hospitality industry.",
         slug: "major-in-hospitality",
         link: "",
-        icon: "/assets/course-d.png",
+        icon: "/assets/courses/major-hospitality.webp",
         courseCode: "CIHE427",
-        heroImage: "/assets/banner-three.png",
+        heroImage: "/assets/course-c.webp",
         faculty: "Bachelors of Business",
         courseDetails: [
           {
@@ -562,9 +562,9 @@ export const navItems = [
           "Develop visionary leadership skills, inspiring teams and driving sustainable organizational success in a constantly evolving business landscape.",
         slug: "major-in-management",
         link: "",
-        icon: "/assets/course-b.png",
+        icon: "/assets/courses/major-management.webp",
         courseCode: "CIHE427",
-        heroImage: "/assets/banner-four.png",
+        heroImage: "/assets/course-d.webp",
         faculty: "Bachelors of Business",
         courseDetails: [
           {

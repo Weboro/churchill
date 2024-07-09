@@ -1,16 +1,18 @@
-import TopBannerCard from "@/components/cards/TopBannerCard";
 import React from "react";
-import MissionVisionsection from "./MissionVisionsection";
-import CoreValuesSection from "./CoreValuesSection";
-import AboutSection from "./AboutSection";
-import RelatedSection from "./RelatedSection";
-import NewsletterSection from "../commonSections/NewsletterSection";
+import {
+  TopBannerCard,
+  MissionVisionsection,
+  CoreValuesSection,
+  AboutSection,
+  RelatedSection,
+  NewsletterSection,
+} from "@/components";
 
 const AboutInfoSection = () => {
   return (
     <div className="flex flex-col gap-[32px] lg:gap-[64px]">
       <TopBannerCard
-        image={"/assets/hero-image.jpeg"}
+        image={"/assets/hero-about.webp"}
         titleSpan={
           <span>
             Meet Our <span className="highlight">Team</span>

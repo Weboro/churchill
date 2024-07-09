@@ -11,10 +11,10 @@ const EnquirySection = () => {
   return (
     <section className="container mx-auto px-5">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-        <div className="lg:row-span-2">
-          <FadeUpAnimation delay={0.1}>
+        <div className="lg:row-span-2 h-full">
+          <FadeUpAnimation className="h-full" delay={0.1}>
             <ApplyCard
-              image={"/assets/girl-pointing.png"}
+              image={"/assets/point.webp"}
               title={"Applying to CIHE is quick, easy and secure."}
               description={
                 "We're happy you're choosing to join the CIHE community with students from across Australia and around the world."
@@ -33,7 +33,7 @@ const EnquirySection = () => {
             <div className="flex items-end">
               <div className="hidden lg:block">
                 <Image
-                  src={`/assets/degree.png`}
+                  src={`/assets/degree.webp`}
                   alt={"use-links-icon-image"}
                   width={400}
                   height={400}
@@ -100,7 +100,7 @@ const EnquirySection = () => {
             <div className="flex items-end">
               <div className="hidden lg:block">
                 <Image
-                  src={`/assets/help.png`}
+                  src={`/assets/help.webp`}
                   alt={"use-links-icon-image"}
                   width={400}
                   height={400}
@@ -116,86 +116,3 @@ const EnquirySection = () => {
 };
 
 export default EnquirySection;
-
-// "use client";
-// import ApplyCard from "@/components/cards/ApplyCard";
-// import React, { useState } from "react";
-// import Link from "next/link";
-// import Button from "@/components/button";
-// import { FaArrowRight } from "react-icons/fa";
-// import Image from "next/image";
-
-// const EnquirySection = () => {
-//   return (
-//     <section className="container mx-auto px-5">
-//       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-//         <div className="lg:row-span-2">
-//           <EnquirySectionCard
-//             mode="col" // row col row-reverse
-//             title="Applying to CIHE is quick, easy and secure."
-//             description="We're happy you're choosing to join the CIHE community with students from across Australia and around the world."
-//             ImageURl="/assets/find-agent-page.png"
-//             backgroundStyle="linear-gradient(to bottom right, rgb(187, 171, 223), rgb(187 171 223 / 43%) 100%)"
-//           />
-//         </div>
-
-//         <EnquirySectionCard
-//           mode="row" // row col row-reverse
-//           title=" Choosing the right degree starts here"
-//           ImageURl="/assets/find-agent-page.png"
-//           backgroundStyle="linear-gradient(to bottom left, rgb(235, 124, 158), rgb(235 124 158 / 43%) 100%)"
-//         />
-
-//         <EnquirySectionCard
-//           mode="rowReverse" // row col row-reverse
-//           title="Have a question? We're here to help."
-//           ImageURl="/assets/find-agent-page.png"
-//           backgroundStyle="linear-gradient(to bottom right, rgb(244, 213, 107), rgb(244 213 107 / 43%) 100%)"
-//         />
-//       </div>
-//     </section>
-//   );
-// };
-
-// const EnquirySectionCard = ({
-//   title,
-//   backgroundStyle,
-//   description,
-//   children,
-//   ImageURl,
-//   mode = "row", // row col row-reverse
-// }) => {
-//   return (
-//     <div
-//       style={{ backgroundImage: backgroundStyle }}
-//       className={`rounded-2xl h-full flex flex-col items-end ${
-//         mode === "row"
-//           ? ""
-//           : mode == "col"
-//           ? "md:flex-col "
-//           : mode == "rowReverse"
-//           ? "md:flex-row-reverse"
-//           : ""
-//       }`}
-//     >
-//       <div className="p-4 flex-1 flex flex-col gap-4">
-//         <h2 className="font-bold text-[36px] text-[#2C2B4B] leading-10">
-//           {title}
-//         </h2>
-//         <p>{description}</p>
-//         {children}
-//       </div>
-//       <div className="md:w-[300px] h-full">
-//         <Image
-//           src={ImageURl}
-//           width={1000}
-//           height={1000}
-//           alt={`Image for ${title}`}
-//           className="w-full object-cover"
-//         />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default EnquirySection;
