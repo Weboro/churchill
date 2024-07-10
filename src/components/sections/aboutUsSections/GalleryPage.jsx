@@ -178,7 +178,7 @@ const GalleryPage = () => {
               setIsFullScreenShown(false);
             }}
           >
-            <i class="fi fi-br-cross"></i>
+            <i className="fi fi-br-cross"></i>
           </div>
           <div className="w-[90%] md:w-[60%] grid place-items-center">
             <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-xl">
