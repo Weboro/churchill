@@ -105,6 +105,11 @@ const images = [
   "1H7A3689.webp",
 ];
 
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  console.log("first");
+}
+
 const GalleryPage = () => {
   const step = 9;
   const [startIndex, setStartIndex] = useState(0);
@@ -117,6 +122,7 @@ const GalleryPage = () => {
     if (endIndex < images.length) {
       setStartIndex(startIndex + step);
       setEndIndex(endIndex + step);
+      scrollToTop();
     }
   }
 
@@ -124,6 +130,7 @@ const GalleryPage = () => {
     if (startIndex > 0) {
       setStartIndex(startIndex - step);
       setEndIndex(endIndex - step);
+      scrollToTop();
     }
   }
 
