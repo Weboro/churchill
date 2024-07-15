@@ -48,17 +48,9 @@ const Timer = () => {
     }
   };
   const startCountDown = useCallback(() => {
-    const customDate = new Date();
-    const countDownDate = new Date(
-      customDate.getFullYear(),
-      customDate.getMonth() + 1,
-      customDate.getDate() + 6,
-      customDate.getHours(),
-      customDate.getMinutes(),
-      customDate.getSeconds() + 1
-    );
+    const countDownDate = new Date("July 22, 2024 00:00:00").getTime();
     setInterval(() => {
-      getTimeDifference(countDownDate.getTime());
+      getTimeDifference(countDownDate);
     }, 1000);
   }, []);
   useEffect(() => {
