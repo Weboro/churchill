@@ -15,7 +15,7 @@ const stepTitles = [
 ];
 
 const Page = () => {
-  const [activeId, setActiveId] = useState(2);
+  const [activeId, setActiveId] = useState(1);
 
   const handleToggle = (id) => {
     setActiveId(activeId === id ? null : id);
@@ -140,6 +140,7 @@ const Page = () => {
                         </div>
                       </div>
                     )}
+
                     {item.id === 2 && (
                       <div className="my-4 flex flex-col gap-5">
                         <p>
@@ -152,6 +153,7 @@ const Page = () => {
                         </a>
                       </div>
                     )}
+
                     {item.id === 3 && (
                       <div className="my-4 flex flex-col gap-5">
                         <p>
@@ -166,6 +168,7 @@ const Page = () => {
                         </p>
                       </div>
                     )}
+
                     {item.id === 4 && (
                       <div className="my-4 flex flex-col gap-5">
                         <p>
