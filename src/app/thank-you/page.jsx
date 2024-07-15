@@ -4,7 +4,7 @@ import { Button } from "@/components";
 const page = () => {
   return (
     <div
-      className="flex flex-col gap-[32px] py-[10rem]"
+      className="flex flex-col gap-[32px] pbon-[10rem]"
       style={{
         backgroundImage: `linear-gradient(to top, white, #00000000), url('/assets/hero-vector.svg')`,
         backgroundRepeat: "no-repeat",
