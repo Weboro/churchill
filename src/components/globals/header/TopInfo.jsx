@@ -35,11 +35,11 @@ const links = [
     text: "Contact Us",
     iconClass: "fi fi-rr-phone-flip",
   },
-  {
-    href: "/about-us/gallery",
-    text: "Gallery",
-    iconClass: "fi fi-rr-gallery",
-  },
+  // {
+  //   href: "/about-us/gallery",
+  //   text: "Gallery",
+  //   iconClass: "fi fi-rr-gallery",
+  // },
 ];
 const TopInfo = () => {
   return (

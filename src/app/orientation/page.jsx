@@ -1,6 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import { Timer, Button } from "@/components";
+import {
+  Timer,
+  Button,
+  RequestIDCardForm,
+  NewsletterSection,
+} from "@/components";
 import Image from "next/image";
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -15,6 +20,7 @@ const stepTitles = [
 ];
 
 const Page = () => {
+  const [isIDFormShown, setIsIDFormShown] = useState(false);
   const [activeId, setActiveId] = useState(1);
 
   const handleToggle = (id) => {
@@ -23,7 +29,7 @@ const Page = () => {
 
   return (
     <>
-      <div
+      <header
         style={{
           backgroundImage: `linear-gradient(to top, white, #00000000), url('/assets/hero-vector.svg')`,
           backgroundRepeat: "no-repeat",
@@ -44,6 +50,7 @@ const Page = () => {
           <p className="text-3xl text-center text-[#eb9320] capitalize">
             Until next semester begins!
           </p>
+
           <Image
             src="/assets/orientation-image.jpg"
             width={1000}
@@ -52,9 +59,10 @@ const Page = () => {
             className="mix-blend-multiply mx-auto"
           />
         </div>
-      </div>
-      <div className="container mx-auto px-5">
-        <div className="flex flex-col py-4 md:px-10 rounded-md bg-primary-orange/10 border border-primary-orange/50">
+      </header>
+
+      <div className="container mx-auto px-5 flex flex-col gap-[52px] ">
+        <section className="flex flex-col py-4 md:px-10 rounded-md bg-primary-orange/10 border border-primary-orange/50">
           {stepTitles.map((item) => {
             const isActive = activeId === item.id;
 
@@ -65,8 +73,9 @@ const Page = () => {
               >
                 <h2
                   onClick={() => handleToggle(item.id)}
-                  className={`text-lg md:text-2xl font-bold py-1 md:py-2 px-2 flex items-center justify-between cursor-pointer select-none hover:bg-zinc-200/20
-               ${isActive ? "border-b-neutral-800/25 border-b" : ""}`}
+                  className={`text-lg md:text-2xl font-bold py-1 md:py-2 px-2 flex items-center justify-between cursor-pointer select-none hover:bg-zinc-200/20 ${
+                    isActive ? "border-b-neutral-800/25 border-b" : ""
+                  }`}
                 >
                   <span>
                     Step {item.id}: {item.title}
@@ -77,10 +86,11 @@ const Page = () => {
                     <IoIosArrowDown />
                   </span>
                 </h2>
+
                 {isActive && (
                   <>
                     {item.id === 1 && (
-                      <div className="my-4 flex flex-col">
+                      <div className="my-4 px-5 flex flex-col">
                         <h3 className="text-xl font-bold  text-primary-orange pb-2">
                           What is USI?
                         </h3>
@@ -142,35 +152,40 @@ const Page = () => {
                     )}
 
                     {item.id === 2 && (
-                      <div className="my-4 flex flex-col gap-5">
+                      <div className="my-4 px-5 flex flex-col gap-5">
                         <p>
                           Please Make sure that your full legal name, Australian
                           mobile number, Unique Student Identifier, Address
                           Information and Emergency Contact is Up to Date.
                         </p>
-                        <a className="w-fit" target="_blank" href="">
-                          <Button btnName={"Update Personal Records Here"} />
+                        <a
+                          className="w-fit"
+                          target="_blank"
+                          href="https://creatorapp.zohopublic.com.au/s.lohani_churchill2/students-self-service/form-perma/Students_Self_Service/234r8B2z6wmhnpAnerZCs3yO9NshTyemXBTwbxmkXtFKa4NAE0w1fbWdHhz3x17qGq1A2vOh1S1n7Re5YgNr3bRJRCyR8n0pBErB"
+                        >
+                          <button className="border-2 border-black px-6 py-3 bg-primary-orange rounded-md font-bold">
+                            Update Personal Records Here
+                          </button>
                         </a>
                       </div>
                     )}
 
                     {item.id === 3 && (
-                      <div className="my-4 flex flex-col gap-5">
+                      <div className="my-4 px-5 flex flex-col gap-5">
                         <p>
                           Quickly Fill Out the Form and Your ID Card will Be
                           ready to be Picked Up at Churchill Reception Desk
                         </p>
-                        <a className="w-fit" target="_blank" href="">
-                          <Button btnName={"Update Personal Records Here"} />
-                        </a>
-                        <p>
-                          This will open a Ticket in Zoho Desk student Support.
-                        </p>
+                        <div onClick={() => setIsIDFormShown(!isIDFormShown)}>
+                          <button className="border-2 border-black px-6 py-3 bg-primary-orange rounded-md font-bold">
+                            Request ID Card
+                          </button>
+                        </div>
                       </div>
                     )}
 
                     {item.id === 4 && (
-                      <div className="my-4 flex flex-col gap-5">
+                      <div className="my-4 px-5 flex flex-col gap-5">
                         <p>
                           You will be Shortly Provided with Login Details For
                           Microsoft 365 by Churchill Staff in your Personal
@@ -180,24 +195,21 @@ const Page = () => {
                         <a
                           className="w-fit"
                           target="_blank"
-                          href={`${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}`}
+                          href={`https://www.youtube.com/watch?v=xOUlxA-0u14`}
                         >
-                          <Button
-                            btnName={
-                              "How to Access Student Email in Office 365"
-                            }
-                          />
+                          <button className="border-2 border-black px-6 py-3 bg-primary-orange rounded-md font-bold">
+                            How to Access Student Email in Office 365
+                          </button>
                         </a>
                         <a
                           className="w-fit"
                           target="_blank"
                           href={`${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}/how-to-guide/how-to-install-Office-365-apps-in-personal-laptop-using-student-account`}
                         >
-                          <Button
-                            btnName={
-                              "How to Download Office Apps in Laptop (Word, Excel, Outlook etc)"
-                            }
-                          />
+                          <button className="border-2 border-black px-6 py-3 bg-primary-orange rounded-md font-bold">
+                            How to Download Office Apps in Laptop (Word, Excel,
+                            Outlook etc)
+                          </button>
                         </a>
                       </div>
                     )}
@@ -206,9 +218,28 @@ const Page = () => {
               </div>
             );
           })}
-        </div>
+        </section>
+
+        {/* last element */}
       </div>
       <div className="my-[64px]"></div>
+
+      <NewsletterSection />
+
+      {isIDFormShown && (
+        <div className="fixed top-0 left-0 w-screen h-screen bg-black/80 z-[10000] grid place-content-center">
+          <div
+            onClick={() => setIsIDFormShown(!isIDFormShown)}
+            className="absolute top-2 right-2 md:top-8 md:right-8 w-12 h-12 grid place-items-center text-white border-2 border-white rounded-full cursor-pointer"
+          >
+            <i className="fi fi-br-cross flex"></i>
+          </div>
+
+          <div className="w-screen px-2 md:p-0 md:w-[80vw] ">
+            <RequestIDCardForm />
+          </div>
+        </div>
+      )}
     </>
   );
 };
