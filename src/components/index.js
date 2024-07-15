@@ -77,6 +77,7 @@ import AccredentialSection from "./sections/courseSections/AccredentialSection";
 import GovernanceStructure from "./sections/aboutUsSections/GovernanceStructure";
 import OrganisationalChartSection from "./sections/aboutUsSections/OrganisationalChartSection";
 import GalleryPage from "./sections/aboutUsSections/GalleryPage";
+import Timer from "./timer/Timer";
 
 export {
   Button,
@@ -158,4 +159,5 @@ export {
   GovernanceStructure,
   OrganisationalChartSection,
   GalleryPage,
+  Timer,
 };
