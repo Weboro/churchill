@@ -19,19 +19,21 @@ const colors = {
   error: "#E10500",
 };
 
-const ToastComponent = (
-  {
-    timeout = 2000,
-    toastMessage,
-    toastType = "information",
-    customFaviconIconStyle,
-  },
-  ref
-) => {
+const ToastComponent = ({ timeout = 2000 }, ref) => {
   const [isShown, setIsShown] = useState(false);
 
+  const [toastInfo, setToastInfo] = useState({
+    message: "",
+    type: "",
+    customFavicon: "",
+  });
+
   useImperativeHandle(ref, () => ({
-    showToast() {
+    showToast(message, type) {
+      setToastInfo({
+        message,
+        type,
+      });
       setIsShown(true);
 
       setTimeout(() => {
@@ -53,7 +55,7 @@ const ToastComponent = (
   if (!isShown) return null;
 
   return (
-    <div className="fixed z-[100] w-full bottom-0 right-0 md:w-fit md:bottom-4 md:right-4 overflow-hidden">
+    <div className="fixed z-[100] w-full bottom-0 left-0 md:w-fit md:bottom-4 md:left-4 overflow-hidden">
       <motion.div
         initial={{ opacity: 0, translateY: "100%" }}
         animate={
@@ -65,7 +67,7 @@ const ToastComponent = (
           duration: 0.5,
           ease: [0, 0.71, 0.2, 1.01],
         }}
-        style={{ border: `${colors[toastType]} 2px solid` }}
+        style={{ border: `${colors[toastInfo.type]} 2px solid` }}
         onClick={() => setIsShown(false)}
         className={`bg-primary-orange border shadow-xl shadow-primary-orange/10 rounded-md overflow-hidden cursor-pointer`}
       >
@@ -82,15 +84,15 @@ const ToastComponent = (
                 ease: [0.6, -0.28, 0.735, 0.045],
               }}
               className={`${
-                customFaviconIconStyle
-                  ? customFaviconIconStyle
-                  : icons[toastType]
+                toastInfo.customFavicon
+                  ? toastInfo.customFavicon
+                  : icons[toastInfo.type]
               } flex text-2xl`}
             />
           </div>
 
           <span className="font-semibold text-white w-[20rem]">
-            {toastMessage}
+            {toastInfo.message}
           </span>
         </div>
       </motion.div>

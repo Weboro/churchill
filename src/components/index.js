@@ -1,12 +1,5 @@
 import Button from "./button";
 import Spiner from "./spiner";
-import ApplyConsiderationForm from "./forms/ApplyConsiderationForm";
-import ApplyPaymentForm from "./forms/ApplyPaymentForm";
-import CourseChangeForm from "./forms/CourseChangeForm";
-import CreditTransferForm from "./forms/CreditTransferForm";
-import RefundRequestForm from "./forms/RefundRequestForm";
-import SexualHarrasmentForm from "./forms/SexualHarrasmentForm";
-import NewsLatterForm from "./forms/NewsLatterForm";
 import Header from "./globals/header";
 import Footer from "./globals/footer";
 import TopBannerCard from "./cards/TopBannerCard";
@@ -78,17 +71,11 @@ import GovernanceStructure from "./sections/aboutUsSections/GovernanceStructure"
 import OrganisationalChartSection from "./sections/aboutUsSections/OrganisationalChartSection";
 import GalleryPage from "./sections/aboutUsSections/GalleryPage";
 import Timer from "./timer/Timer";
+import RequestIDCardForm from "./forms/RequestIDCardForm";
 
 export {
   Button,
   Spiner,
-  ApplyConsiderationForm,
-  ApplyPaymentForm,
-  CourseChangeForm,
-  CreditTransferForm,
-  RefundRequestForm,
-  SexualHarrasmentForm,
-  NewsLatterForm,
   Header,
   Footer,
   TopBannerCard,
@@ -160,4 +147,5 @@ export {
   OrganisationalChartSection,
   GalleryPage,
   Timer,
+  RequestIDCardForm,
 };

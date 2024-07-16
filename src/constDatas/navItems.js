@@ -242,9 +242,13 @@ export const navItems = [
         menuTitle: "Accreditation",
         headerIcon: "fi fi-rr-legal",
         slug: "accreditation",
-        // link: "/assets/accredited.jpg",
         image: "/assets/course-c.png",
-        // redirectLink: "/assets/accredited.jpg",
+        CatagoriesItem: [],
+      },
+      {
+        menuTitle: "gallery",
+        headerIcon: "fi fi-rr-gallery",
+        slug: "gallery",
         CatagoriesItem: [],
       },
       // {

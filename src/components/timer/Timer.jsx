@@ -37,6 +37,7 @@ const Timer = () => {
         minutes: "00",
         seconds: "00",
       });
+
       clearInterval();
     } else {
       setCountDownTIme({
@@ -47,6 +48,7 @@ const Timer = () => {
       });
     }
   };
+
   const startCountDown = useCallback(() => {
     const countDownDate = new Date("July 22, 2024 00:00:00").getTime();
     setInterval(() => {
@@ -62,7 +64,7 @@ const Timer = () => {
         <div className="flex flex-col gap-5 relative">
           <div className="h-12 w-12 sm:w-32 sm:h-32 lg:w-24 lg:h-24 flex justify-between items-center bg-white border-2 border-primary-orange rounded-lg">
             <div className="relative h-2.5 w-2.5 sm:h-3 sm:w-3 !-left-[6px] rounded-full bg-primary-orange"></div>
-            <span className="lg:text-5xl sm:text-4xl text-3xl font-semibold  text-matte-purple">
+            <span className="lg:text-5xl sm:text-4xl text-3xl font-semiboldtext-matte-purple">
               {countDownTime?.days}
             </span>
             <div className="relative h-2.5 w-2.5 sm:h-3 sm:w-3 -right-[6px] rounded-full bg-primary-orange"></div>
@@ -74,7 +76,7 @@ const Timer = () => {
         <div className="flex flex-col gap-5 relative">
           <div className="h-12 w-12 sm:w-32 sm:h-32 lg:w-24 lg:h-24 flex justify-between items-center bg-white border-2 border-primary-orange rounded-lg">
             <div className="relative h-2.5 w-2.5 sm:h-3 sm:w-3 !-left-[6px] rounded-full bg-primary-orange"></div>
-            <span className="lg:text-5xl sm:text-4xl text-3xl font-semibold  text-matte-purple">
+            <span className="lg:text-5xl sm:text-4xl text-3xl font-semiboldtext-matte-purple">
               {countDownTime?.hours}
             </span>
             <div className="relative h-2.5 w-2.5 sm:h-3 sm:w-3 -right-[6px] rounded-full bg-primary-orange"></div>
@@ -86,7 +88,7 @@ const Timer = () => {
         <div className="flex flex-col gap-5 relative">
           <div className="h-12 w-12 sm:w-32 sm:h-32 lg:w-24 lg:h-24 flex justify-between items-center bg-white border-2 border-primary-orange rounded-lg">
             <div className="relative h-2.5 w-2.5 sm:h-3 sm:w-3 !-left-[6px] rounded-full bg-primary-orange"></div>
-            <span className="lg:text-5xl sm:text-4xl text-3xl font-semibold  text-matte-purple">
+            <span className="lg:text-5xl sm:text-4xl text-3xl font-semiboldtext-matte-purple">
               {countDownTime?.minutes}
             </span>
             <div className="relative h-2.5 w-2.5 sm:h-3 sm:w-3 -right-[6px] rounded-full bg-primary-orange"></div>
@@ -98,7 +100,7 @@ const Timer = () => {
         <div className="flex flex-col gap-5 relative">
           <div className="h-12 w-12 sm:w-32 sm:h-32 lg:w-24 lg:h-24 flex justify-between items-center bg-white border-2 border-primary-orange rounded-lg">
             <div className="relative h-2.5 w-2.5 sm:h-3 sm:w-3 !-left-[6px] rounded-full bg-primary-orange"></div>
-            <span className="lg:text-5xl sm:text-4xl text-3xl font-semibold  text-matte-purple">
+            <span className="lg:text-5xl sm:text-4xl text-3xl font-semiboldtext-matte-purple">
               {countDownTime?.seconds}
             </span>
             <div className="relative h-2.5 w-2.5 sm:h-3 sm:w-3 -right-[6px] rounded-full bg-primary-orange"></div>
@@ -111,4 +113,5 @@ const Timer = () => {
     </div>
   );
 };
+
 export default Timer;
