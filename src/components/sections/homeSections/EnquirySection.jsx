@@ -14,7 +14,7 @@ const EnquirySection = () => {
         <div className="lg:row-span-2 h-full">
           <FadeUpAnimation className="h-full" delay={0.1}>
             <ApplyCard
-              image={"/assets/point.webp"}
+              image={"/assets/apply-card.png"}
               title={"Applying to CIHE is quick, easy and secure."}
               description={
                 "We're happy you're choosing to join the CIHE community with students from across Australia and around the world."
