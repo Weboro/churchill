@@ -24,6 +24,8 @@ const RequestIDCardForm = () => {
     e.preventDefault();
 
     try {
+      formData.subject = `ID Card Request by ${formData.firstName}`;
+
       const response = await fetch("/api/request-id-card", {
         method: "POST",
         headers: {
@@ -33,15 +35,14 @@ const RequestIDCardForm = () => {
       });
 
       const data = await response.json();
-      console.log(data);
 
       if (data.errorCode) throw error(err);
 
       setFormData(defaultFormState);
       toastRef.current.showToast("Form Submitted successfully!", "success");
     } catch (error) {
-      toastRef.current.showToast("An error Occoured", "error");
       console.log(error);
+      toastRef.current.showToast("An error Occoured", "error");
     }
   };
 

@@ -6,17 +6,13 @@ let currentAccessToken = null;
 
 // Function to read access token from a file
 function readAccessToken() {
-  const filePath = path.resolve(process.cwd(), "access_token.txt");
-  if (fs.existsSync(filePath)) {
-    return fs.readFileSync(filePath, "utf-8");
-  }
-  return null;
+  const token = process.env.ACCESS_TOKEN;
+  return token;
 }
 
 // Function to write access token to a file
 function writeAccessToken(token) {
-  const filePath = path.resolve(process.cwd(), "access_token.txt");
-  fs.writeFileSync(filePath, token, "utf-8");
+  process.env.ACCESS_TOKEN = token;
   currentAccessToken = token;
 }
 
@@ -24,7 +20,7 @@ function writeAccessToken(token) {
 currentAccessToken = readAccessToken();
 
 export async function POST(request) {
-  const { id, firstName, lastName, email, subject } = await request.json();
+  const { firstName, lastName, email, id, subject } = await request.json();
 
   async function getNewAccessToken() {
     const response = await axios.post(
@@ -71,6 +67,7 @@ export async function POST(request) {
           },
         }
       );
+
       return new Response(JSON.stringify(response.data), { status: 200 });
     } catch (error) {
       if (error.response && error.response.data.errorCode === "INVALID_OAUTH") {
