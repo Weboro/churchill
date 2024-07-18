@@ -103,7 +103,7 @@ const NavList = ({
                                   </div>
 
                                   <div className="flex flex-1 flex-col gap-1">
-                                    <h3 className="leading-5 font-xl capitalize">
+                                    <h3 className="leading-5 font-xl">
                                       {subItem.menuTitle}
                                     </h3>
                                     <p className=" text-sm font-[500]">

@@ -246,7 +246,7 @@ export const navItems = [
         CatagoriesItem: [],
       },
       {
-        menuTitle: "gallery",
+        menuTitle: "Gallery",
         headerIcon: "fi fi-rr-gallery",
         slug: "gallery",
         CatagoriesItem: [],
@@ -268,7 +268,7 @@ export const navItems = [
     link: "",
     Catagories: [
       {
-        menuTitle: "apply at churchill",
+        menuTitle: "Apply At Churchill",
         slug: "apply-at-churchill",
         headerIcon: "fi fi-rr-chart-connected",
         image: "/assets/course-b.png",
@@ -276,7 +276,7 @@ export const navItems = [
         redirectLink: "",
       },
       {
-        menuTitle: "student hub",
+        menuTitle: "Student Hub",
         slug: "student-hub",
         headerIcon: "fi fi-rr-student",
         image: "/assets/course-b.png",
@@ -292,7 +292,7 @@ export const navItems = [
         redirectLink: "",
       },
       {
-        menuTitle: "enquiry now",
+        menuTitle: "Enquiry Now",
         slug: "enquiry-now",
         headerIcon: "fi fi-rr-person-circle-question",
         image: "/assets/course-b.png",
@@ -301,7 +301,7 @@ export const navItems = [
           "https://forms.zohopublic.com.au/CIHE/form/StudentHubEnquiry/formperma/XilFJje5kQ-h7f4saQYbSV4kJ-kAMiG7p1QNfWEvDXs",
       },
       {
-        menuTitle: "grievance form",
+        menuTitle: "Grievance Form",
         slug: "grievance-form",
         headerIcon: "fi fi-rr-sad",
         image: "/assets/course-b.png",
@@ -310,7 +310,7 @@ export const navItems = [
           "https://forms.zohopublic.com.au/CIHE/form/Grievanceform/formperma/5jf5-XC5SXb47VhUMTlxv30fih-aqYAUbQh8V3lncvQ", //
       },
       {
-        menuTitle: "request form",
+        menuTitle: "Request Form",
         slug: "request-form",
         headerIcon: "fi fi-rr-form",
         image: "/assets/course-b.png",
@@ -318,7 +318,7 @@ export const navItems = [
         redirectLink: `${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}/request-form`,
       },
       {
-        menuTitle: "blogs",
+        menuTitle: "Blogs",
         slug: "blogs",
         headerIcon: "fi fi-rr-blog-text",
         image: "/assets/course-b.png",
@@ -326,7 +326,7 @@ export const navItems = [
         redirectLink: "",
       },
       {
-        menuTitle: "upcoming events",
+        menuTitle: "upcoming Events",
         slug: "upcoming-events",
         headerIcon: "fi fi-rr-calendar-day",
         image: "/assets/course-b.png",
@@ -665,7 +665,7 @@ export const navItems = [
       },
       {
         icon: <PiCourtBasketballBold />,
-        menuTitle: "staff portal",
+        menuTitle: "Staff Portal",
         headerIcon: "fi fi-rr-employee-man",
         subTitle: "Access your timetable, results, trimester invoices.",
         slug: "staff-login",
