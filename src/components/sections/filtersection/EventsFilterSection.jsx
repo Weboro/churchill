@@ -1,23 +1,17 @@
 "use client";
 import React, { useState } from "react";
-// import { navItems } from "@/constDatas/navItems";
-import { eventsData } from "@/constDatas/eventsData";
-import { DataNotFound, EventsCard } from "@/components";
-
 import {
+  DataNotFound,
+  EventsCard,
   CheckBoxList,
   FilterComponent,
   NewsletterSection,
   SelectComponent,
 } from "@/components";
 
-const EventsFilterSection = () => {
+const EventsFilterSection = ({ isLoading, upcomingEventsData }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const query = searchQuery.trim().toLowerCase();
-
-  const filteredArray = eventsData.filter((item) =>
-    item.title.toLowerCase().includes(query)
-  );
 
   const tags = [
     { title: "Business" },
@@ -46,22 +40,20 @@ const EventsFilterSection = () => {
           </FilterComponent>
 
           <div className="flex-1">
-            {filteredArray.length > 0 ? (
+            {upcomingEventsData.length > 0 ? (
               <div className="flex flex-col gap-8">
-                {filteredArray?.map((item, index) => (
+                {upcomingEventsData?.map((item, index) => (
                   <EventsCard
                     key={index}
+                    id={item?.id}
                     image={item?.image}
                     title={item?.title}
-                    subTitle={item?.subTitle}
-                    day={item?.day}
-                    month={item?.month}
-                    time={item?.time}
-                    date={item?.date}
-                    link={item?.link}
-                    slug={item?.slug}
-                    catagories={item?.catagories}
-                    duration={item?.duration}
+                    description={item?.description}
+                    rich_text={item?.rich_text}
+                    start_time={item?.start_time}
+                    end_time={item?.end_time}
+                    time_duration={item?.time_duration}
+                    tags={item?.tags}
                   />
                 ))}
               </div>

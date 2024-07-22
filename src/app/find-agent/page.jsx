@@ -23,7 +23,7 @@ const FindAgent = () => {
   const [searchByCountry, setSearchByCountry] = useState("");
 
   const [filteredData, setFilteredData] = useState(AgentUserData);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (!formatText(searchByName) && !formatText(searchByCountry)) {

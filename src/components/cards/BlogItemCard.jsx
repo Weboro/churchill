@@ -3,7 +3,15 @@ import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
 import Button from "@/components/button";
 
-const BlogItemCard = ({ slug, title, image, date, tags, subTitle, index }) => {
+const BlogItemCard = ({
+  slug,
+  title,
+  image,
+  date,
+  tags,
+  description,
+  index,
+}) => {
   return (
     <div key={index} className="rounded-md overflow-hidden group">
       <div className="overflow-hidden rounded-md">
@@ -32,12 +40,12 @@ const BlogItemCard = ({ slug, title, image, date, tags, subTitle, index }) => {
         </div>
 
         <Link href={`/blogs/${slug}`} className="w-fit">
-          <h4 className="font-bold text-2xl leading-7 line-clamp-3 text-matte-purple hover:text-primary-orange transition-all">
+          <h4 className="font-bold text-2xl leading-7 line-clamp-2 text-matte-purple hover:text-primary-orange transition-all">
             {title}
           </h4>
         </Link>
 
-        <p className="line-clamp-3 text-lg">{subTitle}</p>
+        <p className="line-clamp-3 text-lg">{description}</p>
 
         <Link href={`/blogs/${slug}`} className="w-fit">
           <Button
@@ -47,14 +55,6 @@ const BlogItemCard = ({ slug, title, image, date, tags, subTitle, index }) => {
             styleType="tertiary"
           />
         </Link>
-
-        {/* <div className="flex items-start gap-2 flex-wrap">
-          {tags?.map((item, index) => (
-            <span className="bg-[#F2CF9C] px-3 py-1 rounded-md" key={index}>
-              {item.tag}
-            </span>
-          ))}
-        </div> */}
       </div>
     </div>
   );

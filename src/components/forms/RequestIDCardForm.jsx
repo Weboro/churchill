@@ -41,7 +41,6 @@ const RequestIDCardForm = () => {
       setFormData(defaultFormState);
       toastRef.current.showToast("Form Submitted successfully!", "success");
     } catch (error) {
-      console.log(error);
       toastRef.current.showToast("An error Occoured", "error");
     }
   };

@@ -363,7 +363,7 @@ export const navItems = [
         menuTitle: "Major in Accounting",
         headerIcon: "fi fi-rr-calculator-math-tax",
         subTitle:
-          "Master the language of business, ensuring financial integrity and making informed decisions that drive organizational success.          ",
+          "Master the language of business, ensuring financial integrity and making informed decisions that drive organizational success.",
         slug: "major-in-accounting",
         link: "",
         icon: "/assets/major_accounting.png",
