@@ -49,7 +49,7 @@ const IndivisualEventsPage = ({ slug }) => {
       .catch((err) => {
         console.error(err);
       });
-  }, []);
+  }, [slug]);
 
   const eventDate = new Date(data?.start_time);
 
@@ -121,7 +121,9 @@ const IndivisualEventsPage = ({ slug }) => {
                       {data?.title}
                     </h2>
 
-                    <h4 dangerouslySetInnerHTML={{ __html: data?.subTitle }} />
+                    <h4
+                      dangerouslySetInnerHTML={{ __html: data?.description }}
+                    />
                   </div>
 
                   <div className="container mx-auto">
@@ -138,7 +140,7 @@ const IndivisualEventsPage = ({ slug }) => {
                     <div
                       className="rich-text-container"
                       dangerouslySetInnerHTML={{
-                        __html: data?.description,
+                        __html: data?.rich_text,
                       }}
                     />
                   </div>
@@ -222,7 +224,7 @@ const IndivisualEventsPage = ({ slug }) => {
               </div>
             </section>
 
-            <MoreEventsSection />
+            <MoreEventsSection slug={slug} />
 
             <NewsletterSection />
           </div>

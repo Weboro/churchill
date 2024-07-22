@@ -4,15 +4,15 @@ import React from "react";
 import Button from "../button";
 import { FaArrowRight } from "react-icons/fa";
 
-const CoursesCard = ({ icon, title, faculty, subTitle, link }) => {
+const CoursesCard = ({ image, title, faculty, subTitle, link }) => {
   return (
     <div className="rounded-md w-full">
       <div className="flex flex-col gap-8 group">
         <span className="relative">
           <div className="overflow-hidden rounded-md">
             <Image
-              src={`${icon}`}
-              alt={"use-links-icon-image"}
+              src={`${image}`}
+              alt={`for ${title}`}
               width={400}
               height={400}
               className="object-cover w-full aspect-[4/2] md:aspect-[1/1]  transition-all group-hover:scale-105 relative"
@@ -31,7 +31,10 @@ const CoursesCard = ({ icon, title, faculty, subTitle, link }) => {
             </h3>
           </Link>
 
-          <p className="clamp-3">{subTitle}</p>
+          <p
+            className="clamp-3"
+            dangerouslySetInnerHTML={{ __html: subTitle }}
+          ></p>
 
           <div className="flex  pb-2 justify-center sm:justify-between flex-col items-center sm:flex-row gap-3">
             <Link

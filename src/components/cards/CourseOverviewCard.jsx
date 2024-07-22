@@ -22,7 +22,7 @@ const CourseOverviewSection = ({ overviewData }) => {
               </div> */}
               <div className="flex flex-row gap-3" key={index}>
                 <div className="w-12 h-12 grid place-items-center bg-primary-orange rounded-full text-2xl">
-                  <p className="text-white flex">{item?.icon}</p>
+                  <p className={`text-white flex ${item?.icon}`}></p>
                 </div>
 
                 <div className="">

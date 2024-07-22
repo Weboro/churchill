@@ -31,7 +31,15 @@ const EventsCard = ({
 }) => {
   const dateOBJ = new Date(start_time);
 
-  const formattedDate = `${dateOBJ.getDay()}th ${month[dateOBJ.getMonth()]}`;
+  const formattedDate = `${dateOBJ.getDay()}${
+    dateOBJ.getDay() === 1
+      ? "st"
+      : dateOBJ.getDay() === 2
+      ? "nd"
+      : dateOBJ.getDay() === 3
+      ? "rd"
+      : "th"
+  } ${month[dateOBJ.getMonth()]}`;
 
   return (
     <div className="group flex rounded-md border bg-neutral-50 border-gray-500/40 overflow-hidden flex-col md:flex-row gap-3">

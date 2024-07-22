@@ -9,7 +9,7 @@ import {
   SelectComponent,
 } from "@/components";
 
-const EventsFilterSection = ({ isLoading, upcomingEventsData }) => {
+const EventsFilterSection = ({ data }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const query = searchQuery.trim().toLowerCase();
 
@@ -40,12 +40,13 @@ const EventsFilterSection = ({ isLoading, upcomingEventsData }) => {
           </FilterComponent>
 
           <div className="flex-1">
-            {upcomingEventsData.length > 0 ? (
+            {data.length > 0 ? (
               <div className="flex flex-col gap-8">
-                {upcomingEventsData?.map((item, index) => (
+                {data?.map((item, index) => (
                   <EventsCard
                     key={index}
                     id={item?.id}
+                    slug={item?.slug}
                     image={item?.image}
                     title={item?.title}
                     description={item?.description}
