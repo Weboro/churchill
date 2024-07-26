@@ -35,8 +35,9 @@ const CourseDetails = ({ slug }) => {
         <div className="flex flex-col gap-[32px] lg:gap-[64px]">
           <TopBannerCard
             beforeTitle={data?.faculty.faculty_name}
-            image={`/assets/banner-courses.webp`}
-            imageA={data?.heroImage}
+            // image={`/assets/banner-courses.webp`}
+            image={data?.heroImage}
+            imageA={data?.heroIconImage}
             titleSpan={data?.course_name}
             courseCode={`${data?.course_code}`}
             subTitle={data?.description}

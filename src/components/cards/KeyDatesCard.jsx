@@ -46,7 +46,6 @@ const KeyDatesCard = ({
           <h2 className="font-bold text-[22px] text-[#2C2B4B] leading-6">
             {title}
           </h2>
-          ({dateObj.getFullYear()} temp)
         </div>
 
         {/* <div className="flex gap-2 items-center flex-wrap text-sm">
