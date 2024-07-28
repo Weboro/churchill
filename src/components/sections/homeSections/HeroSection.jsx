@@ -18,7 +18,7 @@ const HeroSection = () => {
           </p>
         }
         link={`/courses`}
-        linkA={`https://agentportal.galaxy360.com.au/application-overview`}
+        linkA={`/apply-now`}
         BtnAText={"Explore Our Courses"}
         BtnBText={"Apply Now"}
       />
