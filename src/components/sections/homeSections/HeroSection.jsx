@@ -12,11 +12,7 @@ const HeroSection = () => {
           </span>
         }
         title={""}
-        subTitle={
-          <p className="my-4">
-            Explore our innovative programs and transform your career.
-          </p>
-        }
+        subTitle={`<p className="my-4"> Explore our innovative programs and transform your career. </p>`}
         link={`/courses`}
         linkA={`https://agentportal.galaxy360.com.au/application-overview`}
         BtnAText={"Explore Our Courses"}
