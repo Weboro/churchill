@@ -72,6 +72,7 @@ import OrganisationalChartSection from "./sections/aboutUsSections/Organisationa
 import GalleryPage from "./sections/aboutUsSections/GalleryPage";
 import Timer from "./timer/Timer";
 import RequestIDCardForm from "./forms/RequestIDCardForm";
+import HomePage from "./pages/HomePage";
 
 export {
   Button,
@@ -148,4 +149,5 @@ export {
   GalleryPage,
   Timer,
   RequestIDCardForm,
+  HomePage,
 };
