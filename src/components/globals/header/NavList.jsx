@@ -143,6 +143,7 @@ const NavList = ({
             <span>Search</span> <FaSearch />
           </div>
         </li>
+
         {openSearch && (
           <div className="z-50 fixed top-0 left-0 right-0 bottom-0 bg-black/75">
             <div className="lg:mt-[15%] mt-[50%]">
