@@ -39,21 +39,17 @@ const UpcomingKeyDates = () => {
               Upcoming Key Dates
             </h2>
             <div className="grid md:grid-cols-2 gap-5">
-              {data?.slice(0, 6)?.map((item, index) => {
-                console.log(item);
-
-                return (
-                  <KeyDatesCard
-                    key={index}
-                    start_date={item?.start_date}
-                    end_date={item?.end_date}
-                    title={item?.title}
-                    description={item?.description}
-                    category={item?.category}
-                    audience={item?.audience}
-                  />
-                );
-              })}
+              {data?.slice(0, 6)?.map((item, index) => (
+                <KeyDatesCard
+                  key={index}
+                  start_date={item?.start_date}
+                  end_date={item?.end_date}
+                  title={item?.title}
+                  description={item?.description}
+                  category={item?.category}
+                  audience={item?.audience}
+                />
+              ))}
             </div>
             <div>
               <div className="flex justify-center">

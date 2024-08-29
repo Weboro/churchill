@@ -4,6 +4,7 @@ import {
   AgentInfoCard,
   Button,
   DataNotFound,
+  Loading,
 } from "@/components";
 
 import React, { useState, useEffect } from "react";
@@ -18,46 +19,59 @@ function formatText(text) {
   return text.trim().toLowerCase();
 }
 
-const FindAgent = () => {
-  const [searchByName, setSearchByName] = useState("");
-  const [searchByCountry, setSearchByCountry] = useState("");
+const defaultFilter = {
+  addressSearch: "",
+  nameSearch: "",
+};
 
-  const [filteredData, setFilteredData] = useState(AgentUserData);
+const FindAgent = () => {
+  const [filter, setFilter] = useState(defaultFilter);
+
+  const [filteredData, setFilteredData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (!formatText(searchByName) && !formatText(searchByCountry)) {
+    setIsLoading(true);
+    setFilteredData(AgentUserData);
+    setIsLoading(false);
+  }, []);
+
+  useEffect(() => {
+    if (!formatText(filter.nameSearch) || !formatText(filter.addressSearch)) {
       setFilteredData(AgentUserData);
     }
-  }, [searchByName, searchByCountry]);
+  }, [filter.nameSearch, filter.addressSearch]);
 
-  function handleClick() {
-    setIsLoading(true);
+  const handleFilterChange = (e) => {
+    setFilter({ ...filter, [e.target.name]: e.target.value });
+  };
 
-    try {
-      const formattedSearchByName = formatText(searchByName);
-      const formattedSearchByCountry = formatText(searchByCountry);
-
-      const filteredData = AgentUserData.filter((item) => {
-        const nameMatches = formatText(item.RecruitmentAgentName).includes(
-          formattedSearchByName
+  const handleClick = () => {
+    const filtered = AgentUserData.filter((agent) => {
+      const addressMatch =
+        formatText(agent.BillingStreet).includes(
+          formatText(filter.addressSearch)
+        ) ||
+        formatText(agent.Billingcity).includes(
+          formatText(filter.addressSearch)
+        ) ||
+        formatText(agent.BillingState).includes(
+          formatText(filter.addressSearch)
         );
 
-        const countryMatches =
-          formatText(item.Country).includes(formattedSearchByCountry) ||
-          formatText(item.BillingStreet).includes(formattedSearchByCountry) ||
-          formatText(item.Billingcity).includes(formattedSearchByCountry) ||
-          formatText(item.BillingState).includes(formattedSearchByCountry);
+      const nameMatch =
+        formatText(agent.RecruitmentAgentName).includes(
+          formatText(filter.nameSearch)
+        ) ||
+        formatText(agent.RepresentativeContactName).includes(
+          formatText(filter.nameSearch)
+        );
 
-        return nameMatches && countryMatches;
-      });
+      return addressMatch && nameMatch;
+    });
 
-      setFilteredData(filteredData);
-    } finally {
-      setIsLoading(false);
-    }
-  }
-
+    setFilteredData(filtered);
+  };
   return (
     <>
       <PatternBannerCard
@@ -85,24 +99,23 @@ const FindAgent = () => {
           </h3>
         </section>
 
-        {/* className="bg-[#F3E4E4] rounded-md flex flex-col gap-4 px-3 py-4 md:flex-row lg:w-fit lg:mx-auto" */}
         <section className="container-blog bg-light-grey flex flex-col md:flex-row gap-4 px-4 py-4 rounded-md">
           <input
             type="text"
-            name="search-country"
+            name="addressSearch"
             placeholder="Search by street/city"
-            value={searchByCountry}
-            onChange={(e) => setSearchByCountry(e.target.value)}
-            className=" rounded-md px-4 py-3 outline outline-neutral-900/20 flex-1 w-full lg:w-[280px]"
+            value={filter.addressSearch}
+            onChange={handleFilterChange}
+            className="rounded-md px-4 py-3 outline outline-neutral-900/20 flex-1 w-full lg:w-[280px]"
           />
 
           <input
             type="text"
-            name="Agent/Representative Name"
-            value={searchByName}
-            onChange={(e) => setSearchByName(e.target.value)}
+            name="nameSearch"
             placeholder="Agent/Representative Name"
-            className=" rounded-md px-4 py-3 outline outline-neutral-900/20 flex-1 w-full lg:w-[280px]"
+            value={filter.nameSearch}
+            onChange={handleFilterChange}
+            className="rounded-md px-4 py-3 outline outline-neutral-900/20 flex-1 w-full lg:w-[280px]"
           />
 
           <div onClick={() => handleClick()}>
@@ -119,30 +132,36 @@ const FindAgent = () => {
 
         <>
           {isLoading ? (
-            <>Loading </>
+            <>
+              <Loading />
+            </>
           ) : (
             <>
               {filteredData.length > 0 ? (
-                <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-                  {filteredData.map((data, index) => (
-                    <AgentInfoCard
-                      key={index}
-                      RecruitmentAgentOwner={data?.RecruitmentAgentOwner}
-                      RecruitmentAgentName={data?.RecruitmentAgentName}
-                      Phone={data?.Phone}
-                      Website={data?.Website}
-                      BillingStreet={data?.BillingStreet}
-                      Billingcity={data?.Billingcity}
-                      BillingState={data?.BillingState}
-                      BillingCode={data?.BillingCode}
-                      Description={data?.Description}
-                      RecruitmentAgencyEmail={data?.RecruitmentAgencyEmail}
-                      RepresentativeContactName={
-                        data?.RepresentativeContactName
-                      }
-                    />
-                  ))}
-                </section>
+                <div>
+                  <p className="mb-6">Showing {filteredData.length} items</p>
+
+                  <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+                    {filteredData.map((data, index) => (
+                      <AgentInfoCard
+                        key={index}
+                        RecruitmentAgentOwner={data?.RecruitmentAgentOwner}
+                        RecruitmentAgentName={data?.RecruitmentAgentName}
+                        Phone={data?.Phone}
+                        Website={data?.Website}
+                        BillingStreet={data?.BillingStreet}
+                        Billingcity={data?.Billingcity}
+                        BillingState={data?.BillingState}
+                        BillingCode={data?.BillingCode}
+                        Description={data?.Description}
+                        RecruitmentAgencyEmail={data?.RecruitmentAgencyEmail}
+                        RepresentativeContactName={
+                          data?.RepresentativeContactName
+                        }
+                      />
+                    ))}
+                  </section>
+                </div>
               ) : (
                 <div className="grid place-items-center md:w-1/2 mx-auto">
                   <DataNotFound />

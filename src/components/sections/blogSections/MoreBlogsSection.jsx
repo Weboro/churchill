@@ -14,14 +14,8 @@ const MoreBlogsSection = ({ item }) => {
 
     FetchBlogData()
       .then((res) => {
-        setData(
-          res.data.sort((prev, next) => {
-            const prevDate = new Date(prev.date);
-            const nextDate = new Date(next.date);
+        setData(res.data);
 
-            return nextDate - prevDate;
-          })
-        );
         setIsLoading(false);
       })
       .catch((err) => console.error(err));

@@ -1,5 +1,5 @@
 "use client";
-import { EventsFilterSection, Spiner } from "@/components";
+import { EventsFilterSection, PatternBannerCard, Spiner } from "@/components";
 import React, { useEffect, useState } from "react";
 import { FetchUpcomingKeyEventsData } from "@/components/utils/apiQueries";
 
@@ -24,9 +24,8 @@ const EventsPage = () => {
         <Spiner />
       ) : (
         <div className="flex flex-col gap-[32px] lg:gap-[64px]">
-          <h1 className="font-extrabold text-3xl text-center mt-[32px]">
-            Churchill Events
-          </h1>
+          <PatternBannerCard title={"Churchill Events"} />
+
           <EventsFilterSection data={data} />
         </div>
       )}

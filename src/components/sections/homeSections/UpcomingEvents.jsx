@@ -23,7 +23,6 @@ const UpcomingEvents = () => {
       .catch((err) => console.error(err));
   }, []);
 
-  console.log(data);
   return (
     <>
       {!isLoading && (

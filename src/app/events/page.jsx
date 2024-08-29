@@ -2,11 +2,7 @@ import React from "react";
 import { EventsPage } from "@/components";
 
 const page = () => {
-  return (
-    <>
-      <EventsPage />
-    </>
-  );
+  return <EventsPage />;
 };
 
 export default page;

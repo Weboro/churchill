@@ -1,5 +1,10 @@
 "use client";
-import { NewsletterSection, MoreBlogsSection, Spiner } from "@/components";
+import {
+  NewsletterSection,
+  MoreBlogsSection,
+  Spiner,
+  ToastComponent,
+} from "@/components";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
@@ -33,12 +38,16 @@ const IndivisualBlogPage = ({ slug }) => {
 
   const siteUrl = process.env.NEXT_PUBLIC_CHURCHILL_URL;
 
+  const toastRef = useRef();
+
   return (
     <>
       {isLoading ? (
         <Spiner />
       ) : (
         <>
+          <ToastComponent ref={toastRef} />
+
           <motion.div
             className="h-[8px] z-[100] fixed bottom-[-1px] left-0 right-0 bg-primary-orange"
             style={{ scaleX: scrollYProgress }}
@@ -83,7 +92,7 @@ const IndivisualBlogPage = ({ slug }) => {
                     {data?.title}
                   </h2>
 
-                  <h4 dangerouslySetInnerHTML={{ __html: data?.description }} />
+                  {/* <h4 dangerouslySetInnerHTML={{ __html: data?.description }} /> */}
                 </div>
 
                 <div className="container mx-auto">
@@ -151,7 +160,17 @@ const IndivisualBlogPage = ({ slug }) => {
                       >
                         <i className="flex fi fi-brands-facebook-messenger"></i>
                       </a>
-                      <div>
+                      <div
+                        onClick={(e) => {
+                          e.preventDefault();
+                          navigator.clipboard.writeText(window.location.href);
+                          toastRef.current.showToast(
+                            "Copied To Clipboard",
+                            "success"
+                          );
+                        }}
+                        className="hover:text-primary-orange transition-all social-button cursor-pointer copy-link"
+                      >
                         <i className="fi fi-rr-copy-alt"></i>
                       </div>
                     </div>
