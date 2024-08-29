@@ -9,6 +9,7 @@ const FilterComponent = ({
   placeholderText,
   searchQuery,
   onSearchQuery,
+  onFilter,
 }) => {
   return (
     <div className="p-4 rounded-xl bg-[#FAF4F4] lg:w-[21rem] h-fit flex flex-col gap-5">
@@ -19,16 +20,22 @@ const FilterComponent = ({
         <span>Filters</span>
       </h1>
 
-      <Search text={searchQuery} onSearchText={onSearchQuery} />
+      <Search
+        placeholderText={placeholderText}
+        text={searchQuery}
+        onSearchText={onSearchQuery}
+      />
 
       {children}
 
-      <Button
-        btnName="Filter"
-        style={
-          "w-fit border font-semibold text-[14px] border-2 border-[#606060] rounded-md px-6 md:px-8 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
-        }
-      />
+      <div onClick={onFilter} className="">
+        <Button
+          btnName="Filter"
+          style={
+            "w-fit border font-semibold text-[14px] border-2 border-[#606060] rounded-md px-6 md:px-8 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
+          }
+        />
+      </div>
     </div>
   );
 };

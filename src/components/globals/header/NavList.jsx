@@ -6,6 +6,7 @@ import { navItems } from "@/constDatas/navItems";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components";
+import { FetchCourseData } from "@/components/utils/apiQueries";
 const NavList = ({
   style,
   isDropdownActive,
@@ -29,6 +30,20 @@ const NavList = ({
     }
   }, [openSearch]);
 
+  const [coursesData, setCoursesData] = useState([]);
+  const [isCoursesLoading, setIsCoursesLoading] = useState(true);
+
+  useEffect(() => {
+    setIsCoursesLoading(true);
+    FetchCourseData()
+      .then((res) => {
+        setCoursesData(res.data);
+
+        setIsCoursesLoading(false);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <div className="w-full flex flex-col gap-2 z-40 pt-5">
       <div className="hidden lg:block">
@@ -42,7 +57,16 @@ const NavList = ({
           const isActive =
             (pathname.includes(item?.slug) && item?.slug?.length > 1) ||
             pathname === item?.slug;
-          const hasSubcategories = item?.Catagories?.length > 0;
+          const hasSubcategories =
+            item?.Catagories?.length > 0
+              ? true
+              : item.slug === "courses"
+              ? true
+              : false;
+
+          const mapData =
+            item.slug === "courses" ? coursesData : item.Catagories;
+
           return (
             <div key={index}>
               {hasSubcategories ? (
@@ -77,7 +101,7 @@ const NavList = ({
                         </div>
                         <div className="flex-[78%]">
                           <ul className="h-[110px] md:h-auto overflow-y-scroll grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-2">
-                            {item.Catagories.map((subItem, index) => (
+                            {mapData.map((subItem, index) => (
                               <Link
                                 target={`${
                                   subItem?.redirectLink ? "_blank" : ""
@@ -98,13 +122,15 @@ const NavList = ({
                                 >
                                   <div className="w-10 h-10 bg-[#eb9320]/20 rounded-full grid place-items-center">
                                     <i
-                                      className={`${subItem.headerIcon} m-0 flex items-center `}
+                                      className={`${
+                                        subItem.headerIcon || subItem.icon
+                                      } m-0 flex items-center `}
                                     />
                                   </div>
 
                                   <div className="flex flex-1 flex-col gap-1">
                                     <h3 className="leading-5 font-xl">
-                                      {subItem.menuTitle}
+                                      {subItem.menuTitle || subItem.course_name}
                                     </h3>
                                     <p className=" text-sm font-[500]">
                                       {subItem.headerDesc}

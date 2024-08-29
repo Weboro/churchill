@@ -57,9 +57,6 @@ export const contactData = [
   },
 ];
 
-//
-//
-//
 export const contactFaqs = [
   {
     title: "What programs and courses does Churchill offer?",

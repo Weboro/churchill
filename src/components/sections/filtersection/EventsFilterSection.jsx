@@ -1,37 +1,29 @@
 "use client";
-import React, { useState } from "react";
-// import { navItems } from "@/constDatas/navItems";
-import { eventsData } from "@/constDatas/eventsData";
-import { DataNotFound, EventsCard } from "@/components";
-
+import React, { useEffect, useState } from "react";
 import {
-  CheckBoxList,
+  DataNotFound,
+  EventsCard,
   FilterComponent,
   NewsletterSection,
-  SelectComponent,
 } from "@/components";
 
-const EventsFilterSection = () => {
+const EventsFilterSection = ({ data }) => {
   const [searchQuery, setSearchQuery] = useState("");
-  const query = searchQuery.trim().toLowerCase();
+  const [filteredData, setFilteredData] = useState([]);
 
-  const filteredArray = eventsData.filter((item) =>
-    item.title.toLowerCase().includes(query)
-  );
+  const handleSearch = () => {
+    const query = searchQuery.trim().toLowerCase();
+    const result = data.filter((item) =>
+      item.title.toLowerCase().includes(query)
+    );
+    setFilteredData(result);
+  };
 
-  const tags = [
-    { title: "Business" },
-    { title: "Science" },
-    { title: "Law" },
-    { title: "Education" },
-  ];
-
-  const dates = [
-    { title: "Today" },
-    { title: "Next 7 Days" },
-    { title: "Next 1 Month" },
-    { title: "Past Events" },
-  ];
+  useEffect(() => {
+    if (!searchQuery) {
+      setFilteredData(data);
+    }
+  }, [searchQuery, data]);
 
   return (
     <>
@@ -40,28 +32,25 @@ const EventsFilterSection = () => {
           <FilterComponent
             searchQuery={searchQuery}
             onSearchQuery={setSearchQuery}
-          >
-            <SelectComponent title="Tags" data={tags ? tags : []} />
-            <CheckBoxList title="Filter by Date" data={dates ? dates : []} />
-          </FilterComponent>
+            onFilter={handleSearch}
+          ></FilterComponent>
 
           <div className="flex-1">
-            {filteredArray.length > 0 ? (
+            {filteredData.length > 0 ? (
               <div className="flex flex-col gap-8">
-                {filteredArray?.map((item, index) => (
+                {filteredData.map((item, index) => (
                   <EventsCard
                     key={index}
-                    image={item?.image}
-                    title={item?.title}
-                    subTitle={item?.subTitle}
-                    day={item?.day}
-                    month={item?.month}
-                    time={item?.time}
-                    date={item?.date}
-                    link={item?.link}
-                    slug={item?.slug}
-                    catagories={item?.catagories}
-                    duration={item?.duration}
+                    id={item.id}
+                    slug={item.slug}
+                    image={item.image}
+                    title={item.title}
+                    description={item.description}
+                    rich_text={item.rich_text}
+                    start_time={item.start_time}
+                    end_time={item.end_time}
+                    time_duration={item.time_duration}
+                    tags={item.tags}
                   />
                 ))}
               </div>

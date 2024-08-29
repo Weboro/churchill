@@ -20,7 +20,9 @@ const ContactUsCard = ({
         <p className="text-2xl font-bold">{title}</p>
         {redirect ? (
           <span className="font-semibold underline">
-            <Link href={redirect}>{description}</Link>
+            <Link target="_blank" href={redirect}>
+              {description}
+            </Link>
           </span>
         ) : (
           <p>{description}</p>
@@ -29,7 +31,7 @@ const ContactUsCard = ({
         {socialLinks && (
           <div className="flex gap-3 flex-wrap">
             {socialLinks?.map((item, index) => (
-              <Link key={index} href={item.url}>
+              <Link target="_blank" key={index} href={item.url}>
                 <div className=" flex flex-col items-center justify-center p-2 rounded-xl hover:bg-[#E5962310]">
                   <p className="text-4xl text-[#E59623]">{item.icon}</p>
                   <p>{item.title}</p>
