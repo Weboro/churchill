@@ -149,13 +149,7 @@ const Footer = () => {
                 </h3>
                 <ul className="flex flex-col gap-1 text-[14px]">
                   <li>
-                    <Link
-                      href={
-                        "https://agentportal.galaxy360.com.au/application-overview"
-                      }
-                    >
-                      Apply At Churchil
-                    </Link>
+                    <Link href={"/apply-now"}>Apply At Churchil</Link>
                   </li>
                   <li>
                     <Link

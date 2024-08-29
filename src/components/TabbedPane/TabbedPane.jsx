@@ -62,7 +62,7 @@ const TabbedPane = ({ data }) => {
                         Ready to start your journey with Churchill?
                       </h2>
                       <div className="flex gap-2 items-center">
-                        <a href="https://agentportal.galaxy360.com.au/application-overview">
+                        <a href="/apply-now">
                           <Button btnName={"Apply Yourself"} style={"w-fit"} />
                         </a>
                         <a href="/find-agent">
