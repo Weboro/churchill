@@ -44,10 +44,7 @@ const CourseDetailsCard = ({
         </div>
       </div>
       <div className="max-w-fit flex flex-col gap-3">
-        <Link
-          href={"https://agentportal.galaxy360.com.au/application-overview"}
-          className="w-full flex-1"
-        >
+        <Link href={"/apply-now"} className="w-full flex-1">
           <Button
             btnName="Apply Now"
             icon={<FaArrowRight />}

@@ -8,6 +8,7 @@ const PatternBannerCard = ({
   BtnAText,
   BtnBLink,
   BtnBText,
+  children,
 }) => {
   return (
     <div
@@ -19,7 +20,7 @@ const PatternBannerCard = ({
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="min-h-[30vh] flex items-center"
+      className="min-h-[30vh] flex flex-col items-center"
     >
       <div className="container mx-auto px-5">
         <div className="flex flex-col gap-4">
@@ -55,6 +56,7 @@ const PatternBannerCard = ({
           )}
         </div>
       </div>
+      {children}
     </div>
   );
 };

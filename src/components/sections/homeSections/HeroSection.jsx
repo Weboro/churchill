@@ -14,7 +14,7 @@ const HeroSection = () => {
         title={""}
         subTitle={`<p className="my-4"> Explore our innovative programs and transform your career. </p>`}
         link={`/courses`}
-        linkA={`https://agentportal.galaxy360.com.au/application-overview`}
+        linkA={`/apply-now`}
         BtnAText={"Explore Our Courses"}
         BtnBText={"Apply Now"}
       />

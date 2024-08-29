@@ -10,7 +10,6 @@ import {
   Spiner,
 } from "@/components";
 import { FetchCourseData } from "@/components/utils/apiQueries";
-// import { navItems} from "@/constDatas/navItems";
 
 const CourseDetails = ({ slug }) => {
   const [data, setData] = useState({});
@@ -65,6 +64,7 @@ const CourseDetails = ({ slug }) => {
         </div>
       )}
     </>
+
   );
 };
 export default CourseDetails;
