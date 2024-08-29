@@ -19,13 +19,6 @@ const AgentInfoCard = ({
 }) => {
   return (
     <div className="bg-light-grey p-4 rounded-md">
-      {/* <Image
-        src={imageUrl}
-        width={250}
-        height={250}
-        alt={`logo of ${RecruitmentAgentOwner}`}
-        className="w-28 mx-auto aspect-square object-contain mix-blend-multiply"
-      /> */}
       <a
         target="_blank"
         href={Website?.includes("https://") ? Website : `https://${Website}`}
@@ -38,22 +31,29 @@ const AgentInfoCard = ({
       <p className="font-[500] capitalize break-words">
         Agent Name: {RepresentativeContactName}
       </p>
+
       <p className="font-[500] capitalize break-words">
-        Address: {Billingcity} {BillingState} {BillingStreet}
+        Address:{" "}
+        {`${BillingStreet}, ${Billingcity}, ${BillingState}, ${BillingCode}`}
       </p>
 
-      <p className="font-[500] break-words">
-        Email:{" "}
-        <a className="font-[600]" href={`mailto:${RecruitmentAgencyEmail}`}>
-          {RecruitmentAgencyEmail}
-        </a>
-      </p>
-      <p className="font-[500] capitalize break-words">
-        phone:
-        <a className="font-[600]" href={`tel:${Phone}`}>
-          {Phone}
-        </a>
-      </p>
+      {RecruitmentAgencyEmail && (
+        <p className="font-[500] break-words">
+          Email:{" "}
+          <a className="font-[600]" href={`mailto:${RecruitmentAgencyEmail}`}>
+            {RecruitmentAgencyEmail}
+          </a>
+        </p>
+      )}
+
+      {Phone && (
+        <p className="font-[500] capitalize break-words">
+          phone:{" "}
+          <a className="font-[600]" href={`tel:${Phone}`}>
+            {Phone}
+          </a>
+        </p>
+      )}
     </div>
   );
 };

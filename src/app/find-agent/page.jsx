@@ -139,7 +139,10 @@ const FindAgent = () => {
             <>
               {filteredData.length > 0 ? (
                 <div>
-                  <p className="mb-6">Showing {filteredData.length} items</p>
+                  <p className="mb-6">
+                    Showing {filteredData.length} item
+                    {filteredData.length > 1 && "s"}
+                  </p>
 
                   <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
                     {filteredData.map((data, index) => (
