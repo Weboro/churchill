@@ -74,6 +74,7 @@ import Timer from "./timer/Timer";
 import RequestIDCardForm from "./forms/RequestIDCardForm";
 import FaqPage from "./sections/contactSections/FaqPage";
 import EventsPage from "./pages/EventsPage";
+import HandBookFloater from "./floater/HandBookFloater";
 
 export {
   Button,
@@ -152,4 +153,5 @@ export {
   RequestIDCardForm,
   FaqPage,
   EventsPage,
+  HandBookFloater,
 };
