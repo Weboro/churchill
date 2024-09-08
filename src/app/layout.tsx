@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { CookieBanner, Footer, Header } from "@/components";
+import { CookieBanner, Footer, HandBookFloater, Header } from "@/components";
 
 export const metadata: Metadata = {
   title: "Churchill Institute",
@@ -104,6 +104,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <HandBookFloater />
         <CookieBanner />
         <Footer />
       </body>
