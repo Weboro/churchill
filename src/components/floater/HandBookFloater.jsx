@@ -9,7 +9,7 @@ const HandBookFloater = () => {
         <div className="hidden group-hover:block transition-all bg-neutral-800 text-white absolute -top-[6.5rem] left-1/2 -translate-x-1/2 w-[8rem] px-3 py-2 rounded-2xl text-center">
           {/* arrow */}
           <div className="absolute w-0 h-0 -bottom-2 left-1/2 -translate-x-1/2 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-neutral-800" />
-          Download Student Prospectus
+          Download Student Handbook
         </div>
 
         <i class="fi bg-primary-orange fi-sr-book-open-cover grid place-items-center w-16 h-16 text-3xl rounded-full text-white shadow-xl" />
