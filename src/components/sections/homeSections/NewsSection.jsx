@@ -6,7 +6,6 @@ const NewsletterSection = ({ showAll = true }) => {
   return (
     <div className="container mx-auto px-5">
       <h2 className="text-3xl font-bold mb-12">Browse Latest News</h2>
-
       <div className="flex flex-col gap-4 ">
         {NewsData?.slice(0, showAll ? NewsData.length : 2)?.map(
           (item, index) => (

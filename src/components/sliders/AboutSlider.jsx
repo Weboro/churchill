@@ -86,7 +86,7 @@ const AboutSlider = () => {
                   icon={item?.headerIcon}
                   title={item?.menuTitle}
                   key={index}
-                  link={item?.slug}
+                  link={`/about-us/${item?.slug}`}
                 />
               </div>
             </FadeUpAnimation>

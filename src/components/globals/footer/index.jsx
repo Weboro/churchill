@@ -236,9 +236,9 @@ const Footer = () => {
                   <li>
                     <Link
                       target="_blank"
-                      href={"https://churchill.instructure.com/login"}
+                      href={"https://elearning.churchill.nsw.edu.au/"}
                     >
-                      Student Portal
+                      eLearning
                     </Link>
                   </li>
                   <li>
@@ -247,10 +247,17 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href={""}>Staff Portal</Link>
+                    <Link href={"https://www.office.com/"}>Staff Portal</Link>
                   </li>
                   <li>
-                    <Link href={""}>Agent Portal</Link>
+                    <Link href={"https://agent.churchill.nsw.edu.au/"}>
+                      Agent Portal
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={"https://churchill.instructure.com/login"}>
+                      Canvas Portal
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -258,49 +265,41 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#E59623] pt-[64px]">
-        <div className="container mx-auto px-5">
-          <div className="flex flex-col lg:flex-row justify-between gap-5 pb-[54px]">
-            <div className="flex flex-col gap-4 items-center mx-auto justify-center max-w-[100ch]">
-              <div className="flex gap-3 items-center">
-                <Image
-                  src={`/assets/flag-a.png`}
-                  width={400}
-                  height={400}
-                  alt="Footer Logo"
-                  className="object-contain w-[50px] h-auto"
-                  priority
-                />
-                <Image
-                  src={`/assets/flag-b.png`}
-                  width={400}
-                  height={400}
-                  alt="Footer Logo"
-                  className="object-contain w-[50px] h-auto"
-                  priority
-                />
-              </div>
-              <p className="text-center">
-                CIHE acknowledges Aboriginal and Torres Strait Islander people
-                as the Traditional Custodians of the land and acknowledges and
-                pays respect to their elders, past and present
-              </p>
+      <div className="bg-[#E59623] pt-8 pb-4">
+        <div className="container mx-auto px-5 space-y-4">
+          <div className="flex flex-col items-center justify-between gap-5">
+            <div className="flex gap-3 items-center">
+              <Image
+                src={`/assets/flag-a.png`}
+                width={400}
+                height={400}
+                alt="Footer Logo"
+                className="object-contain w-[50px] h-auto"
+                priority
+              />
+              <Image
+                src={`/assets/flag-b.png`}
+                width={400}
+                height={400}
+                alt="Footer Logo"
+                className="object-contain w-[50px] h-auto"
+                priority
+              />
             </div>
-            {/* <div className="">
-              <div className="flex flex-col gap-2">
-                <h3 className="text-[16px]">
-                  <strong>Churchill Institute of Higher Education</strong>
-                </h3>
-                <p className="text-[14px]">CRICOS Provider Code 04082E</p>
-                <p className="text-[14px]">TEQSA Provider Number PRV14305</p>
-                <p className="text-[14px]">ABN 91 612 507 141</p>
-              </div>
-            </div> */}
+            <p className="text-center max-w-[80ch] mx-auto">
+              CIHE acknowledges Aboriginal and Torres Strait Islander people as
+              the Traditional Custodians of the land and acknowledges and pays
+              respect to their elders, past and present
+            </p>
           </div>
-          <hr className=" border-neutral-950/50 " />
-          <p className="text-center container mx-auto px-5 font-semibold text-[15px] py-4">
-            Copyright © 2024 Mpika Holdings Pty Ltd t/as Churchill Institute of
-            Higher Education.
+
+          {/* <div className=""><div className="flex flex-col gap-2"><h3 className="text-[16px]"><strong>Churchill Institute of Higher Education</strong></h3><p className="text-[14px]">CRICOS Provider Code 04082E</p><p className="text-[14px]">TEQSA Provider Number PRV14305</p><p className="text-[14px]">ABN 91 612 507 141</p></div></div> */}
+
+          <hr className="border-neutral-950/25 " />
+
+          <p className="text-center text-[#323432] text-[14px] py-4">
+            Copyright &copy;{new Date().getFullYear()} Mpika Holdings Pty Ltd
+            t/as Churchill Institute of Higher Education.
           </p>
         </div>
       </div>

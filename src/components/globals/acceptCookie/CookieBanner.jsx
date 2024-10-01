@@ -43,7 +43,9 @@ const CookieBanner = () => {
           </h2>
         </div>
         <div className="flex lg:items-center gap-4">
-          <button className="text-[#E59623]">Decline</button>
+          <button className="text-[#E59623] border border-[#E59623] px-4 py-2 rounded-xl font-normal">
+            Decline
+          </button>
           <button
             className="px-4 py-2 bg-[#E59623] font-bold rounded-xl"
             onClick={() => handleAllowCookie()}

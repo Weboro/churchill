@@ -5,15 +5,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { FaArrowRight } from "react-icons/fa";
-
 import { navItems } from "@/constDatas/navItems";
-import { Button, CoursesCard } from "@/components";
 import Link from "next/link";
-
+import { Button, CoursesCard } from "@/components";
 import FadeUpAnimation from "@/animations/FadeUp";
+import { FetchCourseData } from "@/components/utils/apiQueries";
 
 const CoursesSlider = () => {
-  const courcesData = navItems[2]?.Catagories;
+  // const courcesData = navItems[2]?.Catagories;
   const sliderRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [totalSlides, setTotalSlides] = useState(0);
@@ -82,67 +81,85 @@ const CoursesSlider = () => {
   };
 
   const serviceLocaton = navItems[2]?.Catagories;
+  //
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(true);
+
+    FetchCourseData()
+      .then((res) => {
+        setData(res.data);
+        setIsLoading(false);
+      })
+      .catch((err) => console.error(err));
+  }, []);
 
   return (
-    <div className="flex flex-col gap-4 lg:gap-[40px]">
-      <Slider {...settings} ref={sliderRef}>
-        {courcesData?.map((item, index) => (
-          <div className="px-[11px] my-[11px]" key={index}>
-            <FadeUpAnimation delay={index * 0.1}>
-              <CoursesCard
-                key={index}
-                icon={`${item?.icon}`}
-                faculty={item?.faculty}
-                title={item?.menuTitle}
-                subTitle={item?.subTitle}
-                link={`/courses/${item?.slug}`}
-              />
-            </FadeUpAnimation>
-          </div>
-        ))}
-      </Slider>
-      <div>
-        <div className="flex flex-col-reverse gap-4 sm:flex-row-reverse sm:justify-between sm:items-center">
-          <div className="">
-            <div className="flex gap-[24px]">
-              <button
-                className={`rounded-full w-[54px] h-[54px] flex items-center justify-center ${
-                  currentSlide === 0
-                    ? "bg-[#848484] text-white border border-[#848484]"
-                    : "hover:bg-[#848484] hover:text-white bg-transparent text-[#202917] border border-[#202917]"
-                }`}
-                onClick={goToPreviousSlide}
-              >
-                <BiChevronLeft className="text-[24px]" />
-              </button>
-              <button
-                className={`rounded-full w-[54px] h-[54px] flex items-center justify-center ${
-                  currentSlide === totalSlides - 1
-                    ? "bg-[#848484] text-white border border-[#848484]"
-                    : "hover:bg-[#848484] hover:text-white bg-transparent text-[#202917] border border-[#202917]"
-                }`}
-                onClick={goToNextSlide}
-              >
-                <BiChevronRight className="text-[24px]" />
-              </button>
-            </div>
-          </div>
-
+    <>
+      {!isLoading && (
+        <div className="flex flex-col gap-4 lg:gap-[40px]">
+          <Slider {...settings} ref={sliderRef}>
+            {data?.map((item, index) => (
+              <div className="px-[11px] my-[11px]" key={index}>
+                <FadeUpAnimation delay={index * 0.1}>
+                  <CoursesCard
+                    key={index}
+                    image={item.heroImage}
+                    faculty={item?.faculty.faculty_name}
+                    title={item?.course_name}
+                    subTitle={item?.description}
+                    link={`/courses/${item?.slug}`}
+                  />
+                </FadeUpAnimation>
+              </div>
+            ))}
+          </Slider>
           <div>
-            <div className="flex justify-start">
-              <Link href={"/courses"}>
-                <Button
-                  btnName={"View all Courses"}
-                  icon={<FaArrowRight />}
-                  styleA={"flex items-center gap-1"}
-                  styleType="secondary"
-                />
-              </Link>
+            <div className="flex flex-col-reverse gap-4 sm:flex-row-reverse sm:justify-between sm:items-center">
+              <div className="">
+                <div className="flex gap-[24px]">
+                  <button
+                    className={`rounded-full w-[54px] h-[54px] flex items-center justify-center ${
+                      currentSlide === 0
+                        ? "bg-[#848484] text-white border border-[#848484]"
+                        : "hover:bg-[#848484] hover:text-white bg-transparent text-[#202917] border border-[#202917]"
+                    }`}
+                    onClick={goToPreviousSlide}
+                  >
+                    <BiChevronLeft className="text-[24px]" />
+                  </button>
+                  <button
+                    className={`rounded-full w-[54px] h-[54px] flex items-center justify-center ${
+                      currentSlide === totalSlides - 1
+                        ? "bg-[#848484] text-white border border-[#848484]"
+                        : "hover:bg-[#848484] hover:text-white bg-transparent text-[#202917] border border-[#202917]"
+                    }`}
+                    onClick={goToNextSlide}
+                  >
+                    <BiChevronRight className="text-[24px]" />
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex justify-start">
+                  <Link href={"/courses"}>
+                    <Button
+                      btnName={"View all Courses"}
+                      icon={<FaArrowRight />}
+                      styleA={"flex items-center gap-1"}
+                      styleType="secondary"
+                    />
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 

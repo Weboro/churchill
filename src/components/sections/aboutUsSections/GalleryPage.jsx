@@ -107,7 +107,6 @@ const images = [
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
-  console.log("first");
 }
 
 const GalleryPage = () => {

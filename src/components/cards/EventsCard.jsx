@@ -4,26 +4,57 @@ import Link from "next/link";
 import Button from "../button";
 import { FaArrowRight } from "react-icons/fa";
 
-const EventsCard = ({ image, title, subTitle, slug, catagories, duration }) => {
+var month = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+const EventsCard = ({
+  image,
+  title,
+  description,
+  rich_text,
+  start_time,
+  end_time,
+  slug,
+  tags,
+}) => {
+  const dateOBJ = new Date(start_time);
+
+  const formattedDate = `${dateOBJ.getDay()}${
+    dateOBJ.getDay() === 1
+      ? "st"
+      : dateOBJ.getDay() === 2
+      ? "nd"
+      : dateOBJ.getDay() === 3
+      ? "rd"
+      : "th"
+  } ${month[dateOBJ.getMonth()]}`;
+
   return (
-    <div className="group flex rounded-md border cursor-pointer bg-neutral-50 hover-shadow border-gray-500/40 overflow-hidden flex-col md:flex-row gap-3 ">
+    <div className="group flex rounded-md border bg-neutral-50 border-gray-500/40 overflow-hidden flex-col md:flex-row gap-3">
       <div className="relative">
-        <div className="aspect-[4/2] md:w-[16rem] overflow-hidden md:aspect-auto md:h-full">
+        <div className="aspect-[4/2] md:w-[20rem] overflow-hidden md:aspect-auto md:h-full">
           <Image
             src={`${image}`}
             alt={"use-links-icon-image"}
             width={600}
             height={600}
-            className="object-cover w-full h-full group-hover:scale-105 transition-all"
+            className="object-cover w-full h-full group-hover:scale-105 delay-75 transition-all"
           />
         </div>
-        <div className="absolute top-2 left-2 rounded-md flex gap-2 bg-primary-orange p-2 text-white font-bold ">
-          <span>
-            {duration?.startDate.split("-")[2]}
-            <sup>th</sup>
-          </span>
-
-          <span>{duration?.startMonth}</span>
+        <div className="absolute top-2 left-2 rounded-md flex gap-2 bg-primary-orange p-2 text-white font-bold">
+          <span>{formattedDate}</span>
         </div>
       </div>
 
@@ -35,8 +66,8 @@ const EventsCard = ({ image, title, subTitle, slug, catagories, duration }) => {
         </Link>
 
         <div
-          dangerouslySetInnerHTML={{ __html: subTitle }}
-          className="line-clamp-5 md:line-clamp-6"
+          dangerouslySetInnerHTML={{ __html: description }}
+          className="line-clamp-3"
         />
 
         <Link href={`/events/${slug}`} className="w-fit">
@@ -49,12 +80,12 @@ const EventsCard = ({ image, title, subTitle, slug, catagories, duration }) => {
         </Link>
 
         <div className="flex flex-row flex-wrap gap-2">
-          {catagories?.map((item, index) => (
+          {tags?.map((item, index) => (
             <p
               key={index}
               className="font-semibold bg-[#F2CF9C] text-[#2C2B4B] rounded-full text-[14px] px-3 py-1 h-fit"
             >
-              {item?.title}
+              {item?.name}
             </p>
           ))}
         </div>

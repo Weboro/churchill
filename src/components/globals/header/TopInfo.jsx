@@ -8,6 +8,11 @@ const NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL =
 
 const links = [
   {
+    href: "https://elearning.churchill.nsw.edu.au/",
+    text: "eLearning",
+    iconClass: "fi fi-rr-lesson",
+  },
+  {
     href: "/find-agent",
     text: "Find Agent",
     iconClass: "fi fi-rr-headphones",
