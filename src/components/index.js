@@ -75,6 +75,7 @@ import RequestIDCardForm from "./forms/RequestIDCardForm";
 import FaqPage from "./sections/contactSections/FaqPage";
 import EventsPage from "./pages/EventsPage";
 import HandBookFloater from "./floater/HandBookFloater";
+import EmergencyContactFloater from "./floater/EmergencyContactFloater";
 
 export {
   Button,
@@ -154,4 +155,5 @@ export {
   FaqPage,
   EventsPage,
   HandBookFloater,
+  EmergencyContactFloater
 };
