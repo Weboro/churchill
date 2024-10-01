@@ -23,7 +23,7 @@ const EmergencyContactFloater = () => {
 
   return (
     <>
-    <div className="sm:z-[1] fixed bottom-3 right-3 md:bottom-8 md:right-12 cursor-pointer group grid place-items-center">
+    <div className="sm:z-[9999999] fixed bottom-3 right-3 md:bottom-8 md:right-12 cursor-pointer group grid place-items-center">
       <div onClick={togglePopup}>
         <i className="fi bg-primary-orange fi-rr-menu-dots grid place-items-center w-16 h-10 sm:h-16 text-3xl rounded-full text-white shadow-xl" />
       </div>
@@ -69,7 +69,7 @@ const EmergencyContactFloater = () => {
           className="fixed inset-0 flex items-center justify-center z-[10000] "
           onClick={(e) => e.stopPropagation()} 
         >
-          <div className="ico-pri bg-white border border-gray-300 shadow-lg p-4 rounded-lg w-[400px] h-[450px]">
+          <div className="ico-pri bg-white border border-gray-300 shadow-lg p-4 rounded-lg w-[400px] h-auto">
             <div className="flex justify-between">
             <h5 class="font-bold text-[25px] mb-8 text-[#2C2B4B]">Emergency Contacts</h5>
             <div className="bg-neutral-50 p-1 rounded-full flex items-center gap-2 overflow-hidden h-[40px] w-[40px] transition-all  hover:bg-orange-200" onClick={toggleContactPopup}>
