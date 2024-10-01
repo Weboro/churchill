@@ -22,24 +22,20 @@ const EmergencyContactFloater = () => {
   };
 
   return (
-<div className="fixed bottom-3 right-3 md:bottom-8 md:right-12 cursor-pointer group grid place-items-center z-[9900]">
-  <div onClick={togglePopup}>
-    <div className="hidden group-hover:block transition-all bg-neutral-800 text-white absolute -top-[6.5rem] left-1/2 -translate-x-1/2 w-[8rem] px-3 py-2 rounded-2xl text-center">
-      {/* arrow */}
-      <div className="absolute w-0 h-0 -bottom-2 left-1/2 -translate-x-1/2 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-neutral-800" />
-      Emergency Contact
-    </div>
-        <i className="fi bg-primary-orange fi-rr-bell-notification-call grid place-items-center w-16 h-16 text-3xl rounded-full text-white shadow-xl" />
+    <>
+    <div className="sm:z-[1] fixed bottom-3 right-3 md:bottom-8 md:right-12 cursor-pointer group grid place-items-center">
+      <div onClick={togglePopup}>
+        <i className="fi bg-primary-orange fi-rr-menu-dots grid place-items-center w-16 h-10 sm:h-16 text-3xl rounded-full text-white shadow-xl" />
       </div>
 
       {isOpen && (
-    <div
+      <div
         className="fixed bottom-20 right-3 md:bottom-24 md:right-12 bg-white border border-gray-300 shadow-lg p-4 rounded-lg z-[10000]"
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the popup
       >
-          <div className="grid grid-cols-1 gap-4">
+          <div className="ico-pri grid grid-cols-1 gap-4">
             <Link href={"/assets/docs/student-handbook.pdf"} target="_blank" className="bg-neutral-50 p-1 rounded-md flex items-center gap-2 overflow-hidden">
-              <div className="aspect-square ml-2 rounded-full bg-primary-orange/25 grid place-items-center">
+              <div className="aspect-square ml-2 rounded-full bg-primary-orange/20 grid place-items-center">
                 <i className="fi fi-rr-employee-handbook w-[50px] h-[50px] grid place-items-center m-0 text-3xl"></i>
               </div>
               <div className="pl-2 py-2">
@@ -48,7 +44,7 @@ const EmergencyContactFloater = () => {
               </div>
             </Link>
             <div className="bg-neutral-50 p-1 rounded-md flex items-center gap-2 overflow-hidden"  onClick={toggleBoth}>
-              <div className="aspect-square ml-2 rounded-full bg-primary-orange/25 grid place-items-center">
+              <div className="aspect-square ml-2 rounded-full bg-primary-orange/20 grid place-items-center">
                 <i className="fi fi-rr-light-emergency-on w-[50px] h-[50px] grid place-items-center m-0 text-3xl"></i>
               </div>
               <div className="pl-2 py-2">
@@ -56,7 +52,7 @@ const EmergencyContactFloater = () => {
               </div>
             </div>
             <Link href={"contact-us"} className="bg-neutral-50 p-1 rounded-md flex items-center gap-2 overflow-hidden">
-              <div className="aspect-square ml-2 rounded-full bg-primary-orange/25 grid place-items-center">
+              <div className="aspect-square ml-2 rounded-full bg-primary-orange/20 grid place-items-center">
                 <i className="fi fi-rr-id-card-clip-alt w-[50px] h-[50px] grid place-items-center m-0 text-3xl"></i>
               </div>
               <div className="pl-2 py-2">
@@ -71,9 +67,9 @@ const EmergencyContactFloater = () => {
   <div>
         <div
           className="fixed inset-0 flex items-center justify-center z-[10000] "
-          onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the popup
+          onClick={(e) => e.stopPropagation()} 
         >
-          <div className=" bg-white border border-gray-300 shadow-lg p-4 rounded-lg w-[400px] h-[450px]">
+          <div className="ico-pri bg-white border border-gray-300 shadow-lg p-4 rounded-lg w-[400px] h-[450px]">
             <div className="flex justify-between">
             <h5 class="font-bold text-[25px] mb-8 text-[#2C2B4B]">Emergency Contacts</h5>
             <div className="bg-neutral-50 p-1 rounded-full flex items-center gap-2 overflow-hidden h-[40px] w-[40px] transition-all  hover:bg-orange-200" onClick={toggleContactPopup}>
@@ -82,7 +78,7 @@ const EmergencyContactFloater = () => {
             </div>
           <div className="grid grid-cols-1 gap-4">
             <a href="tel:0432641386" className="bg-neutral-50 p-1 rounded-md flex items-center gap-2 overflow-hidden">
-              <div className="aspect-square ml-2 rounded-full bg-primary-orange/25 grid place-items-center">
+              <div className="aspect-square ml-2 rounded-full bg-primary-orange/10 grid place-items-center">
                 <i className="fi fi-rr-hr-person w-[50px] h-[50px] grid place-items-center m-0 text-3xl"></i>
               </div>
               <div className="pl-2 py-2">
@@ -92,7 +88,7 @@ const EmergencyContactFloater = () => {
               </div>
             </a>
             <a href="tel:094132360" className="bg-neutral-50 p-1 rounded-md flex items-center gap-2 overflow-hidden">
-              <div className="aspect-square ml-2 rounded-full bg-primary-orange/25 grid place-items-center">
+              <div className="aspect-square ml-2 rounded-full bg-primary-orange/10 grid place-items-center">
                 <i className="fi fi-rr-building w-[50px] h-[50px] grid place-items-center m-0 text-3xl"></i>
               </div>
               <div className="pl-2 py-2">
@@ -102,7 +98,7 @@ const EmergencyContactFloater = () => {
               </div>
             </a>
             <a href="tel:0435127197" className="bg-neutral-50 p-1 rounded-md flex items-center gap-2 overflow-hidden">
-              <div className="aspect-square ml-2 rounded-full bg-primary-orange/25 grid place-items-center">
+              <div className="aspect-square ml-2 rounded-full bg-primary-orange/10 grid place-items-center">
                 <i className="fi fi-rr-id-card-clip-alt w-[50px] h-[50px] grid place-items-center m-0 text-3xl"></i>
               </div>
               <div className="pl-2 py-2">
@@ -119,6 +115,36 @@ const EmergencyContactFloater = () => {
   </div>
       )}
     </div>
+    <div className="ico-pri block w-98 sm:hidden fixed bottom-3 left-0 bg-white mx-2 border shadow-lg rounded-lg">
+          <div className="grid w-100 grid-cols-3 gap-2 m-1 bg-primary-orange/20 rounded-md">
+            <Link href={"/assets/docs/student-handbook.pdf"} target="_blank" className="pl-2 rounded-md flex items-center gap-2 overflow-hidden">
+              <div className="rounded-full grid place-items-center">
+                <i className="fi fi-rr-employee-handbook w-[20px] h-[20px] grid place-items-center m-0 text-xl"></i>
+              </div>
+              <div className="py-2">
+                <h2 className="font-semibold break-words text-wrap capitalize text-left"></h2>
+                  <p className="font-semibold text-xs break-words text-wrap">Student HandBook</p>
+              </div>
+            </Link>
+            <div className="pl-2 rounded-md flex items-center gap-2 overflow-hidden" onClick={toggleContactPopup}>
+              <div className="rounded-full grid place-items-center">
+                <i className="fi fi-rr-light-emergency-on w-[20px] h-[20px] grid place-items-center m-0 text-xl"></i>
+              </div>
+              <div className="py-2">
+                  <p className="font-semibold text-xs break-words text-wrap">Emergency Contacts</p>
+              </div>
+            </div>
+            <Link href={"contact-us"} className="pl-2 rounded-md flex items-center gap-2 overflow-hidden">
+              <div className="rounded-full grid place-items-center">
+                <i className="fi fi-rr-id-card-clip-alt w-[20px] h-[20px] grid place-items-center m-0 text-xl"></i>
+              </div>
+              <div className="py-2">
+                  <p className="font-semibold text-xs break-words text-wrap">Contact Us</p>
+              </div>
+            </Link>
+          </div>
+    </div>
+    </>
   );
 };
 

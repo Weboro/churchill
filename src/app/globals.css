@@ -526,3 +526,8 @@ tr:nth-child(even) {
 .gsc-control-cse.gsc-control-cse-en td.gsc-search-button {
   margin-left: 1rem;
 }
+
+.ico-pri i {
+  filter: invert(78%) sepia(30%) saturate(5149%) hue-rotate(347deg)
+    brightness(96%) contrast(86%);
+}
