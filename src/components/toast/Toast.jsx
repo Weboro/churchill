@@ -72,24 +72,20 @@ const ToastComponent = ({ timeout = 2000 }, ref) => {
         className={`bg-primary-orange border shadow-xl shadow-primary-orange/10 rounded-md overflow-hidden cursor-pointer`}
       >
         <div className="px-4 py-2 flex items-center gap-2">
-          <div
-            className={`w-12 h-12 aspect-square flex-1 bg-white rounded-full grid place-items-center p-2`}
-          >
-            <motion.i
-              initial={{ rotate: "-45deg" }}
-              animate={isShown ? { rotate: 0 } : { rotate: "-45deg" }}
-              transition={{
-                duration: 0.3,
-                delay: 0.1,
-                ease: [0.6, -0.28, 0.735, 0.045],
-              }}
-              className={`${
-                toastInfo.customFavicon
-                  ? toastInfo.customFavicon
-                  : icons[toastInfo.type]
-              } flex text-2xl`}
-            />
-          </div>
+          <motion.i
+            initial={{ rotate: "-45deg" }}
+            animate={isShown ? { rotate: 0 } : { rotate: "-45deg" }}
+            transition={{
+              duration: 0.3,
+              delay: 0.1,
+              ease: [0.6, -0.28, 0.735, 0.045],
+            }}
+            className={`${
+              toastInfo.customFavicon
+                ? toastInfo.customFavicon
+                : icons[toastInfo.type]
+            } w-12 h-12  bg-white aspect-square rounded-full grid place-items-center  text-2xl`}
+          />
 
           <span className="font-semibold text-white w-[20rem]">
             {toastInfo.message}

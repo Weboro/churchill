@@ -28,6 +28,8 @@ const CybersecurityIncident = () => {
   const [fileError, setFileError] = useState("");
   const [attachment, setAttachment] = useState("");
   const [btnText, setBtnText] = useState("Submit");
+  const isSending = btnText === "Sending...";
+
   const toastRef = useRef();
 
   const handleCheckboxChange = (e) => {
@@ -73,7 +75,11 @@ const CybersecurityIncident = () => {
     const files = Array.from(e.target.files);
 
     if (files.length > 5) {
-      alert("You can upload a maximum of 5 files.");
+      toastRef.current.showToast(
+        "You can upload a maximum of 5 files.",
+        "error"
+      );
+
       e.target.value = "";
       return;
     }
@@ -81,7 +87,11 @@ const CybersecurityIncident = () => {
     const totalSize = files.reduce((acc, file) => acc + file.size, 0);
 
     if (totalSize > 10 * 1024 * 1024) {
-      alert("Total file size must not exceed 10MB.");
+      toastRef.current.showToast(
+        "Total file size must not exceed 10MB.",
+        "error"
+      );
+
       e.target.value = "";
       return;
     }
@@ -115,11 +125,17 @@ const CybersecurityIncident = () => {
     event.preventDefault();
     setBtnText("Sending...");
 
-    if (!attachment) {
-      setFileError("Please upload a file");
+    if (formState.email !== formState.verifyEmail) {
+      toastRef.current.showToast("Email doesn't match", "error");
       setBtnText("Submit");
       return;
     }
+
+    // if (!attachment) {
+    //   setFileError("Please upload a file");
+    //   setBtnText("Submit");
+    //   return;
+    // }
 
     try {
       const response = await fetch("/api/send-email", {
@@ -134,7 +150,7 @@ const CybersecurityIncident = () => {
       });
 
       if (response.ok) {
-        toastRef.current.showToast("Email sent successfully!");
+        toastRef.current.showToast("Email sent successfully!", "success");
         setFormState(defaultFormState);
         setAttachment(null);
         setBtnText("Submitted");
@@ -145,7 +161,10 @@ const CybersecurityIncident = () => {
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      toastRef.current.showToast("An error occurred while sending the email.");
+      toastRef.current.showToast(
+        "An error occurred while sending the email.",
+        "error"
+      );
       setBtnText("Submit");
     }
   };
@@ -481,6 +500,7 @@ const CybersecurityIncident = () => {
                 <label className="font-semibold text-matte-purple">
                   Attach Files (Screenshots, Documents)
                 </label>
+
                 <input
                   type="file"
                   name="attachedFiles"
@@ -488,6 +508,7 @@ const CybersecurityIncident = () => {
                   onChange={handleFileChange}
                   className="w-full p-2 border border-gray-300 rounded-md"
                 />
+
                 {fileError && <span className="text-red-500">{fileError}</span>}
               </div>
             </div>
@@ -609,31 +630,36 @@ const CybersecurityIncident = () => {
             </div>
 
             <div className="flex justify-center">
-              <button
-                type="submit"
-                className="text-center flex justify-center btn-translate border-2 rounded-md font-semibold text-[14px] border-[#606060] px-6 md:px-8 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200 ease-in-out hover:scale-105"
-              >
-                <div className="flex items-center gap-1 ">
-                  <div className=" "></div>
-                  <div className="flex flex-col">
-                    <div className="whitespace-nowrap">{btnText}</div>
-                    <span className="block text-[16px] whitespace-nowrap"></span>
+              {isSending ? (
+                <>Sending...</>
+              ) : (
+                <button
+                  type="submit"
+                  disabled={btnText === "Sending..."}
+                  className="text-center flex justify-center btn-translate border-2 rounded-md font-semibold text-[14px] border-[#606060] px-6 md:px-8 py-3 bg-[#E59623] hover:bg-[#ff9700] transition duration-200 ease-in-out hover:scale-105"
+                >
+                  <div className="flex items-center gap-1 ">
+                    <div className=" "></div>
+                    <div className="flex flex-col">
+                      <div className="whitespace-nowrap">{btnText}</div>
+                      <span className="block text-[16px] whitespace-nowrap"></span>
+                    </div>
+                    <div className=" btn-translate-child transition-all ">
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        strokeWidth="0"
+                        viewBox="0 0 448 512"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"></path>
+                      </svg>
+                    </div>
                   </div>
-                  <div className=" btn-translate-child transition-all ">
-                    <svg
-                      stroke="currentColor"
-                      fill="currentColor"
-                      strokeWidth="0"
-                      viewBox="0 0 448 512"
-                      height="1em"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"></path>
-                    </svg>
-                  </div>
-                </div>
-              </button>
+                </button>
+              )}
             </div>
           </form>
         </div>
