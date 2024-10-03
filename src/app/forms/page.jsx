@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useRef } from "react";
-import { ToastComponent } from "@/components";
+import { Spiner, ToastComponent } from "@/components";
+import { CgSpinner } from "react-icons/cg";
 
 const defaultFormState = {
   identity: "",
@@ -171,10 +172,10 @@ const CybersecurityIncident = () => {
 
   return (
     <>
-      <ToastComponent ref={toastRef} />
+      <ToastComponent ref={toastRef} /> 
 
-      <div className="container form-fileds mx-auto mb-20">
-        <div className="mx-5 md:m-0 p-5 rounded-md bg-white">
+      <div className="md:container sm:px-20 px-0  form-fileds mx-auto mb-20">
+        <div className=" max-w-[800px] mx-auto p-5 rounded-md bg-white">
           <h2 className="text-matte-purple py-10 text-3xl lg:text-5xl font-bold mb-6 text-center">
             Cyber Incident Report Form
           </h2>
@@ -520,7 +521,7 @@ const CybersecurityIncident = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="flex flex-col gap-2">
                   <label className="font-semibold text-matte-purple">
-                    Reporting is about <span className="text-[#FF0000]">*</span>
+                    Reporting is about
                   </label>
                   <select
                     name="reportingAbout"
@@ -540,7 +541,7 @@ const CybersecurityIncident = () => {
 
                 <div className="flex flex-col gap-2">
                   <label className="font-semibold text-matte-purple">
-                    OS Used <span className="text-[#FF0000]">*</span>
+                    OS Used
                   </label>
                   <select
                     name="osUsed"
@@ -561,7 +562,7 @@ const CybersecurityIncident = () => {
 
                 <div className="flex flex-col gap-2">
                   <label className="font-semibold text-matte-purple">
-                    Browser Used <span className="text-[#FF0000]">*</span>
+                    Browser Used
                   </label>
                   <select
                     name="browserUsed"
@@ -583,7 +584,7 @@ const CybersecurityIncident = () => {
 
                 <div className="flex flex-col gap-2">
                   <label className="font-semibold text-matte-purple">
-                    Device Used <span className="text-[#FF0000]">*</span>
+                    Device Used
                   </label>
                   <select
                     name="deviceUsed"
@@ -620,8 +621,8 @@ const CybersecurityIncident = () => {
                 type="checkbox"
                 name="consent"
                 checked={formState.consent}
-                onChange={handleFormChange}
                 className="h-4 w-4"
+                required
               />
               <label className="font-semibold text-matte-purple">
                 I consent to sharing this report with the Department of Home
@@ -631,7 +632,20 @@ const CybersecurityIncident = () => {
 
             <div className="flex justify-center">
               {isSending ? (
-                <>Sending...</>
+                <button
+                type="submit"
+                className="text-center flex justify-center btn-translate border-2 rounded-md font-semibold text-[14px] border-[#606060] px-6 md:px-8 py-3 bg-[#E59623]"
+              >
+                <div className="flex items-center ">
+                  <div className="flex flex-col">
+                    <div className="whitespace-nowrap">Sending</div>
+                    <span className="block text-[16px] whitespace-nowrap"></span>
+                  </div>
+                  <div className="ml-4">
+                      <CgSpinner size={30} className="spinner"/>
+                  </div>
+                </div>
+              </button>
               ) : (
                 <button
                   type="submit"
