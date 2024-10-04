@@ -64,15 +64,15 @@ const EmergencyContactFloater = () => {
               </div>
 
               <Link
-                href={"contact-us"}
+                href={"cyber-incident-report-form"}
                 className="bg-neutral-50 p-1 rounded-md flex items-center gap-2 overflow-hidden"
               >
                 <div className="aspect-square ml-2 rounded-full bg-primary-orange/20 grid place-items-center">
-                  <i className="fi fi-rr-id-card-clip-alt w-[50px] h-[50px] grid place-items-center m-0 text-3xl"></i>
+                  <i className="fi fi-rr-shield-security-risk w-[50px] h-[50px] grid place-items-center m-0 text-3xl"></i>
                 </div>
                 <div className="pl-2 py-2">
                   <p className="font-bold text-xl break-words text-wrap">
-                    Contact Us
+                    Report Cyber Incident
                   </p>
                 </div>
               </Link>
@@ -197,15 +197,15 @@ const EmergencyContactFloater = () => {
             </div>
           </div>
           <Link
-            href={"contact-us"}
+            href={"cyber-incident-report-form"}
             className="pl-2 rounded-md flex items-center gap-2 overflow-hidden"
           >
             <div className="rounded-full grid place-items-center">
-              <i className="fi fi-rr-id-card-clip-alt w-[20px] h-[20px] grid place-items-center m-0 text-xl"></i>
+              <i className="fi fi-rr-shield-security-risk w-[20px] h-[20px] grid place-items-center m-0 text-xl"></i>
             </div>
             <div className="py-2">
               <p className="font-semibold text-xs break-words text-wrap">
-                Contact Us
+              Report Cyber Incident
               </p>
             </div>
           </Link>

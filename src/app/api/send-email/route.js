@@ -25,8 +25,8 @@ export async function POST(req) {
     } = await req.json();
 
     let transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
+      host: "smtp-mail.outlook.com",
+      port: 587,
       auth: {
         user: process.env.SMTP_EMAIL,
         pass: process.env.SMTP_PASS,
@@ -36,7 +36,7 @@ export async function POST(req) {
     // Prepare mail options
     let mailOptions = {
       from: process.env.SMTP_EMAIL,
-      to: "omrautofficial@gmail.com",
+      to: "cyberincident@churchill.nsw.edu.au",
       subject: `Cybe Incident Report by ${firstName} ${lastName}`, // Fixed the subject string
       html: `
 <table
@@ -129,7 +129,7 @@ export async function POST(req) {
                                       <img
                                         alt=""
                                         height="112.812"
-                                        src="https://ik.imagekit.io/z6yqvf1sq/Banner%2019.jpg?updatedAt=1726710805004"
+                                        src="https://ik.imagekit.io/z6yqvf1sq/top-incidentbanner.jpg?updatedAt=1728020381657"
                                         style="
                                           width: 100%;
                                           max-width: 100%;
@@ -460,8 +460,8 @@ export async function POST(req) {
                                     >
                                       <img
                                         alt=""
-                                        height="112.812"
-                                        src="https://ik.imagekit.io/z6yqvf1sq/Banner%2019.jpg?updatedAt=1726710805004"
+                                        height="100%"
+                                        src="https://ik.imagekit.io/z6yqvf1sq/bottom-incidentbanner.jpg?updatedAt=1728020381563"
                                         style="
                                           width: 100%;
                                           max-width: 100%;
@@ -558,7 +558,6 @@ export async function POST(req) {
     </tr>
   </tbody>
 </table>
-
       `,
       // cc: "info@example.co",
       attachments:
@@ -579,7 +578,8 @@ export async function POST(req) {
   } catch (err) {
     return NextResponse.json(
       { message: "Internal Server Error" },
-      { status: 500 }
+      { status: 500 },
+      console.log(err)
     );
   }
 }
