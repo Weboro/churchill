@@ -37,7 +37,8 @@ export async function POST(req) {
     let mailOptions = {
       from: process.env.SMTP_EMAIL,
       to: "cyberincident@churchill.nsw.edu.au",
-      subject: `Cybe Incident Report by ${firstName} ${lastName}`, // Fixed the subject string
+      cc: "cyberincidents@churchill.nsw.edu.au",
+      subject: `Cyber Incident Report by ${firstName} ${lastName}`, // Fixed the subject string
       html: `
 <table
   cellpadding="0"
@@ -559,7 +560,6 @@ export async function POST(req) {
   </tbody>
 </table>
       `,
-      // cc: "info@example.co",
       attachments:
         attachments &&
         attachments.map((attachment) => ({
