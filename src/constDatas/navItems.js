@@ -683,6 +683,16 @@ export const navItems = [
         // link: "/",
         image: "/assets/hero-image.jpeg",
       },
+      {
+        icon: <RiExchangeDollarFill />,
+        menuTitle: "Attendance Portal",
+        headerIcon: "fi fi-rr-user-trust",
+        subTitle: "Student attendance.",
+        slug: "student-attendance",
+        redirectLink:  "https://attendance.churchill.nsw.edu.au",
+        // link: "/",
+        image: "/assets/hero-image.jpeg",
+      },
     ],
   },
 ];
