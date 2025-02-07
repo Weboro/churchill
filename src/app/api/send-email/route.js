@@ -322,7 +322,9 @@ export async function POST(req) {
                                           </tr>
                                           <tr>
                                             <td style="border-bottom: 1px solid #e59623;"><strong>Incident Type</strong>:</td>
-                                            <td style="border-bottom: 1px solid #e59623;">${incidentType.join(", ")}</td>
+                                            <td style="border-bottom: 1px solid #e59623;">${incidentType.join(
+                                              ", "
+                                            )}</td>
                                           </tr>
                                           <tr style="background: #ededeb;">
                                             <td><strong>Impacted</strong>:</td>

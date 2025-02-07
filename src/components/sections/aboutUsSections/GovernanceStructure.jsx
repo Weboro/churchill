@@ -10,7 +10,7 @@ const GovernanceStructure = ({ slug }) => {
           width={1000}
           height={800}
           alt="organizational chart"
-          src="/assets/CIHE-Governance-Struct.svg"
+          src="/assets/CIHE-Governance-Struct.png"
           className="w-full"
         />
       </div>
