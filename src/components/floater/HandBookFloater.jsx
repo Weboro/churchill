@@ -12,7 +12,7 @@ const HandBookFloater = () => {
           Download Student Handbook
         </div>
 
-        <i class="fi bg-primary-orange fi-sr-book-open-cover grid place-items-center w-16 h-16 text-3xl rounded-full text-white shadow-xl" />
+        <i className="fi bg-primary-orange fi-sr-book-open-cover grid place-items-center w-16 h-16 text-3xl rounded-full text-white shadow-xl" />
       </Link>
     </div>
   );
