@@ -247,7 +247,7 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href={"https://www.office.com/"}>Staff Portal</Link>
+                    <Link href={"http://staff.churchill.nsw.edu.au"}>Staff Portal</Link>
                   </li>
                   <li>
                     <Link href={"https://agent.churchill.nsw.edu.au/"}>
@@ -255,8 +255,8 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href={"https://churchill.instructure.com/login"}>
-                      Canvas Portal
+                    <Link href={"https://elearning.churchill.nsw.edu.au/login/index.php"}>
+                      Student Moodle Portal
                     </Link>
                   </li>
                 </ul>
