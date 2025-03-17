@@ -137,20 +137,20 @@ export const navItems = [
         image: "/assets/course-d.png",
 
         CatagoriesItem: [
-          {
-            title: "Emeritus Prof Jim Psaros",
-            slug: "emeritus-prof-jim-psaros",
-            email: "jim-psaros@churchil.mail",
-            subTitle: " Chair of Governing council",
-            image: "/assets/staff/emeritus-prof-jim-psaros.jpg",
-            description: `<p>Emeritus Professor Jim Psaros was a Professor of Accounting at the University of Newcastle until 2015. He held senior positions at the University of Newcastle including Deputy Head - Faculty of Business and Law, Assistant Dean Teaching and Learning, Director of Executive and Corporate Programs, Head of the Department of Accounting and Finance, and Academic Director of the Sydney Campus. </p> <p>Prior to entering academia, Emeritus Professor Psaros was employed for several years in Chartered Accounting. He has experience in Australia and overseas working for Big 4 Accounting Firms. For more than 20 years he has taught and researched at Australian and British Universities. He has sat on the Board of Directors of companies and the audit committee of government authorities. He has both extensive professional accounting and research experience. </p> <p> Emeritus Professor Psaros has a PhD in Accounting from the University of New South Wales. Throughout his research career, Emeritus Professor Psaros has focused on issues of practical importance. He has conducted research in a range of areas including auditing and fraud, the inadequacies of Australian accounting standards, and more recently, corporate governance mechanisms. Emeritus Professor Psaros has published extensively and has made many presentations at professional and academic forums. Since Emeritus Professor Psaros retired from full-time academia in 2015, he has engaged in various consulting activities in the Higher Education Sector. </p>`,
-          },
+          // {
+          //   title: "Emeritus Prof Jim Psaros",
+          //   slug: "emeritus-prof-jim-psaros",
+          //   email: "jim-psaros@churchil.mail",
+          //   subTitle: " Chair of Governing council",
+          //   image: "/assets/staff/emeritus-prof-jim-psaros.jpg",
+          //   description: `<p>Emeritus Professor Jim Psaros was a Professor of Accounting at the University of Newcastle until 2015. He held senior positions at the University of Newcastle including Deputy Head - Faculty of Business and Law, Assistant Dean Teaching and Learning, Director of Executive and Corporate Programs, Head of the Department of Accounting and Finance, and Academic Director of the Sydney Campus. </p> <p>Prior to entering academia, Emeritus Professor Psaros was employed for several years in Chartered Accounting. He has experience in Australia and overseas working for Big 4 Accounting Firms. For more than 20 years he has taught and researched at Australian and British Universities. He has sat on the Board of Directors of companies and the audit committee of government authorities. He has both extensive professional accounting and research experience. </p> <p> Emeritus Professor Psaros has a PhD in Accounting from the University of New South Wales. Throughout his research career, Emeritus Professor Psaros has focused on issues of practical importance. He has conducted research in a range of areas including auditing and fraud, the inadequacies of Australian accounting standards, and more recently, corporate governance mechanisms. Emeritus Professor Psaros has published extensively and has made many presentations at professional and academic forums. Since Emeritus Professor Psaros retired from full-time academia in 2015, he has engaged in various consulting activities in the Higher Education Sector. </p>`,
+          // },
           {
             title: "Associate Prof Brendan Boyle",
             slug: "associate-prof-brendan-boyle",
             email: "brendan-boyle@churchil.mail",
-            subTitle: "Chair of Academic Board, Member of Governing council",
-            image: "/assets/staff/avatar.png",
+            subTitle: "Chair of Governing council",
+            image: "/assets/staff/brendan-boyle.jpg",
             description: `<p>Before joining Newcastle, Assoc Prof Boyle lectured in University College Dublin, Centro de Estudios Superiores Universitarios de Galicia, Spain and the University of Sydney, Australia. Assoc Prof Boyle has also delivered units and guest lectures at universities in Malaysia, Hong Kong, and China. Assoc Prof Boyle was a graduate member of the Chartered Institute of Personnel & Development (CIPD) the world's largest Chartered management development professional body. Assoc Prof Boyle completed a master's degree in business studies in University College Dublin and was awarded his PhD from the Discipline of International Business at University of Sydney 2009. </p> <p>Brendan's primary research interests include international HRM, knowledge management/sharing in organizations and top management teams. He has published research papers on knowledge creation and knowledge sharing in MNEs. He is currently involved in three major projects examining, collaboration in health care organizations, the management teams in the subsidiaries of multinational enterprises in China (MNEs) and the HRM practices of MNEs. Combined, these collaborative projects involve partnerships between Newcastle Business School and universities in Europe, North America, Latin America and Asia.</p><p>Brendan is also co-director of the Health Services Research and Innovation Centre at UoN (HSRIC). This centre aims to improve the design and management health services with particular emphasis interdisciplinary approaches to addressing critical challenges. Brendan is particularly interested in global health services research as an important emerging research area that integrates issues of public policy and health services development. Brendan has a particular focus on the mobility of health professionals - issues of immigration, expatriation and professional institutions. </p>`,
           },
           {
@@ -190,7 +190,7 @@ export const navItems = [
             title: "Assoc Prof Maria Varua",
             slug: "assoc-prof-maria-varua",
             email: "maria-varua@churchil.mail",
-            subTitle: "Member of Academic Board",
+            subTitle: "Chair of Academic Board",
             image: "/assets/staff/avatar.png",
             description: `<span>TO BE ADDED</span>`,
           },
@@ -198,7 +198,7 @@ export const navItems = [
             title: "Professor Ashish Malik",
             slug: "professor-ashish-malik",
             email: "ashish-malik@churchil.mail",
-            subTitle: "TBA",
+            subTitle: "Head of the Management Discipline",
             image: "/assets/staff/professor-ashish-malik.jpg",
             description: `<p>Professor Ashish Malik , PhD has been the Head of the Management Discipline at University of Newcastle, Australia. In his earlier role in New Zealand, Ashish was the Head of the Centre for Management at The Open Polytechnic of New Zealand. Ashish is the Professor of Human Resource Management at Queen's Business School and the Director of The William J Clinton Leadership Institute at Queen's University of Belfast. Ashish holds a PhD from Victoria University of Wellington, New Zealand, and an MA (PM&IR) from TISS, Mumbai, India. Additionally, Ashish has served as the Program Convenor of the Master of Human Resource Management Program at the University of Newcastle, Australia and for the Graduate Diploma in HRM at The Open Polytechnic of New Zealand. Ashish has published 10 books and presented more than 150 research papers in the field of Human Capital, Indian Culture, Strategic HRM, Managing People in a post-crisis event and HRM and disruptive technologies such as Artificial Intelligence. Ashish has more than $2.8 million in grant income for various sole and collaborative inter-disciplinary projects against his name. Ashish's research has been accepted/published in several A*/A journals such as <i> Human Resource Management (US) (ABDC Rank A* and FT-50), Human Resource Management Journal (ABDC A/ABS4*), British Journal of Management, Harvard Business Review(FT-50), MIT Sloan Management Review (FT-50), Industrial Marketing Management, International Journal of Human Resource Management, Health Care Management Review, International Journal of Manpower, Knowledge Management Research & Practice, Organizational Dynamics, Personnel Review and Journal of International Management,</i> among others. Ashish is an Associate Editor - of the Human Resource Management Journal (ABDC-A), International journal of Management Reviews (ABDC- A), and the Journal of Business Research  (ABDC Rank-A).  Ashish is also on the Editorial Boards of HRMR (ABDC Rank- A), JSTP (ABDC-Rank A) and Journal of Knowledge Management (ABDC Rank-A).</p>`,
           },
