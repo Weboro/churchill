@@ -41,7 +41,7 @@ const CourseDetails = ({ slug }) => {
             courseCode={`${data?.course_code}`}
             subTitle={data?.description}
             BtnAText="Apply Now"
-            BtnBText="Enquire More"
+            BtnBText="Enquire Now"
             link={`https://agentportal.galaxy360.com.au/application-overview`}
             linkA={`https://forms.zohopublic.com.au/CIHE/form/StudentHubEnquiry/formperma/XilFJje5kQ-h7f4saQYbSV4kJ-kAMiG7p1QNfWEvDXs`}
             imageAStyle={`lg:scale-[135%]`}
@@ -55,7 +55,7 @@ const CourseDetails = ({ slug }) => {
 
           <div className="container mx-auto px-5">
             <h2 className="font-bold leading-9 mb-6 text-[36px] text-[#2C2B4B]">
-              Browse Other Courses
+              Browse Other Majors
             </h2>
             <CoursesSlider />
           </div>

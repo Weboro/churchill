@@ -8,6 +8,8 @@ import { MdEmail } from "react-icons/md";
 const Footer = () => {
   const NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL =
     process.env.NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL;
+  const NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL =
+    process.env.NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL;
 
   return (
     <div className="">
@@ -80,12 +82,12 @@ const Footer = () => {
                 <ul className="flex flex-col gap-1 text-[14px]">
                   <li>
                     <Link href={"/about-us/CIHE-governance-structure"}>
-                      CIHE Governance Structure
+                      CIHE Governance
                     </Link>
                   </li>
                   <li>
                     <Link href={"/about-us/CIHE-organisational-chart"}>
-                      CIHE Organisational Chart
+                      CIHE Leadership
                     </Link>
                   </li>
                   <li>
@@ -94,8 +96,8 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href={"/about-us/governance-and-leadership"}>
-                      Company and Financial Documents
+                    <Link href={"/about-us/company-and-financial-documents"}>
+                      Financial Standing, TPS & Enrolment Summary
                     </Link>
                   </li>
                   <li>
@@ -109,9 +111,14 @@ const Footer = () => {
                   <li>
                     <Link href={"/about-us/accreditation"}> Accreditation</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href={"/about-us/approved-agents"}>
                       Approved Agents
+                    </Link>
+                  </li> */}
+                  <li>
+                    <Link href={"/about-us/gallery"}>
+                      Gallery
                     </Link>
                   </li>
                 </ul>
@@ -194,7 +201,7 @@ const Footer = () => {
                     <Link href={"/blogs"}>Blogs</Link>
                   </li>
                   <li>
-                    <Link href={"/events"}>Events</Link>
+                    <Link href={"/events"}>Upcoming Events</Link>
                   </li>
                   <li>
                     <Link
@@ -215,11 +222,26 @@ const Footer = () => {
                     <Link href={"/"}>Home</Link>
                   </li>
                   <li>
+                    <Link href={"https://elearning.churchill.nsw.edu.au/"}>
+                      eLearning
+                    </Link>
+                  </li>
+                  <li>
                     <Link href={"/find-agent"}>Find Agent</Link>
                   </li>
                   <li>
+                    <Link href={'https://churchill.softlinkhosting.com.au/liberty/libraryHome.do'}>
+                      Library
+                    </Link>
+                  </li>
+                  <li>
                     <Link href={`${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}`}>
-                      Student Hub
+                      Student Support
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={`${NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL}`}>
+                      Agent Hub
                     </Link>
                   </li>
                   <li>
@@ -242,6 +264,11 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
+                    <Link href={"https://agent.churchill.nsw.edu.au/"}>
+                      Agent Portal
+                    </Link>
+                  </li>
+                  <li>
                     <Link href={"https://churchill.softlinkhosting.com.au/"}>
                       Library Portal
                     </Link>
@@ -250,13 +277,13 @@ const Footer = () => {
                     <Link href={"http://staff.churchill.nsw.edu.au"}>Staff Portal</Link>
                   </li>
                   <li>
-                    <Link href={"https://agent.churchill.nsw.edu.au/"}>
-                      Agent Portal
+                    <Link href={"https://elearning.churchill.nsw.edu.au/login/index.php"}>
+                      Student Moodle Portal
                     </Link>
                   </li>
                   <li>
-                    <Link href={"https://elearning.churchill.nsw.edu.au/login/index.php"}>
-                      Student Moodle Portal
+                    <Link href={"https://attendance.churchill.nsw.edu.au/"}>
+                      Attendance Portal
                     </Link>
                   </li>
                 </ul>
@@ -298,8 +325,7 @@ const Footer = () => {
           <hr className="border-neutral-950/25 " />
 
           <p className="text-center text-[#323432] text-[14px] py-4">
-            Copyright &copy;{new Date().getFullYear()} Mpika Holdings Pty Ltd
-            t/as Churchill Institute of Higher Education.
+            Copyright &copy;{new Date().getFullYear()} Mpika Holdings Pty Ltd (ACN: 612 507 141) t/as Churchill Institute of Higher Education (ABN: 91 612 507 141).
           </p>
         </div>
       </div>

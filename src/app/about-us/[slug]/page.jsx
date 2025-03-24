@@ -7,6 +7,7 @@ import {
   GovernanceStructure,
   OrganisationalChartSection,
   GalleryPage,
+  FinancialStanding,
 } from "@/components";
 import { FaArrowRight } from "react-icons/fa";
 import Animation from "@/constDatas/animations/PageNotFound.json";
@@ -28,6 +29,8 @@ const Page = ({ params }) => {
         <GovernanceStructure slug={slug} />
       ) : slug === "CIHE-organisational-chart" ? (
         <OrganisationalChartSection slug={slug} />
+      ) : slug === "company-and-financial-documents" ? (
+        <FinancialStanding />
       ) : slug === "gallery" ? (
         <GalleryPage />
       ) : (

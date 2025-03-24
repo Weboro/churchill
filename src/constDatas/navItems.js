@@ -73,7 +73,7 @@ export const navItems = [
       ],
       related: [
         {
-          title: "CIHE Governance Structure",
+          title: "CIHE Governance",
           image: "/assets/course-a.png",
           slug: "CIHE-governance-structure",
           link: "",
@@ -82,7 +82,7 @@ export const navItems = [
             "Thank you for your interest in courses at the Churchill Institute of Higher Education. I'm delighted that you've taken the time to view our website and hope it may help you decide to make CIHE your first choice when it comes to your future education needs. At CIHE, we believe that we are unique. The Institute is new and innovative with an enviable reputation as a provider of quality education in a caring environment. Whilst our students include individuals from many backgrounds, cultures and beliefs, our focus on universal values makes us a little different from other colleges. We pride ourselves on our ethical dealings with students and stakeholders and ensure that every student is treated as an individual. As Dean/CEO, my door is always open to students, whether to discuss their course, personal concerns or simply just to pass the time of day. At our levels of CIHE, students are our number one priority. We are all aware that today's corporate world is a very competitive place and organisations are increasingly seeking employees with ‘the right attitude'. To address this, we focus on the whole individual. Our students are encouraged to develop and demonstrate an attitude that's appealing to prospective employers based on respect for others, honesty, integrity, loyalty and a strong work ethic. These attributes are not only important in our work life but also in our personal life - they help us to be successful individuals.",
         },
         {
-          title: "CIHE Organisational Chart",
+          title: "CIHE Leadership",
           image: "/assets/course-b.png",
           slug: "CIHE-organisational-chart",
           link: "",
@@ -100,7 +100,7 @@ export const navItems = [
             "Churchill Institute of Higher Education's campus is located at Level 1, 16-18 Wentworth Street Parramatta NSW 2150 a major urban area of Sydney with ample access to employment, social and accommodation opportunities. The Campus is walking distance to the main public transport located at Parramatta Station, close to business facilities with touristic locations of Sydney a short train ride away. The Campus is spacious and well-equipped. The campus pro vides facilities specifically designed to provide students and staff with premises and equipment to promote and foster excellence in teaching and learning. Its facilities are allocated for teaching purpose and all other essential academic activities such as student services and academic activities as well as all general administration. New students joining Churchill Institute of Higher Education will attend the Orientation Program conducted at the beginning of each semester where details about living, getting around and about, and studying in Parramatta and Sydney are provided. The Campus is equipped with an in-house Library where students and staff have access to a number of textbooks and online databases for their reference. The library will ensure adequate computers are available for students to access online databases and the library catalogue.",
         },
         {
-          title: "Company and Financial Documents",
+          title: "Financial Standing, TPS & Enrolment Summary",
           image: "/assets/course-d.png",
           slug: "company-and-financial-documents",
           link: "",
@@ -112,7 +112,7 @@ export const navItems = [
     },
     Catagories: [
       {
-        menuTitle: "CIHE Governance Structure",
+        menuTitle: "CIHE Governance",
         headerIcon: "fi fi-rr-department-structure",
         slug: "CIHE-governance-structure",
         link: "",
@@ -121,7 +121,7 @@ export const navItems = [
         CatagoriesItem: [],
       },
       {
-        menuTitle: "CIHE Organisational Chart",
+        menuTitle: "CIHE Leadership",
         headerIcon: "fi fi-rr-chart-network",
         slug: "CIHE-organisational-chart",
         link: "",
@@ -221,7 +221,7 @@ export const navItems = [
         ],
       },
       {
-        menuTitle: "Company and Financial Documents",
+        menuTitle: "Financial Standing, TPS & Enrolment Summary",
         headerIcon: "fi fi-rr-document",
         slug: "company-and-financial-documents",
         link: "",
@@ -326,7 +326,7 @@ export const navItems = [
         redirectLink: "",
       },
       {
-        menuTitle: "upcoming Events",
+        menuTitle: "Upcoming Events",
         slug: "upcoming-events",
         headerIcon: "fi fi-rr-calendar-day",
         image: "/assets/course-b.png",
@@ -334,7 +334,7 @@ export const navItems = [
         redirectLink: "",
       },
       {
-        menuTitle: "upcoming key dates",
+        menuTitle: "Upcoming Key Dates",
         slug: "upcoming-key-dates",
         headerIcon: "fi fi-rr-calendar",
         image: "/assets/course-b.png",

@@ -121,21 +121,19 @@ const CoursesSlider = () => {
               <div className="">
                 <div className="flex gap-[24px]">
                   <button
-                    className={`rounded-full w-[54px] h-[54px] flex items-center justify-center ${
-                      currentSlide === 0
-                        ? "bg-[#848484] text-white border border-[#848484]"
-                        : "hover:bg-[#848484] hover:text-white bg-transparent text-[#202917] border border-[#202917]"
-                    }`}
+                    className={`rounded-full w-[54px] h-[54px] flex items-center justify-center ${currentSlide === 0
+                      ? "bg-[#848484] text-white border border-[#848484]"
+                      : "hover:bg-[#848484] hover:text-white bg-transparent text-[#202917] border border-[#202917]"
+                      }`}
                     onClick={goToPreviousSlide}
                   >
                     <BiChevronLeft className="text-[24px]" />
                   </button>
                   <button
-                    className={`rounded-full w-[54px] h-[54px] flex items-center justify-center ${
-                      currentSlide === totalSlides - 1
-                        ? "bg-[#848484] text-white border border-[#848484]"
-                        : "hover:bg-[#848484] hover:text-white bg-transparent text-[#202917] border border-[#202917]"
-                    }`}
+                    className={`rounded-full w-[54px] h-[54px] flex items-center justify-center ${currentSlide === totalSlides - 1
+                      ? "bg-[#848484] text-white border border-[#848484]"
+                      : "hover:bg-[#848484] hover:text-white bg-transparent text-[#202917] border border-[#202917]"
+                      }`}
                     onClick={goToNextSlide}
                   >
                     <BiChevronRight className="text-[24px]" />
@@ -147,7 +145,7 @@ const CoursesSlider = () => {
                 <div className="flex justify-start">
                   <Link href={"/courses"}>
                     <Button
-                      btnName={"View all Courses"}
+                      btnName={"View all Majors"}
                       icon={<FaArrowRight />}
                       styleA={"flex items-center gap-1"}
                       styleType="secondary"

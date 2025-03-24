@@ -11,21 +11,18 @@ const TabbedPane = ({ data }) => {
         <div className="flex flex-col gap-3 lg:flex-row lg:justify-center lg:items-center">
           {data?.map((item, index) => (
             <div
-              className={`capitalize flex items-center justify-between px-2 py-2 border rounded-md border-primary-orange transition-all font-bold ${
-                selectedIndex === index ? "bg-[#E59623]" : ""
-              } ${
-                selectedIndex === index
+              className={`capitalize flex items-center justify-between px-2 py-2 border rounded-md border-primary-orange transition-all font-bold ${selectedIndex === index ? "bg-[#E59623]" : ""
+                } ${selectedIndex === index
                   ? "lg:bg-[#E59623] lg:border-2"
                   : "lg:text-[#2C2B4B] lg:border-2 lg:border-[#E59623]"
-              } lg:px-6 lg:py-2 lg:rounded-lg lg:transition-all lg:hover:cursor-pointer lg:select-none lg:text-center`}
+                } lg:px-6 lg:py-2 lg:rounded-lg lg:transition-all lg:hover:cursor-pointer lg:select-none lg:text-center`}
               key={index}
               onClick={() => setSelectedIndex(index)}
             >
               {item.title}
               <i
-                className={`lg:hidden text-2xl fi fi-rr-cross-small flex transition-all ${
-                  selectedIndex === index ? "rotate-0" : "rotate-[45deg]"
-                }`}
+                className={`lg:hidden text-2xl fi fi-rr-cross-small flex transition-all ${selectedIndex === index ? "rotate-0" : "rotate-[45deg]"
+                  }`}
               ></i>
             </div>
           ))}
@@ -56,7 +53,7 @@ const TabbedPane = ({ data }) => {
                     className="rich-text-container"
                     dangerouslySetInnerHTML={{ __html: item.rich_text }}
                   />
-                  {selectedIndex === 3 && (
+                  {/* {selectedIndex === 3 && (
                     <>
                       <h2 className="text-xl capitalize font-bold mt-6 mb-3">
                         Ready to start your journey with Churchill?
@@ -70,7 +67,7 @@ const TabbedPane = ({ data }) => {
                         </a>
                       </div>
                     </>
-                  )}
+                  )} */}
                 </div>
               )
           )}

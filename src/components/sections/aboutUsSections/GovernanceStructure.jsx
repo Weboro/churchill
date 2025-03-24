@@ -4,7 +4,7 @@ import Image from "next/image";
 const GovernanceStructure = ({ slug }) => {
   return (
     <div>
-      <PatternBannerCard title="Governance Structure" />
+      <PatternBannerCard title="CIHE Governance" />
       <div className="container mx-auto px-5">
         {/* <Image
           width={1000}
