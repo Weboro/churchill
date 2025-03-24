@@ -694,5 +694,5 @@ export const navItems = [
         image: "/assets/hero-image.jpeg",
       },
     ],
-  },
+  }
 ];

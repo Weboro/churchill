@@ -61,8 +61,8 @@ const NavList = ({
             item?.Catagories?.length > 0
               ? true
               : item.slug === "courses"
-              ? true
-              : false;
+                ? true
+                : false;
 
           const mapData =
             item.slug === "courses" ? coursesData : item.Catagories;
@@ -103,16 +103,15 @@ const NavList = ({
                           <ul className="h-[110px] md:h-auto overflow-y-scroll grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-2">
                             {mapData.map((subItem, index) => (
                               <Link
-                                target={`${
-                                  subItem?.redirectLink ? "_blank" : ""
-                                }`}
+                                target={`${subItem?.redirectLink ? "_blank" : ""
+                                  }`}
                                 key={index}
                                 href={
                                   subItem?.redirectLink
                                     ? subItem?.redirectLink
                                     : subItem?.link
-                                    ? subItem?.link
-                                    : `/${item.slug}/${subItem.slug}`
+                                      ? subItem?.link
+                                      : `/${item.slug}/${subItem.slug}`
                                 }
                                 className="w-full h-full lg:max-h-[6rem] flex"
                               >
@@ -122,9 +121,8 @@ const NavList = ({
                                 >
                                   <div className="w-10 h-10 bg-[#eb9320]/20 rounded-full grid place-items-center">
                                     <i
-                                      className={`${
-                                        subItem.headerIcon || subItem.icon
-                                      } m-0 flex items-center `}
+                                      className={`${subItem.headerIcon || subItem.icon
+                                        } m-0 flex items-center `}
                                     />
                                   </div>
 
@@ -148,9 +146,8 @@ const NavList = ({
               ) : (
                 <Link href={``}>
                   <li
-                    className={`flex gap-1 items-center ${
-                      isActive && "text-[#eb9320]"
-                    }  cursor-pointer pb-5`}
+                    className={`flex gap-1 items-center ${isActive && "text-[#eb9320]"
+                      }  cursor-pointer pb-5`}
                   >
                     <p className="hover:text-[#eb9320]">{item?.title}</p>
                   </li>
@@ -159,7 +156,11 @@ const NavList = ({
             </div>
           );
         })}
-
+        <li>
+          <Link href="/emergency-contact" className="flex gap-1 items-center cursor-pointer text-red-600 hover:text-[#eb9320]">
+            <span>Emergency Contacts</span>
+          </Link>
+        </li>
         <li
           onClick={() => {
             setOpenSearch(true);
