@@ -334,7 +334,7 @@ export const navItems = [
         redirectLink: "",
       },
       {
-        menuTitle: "Upcoming Key Dates",
+        menuTitle: "Key Dates",
         slug: "upcoming-key-dates",
         headerIcon: "fi fi-rr-calendar",
         image: "/assets/course-b.png",
@@ -635,7 +635,7 @@ export const navItems = [
     Catagories: [
       {
         icon: <RiRefund2Fill />,
-        menuTitle: "eLearning",
+        menuTitle: "Learning Management System (LMS)",
         headerIcon: "fi fi-rr-lesson",
         subTitle: "Access your timetable, results, trimester invoices.",
         slug: "agent-login",

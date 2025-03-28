@@ -9,8 +9,8 @@ const UpcomingKeyDatesSection = () => {
         <TopBannerCard
           image={`/assets/hero-image.jpeg`}
           titleSpan={""}
-          title={"Upcoming Key Dates"}
-          subTitle={`Student Hub > Request Form > Upcoming Key Dates`}
+          title={"Key Dates"}
+          subTitle={`Student Hub > Request Form > Key Dates`}
         />
       </div>
       <div className="container mx-auto px-5">

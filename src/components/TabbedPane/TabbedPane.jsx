@@ -63,7 +63,7 @@ const TabbedPane = ({ data }) => {
                           <Button btnName={"Apply Yourself"} style={"w-fit"} />
                         </a>
                         <a href="/find-agent">
-                          <Button btnName={"Find Agent"} style={"w-fit"} />
+                          <Button btnName={"Find an Education Agent"} style={"w-fit"} />
                         </a>
                       </div>
                     </>

@@ -208,7 +208,7 @@ const Footer = () => {
                       target="_blank"
                       href={`${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}/upcoming-key-dates`}
                     >
-                      Upcoming Key Dates
+                      Key Dates
                     </Link>
                   </li>
                 </ul>
@@ -223,11 +223,11 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link href={"https://elearning.churchill.nsw.edu.au/"}>
-                      eLearning
+                      Learning Management System (LMS)
                     </Link>
                   </li>
                   <li>
-                    <Link href={"/find-agent"}>Find Agent</Link>
+                    <Link href={"/find-agent"}>Find an Education Agent</Link>
                   </li>
                   <li>
                     <Link href={'https://churchill.softlinkhosting.com.au/liberty/libraryHome.do'}>
@@ -260,7 +260,7 @@ const Footer = () => {
                       target="_blank"
                       href={"https://elearning.churchill.nsw.edu.au/"}
                     >
-                      eLearning
+                      Learning Management System (LMS)
                     </Link>
                   </li>
                   <li>

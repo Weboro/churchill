@@ -75,7 +75,7 @@ const ContactUs = () => {
             </div>
           </section>
 
-          <section className="flex flex-col gap-12 mt-[32px]">
+          {/* <section className="flex flex-col gap-12 mt-[32px]">
             <h2 className=" text-3xl md:text-4xl font-bold text-center w-fit mx-auto">
               Frequently Asked Questions
             </h2>
@@ -94,7 +94,7 @@ const ContactUs = () => {
                 />
               </Link>
             </span>
-          </section>
+          </section> */}
 
           <EnquirySection />
         </div>
