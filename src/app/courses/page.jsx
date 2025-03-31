@@ -64,7 +64,7 @@ const Courses = () => {
               linkA=""
               handleRightBtn={handleRightBtn}
             />
-            <section className="container mx-auto bg-white rounded-lg p-8 fade-in">
+            <section className="rich-text-container container mx-auto bg-white rounded-lg p-8 fade-in">
               <div className="text-center mb-8">
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Bachelor of Business (BBus)</h1>
                 <p className="text-lg md:text-xl text-gray-600">
@@ -81,17 +81,17 @@ const Courses = () => {
               <div className="mb-8">
                 <ul className="space-y-3 text-gray-700">
                   <li>
-                    • Comprises four (4) majors in <Link href="/courses/major-in-accounting" className="text-orange-500 hover:underline">Accounting</Link>,  <Link href="/courses/major-in-hospitality" className="text-orange-500 hover:underline">Hospitality</Link>, <Link href="/courses/major-in-information-systems" className="text-orange-500 hover:underline">Information Systems</Link> and <Link href="/courses/major-in-management" className="text-orange-500 hover:underline">Management</Link>
+                    Comprises four (4) majors in <Link href="/courses/major-in-accounting" className="text-orange-500 hover:underline">Accounting</Link>,  <Link href="/courses/major-in-hospitality" className="text-orange-500 hover:underline">Hospitality</Link>, <Link href="/courses/major-in-information-systems" className="text-orange-500 hover:underline">Information Systems</Link> and <Link href="/courses/major-in-management" className="text-orange-500 hover:underline">Management</Link>
                     <ul className="ml-6 mt-2 space-y-2">
-                      <li>* The Accounting major is accredited by <a href="https://apps.cpaaustralia.com.au/accredited-course-details/?id=c296df07-cd90-ef11-8a69-00224817f123" target="_blank" className="text-orange-500 hover:underline"> CPA Australia </a> and <a href="https://www.charteredaccountantsanz.com/-/media/4014530aae564cf18df73ca785a61b1c.pdf" target="_blank" className="text-orange-500 hover:underline"> Chartered Accountants (CA) Australia </a></li>
-                      <li>* Is delivered over 3 years full-time, face to face on campus over 6 semesters.</li>
-                      <li>* Requires completion of 24 Units (240 credit points) that comply with the course major rules to meet graduation eligibility requirements.</li>
+                      <li>The Accounting major is accredited by <a href="https://apps.cpaaustralia.com.au/accredited-course-details/?id=c296df07-cd90-ef11-8a69-00224817f123" target="_blank" className="text-orange-500 hover:underline"> CPA Australia </a> and <a href="https://www.charteredaccountantsanz.com/-/media/4014530aae564cf18df73ca785a61b1c.pdf" target="_blank" className="text-orange-500 hover:underline"> Chartered Accountants (CA) Australia </a></li>
+                      <li>Is delivered over 3 years full-time, face to face on campus over 6 semesters.</li>
+                      <li>Requires completion of 24 Units (240 credit points) that comply with the course major rules to meet graduation eligibility requirements.</li>
                     </ul>
                   </li>
-                  <li>• Each semester comprises 12 weeks of class teaching (class attendance), a mid-semester break, a one (1) 1 week study break and a two (2) week exam period. Refer to the <Link href="https://student.churchill.nsw.edu.au/upcoming-key-dates" target="_blank" className="text-orange-500 hover:underline">key dates </Link> for details.</li>
-                  <li>• Attendance for each unit includes 4 face-to-face contact hours per week that are divided into lecture and tutorial components (2-hour lecture + 2-hour tutorial).</li>
-                  <li>• For each contact hour, 1.5 hours of independent study is expected from students for every face-to face hour (4 + 6 = 10 hours’ workload per unit per week).</li>
-                  <li>• Full time workload: 4 Units x 10 hours per Unit = 40 hours per week.</li>
+                  <li>Each semester comprises 12 weeks of class teaching (class attendance), a mid-semester break, a one (1) 1 week study break and a two (2) week exam period. Refer to the <Link href="https://student.churchill.nsw.edu.au/upcoming-key-dates" target="_blank" className="text-orange-500 hover:underline">key dates </Link> for details.</li>
+                  <li>Attendance for each unit includes 4 face-to-face contact hours per week that are divided into lecture and tutorial components (2-hour lecture + 2-hour tutorial).</li>
+                  <li>For each contact hour, 1.5 hours of independent study is expected from students for every face-to face hour (4 + 6 = 10 hours’ workload per unit per week).</li>
+                  <li>Full time workload: 4 Units x 10 hours per Unit = 40 hours per week.</li>
                 </ul>
               </div>
 

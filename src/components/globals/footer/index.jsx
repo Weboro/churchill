@@ -156,7 +156,7 @@ const Footer = () => {
                 </h3>
                 <ul className="flex flex-col gap-1 text-[14px]">
                   <li>
-                    <Link href={"/apply-now"}>Apply At Churchil</Link>
+                    <Link href={"/apply-now"}>Apply At Churchill</Link>
                   </li>
                   <li>
                     <Link
@@ -166,9 +166,9 @@ const Footer = () => {
                       Student Hub
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href={"/contact-us/faq"}>FAQ</Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link
                       target="_blank"
@@ -186,7 +186,7 @@ const Footer = () => {
                         "https://forms.zohopublic.com.au/CIHE/form/Grievanceform/formperma/5jf5-XC5SXb47VhUMTlxv30fih-aqYAUbQh8V3lncvQ"
                       }
                     >
-                      Grievance Form
+                      Online Student Grievance Application Form
                     </Link>
                   </li>
                   <li>
