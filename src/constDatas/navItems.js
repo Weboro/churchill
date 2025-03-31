@@ -238,13 +238,13 @@ export const navItems = [
         redirectLink: `${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}/policies`,
         CatagoriesItem: [],
       },
-      {
-        menuTitle: "Accreditation",
-        headerIcon: "fi fi-rr-legal",
-        slug: "accreditation",
-        image: "/assets/course-c.png",
-        CatagoriesItem: [],
-      },
+      // {
+      //   menuTitle: "Accreditation",
+      //   headerIcon: "fi fi-rr-legal",
+      //   slug: "accreditation",
+      //   image: "/assets/course-c.png",
+      //   CatagoriesItem: [],
+      // },
       {
         menuTitle: "Gallery",
         headerIcon: "fi fi-rr-gallery",
@@ -262,7 +262,7 @@ export const navItems = [
     ],
   },
   {
-    title: "Student",
+    title: "Current Students Information",
     slug: "student",
     headerDesc: "Quick access to access necessary links for our students. ",
     link: "",
@@ -301,7 +301,7 @@ export const navItems = [
           "https://forms.zohopublic.com.au/CIHE/form/StudentHubEnquiry/formperma/XilFJje5kQ-h7f4saQYbSV4kJ-kAMiG7p1QNfWEvDXs",
       },
       {
-        menuTitle: "Grievance Form",
+        menuTitle: " Online Student Grievance Application Form",
         slug: "grievance-form",
         headerIcon: "fi fi-rr-sad",
         image: "/assets/course-b.png",

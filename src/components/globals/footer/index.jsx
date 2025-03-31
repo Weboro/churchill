@@ -108,9 +108,9 @@ const Footer = () => {
                       Policies and Procedures
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href={"/about-us/accreditation"}> Accreditation</Link>
-                  </li>
+                  </li> */}
                   {/* <li>
                     <Link href={"/about-us/approved-agents"}>
                       Approved Agents
