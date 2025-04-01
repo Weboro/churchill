@@ -36,7 +36,7 @@ const CourseDetails = ({ slug }) => {
             beforeTitle={data?.faculty.faculty_name}
             // image={`/assets/banner-courses.webp`}
             image={data?.heroImage}
-            imageA={data?.heroIconImage}
+            // imageA={data?.heroIconImage}
             titleSpan={data?.course_name}
             courseCode={`${data?.course_code}`}
             subTitle={data?.description}
