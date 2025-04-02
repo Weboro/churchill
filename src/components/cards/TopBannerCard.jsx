@@ -91,13 +91,15 @@ const TopBannerCard = ({
                 </FadeUpAnimation>
               </div>
             </div>
-            <Image
-              src={`/assets/accredit.png`}
-              alt=""
-              width={1000}
-              height={1000}
-              className={` object-contain w-[300px]`}
-            />
+            {titleSpan === "Major in Accounting" && (
+              <Image
+                src={`/assets/accredit.png`}
+                alt=""
+                width={1000}
+                height={1000}
+                className="object-contain w-[300px]"
+              />
+            )}
           </div>
 
           {imageA && (

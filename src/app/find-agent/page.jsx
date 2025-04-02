@@ -15,6 +15,9 @@ import Image from "next/image";
 import Link from "next/link";
 import FadeUpAnimation from "@/animations/FadeUp";
 
+// import { AgentUserData } from "@/components/utils/apiQueries";
+
+
 function formatText(text) {
   return text.trim().toLowerCase();
 }
@@ -71,6 +74,7 @@ const FindAgent = () => {
     });
 
     setFilteredData(filtered);
+
   };
   return (
     <>
@@ -137,6 +141,7 @@ const FindAgent = () => {
             </>
           ) : (
             <>
+              {console.log(filteredData)}
               {filteredData.length > 0 ? (
                 <div>
                   <p className="mb-6">
