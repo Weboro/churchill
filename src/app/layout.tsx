@@ -104,7 +104,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
-        <EmergencyContactFloater />
+        {/* <EmergencyContactFloater /> */}
         <CookieBanner />
         <Footer />
       </body>

@@ -42,7 +42,7 @@ const ContactUs = () => {
                 }
               />
             </Link>
-            <Link href={"/contact-us/faq"}>
+            {/* <Link href={"/contact-us/faq"}>
               <Button
                 btnName="FAQ"
                 icon={<FaArrowRight />}
@@ -51,7 +51,7 @@ const ContactUs = () => {
                   "border font-semibold text-[14px] border-2 border-[#606060] rounded-md px-4 py-3 hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
                 }
               />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>
@@ -75,7 +75,7 @@ const ContactUs = () => {
             </div>
           </section>
 
-          <section className="flex flex-col gap-12 mt-[32px]">
+          {/* <section className="flex flex-col gap-12 mt-[32px]">
             <h2 className=" text-3xl md:text-4xl font-bold text-center w-fit mx-auto">
               Frequently Asked Questions
             </h2>
@@ -94,7 +94,7 @@ const ContactUs = () => {
                 />
               </Link>
             </span>
-          </section>
+          </section> */}
 
           <EnquirySection />
         </div>

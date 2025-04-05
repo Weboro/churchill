@@ -76,6 +76,7 @@ import FaqPage from "./sections/contactSections/FaqPage";
 import EventsPage from "./pages/EventsPage";
 import HandBookFloater from "./floater/HandBookFloater";
 import EmergencyContactFloater from "./floater/EmergencyContactFloater";
+import FinancialStanding from "./sections/aboutUsSections/FinancialStanding";
 
 export {
   Button,
@@ -155,5 +156,6 @@ export {
   FaqPage,
   EventsPage,
   HandBookFloater,
-  EmergencyContactFloater
+  EmergencyContactFloater,
+  FinancialStanding
 };

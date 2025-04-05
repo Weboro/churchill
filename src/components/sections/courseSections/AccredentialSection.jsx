@@ -8,7 +8,7 @@ const AccredentialSection = ({ slug }) => {
 
   return (
     <div>
-      <PatternBannerCard title="Accredentials" />
+      <PatternBannerCard title="Accreditation" />
 
       <div className="container-blog mx-auto px-5">
         <div className="flex flex-col gap-8 mb-[48px]">
@@ -30,7 +30,7 @@ const AccredentialSection = ({ slug }) => {
 
                   <div>
                     <p className="text-2xl font-bold text-center w-fit mx-auto">
-                      Course Code: ({item.courseCode})
+                      CRICOS Course Code: ({item.courseCode})
                     </p>
                     <p className="text-center w-fit mx-auto text-xl font-semibold">
                       is Accrediated By

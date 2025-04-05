@@ -40,6 +40,13 @@ const IndivisualBlogPage = ({ slug }) => {
 
   const toastRef = useRef();
 
+  const cleanText = (data?.rich_text || "")
+    .replace(/<[^>]+>/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  const wordCount = cleanText.split(" ").length;
+  const readingTime = Math.ceil(wordCount / 200);
+
   return (
     <>
       {isLoading ? (
@@ -85,7 +92,8 @@ const IndivisualBlogPage = ({ slug }) => {
                     <span>·</span>
 
                     <i className="fi fi-rr-clock-three flex"></i>
-                    <>{Math.ceil(data?.rich_text?.length / 300)} min read</>
+                    <>{readingTime} mins read</>
+
                   </div>
 
                   <h2 className="text-4xl leading-[40px] lg:text-6xl lg:leading-[62px] font-bold">

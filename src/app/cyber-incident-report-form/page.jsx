@@ -172,7 +172,7 @@ const CybersecurityIncident = () => {
 
   return (
     <>
-      <ToastComponent ref={toastRef} /> 
+      <ToastComponent ref={toastRef} />
 
       <div className="md:container sm:px-20 px-0  form-fileds mx-auto mb-20">
         <div className=" max-w-[800px] mx-auto p-5 rounded-md bg-white">
@@ -533,7 +533,7 @@ const CybersecurityIncident = () => {
                       Select
                     </option>
                     <option value="website">Website</option>
-                    <option value="eLearning">E-Learning</option>
+                    <option value="eLearning">Learning Management System (LMS)</option>
                     <option value="inHouseSystem">In-House System</option>
                     <option value="others">Others</option>
                   </select>
@@ -633,19 +633,19 @@ const CybersecurityIncident = () => {
             <div className="flex justify-center">
               {isSending ? (
                 <button
-                type="submit"
-                className="text-center flex justify-center btn-translate border-2 rounded-md font-semibold text-[14px] border-[#606060] px-6 md:px-8 py-3 bg-[#E59623]"
-              >
-                <div className="flex items-center ">
-                  <div className="flex flex-col">
-                    <div className="whitespace-nowrap">Sending</div>
-                    <span className="block text-[16px] whitespace-nowrap"></span>
+                  type="submit"
+                  className="text-center flex justify-center btn-translate border-2 rounded-md font-semibold text-[14px] border-[#606060] px-6 md:px-8 py-3 bg-[#E59623]"
+                >
+                  <div className="flex items-center ">
+                    <div className="flex flex-col">
+                      <div className="whitespace-nowrap">Sending</div>
+                      <span className="block text-[16px] whitespace-nowrap"></span>
+                    </div>
+                    <div className="ml-4">
+                      <CgSpinner size={30} className="spinner" />
+                    </div>
                   </div>
-                  <div className="ml-4">
-                      <CgSpinner size={30} className="spinner"/>
-                  </div>
-                </div>
-              </button>
+                </button>
               ) : (
                 <button
                   type="submit"

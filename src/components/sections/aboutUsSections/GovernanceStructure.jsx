@@ -4,15 +4,16 @@ import Image from "next/image";
 const GovernanceStructure = ({ slug }) => {
   return (
     <div>
-      <PatternBannerCard title="Governance Structure" />
+      <PatternBannerCard title="CIHE Governance" />
       <div className="container mx-auto px-5">
-        <Image
+        {/* <Image
           width={1000}
           height={800}
-          alt="organizational chart"
-          src="/assets/CIHE-Governance-Struct.png"
+          alt="governance chart"
+          src="/assets/CIHE-Governance-Structi.svg"
           className="w-full"
-        />
+        /> */}
+        <h6 className="py-5 mx-auto my-5 text-center">This page is under construction.</h6>
       </div>
     </div>
   );

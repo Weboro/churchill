@@ -53,7 +53,7 @@ const TopBannerCard = ({
             {courseCode && (
               <FadeUpAnimation delay={0.15}>
                 <p className="text-white underline-[#2C2B4B] pb-1 px-[2px] mt-5 text-xl font-extrabold w-fit ">
-                  Course Code:{" "}
+                  CRICOS Course Code:{" "}
                   <span className="relative before:absolute before:w-full before:h-1 before:bg-[#E59623] before:bottom-0 before:left-0">
                     {courseCode}
                   </span>
@@ -91,6 +91,15 @@ const TopBannerCard = ({
                 </FadeUpAnimation>
               </div>
             </div>
+            {titleSpan === "Major in Accounting" && (
+              <Image
+                src={`/assets/accredit.png`}
+                alt=""
+                width={1000}
+                height={1000}
+                className="object-contain w-[300px]"
+              />
+            )}
           </div>
 
           {imageA && (

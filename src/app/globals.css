@@ -509,13 +509,17 @@ tr:nth-child(even) {
   border: 1px solid #e59623;
 }
 
-.rich-text-container table tr:nth-child(1) th,
-.rich-text-container table tr:nth-child(1) td {
+.rich-text-container table thead tr th,
+.rich-text-container table thead tr td {
   background: #e59623;
   color: #eff3f5;
   font-weight: 600;
 }
-
+/* .rich-text-container table thead{
+  background: #e59623;
+  color: #eff3f5;
+  font-weight: 600;
+} */
 /*  */
 .gs-image-box,
 .gs-web-image-box {
