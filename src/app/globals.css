@@ -384,6 +384,10 @@ tr:nth-child(even) {
   font-size: 1.125rem;
   line-height: 1.5rem;
 }
+.rich-text-container a {
+text-decoration: underline!important;
+color: blueviolet;
+}
 
 .rich-text-container {
   margin-inline: auto;
@@ -550,4 +554,8 @@ tr:nth-child(even) {
 .ico-pri i {
   filter: invert(78%) sepia(30%) saturate(5149%) hue-rotate(347deg)
     brightness(96%) contrast(86%);
+}
+
+.text-base a{
+  color: blue!important;
 }
