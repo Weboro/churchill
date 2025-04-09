@@ -80,7 +80,7 @@ const page = () => {
 
             </div>
             <div className="container mx-auto px-5 mb-20">
-                <h3 className="text-xl font-bold mb-4 p-0 sm:p-10 text-center">The below map of Australia shows the states and location of the national capital (Canberra) and state capitals (capital cities):</h3>
+                <h3 className="text-xl font-bold mb-10 p-0 sm:p-10 text-center">The below map of Australia shows the states and location of the national capital (Canberra) and state capitals (capital cities):</h3>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29342471.43105036!2d126.27452645104982!3d-26.13660754270196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2b2bfd076787c5df%3A0x538267a1955b1352!2sAustralia!5e0!3m2!1sen!2snp!4v1744000380229!5m2!1sen!2snp"
                     height="600"
@@ -92,7 +92,7 @@ const page = () => {
             </div>
             <div className="container mx-auto px-5 mb-20">
                 <h3 className="text-2xl font-bold p-5 text-center">Information about Sydney</h3>
-                <p>Churchill Institute of Higher Education (CIHE) is located in the Sydney suburb of Parramatta – Sydney’s “second city”, a vibrant, multi-cultural, commercial,  retail and residential hub that is only 30 minutes by train from Sydney ‘s Central Business District (CBD). Our campus is less than 5 minutes’ walk from Parramatta station at level 1/16-18 Wentworth St. Parramatta. </p>
+                <p className="mb-10">Churchill Institute of Higher Education (CIHE) is located in the Sydney suburb of Parramatta – Sydney’s “second city”, a vibrant, multi-cultural, commercial,  retail and residential hub that is only 30 minutes by train from Sydney ‘s Central Business District (CBD). Our campus is less than 5 minutes’ walk from Parramatta station at level 1/16-18 Wentworth St. Parramatta. </p>
                 <div className="flex flex-col md:flex-row items-center gap-4">
                     <img
                         src="/assets/route-paramatta.png"
