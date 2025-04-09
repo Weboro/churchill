@@ -430,63 +430,66 @@ export const checklist = [
   },
   {
     title: "Emergencies, Health Care and Student Support",
-    description: `< p class = "text-lg font-semibold" > Stay safe and healthy in Australia:</p >
+    description: `
   <ul class="list-disc ml-5">
-    <li class="text-base">Emergency Contacts:
+    <li class="text-base"><span class="font-bold">Emergency Contacts:</span>
       <ul class="list-disc ml-7">
-        <li class="text-base">Dial 000 (free call) in an emergency (police, ambulance or fire brigade)</li>
+        <li class="text-base"><span class="font-bold">Dial 000 (free call) in an emergency</span> (police, ambulance or fire brigade)</li>
       </ul>
     </li>
-    <li class="text-base">Health Care:
+    <li class="text-base"><span class="font-bold">Health Care:</span>
       <ul class="list-disc ml-7">
-        <li class="text-base">All international students must have Overseas Student Health Cover (OSHC) for the entire duration of their studies in Australia</li>
+        <li class="text-base">All international students must have <span class="font-bold">Overseas Student Health Cover (OSHC)</span> for the entire duration of their studies in Australia</li>
         <li class="text-base">The <a class="text-blue-500 hover:underline" href="https://oshaustralia.com.au/" target="_blank">Osh Australia website</a> provides more information and compares various health insurance providers</li>
-        <li class="text-base">Emergency medical care is available from the Emergency Department at all Sydney hospitals</li>
+        <li class="text-base">Emergency medical care is available from the Emergency Department at all <a href="https://www.healthdirect.gov.au/australian-health-services/search/sydney-2000-nsw/hospitals/1223151000168101" tagret="_blank">Sydney hospitals</a></li>
         <li class="text-base">Medical Centres are located in almost every suburb in Sydney if you need to see a doctor</li>
         <li class="text-base">Doctors working in medical centres are usually called GPs (General Practitioners)</li>
-        <li class="text-base">A list of GPs / Medical Centres in Sydney is available online</li>
+        <li class="text-base"><a href="https://doctors.com.au/find/general-practitioner/nsw/sydney-nsw-2000/" target="_blank">A list of GPs / Medical Centres </a>in Sydney is available online</li>
       </ul>
     </li>
-    <li class="text-base">Student Support and Safety:
+    <li class="text-base"></span>Student Support and Safety:</span>
       <ul class="list-disc ml-7">
-        <li class="text-base">Refer to the <a class="text-blue-500 hover:underline" href="https://www.cihe.edu.au/" target="_blank">Student Support and Safety page</a> for further contacts</li>
+        <li class="text-base">Refer to the <a class="text-blue-500 hover:underline" href="https://churchill.nsw.edu.au/emergency-contact" target="_blank">Student Support and Safety page</a> for further contacts</li>
       </ul>
     </li>
   </ul>`,
   },
   {
     title: "No Smoking Rules",
-    description: `< p class = "text-lg font-semibold" > Understand Australia’s no smoking rules:</p >
+    description: `
+    <p>Smoking is considered an anti-social habit in Australia due to the risk it poses to others through passive smoking</p>
+    <p>Smoking is banned in all enclosed spaces (including CIHE’s campus), common areas of residential buildings, sporting venues, public transport (including bus stops, ferry terminals, and railway platforms) in the state of New South Wales. Smoking is also banned in some other open-air spaces. Violations incur the payment of a fine. Refer to the <a class="text-blue-500 hover:underline" href="https://www.health.nsw.gov.au/tobacco/Pages/smoke-free-laws.aspx" target="_blank">NSW government no smoke rules</a> for details</p>
   <ul class="list-disc ml-5">
-    <li class="text-base">Smoking is considered an anti-social habit in Australia due to the risk it poses to others through passive smoking</li>
-    <li class="text-base">Smoking is banned in all enclosed spaces (including CIHE’s campus), common areas of residential buildings, sporting venues, public transport (including bus stops, ferry terminals, and railway platforms) in the state of New South Wales. Smoking is also banned in some other open-air spaces. Violations incur the payment of a fine. Refer to the <a class="text-blue-500 hover:underline" href="https://www.nsw.gov.au/" target="_blank">NSW government no smoke rules</a> for details</li>
+  
     <li class="text-base">Cigarettes cost approx. $35-$60 per packet in Australia and prices increase annually</li>
     <li class="text-base">If you smoke now, you should seriously consider quitting after arriving in Australia. You’ll see and feel a significant improvement to your health; and you’ll be pleasantly surprised how much money you can save each week</li>
-    <li class="text-base">The <a class="text-blue-500 hover:underline" href="https://www.quitnow.nsw.gov.au/" target="_blank">NSW Government Quit Line</a> offers free counselling and support to people who wish to quit smoking</li>
+    <li class="text-base">The <a class="text-blue-500 hover:underline" href="https://www.cancer.nsw.gov.au/prevention-and-screening/preventing-cancer/quit-smoking/nsw-quitline" target="_blank">NSW Government Quit Line</a> offers free counselling and support to people who wish to quit smoking</li>
   </ul>`,
   },
   {
     title: "Metrics Used in Australia",
-    description: `< p class = "text-lg font-semibold" > Familiarize yourself with the metric system used in Australia:</p >
+    description: `<p class="text-lg">Australia uses the Metric System for measurements, which may differ from your home county. Basic metrics are:</p>
   <ul class="list-disc ml-5">
     <li class="text-base">Distance: kilometres and metres</li>
     <li class="text-base">Measurements: centimetres and millimetres</li>
     <li class="text-base">Fluids: Litres or millilitres</li>
     <li class="text-base">Temperature: Celsius</li>
-    <li class="text-base">Refer to the metric conversion tables for further information</li>
-  </ul>`,
+  </ul>
+    <p>Refer to the metric conversion tables for further information</p>
+  
+  `,
   },
   {
     title: "Traffic and People Direction",
-    description: `< p class = "text-lg font-semibold" > Understand traffic and people direction in Australia:</p >
+    description: `
   <ul class="list-disc ml-5">
-    <li class="text-base">All vehicles drive on the left side of the road</li>
-    <li class="text-base">If you are sharing a path, staircase, escalator etc, always walk or stand to your left</li>
+    <li class="text-base">All vehicles drive on <span class="font-bold">the left side</span> of the road</li>
+    <li class="text-base">If you are sharing a path, staircase, escalator etc, always walk or stand to your <span class="font-bold">left</span></li>
   </ul>`,
   },
   {
     title: "Retail and Hospitality Trading Hours in Sydney",
-    description: `< p class = "text-lg font-semibold" > Know the trading hours for retail and hospitality in Sydney:</p >
+    description: `
   <ul class="list-disc ml-5">
     <li class="text-base">Shops are generally open 7 days a week in Sydney between 8.30am to 6.30pm</li>
     <li class="text-base">Larger supermarkets open from 8.30-12 midnight in some areas</li>
@@ -500,17 +503,17 @@ export const checklist = [
   },
   {
     title: "Public Holidays in Australia and New South Wales",
-    description: `< p class = "text-lg font-semibold" > Be aware of public holidays in Australia and NSW:</p >
+    description: `<p class="text-lg font-semibold">Public Holidays</p >
   <ul class="list-disc ml-5">
     <li class="text-base">Australia’s National Public Holidays are observed across all states and territories</li>
     <li class="text-base">NSW has public holidays in addition to Australia’s national public holidays</li>
     <li class="text-base">CIHE’s campus will not open on public holidays, although all online facilities will be available 24/7</li>
-    <li class="text-base">The <a class="text-blue-500 hover:underline" href="https://www.nsw.gov.au/" target="_blank">NSW government website</a> maintains public holiday dates and information (national and state dates)</li>
+    <li class="text-base">The <a class="text-blue-500 hover:underline" href="https://www.nsw.gov.au/about-nsw/public-holidays#nsw-public-holidays-2022-2024" target="_blank">NSW government website</a> maintains public holiday dates and information (national and state dates)</li>
   </ul>`,
   },
   {
     title: "Places of Worship in Sydney",
-    description: `< p class = "text-lg font-semibold" > Find places of worship in Sydney:</p >
+    description: `
   <ul class="list-disc ml-5">
     <li class="text-base">Freedom of religion is guaranteed by Australia’s Constitution (1901)</li>
     <li class="text-base">Due to the multicultural population of Sydney, there are many places of worship for various faiths that include, but are not limited to:
@@ -523,7 +526,8 @@ export const checklist = [
         <li class="text-base">Taoism</li>
       </ul>
     </li>
-    <li class="text-base">The <a class="text-blue-500 hover:underline" href="https://www.sl.nsw.gov.au/" target="_blank">State Library of NSW</a> provides a comprehensive listing of religious organisations and places of worship across metropolitan Sydney</li>
-  </ul>`,
+  </ul>
+    <p>The <a class="text-blue-500 hover:underline" href="https://dictionaryofsydney.org/role/place_of_worship" target="_blank">State Library of NSW</a> provides a comprehensive listing of religious organisations and places of worship across metropolitan Sydney</p>
+  `,
   },
 ];

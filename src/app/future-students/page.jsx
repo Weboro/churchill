@@ -1,4 +1,4 @@
-import { AccordionComponent, PatternBannerCard } from "@/components";
+import { AccordionComponent, NewsletterSection, PatternBannerCard } from "@/components";
 import React from "react";
 import SplitHero from "@/components/split-hero";
 import Image from "next/image";
@@ -57,10 +57,10 @@ const page = () => {
                     icon: "",
                 }}
             />
-            <div className="container mx-auto mb-20">
+            <div className="container mx-auto px-5 mb-20">
                 <h3 className="text-xl  mb-4 p-0 sm:p-10 text-center">Australia remains a leading study destination globally with  over 1000,000 international students studying in Australia in 2025, who choose Australia for its:
                 </h3>
-                <div className="grid grid-cols-1 h-full lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 h-full md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {features.map((item, index) => (
                         <div key={index} className="bg-[#E9E9E9] p-5 rounded-md">
                             <div className="flex flex-col gap-2 justify-center items-center">
@@ -79,19 +79,18 @@ const page = () => {
                 </div>
 
             </div>
-            <div className="container mx-auto mb-20">
+            <div className="container mx-auto px-5 mb-20">
                 <h3 className="text-xl font-bold mb-4 p-0 sm:p-10 text-center">The below map of Australia shows the states and location of the national capital (Canberra) and state capitals (capital cities):</h3>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29342471.43105036!2d126.27452645104982!3d-26.13660754270196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2b2bfd076787c5df%3A0x538267a1955b1352!2sAustralia!5e0!3m2!1sen!2snp!4v1744000380229!5m2!1sen!2snp"
-                    width="800"
                     height="600"
-                    style={{ border: 0, margin: "auto" }}
+                    style={{ border: 0, margin: "auto", minWidth: "100%", maxWidth: "800px" }}
                     allowFullScreen=""
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                 />
             </div>
-            <div className="container mx-auto mb-20">
+            <div className="container mx-auto px-5 mb-20">
                 <h3 className="text-2xl font-bold p-5 text-center">Information about Sydney</h3>
                 <p>Churchill Institute of Higher Education (CIHE) is located in the Sydney suburb of Parramatta – Sydney’s “second city”, a vibrant, multi-cultural, commercial,  retail and residential hub that is only 30 minutes by train from Sydney ‘s Central Business District (CBD). Our campus is less than 5 minutes’ walk from Parramatta station at level 1/16-18 Wentworth St. Parramatta. </p>
                 <div className="flex flex-col md:flex-row items-center gap-4">
@@ -150,14 +149,14 @@ const page = () => {
                 </section>
             </div>
 
-            <div className="container mx-auto">
+            <div className="container mx-auto px-5 mb-10">
                 <h3 className="text-2xl font-bold p-5 text-center">Pre-Departure Information and about Living in Australia</h3>
-                <p className="text-center">Relocating to Australia to study for three or more years is a significant decision and life event , and it is important to be prepared for your arrival in Australia before you leave your home country. CIHE has compiled this checklist to inform you about living in Australia and what to consider and pack before leaving home.</p>
+                <p className="text-center mb-10">Relocating to Australia to study for three or more years is a significant decision and life event , and it is important to be prepared for your arrival in Australia before you leave your home country. CIHE has compiled this checklist to inform you about living in Australia and what to consider and pack before leaving home.</p>
 
                 <AccordionComponent data={checklist} />
             </div>
 
-
+            <NewsletterSection />
         </>
     );
 };

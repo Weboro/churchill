@@ -3,7 +3,7 @@ import React from "react";
 import Button from "@/components/button";
 const SplitHero = ({ image, description, title, cta }) => {
     return (
-        <section className="container mx-auto flex flex-col md:flex-row items-center justify-between my-20">
+        <section className="container mx-auto flex flex-col md:flex-row items-center justify-between mb-20 p-5">
             <div className="w-full md:w-1/2 mb-6 md:mb-0">
                 <img src={image} alt="Hero" className="w-full h-auto rounded-xl" />
             </div>
