@@ -44,21 +44,22 @@ const CourseDetailsCard = ({
         </div>
       </div>
       <div className="max-w-fit flex flex-col gap-3">
-        <Link href={"/apply-now"} className="w-full flex-1">
-          <Button
-            btnName="Apply Now"
-            icon={<FaArrowRight />}
-            styleA={"flex items-center gap-1"}
-            style="w-full"
-          />
-        </Link>
         <Link href={`/courses/${slug}`} className="w-full flex-1">
           <Button
             btnName="Learn More"
             icon={<FaArrowRight />}
             styleA={"flex items-center gap-1"}
             style="w-full"
+          />
+        </Link>
+        <Link href={"/apply-now"} className="w-full flex-1">
+          <Button
+            btnName="Apply Now"
+            icon={<FaArrowRight />}
+            styleA={"flex items-center gap-1"}
+            style="w-full"
             styleType="secondary"
+
           />
         </Link>
       </div>

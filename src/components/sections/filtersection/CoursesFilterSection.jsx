@@ -24,11 +24,11 @@ const CoursesFilterSection = ({ data }) => {
   return (
     <div className="container mx-auto px-5 flex flex-col gap-[32px] lg:gap-[64px]">
       <div className="flex flex-col lg:flex-row gap-6 relative">
-        <FilterComponent
+        {/* <FilterComponent
           searchQuery={searchQuery}
           onSearchQuery={setSearchQuery}
           onFilter={handleFilter}
-        ></FilterComponent>
+        ></FilterComponent> */}
 
         <div className="flex-1">
           {filteredArray.length > 0 && (

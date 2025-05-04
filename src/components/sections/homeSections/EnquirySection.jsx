@@ -15,9 +15,9 @@ const EnquirySection = () => {
           <FadeUpAnimation className="h-full" delay={0.1}>
             <ApplyCard
               image={"/assets/apply-card.png"}
-              title={"Applying to CIHE is quick, easy and secure."}
+              title={"Welcome to Churchill Institute of Higher Education"}
               description={
-                "We're happy you're choosing to join the CIHE community with students from across Australia and around the world."
+                "We’re excited you’re considering joining our vibrant community of students from across Australia and around the globe."
               }
             />
           </FadeUpAnimation>
@@ -33,7 +33,7 @@ const EnquirySection = () => {
             <div className="flex items-end">
               <div className="hidden lg:block">
                 <Image
-                  src={`/assets/degree.webp`}
+                  src={`/assets/degree.png`}
                   alt={"use-links-icon-image"}
                   width={400}
                   height={400}
@@ -45,7 +45,7 @@ const EnquirySection = () => {
               <div className="pt-[32px] flex flex-col gap-5">
                 <div className="flex justify-between gap-4 flex-col lg:flex-row items-center">
                   <h2 className="font-bold text-[36px] text-[#2C2B4B] leading-[38px]">
-                    Choosing the right degree starts here
+                    Choosing the right course starts here
                   </h2>
                 </div>
               </div>
@@ -78,7 +78,7 @@ const EnquirySection = () => {
               <div className="pt-[32px] flex flex-col gap-5">
                 <div className="flex justify-between gap-4 flex-col lg:flex-row items-center">
                   <h2 className="font-bold text-[36px] text-[#2C2B4B] leading-[38px]">
-                    Have a question? We're here to help.
+                    Ask us for more info
                   </h2>
                 </div>
               </div>

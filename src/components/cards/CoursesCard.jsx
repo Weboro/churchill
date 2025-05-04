@@ -42,6 +42,16 @@ const CoursesCard = ({ image, title, faculty, subTitle, link }) => {
                 btnName={"Apply Now"}
                 icon={<FaArrowRight />}
                 styleA={"flex items-center gap-1"}
+                styleType="primary"
+                style={"w-fit"}
+              />
+            </Link>
+
+            <Link className="w-full" href={`${link}`}>
+              <Button
+                btnName={"More Info"}
+                icon={<FaArrowRight />}
+                styleA={"flex items-center gap-1"}
                 styleType="tertiary"
                 style={"w-fit"}
               />

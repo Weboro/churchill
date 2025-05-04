@@ -130,7 +130,7 @@ const Footer = () => {
                 <ul className="flex flex-col gap-1 text-[14px]">
                   <li>
                     <Link href={"/courses/accounting-major"}>
-                      Accounting Major
+                      Major in Accounting
                     </Link>
                   </li>
                   <li>
@@ -152,11 +152,11 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-[16px] pb-4">
-                  <strong>Student</strong>
+                  <strong>Students</strong>
                 </h3>
                 <ul className="flex flex-col gap-1 text-[14px]">
                   <li>
-                    <Link href={"/apply-now"}>Apply At Churchill</Link>
+                    <Link href={"/apply-now"}>Apply to Churchill</Link>
                   </li>
                   <li>
                     <Link
@@ -176,7 +176,7 @@ const Footer = () => {
                         "https://forms.zohopublic.com.au/CIHE/form/StudentHubEnquiry/formperma/XilFJje5kQ-h7f4saQYbSV4kJ-kAMiG7p1QNfWEvDXs"
                       }
                     >
-                      Enquiry Now
+                      Enquire Now
                     </Link>
                   </li>
                   <li>
@@ -315,7 +315,7 @@ const Footer = () => {
             </div>
             <p className="text-center max-w-[80ch] mx-auto">
               CIHE acknowledges Aboriginal and Torres Strait Islander people as
-              the Traditional Custodians of the land and acknowledges and pays
+              the Traditional Custodians of the land and pays
               respect to their elders, past and present
             </p>
           </div>

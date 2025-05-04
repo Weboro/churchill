@@ -14,6 +14,17 @@ import { FetchBlogData } from "@/components/utils/apiQueries";
 import { BlogData } from "@/constDatas/BlogData";
 import { SlGameController } from "react-icons/sl";
 
+// Date formatter function
+const formatDate = (dateString) => {
+  if (!dateString) return "";
+  const date = new Date(dateString);
+  return new Intl.DateTimeFormat("en-AU", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }).format(date);
+};
+
 const IndivisualBlogPage = ({ slug }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -37,7 +48,6 @@ const IndivisualBlogPage = ({ slug }) => {
   });
 
   const siteUrl = process.env.NEXT_PUBLIC_CHURCHILL_URL;
-
   const toastRef = useRef();
 
   const cleanText = (data?.rich_text || "")
@@ -83,8 +93,7 @@ const IndivisualBlogPage = ({ slug }) => {
 
                   <div className="flex flex-wrap flex-row items-center gap-1">
                     <i className="fi fi-rr-calendar-day flex" />
-                    <span>{data?.date}</span>
-                    {/* <span>{displayMonth}</span><span>{displayDay}</span><span>{year}</span>*/}
+                    <span>{formatDate(data?.date)}</span>
                     <span>·</span>
 
                     <i className="fi fi-rr-circle-user flex" />
@@ -93,14 +102,11 @@ const IndivisualBlogPage = ({ slug }) => {
 
                     <i className="fi fi-rr-clock-three flex"></i>
                     <>{readingTime} mins read</>
-
                   </div>
 
                   <h2 className="text-4xl leading-[40px] lg:text-6xl lg:leading-[62px] font-bold">
                     {data?.title}
                   </h2>
-
-                  {/* <h4 dangerouslySetInnerHTML={{ __html: data?.description }} /> */}
                 </div>
 
                 <div className="container mx-auto">
@@ -187,7 +193,6 @@ const IndivisualBlogPage = ({ slug }) => {
               </div>
 
               <MoreBlogsSection slug={slug} />
-
               <NewsletterSection />
             </div>
           </section>

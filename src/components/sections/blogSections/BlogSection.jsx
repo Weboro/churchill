@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { BlogData } from "@/constDatas/BlogData";
 import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
 import Button from "@/components/button";
@@ -17,14 +16,12 @@ function BlogSection() {
 
     FetchBlogData()
       .then((res) => {
-        setData(
-          res.data.sort((prev, next) => {
-            const prevDate = new Date(prev.date);
-            const nextDate = new Date(next.date);
-
-            return nextDate - prevDate;
-          })
-        );
+        const sorted = res.data.sort((prev, next) => {
+          const prevDate = new Date(prev.date);
+          const nextDate = new Date(next.date);
+          return nextDate - prevDate;
+        });
+        setData(sorted);
         setIsLoading(false);
       })
       .catch((err) => console.error(err));
@@ -32,28 +29,35 @@ function BlogSection() {
 
   return (
     <>
-      {" "}
       {!isLoading && (
-        <div className="container mx-auto px-5 ">
+        <div className="container mx-auto px-5">
           <div className="flex flex-col gap-[32px] lg:gap-[44px]">
             <h2 className="font-bold text-[36px] text-center mx-auto text-[#2C2B4B]">
               Latest Blogs
             </h2>
 
             <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 md:gap-4">
-              {data?.slice(0, 3)?.map((data, index) => (
-                <FadeUpAnimation key={index} delay={index * 0.2}>
-                  <BlogItemCard
-                    slug={data?.slug}
-                    title={data?.title}
-                    image={data?.image}
-                    date={data?.date}
-                    tags={data?.tags}
-                    description={data?.description}
-                    index={data?.index}
-                  />
-                </FadeUpAnimation>
-              ))}
+              {data?.slice(0, 3)?.map((item, index) => {
+                const formattedDate = new Intl.DateTimeFormat("en-AU", {
+                  day: "2-digit",
+                  month: "2-digit",
+                  year: "numeric",
+                }).format(new Date(item.date));
+
+                return (
+                  <FadeUpAnimation key={index} delay={index * 0.2}>
+                    <BlogItemCard
+                      slug={item?.slug}
+                      title={item?.title}
+                      image={item?.image}
+                      date={formattedDate}
+                      tags={item?.tags}
+                      description={item?.description}
+                      index={index}
+                    />
+                  </FadeUpAnimation>
+                );
+              })}
             </section>
 
             {data.length > 3 && (

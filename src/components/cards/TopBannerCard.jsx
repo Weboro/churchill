@@ -29,7 +29,7 @@ const TopBannerCard = ({
         objectFit: "cover",
         width: "100%",
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "top center",
       }}
       className="lg:h-[75vh] flex items-center justify-center fade-in-animation"
     >

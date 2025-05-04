@@ -12,16 +12,17 @@ const NewsletterSection = () => {
         <div className="w-full flex flex-col md:flex-row bg-[#F3E4E4] relative hover-shadow overflow-hidden rounded-md">
           <div className="flex z-[10] flex-1 flex-col gap-6 pt-8 pl-8 md:py-20 md:pl-20">
             <h3 className="relative leading-10 font-bold text-[36px]  text-[#2C2B4B]">
-              Join our <br /> Newsletter
+              Be in the <br />
+              Know
             </h3>
-            <p>Get updated about our latest news, events, updates and more.</p>
+            <p>For updates about our latest news, events, and more.</p>
             <Link
               href={`https://zfrmz.com.au/DtG2T10jdX7f8egPhVzt`}
               target="_blank"
               className="w-max"
             >
               <Button
-                btnName={"Subscribe to our Newsletter"}
+                btnName={"Subscribe Now"}
                 icon={<FaArrowRight />}
                 styleA={"flex items-center gap-1"}
                 style={
