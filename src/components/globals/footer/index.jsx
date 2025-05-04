@@ -156,19 +156,13 @@ const Footer = () => {
                 </h3>
                 <ul className="flex flex-col gap-1 text-[14px]">
                   <li>
-                    <Link href={"/apply-now"}>Apply to Churchill</Link>
-                  </li>
-                  <li>
                     <Link
                       target="_blank"
-                      href={NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}
+                      href={`${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}/upcoming-key-dates`}
                     >
-                      Student Hub
+                      Key Dates
                     </Link>
                   </li>
-                  {/* <li>
-                    <Link href={"/contact-us/faq"}>FAQ</Link>
-                  </li> */}
                   <li>
                     <Link
                       target="_blank"
@@ -180,13 +174,20 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
+                    <Link href={"/apply-now"}>Apply to Churchill Institute of Higher Education</Link>
+                  </li>
+                  <li>
+                    <Link href={"/events"}>Upcoming Events</Link>
+                  </li>
+                  <li>
+                    <Link href={"/blogs"}>Blogs</Link>
+                  </li>
+                  <li>
                     <Link
                       target="_blank"
-                      href={
-                        "https://forms.zohopublic.com.au/CIHE/form/Grievanceform/formperma/5jf5-XC5SXb47VhUMTlxv30fih-aqYAUbQh8V3lncvQ"
-                      }
+                      href={NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}
                     >
-                      Online Student Grievance Application Form
+                      Student Hub
                     </Link>
                   </li>
                   <li>
@@ -194,21 +195,29 @@ const Footer = () => {
                       target="_blank"
                       href={`${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}/request-form`}
                     >
-                      Request Form
+                      Current Student Request Form
                     </Link>
-                  </li>
-                  <li>
-                    <Link href={"/blogs"}>Blogs</Link>
-                  </li>
-                  <li>
-                    <Link href={"/events"}>Upcoming Events</Link>
                   </li>
                   <li>
                     <Link
                       target="_blank"
-                      href={`${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}/upcoming-key-dates`}
+                      href={`${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}/policies`}
                     >
-                      Key Dates
+                      Policies and Procedures
+                    </Link>
+                  </li>
+
+                  {/* <li>
+                    <Link href={"/contact-us/faq"}>FAQ</Link>
+                  </li> */}
+                  <li>
+                    <Link
+                      target="_blank"
+                      href={
+                        "https://forms.zohopublic.com.au/CIHE/form/Grievanceform/formperma/5jf5-XC5SXb47VhUMTlxv30fih-aqYAUbQh8V3lncvQ"
+                      }
+                    >
+                      Online Student Grievance Application Form
                     </Link>
                   </li>
                 </ul>
@@ -275,11 +284,6 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link href={"http://staff.churchill.nsw.edu.au"}>Staff Portal</Link>
-                  </li>
-                  <li>
-                    <Link href={"https://elearning.churchill.nsw.edu.au/login/index.php"}>
-                      Student Moodle Portal
-                    </Link>
                   </li>
                   <li>
                     <Link href={"https://attendance.churchill.nsw.edu.au/"}>

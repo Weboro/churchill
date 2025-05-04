@@ -37,7 +37,7 @@ const CoursesCard = ({ image, title, faculty, subTitle, link }) => {
           ></p>
 
           <div className="flex  pb-2 justify-center sm:justify-between flex-col items-center sm:flex-row gap-3">
-            <Link className="w-full" href={"/apply-now"}>
+            {/* <Link className="w-full" href={"/apply-now"}>
               <Button
                 btnName={"Apply Now"}
                 icon={<FaArrowRight />}
@@ -45,7 +45,7 @@ const CoursesCard = ({ image, title, faculty, subTitle, link }) => {
                 styleType="primary"
                 style={"w-fit"}
               />
-            </Link>
+            </Link> */}
 
             <Link className="w-full" href={`${link}`}>
               <Button

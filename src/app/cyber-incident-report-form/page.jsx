@@ -183,7 +183,7 @@ const CybersecurityIncident = () => {
             <div className="bg-[#f2dede] p-4 rounded-md">
               <div className="flex flex-col gap-2">
                 <label className="font-semibold text-matte-purple">
-                  How do you identify yourself to Churchill Institute?{" "}
+                  How do you identify yourself to Churchill Institute Institute of Higher Education?{" "}
                   <span className="text-[#FF0000]">*</span>
                 </label>
                 <select

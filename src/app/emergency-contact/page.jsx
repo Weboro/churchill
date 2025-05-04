@@ -5,7 +5,7 @@ const page = () => {
                 <div className="text-center mb-12">
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Emergency Services</h1>
                     <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                        Churchill Studnets can call the services below in the case of an emergency 24 Hours, 7 Days a week.
+                        Churchill Institute of Higher Education Students can call the services below in the case of an emergency 24 Hours, 7 Days a week.
                     </p>
                 </div>
 

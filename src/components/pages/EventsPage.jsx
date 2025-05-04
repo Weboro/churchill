@@ -24,7 +24,7 @@ const EventsPage = () => {
         <Spiner />
       ) : (
         <div className="flex flex-col gap-[32px] lg:gap-[64px]">
-          <PatternBannerCard title={"Churchill Events"} />
+          <PatternBannerCard title={"Churchill Institute of Higher Education Events"} />
 
           <EventsFilterSection data={data} />
         </div>

@@ -3,7 +3,7 @@ import "./globals.css";
 import { CookieBanner, Footer, EmergencyContactFloater, Header } from "@/components";
 
 export const metadata: Metadata = {
-  title: "Churchill Institute",
+  title: "Churchill Institute of Higher Education",
   description: "",
 };
 

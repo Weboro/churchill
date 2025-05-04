@@ -268,7 +268,7 @@ export const navItems = [
     link: "",
     Catagories: [
       {
-        menuTitle: "Apply At Churchill",
+        menuTitle: "Apply At Churchill Institute of Higher Education",
         slug: "apply-at-churchill",
         headerIcon: "fi fi-rr-chart-connected",
         image: "/assets/course-b.png",

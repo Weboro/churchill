@@ -54,7 +54,7 @@ const Courses = () => {
               image={`/assets/courses-banner.webp`}
               titleSpan={
                 <span>
-                  Study Bachelor of Business at <span className="highlight">Churchill</span>
+                  Study Bachelor of Business at Churchill Institute of Higher Education.
                 </span>
               }
               subTitle="Explore our innovative programs and transform your career."

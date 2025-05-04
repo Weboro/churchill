@@ -25,15 +25,8 @@ const KeyDatesCard = ({
 }) => {
   const dateObj = new Date(start_date);
 
-  const formattedDate = `${dateObj.getDay()}${
-    dateObj.getDay() === 1
-      ? "st"
-      : dateObj.getDay() === 2
-      ? "nd"
-      : dateObj.getDay() === 3
-      ? "rd"
-      : "th"
-  } ${monthArray[dateObj.getMonth()]}`;
+
+  const formattedDate = `${dateObj.getDate()} ${monthArray[dateObj.getMonth()]}`;
 
   return (
     <>

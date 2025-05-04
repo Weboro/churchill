@@ -7,6 +7,7 @@ import {
   CoursesSection,
   UpcomingKeyDates,
   BlogSection,
+  VideoSection,
 } from "@/components";
 import React from "react";
 
@@ -25,6 +26,8 @@ const Home = () => {
         <UpcomingEvents />
 
         <BlogSection />
+
+        <VideoSection />
 
         <NewsletterSection />
       </div>
