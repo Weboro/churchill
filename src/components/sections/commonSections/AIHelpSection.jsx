@@ -82,7 +82,7 @@ const AIHelpSection = () => {
             </h2>
             <p>
               This policy explains Churchill Institute of Higher Education's
-              (CIHE or 'the Institute') commitment to providing the support
+              (Churchill Institute of Higher Education or 'the Institute') commitment to providing the support
               services students need to successfully complete their studies at
               the Institute.
             </p>

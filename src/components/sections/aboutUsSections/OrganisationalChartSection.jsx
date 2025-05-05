@@ -4,7 +4,7 @@ import Image from "next/image";
 const OrganisationalChartSection = ({ slug }) => {
   return (
     <div>
-      <PatternBannerCard title="CIHE Leadership" />
+      <PatternBannerCard title="Churchill Institute of Higher Education Leadership" />
 
       <div className="container mx-auto px-5">
         <Image

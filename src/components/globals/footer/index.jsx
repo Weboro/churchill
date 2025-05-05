@@ -82,12 +82,12 @@ const Footer = () => {
                 <ul className="flex flex-col gap-1 text-[14px]">
                   <li>
                     <Link href={"/about-us/CIHE-governance-structure"}>
-                      CIHE Governance
+                      Churchill Institute of Higher Education Governance
                     </Link>
                   </li>
                   <li>
                     <Link href={"/about-us/CIHE-organisational-chart"}>
-                      CIHE Leadership
+                      Churchill Institute of Higher Education Leadership
                     </Link>
                   </li>
                   <li>
@@ -318,7 +318,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-center max-w-[80ch] mx-auto">
-              CIHE acknowledges Aboriginal and Torres Strait Islander people as
+              Churchill Institute of Higher Education acknowledges Aboriginal and Torres Strait Islander people as
               the Traditional Custodians of the land and pays
               respect to their elders, past and present
             </p>

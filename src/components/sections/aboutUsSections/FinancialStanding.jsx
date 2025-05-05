@@ -24,7 +24,7 @@ const GovernanceStructure = ({ slug }) => {
                     <section className="bg-white rounded-lg shadow-lg p-6 fade-in">
                         <h2 className="text-2xl font-semibold text-gray-900 mb-4">Tuition Protection Service (TPS)</h2>
                         <p className="text-gray-700 leading-relaxed">
-                            CIHE financially contributes to the <a href="https://www.education.gov.au/tps" target="_blank" className="text-orange-500 hover:underline"> Tuition Protection Service (TPS)</a> that protects students in the event a course of study provided by an approved provider ceases to be provided after it starts but before it is completed.
+                            Churchill Institute of Higher Education financially contributes to the <a href="https://www.education.gov.au/tps" target="_blank" className="text-orange-500 hover:underline"> Tuition Protection Service (TPS)</a> that protects students in the event a course of study provided by an approved provider ceases to be provided after it starts but before it is completed.
                             Tuition assurance for international and domestic students (whether they are paying up-front or deferring tuition via FEE-HELP) is provided through the Australian Government’s Tuition Protection Service (TPS).
                         </p>
                     </section>
@@ -32,7 +32,7 @@ const GovernanceStructure = ({ slug }) => {
                     <section className="bg-white rounded-lg shadow-lg p-6 fade-in">
                         <h2 className="text-2xl font-semibold text-gray-900 mb-4">2025 Enrolments</h2>
                         <p className="text-gray-700 leading-relaxed">
-                            CIHE enrols approximately 499 international students (Semester 1/2025) at an estimated EFTSL of 218.31 for this semester.
+                            Churchill Institute of Higher Education enrols approximately 499 international students (Semester 1/2025) at an estimated EFTSL of 218.31 for this semester.
                         </p>
                         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="bg-orange-50 rounded-lg p-4 text-center">

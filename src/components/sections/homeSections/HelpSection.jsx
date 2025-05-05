@@ -17,7 +17,7 @@ const HelpSection = () => {
             image={"/assets/help.webp"}
             title={"Need Help?"}
             description={
-              "If you would like to become an authorised representative of CIHE Sydney, please submit an Expression of Interest. Expression of interests will be assessed by the relevant Regional Recruitment Manager."
+              "If you would like to become an authorised representative of Churchill Institute of Higher Education Sydney, please submit an Expression of Interest. Expression of interests will be assessed by the relevant Regional Recruitment Manager."
             }
           />
         </div>

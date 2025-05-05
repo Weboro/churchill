@@ -114,8 +114,8 @@ const Page = () => {
     return (
       <>
         <PatternBannerCard
-          title="Find a CIHE AGENT"
-          description="Get in touch with one of our official CIHE agents."
+          title="Find a Churchill Institute of Higher Education AGENT"
+          description="Get in touch with one of our official Churchill Institute of Higher Education agents."
           BtnAText="Find an Agent"
           BtnALink="#search-agent"
           BtnBText="Become an Agent"
@@ -129,8 +129,8 @@ const Page = () => {
   return (
     <div>
       <PatternBannerCard
-        title="Find a CIHE AGENT"
-        description="Get in touch with one of our official CIHE agents."
+        title="Find a Churchill Institute of Higher Education AGENT"
+        description="Get in touch with one of our official Churchill Institute of Higher Education agents."
         BtnAText="Find an Agent"
         BtnALink="#search-agent"
         BtnBText="Become an Agent"
@@ -143,10 +143,10 @@ const Page = () => {
       >
         <section className="text-center mx-auto max-w-[80ch] mt-[32px] lg:mt-[64px] flex flex-col justify-center gap-6">
           <h1 className="text-2xl lg:text-4xl font-extrabold">
-            Looking for help with your CIHE application?
+            Looking for help with your Churchill Institute of Higher Education application?
           </h1>
           <h3>
-            CIHE agents are independent advisors authorised to consult with
+            Churchill Institute of Higher Education agents are independent advisors authorised to consult with
             students on our behalf. From student visas to applications and
             accepting an offer, our global network of certified agents offer
             help every step of the way, no matter where you are in the world.

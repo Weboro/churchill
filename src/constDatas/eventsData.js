@@ -1,7 +1,7 @@
 export const eventsData = [
   {
     title: "Continuing Student Enrolment Commences",
-    subTitle: `Join our seminar if you are a Churchill Institute international student or recent graduate seeking professional employment related to your studies.`,
+    subTitle: `Join our seminar if you are a Churchill Institute of Higher Education student or recent graduate seeking professional employment related to your studies.`,
     slug: "continuing-student-enrolment-commences",
     link: "",
     author: "Admin",

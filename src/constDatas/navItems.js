@@ -62,7 +62,7 @@ export const navItems = [
           title: "MESSAGE FROM DEAN",
           image: "/assets/staff/michea-seamer.jpeg",
           description:
-            "Thank you for your interest in courses at the Churchill Institute of Higher Education.<br/><br/> I'm delighted that you've taken the time to view our website and hope it may help you decide to make CIHE your first choice when it comes to your future education needs. At CIHE, we believe that we are unique. The Institute is new and innovative with an enviable reputation as <br/><br/>a provider of quality education in a caring environment. Whilst our students include individuals from many backgrounds, cultures and beliefs, our focus on universal values makes us a little different from other colleges. We pride ourselves on our ethical dealings with students and stakeholders and ensure that every student is treated as an individual. As Dean/CEO, my door is always open to students, whether to discuss their course, personal concerns or simply just to pass the time of day. At our levels of CIHE, students are our number one priority. We are all aware that today's corporate world is a very competitive place and organisations are increasingly seeking employees with ‘the right attitude'. To address this, we focus on the whole individual. Our students are encouraged to develop and demonstrate an attitude that's appealing to prospective employers based on respect for others, honesty, integrity, loyalty and a strong work ethic. These attributes are not only important in our work life but also in our personal life - they help us to be successful individuals.",
+            "Thank you for your interest in courses at the Churchill Institute of Higher Education.<br/><br/> I'm delighted that you've taken the time to view our website and hope it may help you decide to make Churchill Institute of Higher Education your first choice when it comes to your future education needs. At CIHE, we believe that we are unique. The Institute is new and innovative with an enviable reputation as <br/><br/>a provider of quality education in a caring environment. Whilst our students include individuals from many backgrounds, cultures and beliefs, our focus on universal values makes us a little different from other colleges. We pride ourselves on our ethical dealings with students and stakeholders and ensure that every student is treated as an individual. As Dean/CEO, my door is always open to students, whether to discuss their course, personal concerns or simply just to pass the time of day. At our levels of CIHE, students are our number one priority. We are all aware that today's corporate world is a very competitive place and organisations are increasingly seeking employees with ‘the right attitude'. To address this, we focus on the whole individual. Our students are encouraged to develop and demonstrate an attitude that's appealing to prospective employers based on respect for others, honesty, integrity, loyalty and a strong work ethic. These attributes are not only important in our work life but also in our personal life - they help us to be successful individuals.",
         },
         {
           title: "About Our Institute",
@@ -73,16 +73,16 @@ export const navItems = [
       ],
       related: [
         {
-          title: "CIHE Governance",
+          title: "Churchill Institute of Higher Education Governance",
           image: "/assets/course-a.png",
           slug: "CIHE-governance-structure",
           link: "",
           subTitle: "Bachelor of Business",
           description:
-            "Thank you for your interest in courses at the Churchill Institute of Higher Education. I'm delighted that you've taken the time to view our website and hope it may help you decide to make CIHE your first choice when it comes to your future education needs. At CIHE, we believe that we are unique. The Institute is new and innovative with an enviable reputation as a provider of quality education in a caring environment. Whilst our students include individuals from many backgrounds, cultures and beliefs, our focus on universal values makes us a little different from other colleges. We pride ourselves on our ethical dealings with students and stakeholders and ensure that every student is treated as an individual. As Dean/CEO, my door is always open to students, whether to discuss their course, personal concerns or simply just to pass the time of day. At our levels of CIHE, students are our number one priority. We are all aware that today's corporate world is a very competitive place and organisations are increasingly seeking employees with ‘the right attitude'. To address this, we focus on the whole individual. Our students are encouraged to develop and demonstrate an attitude that's appealing to prospective employers based on respect for others, honesty, integrity, loyalty and a strong work ethic. These attributes are not only important in our work life but also in our personal life - they help us to be successful individuals.",
+            "Thank you for your interest in courses at the Churchill Institute of Higher Education. I'm delighted that you've taken the time to view our website and hope it may help you decide to make Churchill Institute of Higher Education your first choice when it comes to your future education needs. At CIHE, we believe that we are unique. The Institute is new and innovative with an enviable reputation as a provider of quality education in a caring environment. Whilst our students include individuals from many backgrounds, cultures and beliefs, our focus on universal values makes us a little different from other colleges. We pride ourselves on our ethical dealings with students and stakeholders and ensure that every student is treated as an individual. As Dean/CEO, my door is always open to students, whether to discuss their course, personal concerns or simply just to pass the time of day. At our levels of CIHE, students are our number one priority. We are all aware that today's corporate world is a very competitive place and organisations are increasingly seeking employees with ‘the right attitude'. To address this, we focus on the whole individual. Our students are encouraged to develop and demonstrate an attitude that's appealing to prospective employers based on respect for others, honesty, integrity, loyalty and a strong work ethic. These attributes are not only important in our work life but also in our personal life - they help us to be successful individuals.",
         },
         {
-          title: "CIHE Leadership",
+          title: "Churchill Institute of Higher Education Leadership",
           image: "/assets/course-b.png",
           slug: "CIHE-organisational-chart",
           link: "",
@@ -112,7 +112,7 @@ export const navItems = [
     },
     Catagories: [
       {
-        menuTitle: "CIHE Governance",
+        menuTitle: "Churchill Institute of Higher Education Governance",
         headerIcon: "fi fi-rr-department-structure",
         slug: "CIHE-governance-structure",
         link: "",
@@ -121,7 +121,7 @@ export const navItems = [
         CatagoriesItem: [],
       },
       {
-        menuTitle: "CIHE Leadership",
+        menuTitle: "Churchill Institute of Higher Education Leadership",
         headerIcon: "fi fi-rr-chart-network",
         slug: "CIHE-organisational-chart",
         link: "",
@@ -184,7 +184,7 @@ export const navItems = [
             subTitle:
               "Member of Governing council, Chair of Audit & Risk Management Commitee",
             image: "/assets/staff/ron-day.jpg",
-            description: `<p>Ron is current;ly a casual academic at UNSW since 2023 and prior to that was a full time academic/senior lecturer in Accounting at the University of Sydney Business School (2007-2022), lecturer at Macquarie University (2003-2006) Newcastle University (1991-2003), and Avondale University (1986-1990)  His education qualifications are an MCom in Accounting  (UNSW), MA in Business Research (Macquarie), BE for Qualified Teachers (Curtin), and BA in Business (PUC)/DipT in Secondary Teaching (Avondale), as well as attaining professional accounting qualifications as a CPA in 1993 and FCPA in 2016. He has received numerous Deans' Citation for Teaching awards from the University of Sydney Business School, a VC Award for Excellence from Macquarie University for curriculum design, and two CPA Australia NSW President's Awards for Excellence  for his contribution to the professional body. He has considerable experience on internal and external University review/advisory boards, and consulting and external reviewer for several Higher Education Institutions to assist them to gain TEQSA and/or CPA/CAANZ professional accounting accreditations.  Ron was appointed by CIHE to the Audit and Risk Committee at the beginning of 2022 and became the Chair of that committee and a member of the Governing Council in July 2023.</p>`,
+            description: `<p>Ron is current;ly a casual academic at UNSW since 2023 and prior to that was a full time academic/senior lecturer in Accounting at the University of Sydney Business School (2007-2022), lecturer at Macquarie University (2003-2006) Newcastle University (1991-2003), and Avondale University (1986-1990)  His education qualifications are an MCom in Accounting  (UNSW), MA in Business Research (Macquarie), BE for Qualified Teachers (Curtin), and BA in Business (PUC)/DipT in Secondary Teaching (Avondale), as well as attaining professional accounting qualifications as a CPA in 1993 and FCPA in 2016. He has received numerous Deans' Citation for Teaching awards from the University of Sydney Business School, a VC Award for Excellence from Macquarie University for curriculum design, and two CPA Australia NSW President's Awards for Excellence  for his contribution to the professional body. He has considerable experience on internal and external University review/advisory boards, and consulting and external reviewer for several Higher Education Institutions to assist them to gain TEQSA and/or CPA/CAANZ professional accounting accreditations.  Ron was appointed by Churchill Institute of Higher Education to the Audit and Risk Committee at the beginning of 2022 and became the Chair of that committee and a member of the Governing Council in July 2023.</p>`,
           },
           {
             title: "Assoc Prof Maria Varua",

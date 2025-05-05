@@ -151,7 +151,7 @@ const page = () => {
 
             <div className="container mx-auto px-5 mb-10">
                 <h3 className="text-2xl font-bold p-5 text-center">Pre-Departure Information and about Living in Australia</h3>
-                <p className="text-center mb-10">Relocating to Australia to study for three or more years is a significant decision and life event , and it is important to be prepared for your arrival in Australia before you leave your home country. CIHE has compiled this checklist to inform you about living in Australia and what to consider and pack before leaving home.</p>
+                <p className="text-center mb-10">Relocating to Australia to study for three or more years is a significant decision and life event , and it is important to be prepared for your arrival in Australia before you leave your home country. Churchill Institute of Higher Education has compiled this checklist to inform you about living in Australia and what to consider and pack before leaving home.</p>
 
                 <AccordionComponent data={checklist} />
             </div>
