@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <div>
       <TopBannerCard
-        image={`/assets/std-uni.jpg`}
+        image={`/assets/hero-banner-min.jpg`}
         titleSpan={
           <span>
             Empowering A Brighter <span className={`highlight`}>Tomorrow</span>

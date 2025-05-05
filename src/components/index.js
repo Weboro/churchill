@@ -78,6 +78,7 @@ import HandBookFloater from "./floater/HandBookFloater";
 import EmergencyContactFloater from "./floater/EmergencyContactFloater";
 import FinancialStanding from "./sections/aboutUsSections/FinancialStanding";
 import VideoSection from "./sections/homeSections/VideoSection";
+import HalfTopBanner from "./cards/HalfTopBannerCard"
 
 export {
   Button,
@@ -160,4 +161,5 @@ export {
   EmergencyContactFloater,
   FinancialStanding,
   VideoSection,
+  HalfTopBanner
 };

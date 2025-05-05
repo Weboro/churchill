@@ -89,7 +89,7 @@ const EnquirySection = () => {
                     target="_blank"
                   >
                     <Button
-                      btnName={"Enquiry Now"}
+                      btnName={"Enquire Now"}
                       icon={<FaArrowRight />}
                       styleA={"flex items-center gap-1"}
                     />

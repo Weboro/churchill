@@ -176,9 +176,9 @@ const Footer = () => {
                   <li>
                     <Link href={"/apply-now"}>Apply to Churchill Institute of Higher Education</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href={"/events"}>Upcoming Events</Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link href={"/blogs"}>Blogs</Link>
                   </li>

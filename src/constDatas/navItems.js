@@ -292,7 +292,7 @@ export const navItems = [
       //   redirectLink: "",
       // },
       {
-        menuTitle: "Enquiry Now",
+        menuTitle: "Enquire Now",
         slug: "enquiry-now",
         headerIcon: "fi fi-rr-person-circle-question",
         image: "/assets/course-b.png",
@@ -325,14 +325,14 @@ export const navItems = [
         link: "/blogs",
         redirectLink: "",
       },
-      {
-        menuTitle: "Upcoming Events",
-        slug: "upcoming-events",
-        headerIcon: "fi fi-rr-calendar-day",
-        image: "/assets/course-b.png",
-        link: "/events",
-        redirectLink: "",
-      },
+      // {
+      //   menuTitle: "Upcoming Events",
+      //   slug: "upcoming-events",
+      //   headerIcon: "fi fi-rr-calendar-day",
+      //   image: "/assets/course-b.png",
+      //   link: "/events",
+      //   redirectLink: "",
+      // },
       {
         menuTitle: "Key Dates",
         slug: "upcoming-key-dates",
@@ -366,7 +366,7 @@ export const navItems = [
         redirectLink: NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL,
       },
       {
-        menuTitle: "Enquiry Now",
+        menuTitle: "Enquire Now",
         slug: "enquiry-now",
         headerIcon: "fi fi-rr-person-circle-question",
         image: "/assets/course-b.png",
