@@ -20,7 +20,7 @@ const AboutInfoSection = () => {
         }
         title={""}
         subTitle={
-          "Since our founding, Churchill Institute has been dedicated to providing industry-relevant education, empowering students with the skills and knowledge to thrive in their careers."
+          "Since our founding, Churchill Institute of Higher Education has been dedicated to providing industry-relevant education, empowering students with the skills and knowledge to thrive in their careers."
         }
         link={`/courses`}
         linkA={`/under-construction`}

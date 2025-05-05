@@ -12,8 +12,7 @@ const NewsletterSection = () => {
         <div className="w-full flex flex-col md:flex-row bg-[#F3E4E4] relative hover-shadow overflow-hidden rounded-md">
           <div className="flex z-[10] flex-1 flex-col gap-6 pt-8 pl-8 md:py-20 md:pl-20">
             <h3 className="relative leading-10 font-bold text-[36px]  text-[#2C2B4B]">
-              Be in the <br />
-              Know
+              Be in the Know
             </h3>
             <p>For updates about our latest news, events, and more.</p>
             <Link

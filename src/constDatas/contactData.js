@@ -246,7 +246,7 @@ export const checklist = [
       <li class="text-base">Whatever type of accommodation you choose, your residence must be close to public transport so that you can commute to CIHE’s campus and other places you need to go</li>
       <li class="text-base">Like all cities, rents vary by area and rentals in Sydney’s inner city and beachside suburbs are more expensive than suburbs located further out from the city centre</li>
     </ul>
-    <p class="text-base">Note that CIHE does not have a formal agreement with any of the above-listed managed accommodation or homestay providers, which are also listed on the Australian government’s <a href="https://www.studyaustralia.gov.au/en/life-in-australia/accommodation.html#ref0" target="_blank">Study Australia</a> website. CIHE does not accept any liability or responsibility, in the unlikely event a student has a poor experience or dispute with any of these accommodation providers.</p>`,
+    <p class="text-base">Note that Churchill Institute of Higher Education does not have a formal agreement with any of the above-listed managed accommodation or homestay providers, which are also listed on the Australian government’s <a href="https://www.studyaustralia.gov.au/en/life-in-australia/accommodation.html#ref0" target="_blank">Study Australia</a> website. Churchill Institute of Higher Education does not accept any liability or responsibility, in the unlikely event a student has a poor experience or dispute with any of these accommodation providers.</p>`,
   },
   {
     title: "Airport Arrival in Australia – What to Expect",
@@ -361,8 +361,8 @@ export const checklist = [
     title: "Internet Connections",
     description: `<p class = "text-lg font-semibold" > You will need ongoing access to the Internet whilst studying at SITU as your administration will be completed online and you all learning materials for each subject and other documentation will only be provided electronically in the Moodle learning management system.</p>
   <ul class="list-disc ml-5">
-    <li class="text-base">CIHE provides free Wi-Fi and internet connectivity on the CIHE campus to all enrolled students</li>
-    <li class="text-base">You are expected to have access to the internet when you are not attending the CIHE campus</li>
+    <li class="text-base">Churchill Institute of Higher Education provides free Wi-Fi and internet connectivity on the Churchill Institute of Higher Education campus to all enrolled students</li>
+    <li class="text-base">You are expected to have access to the internet when you are not attending the Churchill Institute of Higher Education campus</li>
     <li class="text-base">Internet access can be obtained by buying or leasing a modem and an internet package from a service provider</li>
     <li class="text-base">You can choose from different technologies such as cable, DSL, ISDN or satellite internet</li>
     <li class="text-base">If you live in managed student accommodation or a Homestay, your accommodation provider may include Wi-Fi access in your weekly rent (this differs amongst providers so please check)</li>

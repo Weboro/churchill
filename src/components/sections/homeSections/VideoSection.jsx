@@ -5,10 +5,7 @@ const videoFiles = [
     "vid-two.mp4",
     "vid-three.mp4",
     "vid-four.mp4",
-    "vid-five.mp4",
-    "vid-six.mp4",
-    "vid-seven.mp4",
-    "vid-eight.mp4",
+
 ];
 
 const VideoSection = () => {

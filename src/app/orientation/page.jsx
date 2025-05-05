@@ -42,7 +42,7 @@ const Page = () => {
       >
         <div className="container flex flex-col gap-[52px]  mx-auto px-5">
           <h2 className="text-3xl md:text-5xl font-bold text-center text-[#eb9320] capitalize">
-            Welcome to Churchill Orientation
+            Welcome to Churchill Institute of Higher Education Orientation
           </h2>
 
           <Timer />
@@ -73,9 +73,8 @@ const Page = () => {
               >
                 <h2
                   onClick={() => handleToggle(item.id)}
-                  className={`text-lg md:text-2xl font-bold py-1 md:py-2 px-2 flex items-center justify-between cursor-pointer select-none hover:bg-zinc-200/20 ${
-                    isActive ? "border-b-neutral-800/25 border-b" : ""
-                  }`}
+                  className={`text-lg md:text-2xl font-bold py-1 md:py-2 px-2 flex items-center justify-between cursor-pointer select-none hover:bg-zinc-200/20 ${isActive ? "border-b-neutral-800/25 border-b" : ""
+                    }`}
                 >
                   <span>
                     Step {item.id}: {item.title}
@@ -174,7 +173,7 @@ const Page = () => {
                       <div className="my-4 px-5 flex flex-col gap-5">
                         <p>
                           Quickly Fill Out the Form and Your ID Card will Be
-                          ready to be Picked Up at Churchill Reception Desk
+                          ready to be Picked Up at Churchill Institute of Higher Education Reception Desk
                         </p>
                         <div onClick={() => setIsIDFormShown(!isIDFormShown)}>
                           <button className="border-2 border-black px-6 py-3 bg-primary-orange rounded-md font-bold">
@@ -188,7 +187,7 @@ const Page = () => {
                       <div className="my-4 px-5 flex flex-col gap-5">
                         <p>
                           You will be Shortly Provided with Login Details For
-                          Microsoft 365 by Churchill Staff in your Personal
+                          Microsoft 365 by Churchill Institute of Higher Education Staff in your Personal
                           Email. Below is Office365 Guide that will be helpful.
                         </p>
 
