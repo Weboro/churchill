@@ -310,7 +310,7 @@ export const navItems = [
           "https://forms.zohopublic.com.au/CIHE/form/Grievanceform/formperma/5jf5-XC5SXb47VhUMTlxv30fih-aqYAUbQh8V3lncvQ", //
       },
       {
-        menuTitle: "Request Form",
+        menuTitle: "Current Student Request Form",
         slug: "request-form",
         headerIcon: "fi fi-rr-form",
         image: "/assets/course-b.png",
@@ -331,6 +331,55 @@ export const navItems = [
         headerIcon: "fi fi-rr-calendar-day",
         image: "/assets/course-b.png",
         link: "/events",
+        redirectLink: "",
+      },
+      {
+        menuTitle: "Key Dates",
+        slug: "upcoming-key-dates",
+        headerIcon: "fi fi-rr-calendar",
+        image: "/assets/course-b.png",
+        link: "",
+        redirectLink: `${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}/upcoming-key-dates`,
+      },
+    ],
+  },
+  {
+    title: "Future Students",
+    slug: "student",
+    headerDesc: "Quick access to access necessary links for our students. ",
+    link: "",
+    Catagories: [
+      {
+        menuTitle: "Find an Education Agent",
+        slug: "find-agent",
+        headerIcon: "fi fi-rr-headphones",
+        image: "/assets/course-b.png",
+        link: "/find-agent",
+        redirectLink: "",
+      },
+      {
+        menuTitle: "Student Hub",
+        slug: "student-hub",
+        headerIcon: "fi fi-rr-student",
+        image: "/assets/course-b.png",
+        link: "",
+        redirectLink: NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL,
+      },
+      {
+        menuTitle: "Enquiry Now",
+        slug: "enquiry-now",
+        headerIcon: "fi fi-rr-person-circle-question",
+        image: "/assets/course-b.png",
+        link: "",
+        redirectLink:
+          "https://forms.zohopublic.com.au/CIHE/form/StudentHubEnquiry/formperma/XilFJje5kQ-h7f4saQYbSV4kJ-kAMiG7p1QNfWEvDXs",
+      },
+      {
+        menuTitle: "Blogs",
+        slug: "blogs",
+        headerIcon: "fi fi-rr-blog-text",
+        image: "/assets/course-b.png",
+        link: "/blogs",
         redirectLink: "",
       },
       {
