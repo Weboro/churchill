@@ -33,7 +33,7 @@ const EnquirySection = () => {
             <div className="flex items-end">
               <div className="hidden lg:block">
                 <Image
-                  src={`/assets/degree.png`}
+                  src={`/assets/right-course.png`}
                   alt={"use-links-icon-image"}
                   width={400}
                   height={400}
@@ -100,7 +100,7 @@ const EnquirySection = () => {
             <div className="flex items-end">
               <div className="hidden lg:block">
                 <Image
-                  src={`/assets/help.webp`}
+                  src={`/assets/ask-us.png`}
                   alt={"use-links-icon-image"}
                   width={400}
                   height={400}

@@ -51,7 +51,7 @@ const Courses = () => {
         <>
           <div className="flex flex-col gap-[32px] lg:gap-[64px]">
             <TopBannerCard
-              image={`/assets/courses-banner.webp`}
+              image={`/assets/course-banner.jpg`}
               titleSpan={
                 <span>
                   Study Bachelor of Business at Churchill Institute of Higher Education.

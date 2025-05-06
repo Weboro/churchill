@@ -1,10 +1,10 @@
 import React from "react";
 
 const videoFiles = [
-    "vid-ch-one.mp4",
-    "vid-ch-two.mp4",
-    "vid-ch-three.mp4",
-    "vid-ch-four.mp4",
+    "cihe-vid-one.mp4",
+    "cihe-vid-two.mp4",
+    "cihne-vid-three.mp4",
+    "cihne-vid-four.mp4",
 
 ];
 

@@ -33,7 +33,7 @@ const CourseDetails = ({ slug }) => {
         <Spiner />
       ) : (
         <div className="flex flex-col gap-[32px] lg:gap-[64px]">
-          <HalfTopBanner
+          <TopBannerCard
             beforeTitle={data?.faculty.faculty_name}
             // image={`/assets/banner-courses.webp`}
             image={data?.heroImage}

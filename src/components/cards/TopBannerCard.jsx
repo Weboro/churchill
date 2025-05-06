@@ -33,7 +33,7 @@ const TopBannerCard = ({
       }}
       className="lg:h-[75vh] flex items-center justify-center fade-in-animation"
     >
-      <div className="container mt-[84px] lg:mt-4 mx-auto px-5">
+      <div className="container mt-[84px] mb-[84px] lg:mt-4 lg:mb-4 mx-auto px-5">
         <div className="grid items-center grid-cols-1 md:grid-cols-2">
           <div className="py-6 flex flex-col gap-3">
             {beforeTitle && (

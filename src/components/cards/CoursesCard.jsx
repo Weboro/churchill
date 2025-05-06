@@ -15,7 +15,7 @@ const CoursesCard = ({ image, title, faculty, subTitle, link }) => {
               alt={`for ${title}`}
               width={400}
               height={400}
-              className="object-cover w-full aspect-[4/2] md:aspect-[1/1]  transition-all group-hover:scale-105 relative"
+              className="object-cover w-full aspect-[2/2] md:aspect-[1/1]  transition-all group-hover:scale-105 relative"
             />
             <div className="absolute rounded-md bg-primary-orange/0 group-hover:bg-primary-orange/50 transition-all w-full h-full z-[8] top-0 left-0" />
           </div>
