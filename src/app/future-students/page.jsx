@@ -4,7 +4,7 @@ import SplitHero from "@/components/split-hero";
 import Image from "next/image";
 import { checklist } from "@/constDatas/contactData";
 
-const page = () => {
+const Page = () => {
     const features = [
         {
             title: "World-Class Education",
@@ -166,4 +166,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;
