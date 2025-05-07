@@ -40,6 +40,11 @@ const page = () => {
             title: "Relaxed Lifestyle",
             subTitle: "Enjoy a relaxed lifestyle and vibrant culture unique to Australia.",
             image: "/assets/lifestyle.svg"
+        },
+        {
+            title: "Multicultural Environment",
+            subTitle: "Australia is one of the most culturally diverse countries in the world, offering international students a welcoming space to celebrate their heritage and connect across cultures.",
+            image: "/assets/multi-culture.svg"
         }
     ];
 

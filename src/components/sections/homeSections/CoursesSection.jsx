@@ -10,6 +10,9 @@ const CoursesSection = () => {
     <div className="container mx-auto px-5">
       <div className="flex flex-col gap-[32px] lg:gap-[44px]">
         <div className="text-center justify-between gap-4 items-center">
+          <h2 className="font-bold leading-9 text-center mx-auto text-[36px] text-[#2C2B4B] mb-5">
+            <span className={`highlight`}>Our Courses</span>
+          </h2>
           <h2 className="font-bold leading-9 text-center mx-auto text-[36px] text-[#2C2B4B]">
             Bachelor of Business (BBus)
           </h2>
