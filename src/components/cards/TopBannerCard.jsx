@@ -63,7 +63,7 @@ const TopBannerCard = ({
 
             <FadeUpAnimation delay={0.2}>
               <div
-                className="font-semibold text-[#ffffff] text-md md:text-[22px] leading-[24px] line-clamp-3"
+                className="font-semibold text-[#ffffff] text-md md:text-[22px]  line-clamp-3 leading-7"
                 dangerouslySetInnerHTML={{ __html: subTitle }}
               ></div>
             </FadeUpAnimation>
