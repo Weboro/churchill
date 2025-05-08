@@ -29,9 +29,9 @@ const TopBannerCard = ({
         objectFit: "cover",
         width: "100%",
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "center top",
       }}
-      className="lg:h-[75vh] flex items-center justify-center fade-in-animation"
+      className="lg:h-[80vh] flex items-center justify-center fade-in-animation"
     >
       <div className="container mt-[84px] mb-[84px] lg:mt-4 lg:mb-4 mx-auto px-5">
         <div className="grid items-center grid-cols-1 md:grid-cols-2">
