@@ -1,9 +1,176 @@
 "use client";
+
 import { PatternBannerCard } from "@/components";
 import { useState } from "react";
 import Image from "next/image";
+import clsx from "clsx";
 
 const images = [
+  "0C1A3387.webp",
+  "1H7A0456.webp",
+  "1H7A0816.webp",
+  "1H7A0852.webp",
+  "1H7A0853.webp",
+  "0C1A2360-159.webp",
+  "0C1A2768-487.webp",
+  "0C1A2794-507.webp",
+  "0C1A2853-552.webp",
+  "0C1A2862-559.webp",
+  "0C1A2784-499.webp",
+  "0C1A2828-533.webp",
+  "0C1A2907-21.webp",
+  "0C1A2993-79.webp",
+  "0C1A3390-278.webp",
+  "0C1A3568-407.webp",
+  "_DSC6831.webp",
+  "_DSC6912.webp",
+  "_DSC6924.webp",
+  "_DSC6946.webp",
+  "0C1A3392-279.webp",
+  "0C1A3413.webp",
+  "_DSC6988.webp",
+  "0C1A3206 (1).webp",
+  "0C1A3645.webp",
+  "0C1A3663.webp",
+  "0C1A3672.webp",
+  "0C1A3312.webp",
+  "0C1A3384.webp",
+  "1H7A1170.webp",
+  "1H7A1182.webp",
+  "1H7A1216.webp",
+  "1H7A1217.webp",
+  "1H7A1240.webp",
+  "1H7A1242.webp",
+  "1H7A7507.webp",
+  "1H7A0993.webp",
+  "1H7A0994.webp",
+  "1H7A0995.webp",
+  "1H7A0997.webp",
+  "1H7A0998.webp",
+  "1H7A0999.webp",
+  "1H7A1035.webp",
+  "1H7A1041.webp",
+  "1H7A1213.webp",
+  "1H7A0665.webp",
+  "1H7A0670.webp",
+  "1H7A0693.webp",
+  "1H7A0713.webp",
+  "1H7A0721.webp",
+  "1H7A0769.webp",
+  "1H7A0838.webp",
+  "1H7A0859.webp",
+  "1H7A0990.webp",
+  "1H7A0991.webp",
+  "Sajan.webp",
+  "Sujan.webp",
+  "1H7A0518.webp",
+  "1H7A0572.webp",
+  "1H7A0587.webp",
+  "1H7A0599.webp",
+  "1H7A0635.webp",
+  "1H7A0642.webp",
+  "1H7A0643.webp",
+  "1H7A0646.webp",
+  "1H7A0651.webp",
+  "1H7A0692.webp",
+  "1H7A0707.webp",
+  "1H7A0764.webp",
+  "1H7A0042.webp",
+  "1H7A0060.webp",
+  "1H7A0062.webp",
+  "1H7A0065.webp",
+  "1H7A0082.webp",
+  "1H7A0285.webp",
+  "1H7A0334.webp",
+  "1H7A0415.webp",
+  "1H7A0416.webp",
+  "1H7A0434.webp",
+  "1H7A0545.webp",
+  "1H7A0558.webp",
+  "1H7A0627.webp",
+  "1H7A0041.webp",
+  "1H7A0043.webp",
+  "1H7A0044.webp",
+  "1H7A0061.webp",
+  "1H7A0064.webp",
+  "1H7A9972.webp",
+  "1H7A9996.webp",
+  "1H7A9998.webp",
+  "Ram Giri.webp",
+  "1H7A0030.webp",
+  "1H7A9915.webp",
+  "1H7A9933.webp",
+  "1H7A9937.webp",
+  "1H7A9940.webp",
+  "1H7A9960.webp",
+  "1H7A9961.webp",
+  "1H7A9970.webp",
+  "1H7A9975.webp",
+  "1H7A9979.webp",
+  "1H7A8430.webp",
+  "1H7A8439.webp",
+  "1H7A9766.webp",
+  "1H7A9774.webp",
+  "1H7A9831.webp",
+  "1H7A9842.webp",
+  "1H7A9867.webp",
+  "1H7A9874.webp",
+  "1H7A9890.webp",
+  "1H7A9911.webp",
+  "1H7A9962.webp",
+  "1H7A8270.webp",
+  "1H7A8287.webp",
+  "1H7A8293.webp",
+  "1H7A8297.webp",
+  "1H7A8310.webp",
+  "1H7A8394.webp",
+  "1H7A8415.webp",
+  "1H7A8418.webp",
+  "1H7A8480.webp",
+  "1H7A9686.webp",
+  "1H7A9835.webp",
+  "1H7A8155.webp",
+  "1H7A8211.webp",
+  "1H7A8227.webp",
+  "1H7A8249.webp",
+  "1H7A825 Behind the Scenes.webp",
+  "1H7A8255.webp",
+  "1H7A8259.webp",
+  "1H7A8261.webp",
+  "1H7A8268.webp",
+  "1H7A8308.webp",
+  "1H7A8408.webp",
+  "1H7A7744.webp",
+  "1H7A7745.webp",
+  "1H7A7768.webp",
+  "1H7A7769.webp",
+  "1H7A7771.webp",
+  "1H7A7991.webp",
+  "1H7A8084.webp",
+  "1H7A8091.webp",
+  "1H7A8163.webp",
+  "1H7A8208.webp",
+  "1H7A7543.webp",
+  "1H7A7598.webp",
+  "1H7A7604.webp",
+  "1H7A7639.webp",
+  "1H7A7656.webp",
+  "1H7A7739.webp",
+  "1H7A7741.webp",
+  "1H7A7742.webp",
+  "1H7A7743.webp",
+  "1H7A0084.webp",
+  "1H7A0441.webp",
+  "1H7A0737.webp",
+  "1H7A7512.webp",
+  "1H7A7532.webp",
+  "1H7A7569.webp",
+  "1H7A774 | Behind the Scenes.webp",
+  "1H7A9651.webp",
+  "1H7A9713.webp",
+  "0C1A2190-20.webp",
+  "0C1A2390-189.webp",
+  "0C1A2408-207.webp",
   "1H7A2756.webp",
   "1H7A2760.webp",
   "1H7A2761.webp",
@@ -105,98 +272,86 @@ const images = [
   "1H7A3689.webp",
 ];
 
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
 const GalleryPage = () => {
   const step = 9;
-  const [startIndex, setStartIndex] = useState(0);
-  const [endIndex, setEndIndex] = useState(startIndex + step);
-  const ImagesToShow = images.slice(startIndex, endIndex);
+  const [visibleImages, setVisibleImages] = useState(step);
+  const [loadedImages, setLoadedImages] = useState({});
   const [isFullScreenShown, setIsFullScreenShown] = useState(false);
   const [fullScreenImage, setFullScreenImage] = useState("");
 
-  function handleNextPage() {
-    if (endIndex < images.length) {
-      setStartIndex(startIndex + step);
-      setEndIndex(endIndex + step);
-      scrollToTop();
-    }
-  }
+  const ImagesToShow = images.slice(0, visibleImages);
 
-  function handlePrevPage() {
-    if (startIndex > 0) {
-      setStartIndex(startIndex - step);
-      setEndIndex(endIndex - step);
-      scrollToTop();
-    }
-  }
+  const handleImageLoad = (index) => {
+    setLoadedImages((prev) => ({ ...prev, [index]: true }));
+  };
 
   return (
     <>
       <PatternBannerCard title="Gallery" />
 
-      <div className="container mx-auto px-5 flex flex-col gap-[48px] pb-[48px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="container mx-auto px-2 md:px-5 lg:px-20 flex flex-col gap-12 pb-12">
+        <div className="grid grid-cols-3 gap-2 md:gap-4">
           {ImagesToShow.map((item, index) => (
-            <Image
+            <div
               key={index}
-              src={`/assets/gallery/${item}`}
-              width={500}
-              height={500}
-              alt={`Gallery Image ${index}`}
-              onClick={(e) => {
+              className="relative aspect-[2/2.5] w-full overflow-hidden bg-gray-200 rounded-md"
+              onClick={() => {
                 setIsFullScreenShown(true);
                 setFullScreenImage(`/assets/gallery/${item}`);
               }}
-              className="aspect-square object-cover border-2 border-white"
-            />
+            >
+              {!loadedImages[index] && (
+                <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 z-10" />
+              )}
+              <Image
+                src={`/assets/gallery/${item}`}
+                alt={`Gallery Image ${index}`}
+                fill
+                sizes="(max-width: 640px) 33vw, (max-width: 1024px) 33vw, 33vw"
+                onLoad={() => handleImageLoad(index)}
+                className={clsx(
+                  "object-cover transition-opacity duration-500",
+                  loadedImages[index] ? "opacity-100" : "opacity-0"
+                )}
+              />
+            </div>
           ))}
         </div>
 
-        <div className="flex items-center justify-between gap-2">
-          <p>
-            Showing {startIndex} to {endIndex}
-          </p>
-          <div className="flex items-center gap-2">
+        {visibleImages < images.length && (
+          <div className="flex justify-center">
             <button
-              className="bg-primary-orange font-bold p-4 rounded-md"
-              onClick={handlePrevPage}
+              className="bg-primary-orange hover:bg-orange-600 px-6 py-3 rounded-md text-white font-bold transition"
+              onClick={() => setVisibleImages((prev) => prev + step)}
             >
-              Previous
-            </button>
-            <button
-              className="bg-primary-orange font-bold p-4 rounded-md"
-              onClick={handleNextPage}
-            >
-              Next
+              Load More
             </button>
           </div>
-        </div>
+        )}
       </div>
 
       {isFullScreenShown && (
         <div className="fixed top-0 left-0 w-screen h-screen bg-black/90 z-[5000] grid place-items-center">
           <div
-            className="absolute top-8 right-12 cursor-pointer text-white"
-            onClick={() => {
-              setIsFullScreenShown(false);
-            }}
+            className="absolute top-8 right-12 cursor-pointer text-white text-2xl"
+            onClick={() => setIsFullScreenShown(false)}
           >
-            <i className="fi fi-br-cross"></i>
+            ×
           </div>
-          <div className="w-[90%] md:w-[60%] grid place-items-center">
-            <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-xl">
-              loading...
-            </p>
-            <Image
-              src={fullScreenImage}
-              width={1000}
-              height={1000}
-              alt="showing image"
-              className="w-full object-contain relative z-10"
-            />
+          <div className="w-[90%] md:w-[60%] min-h-[50vh] grid place-items-center">
+            {fullScreenImage ? (
+              <Image
+                src={fullScreenImage}
+                alt="Full view"
+                width={1200}
+                height={800}
+                className="w-full h-auto object-contain"
+                unoptimized
+                onError={() => console.log("Image failed to load:", fullScreenImage)}
+              />
+            ) : (
+              <p className="text-white">Loading image...</p>
+            )}
           </div>
         </div>
       )}
