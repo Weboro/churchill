@@ -154,11 +154,11 @@ export const navItems = [
             description: `<p>Before joining Newcastle, Assoc Prof Boyle lectured in University College Dublin, Centro de Estudios Superiores Universitarios de Galicia, Spain and the University of Sydney, Australia. Assoc Prof Boyle has also delivered units and guest lectures at universities in Malaysia, Hong Kong, and China. Assoc Prof Boyle was a graduate member of the Chartered Institute of Personnel & Development (CIPD) the world's largest Chartered management development professional body. Assoc Prof Boyle completed a master's degree in business studies in University College Dublin and was awarded his PhD from the Discipline of International Business at University of Sydney 2009. </p> <p>Brendan's primary research interests include international HRM, knowledge management/sharing in organizations and top management teams. He has published research papers on knowledge creation and knowledge sharing in MNEs. He is currently involved in three major projects examining, collaboration in health care organizations, the management teams in the subsidiaries of multinational enterprises in China (MNEs) and the HRM practices of MNEs. Combined, these collaborative projects involve partnerships between Newcastle Business School and universities in Europe, North America, Latin America and Asia.</p><p>Brendan is also co-director of the Health Services Research and Innovation Centre at UoN (HSRIC). This centre aims to improve the design and management health services with particular emphasis interdisciplinary approaches to addressing critical challenges. Brendan is particularly interested in global health services research as an important emerging research area that integrates issues of public policy and health services development. Brendan has a particular focus on the mobility of health professionals - issues of immigration, expatriation and professional institutions. </p>`,
           },
           {
-            title: "Associate Professor Micheal Seamer",
-            slug: "associate-professor-micheal-seamer",
-            email: "michea-seamer@churchil.mail",
+            title: "David Knight",
+            slug: "david-knight",
+            email: "david-knight@churchil.mail",
             subTitle: "CEO/ Dean",
-            image: "/assets/staff/michea-seamer.jpeg",
+            image: "/assets/staff/david.jpg",
             description: `<p>Recently appointed as CEO & Dean of Churchill Institute of Higher Education  in March 2025, I bring to Churchill over 15 years of executive leadership experience in higher (international) education - gained in both the private and public sectors. My job essentially is to work with and implement our Governing Council's ambitious strategy for Churchill; and to maximise our students experience by delivering academically robust and career-oriented courses, where our  students are supported, academically challenged and valued to prepare them for life after Churchill. </p>`,
           },
           {
