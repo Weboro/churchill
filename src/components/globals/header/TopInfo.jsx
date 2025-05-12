@@ -7,39 +7,39 @@ const NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL =
   process.env.NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL;
 
 const links = [
-  {
-    href: "https://elearning.churchill.nsw.edu.au/",
-    text: "Learning Management System (LMS)",
-    iconClass: "fi fi-rr-lesson",
-  },
-  {
-    href: "/find-agent",
-    text: "Find an Education Agent",
-    iconClass: "fi fi-rr-headphones",
-  },
-  {
-    href: "https://churchill.softlinkhosting.com.au/",
-    text: "Library",
-    iconClass: "fi fi-rr-book",
-    external: true,
-  },
-  {
-    href: NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL,
-    text: "Student Support",
-    iconClass: "fi fi-rr-student",
-    external: true,
-  },
+  // {
+  //   href: "https://elearning.churchill.nsw.edu.au/",
+  //   text: "Learning Management System (LMS)",
+  //   iconClass: "fi fi-rr-lesson",
+  // },
+  // {
+  //   href: "/find-agent",
+  //   text: "Find an Education Agent",
+  //   iconClass: "fi fi-rr-headphones",
+  // },
+  // {
+  //   href: "https://churchill.softlinkhosting.com.au/",
+  //   text: "Library",
+  //   iconClass: "fi fi-rr-book",
+  //   external: true,
+  // },
+  // {
+  //   href: NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL,
+  //   text: "Student Support",
+  //   iconClass: "fi fi-rr-student",
+  //   external: true,
+  // },
   {
     href: NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL,
     text: "Agent Hub",
     iconClass: "fi fi-rs-employee-man-alt",
     external: true,
   },
-  {
-    href: "/contact-us",
-    text: "Contact Us",
-    iconClass: "fi fi-rr-phone-flip",
-  },
+  // {
+  //   href: "/contact-us",
+  //   text: "Contact Us",
+  //   iconClass: "fi fi-rr-phone-flip",
+  // },
   // {
   //   href: "/about-us/gallery",
   //   text: "Gallery",
