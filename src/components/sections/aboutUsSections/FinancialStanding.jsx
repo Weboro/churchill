@@ -22,9 +22,23 @@ const GovernanceStructure = ({ slug }) => {
                 <main className="max-w-5xl mx-auto px-4 py-12 space-y-12">
                     <section className="bg-white rounded-lg shadow-lg p-6 fade-in">
                         <h2 className="text-2xl font-semibold text-gray-900 mb-4">Financial Standing</h2>
-                        <p className="text-gray-700 leading-relaxed">
+                        <p className="text-gray-700 leading-relaxed mb-5">
                             Refer to the Financial Auditor's Declaration from the 2024 Financial Year Audit of CIHE's Accounts.
                         </p>
+                        <Link
+                            href={`/assets/docs/Auditor Declaration_FY_2024.pdf`}
+                            target="_blank"
+                            className="w-max "
+                        >
+                            <Button
+                                btnName={"View Report"}
+                                icon={<FaArrowRight />}
+                                styleA={"flex items-center gap-1"}
+                                style={
+                                    "border border-2 border-[#606060] rounded-md px-4 py-3 bg-[#E59623] hover:text-black hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
+                                }
+                            />
+                        </Link>
                     </section>
 
                     <section className="bg-white rounded-lg shadow-lg p-6 fade-in">
@@ -51,41 +65,6 @@ const GovernanceStructure = ({ slug }) => {
                             </div>
                         </div>
                     </section>
-                    <FadeUpAnimation>
-                        <div className="container mx-auto mb-[48px] rounded-md ">
-                            <div className="w-full flex flex-col md:flex-row bg-[#F3E4E4] relative hover-shadow overflow-hidden rounded-md">
-                                <div className="flex z-[10] flex-1 flex-col gap-6 pt-8 pl-8 md:py-20 md:pl-20">
-                                    <h3 className="relative leading-10 font-bold text-[36px]  text-[#2C2B4B]">
-                                        Auditor's Report
-                                    </h3>
-                                    <p>Independent Auditor's Report to the Members of Mpika Holdings Pty Ltd</p>
-                                    <Link
-                                        href={`/assets/docs/Auditor Declaration_FY_2024.pdf`}
-                                        target="_blank"
-                                        className="w-max"
-                                    >
-                                        <Button
-                                            btnName={"View Report"}
-                                            icon={<FaArrowRight />}
-                                            styleA={"flex items-center gap-1"}
-                                            style={
-                                                "border border-2 border-[#606060] rounded-md px-4 py-3 bg-[#E59623] hover:text-black hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
-                                            }
-                                        />
-                                    </Link>
-                                </div>
-                                <div className="flex-1 pb-48 md:flex-0">
-                                    <Image
-                                        width={600}
-                                        height={600}
-                                        className="absolute z-[0] translate-y-1/2 translate-x-1/2 bottom-16 -left-1/2 md:left-auto md:right-48 group-hover:scale-105 transition-all"
-                                        src="/assets/churchil-circle.webp"
-                                        alt="alt image for churchil circle"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </FadeUpAnimation>
                 </main>
 
             </div>

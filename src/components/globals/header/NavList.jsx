@@ -7,6 +7,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components";
 import { FetchCourseData } from "@/components/utils/apiQueries";
+const NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL =
+  process.env.NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL;
 
 const NavList = ({
   style,
@@ -54,12 +56,12 @@ const NavList = ({
   }, {});
 
   return (
-    <div className="w-full flex flex-col gap-2 z-40 pt-5">
-      <div className="hidden lg:block">
+    <div className="w-full flex flex-col gap-2 z-40">
+      {/* <div className="hidden lg:block">
         <div className="flex justify-end">
           <TopInfo />
         </div>
-      </div>
+      </div> */}
 
       <ul className={`${style ? style : ""}`}>
         {navItems?.map((item, index) => {
@@ -80,15 +82,15 @@ const NavList = ({
             <div key={index}>
               {hasSubcategories ? (
                 <li
-                  className="group relative lg:static"
+                  className="group relative lg:static sm-py-10 py-[30px]"
                   onClick={() => {
                     handleOnclickA();
                   }}
                 >
                   <div
-                    className="flex gap-1 pb-3 items-center group cursor-pointer"
+                    className="flex gap-1 items-center group cursor-pointer"
                   >
-                    <p className="hover:text-[#eb9320]">{item?.title}</p>
+                    <p className="hover:text-[#eb9320] text-[16px] custom-1280-text">{item?.title}</p>
                     <span className="rotate-180 group-hover:rotate-0 transition-all">
                       <FaAngleDown />
                     </span>
@@ -197,25 +199,30 @@ const NavList = ({
                   <li
                     className={`flex gap-1 items-center ${isActive && "text-[#eb9320]"} cursor-pointer pb-5`}
                   >
-                    <p className="hover:text-[#eb9320]">{item?.title}</p>
+                    <p className="hover:text-[#eb9320] text-[16px] custom-1280-text">{item?.title}</p>
                   </li>
                 </Link>
               )}
             </div>
           );
         })}
-        <li>
-          <Link href="/emergency-contact" className="flex gap-1 items-center cursor-pointer text-red-600 hover:text-[#eb9320]">
-            <span>Emergency Contacts</span>
+        <li className="sm-py-10 py-[30px]">
+          <Link href={NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL} className="flex gap-1 items-center cursor-pointer hover:text-[#eb9320] text-[16px] custom-1280-text">
+            <span>Agent Hub</span>
           </Link>
         </li>
-        <li
+        <li className="sm-py-10 py-[30px]">
+          <Link href="/emergency-contact" className="flex gap-1 items-center cursor-pointer text-red-600 hover:text-[#eb9320] text-[16px] custom-1280-text">
+            <span>Emergency</span>
+          </Link>
+        </li>
+        <li className="flex center sm-py-10 py-[30px]"
           onClick={() => {
             setOpenSearch(true);
           }}
         >
-          <div className="flex gap-1 items-center cursor-pointer hover:text-[#eb9320]">
-            <span>Search</span> <FaSearch />
+          <div className="flex gap-1 items-center cursor-pointer hover:text-[#eb9320] text-[16px] custom-1280-text">
+            <span className="hidden sm:block md:hidden lg:hidden">Search</span> <FaSearch />
           </div>
         </li>
         {openSearch && (

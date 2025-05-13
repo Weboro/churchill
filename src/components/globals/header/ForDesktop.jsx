@@ -9,7 +9,7 @@ import NavListVTwo from "./NavListVTwo";
 const DesktopNav = () => {
   return (
     <div className="container mx-auto px-5 ">
-      <div className="flex justify-between items-center gap-4">
+      <div className="flex justify-between items-center gap-4 ">
         <div className="">
           <Link href="/">
             <Image
@@ -24,7 +24,7 @@ const DesktopNav = () => {
         </div>
         <div className="">
           <NavList
-            style={"flex gap-5 text-[16px] font-inter font-bold text-[#2C2B4B]"}
+            style={"flex gap-5 md:gap-3 text-[16px] font-inter font-bold text-[#2C2B4B]"}
             isDropdownActive={true}
             handleOnclick={() => ""}
             handleOnclickA={() => ""}
