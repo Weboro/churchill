@@ -44,7 +44,6 @@ const NavList = ({
       .catch((err) => console.error(err));
   }, []);
 
-  // Group courses by faculty
   const groupedCourses = coursesData.reduce((acc, course) => {
     const facultyName = course.faculty.faculty_name;
     if (!acc[facultyName]) {
