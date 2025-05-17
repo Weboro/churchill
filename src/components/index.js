@@ -68,7 +68,7 @@ import PatternBannerCard from "./cards/PatternBannerCard";
 import AgentInfoCard from "./cards/AgentInfoCard";
 import AccredentialSection from "./sections/courseSections/AccredentialSection";
 import GovernanceStructure from "./sections/aboutUsSections/GovernanceStructure";
-import OrganisationalChartSection from "./sections/aboutUsSections/OrganisationalChartSection";
+// import OrganisationalChartSection from "./sections/aboutUsSections/OrganisationalChartSection";
 import GalleryPage from "./sections/aboutUsSections/GalleryPage";
 import Timer from "./timer/Timer";
 import RequestIDCardForm from "./forms/RequestIDCardForm";
@@ -79,6 +79,7 @@ import EmergencyContactFloater from "./floater/EmergencyContactFloater";
 import FinancialStanding from "./sections/aboutUsSections/FinancialStanding";
 import VideoSection from "./sections/homeSections/VideoSection";
 import HalfTopBanner from "./cards/HalfTopBannerCard"
+import HierarchyChart from "./hiearchy/HiearchyChart";
 
 export {
   Button,
@@ -151,7 +152,7 @@ export {
   AgentInfoCard,
   AccredentialSection,
   GovernanceStructure,
-  OrganisationalChartSection,
+  // OrganisationalChartSection,
   GalleryPage,
   Timer,
   RequestIDCardForm,
@@ -161,5 +162,6 @@ export {
   EmergencyContactFloater,
   FinancialStanding,
   VideoSection,
-  HalfTopBanner
+  HalfTopBanner,
+  HierarchyChart
 };

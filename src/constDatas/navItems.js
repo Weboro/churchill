@@ -82,7 +82,7 @@ export const navItems = [
             "Thank you for your interest in courses at the Churchill Institute of Higher Education. I'm delighted that you've taken the time to view our website and hope it may help you decide to make Churchill Institute of Higher Education your first choice when it comes to your future education needs. At CIHE, we believe that we are unique. The Institute is new and innovative with an enviable reputation as a provider of quality education in a caring environment. Whilst our students include individuals from many backgrounds, cultures and beliefs, our focus on universal values makes us a little different from other colleges. We pride ourselves on our ethical dealings with students and stakeholders and ensure that every student is treated as an individual. As Dean/CEO, my door is always open to students, whether to discuss their course, personal concerns or simply just to pass the time of day. At our levels of CIHE, students are our number one priority. We are all aware that today's corporate world is a very competitive place and organisations are increasingly seeking employees with ‘the right attitude'. To address this, we focus on the whole individual. Our students are encouraged to develop and demonstrate an attitude that's appealing to prospective employers based on respect for others, honesty, integrity, loyalty and a strong work ethic. These attributes are not only important in our work life but also in our personal life - they help us to be successful individuals.",
         },
         {
-          title: "Churchill Institute of Higher Education Leadership",
+          title: "Churchill Institute of Higher Education Governance Structure and Organisational Chart",
           image: "/assets/course-b.png",
           slug: "CIHE-organisational-chart",
           link: "",
@@ -90,15 +90,15 @@ export const navItems = [
           description:
             "Churchill Institute of Higher Education's campus is located at Level 1, 16-18 Wentworth Street Parramatta NSW 2150 a major urban area of Sydney with ample access to employment, social and accommodation opportunities. The Campus is walking distance to the main public transport located at Parramatta Station, close to business facilities with touristic locations of Sydney a short train ride away. The Campus is spacious and well-equipped. The campus pro vides facilities specifically designed to provide students and staff with premises and equipment to promote and foster excellence in teaching and learning. Its facilities are allocated for teaching purpose and all other essential academic activities such as student services and academic activities as well as all general administration. New students joining Churchill Institute of Higher Education will attend the Orientation Program conducted at the beginning of each semester where details about living, getting around and about, and studying in Parramatta and Sydney are provided. The Campus is equipped with an in-house Library where students and staff have access to a number of textbooks and online databases for their reference. The library will ensure adequate computers are available for students to access online databases and the library catalogue.",
         },
-        {
-          title: "Governance and Leadership",
-          image: "/assets/course-c.png",
-          slug: "governance-and-leadership",
-          link: "",
-          subTitle: "Bachelor of Business",
-          description:
-            "Churchill Institute of Higher Education's campus is located at Level 1, 16-18 Wentworth Street Parramatta NSW 2150 a major urban area of Sydney with ample access to employment, social and accommodation opportunities. The Campus is walking distance to the main public transport located at Parramatta Station, close to business facilities with touristic locations of Sydney a short train ride away. The Campus is spacious and well-equipped. The campus pro vides facilities specifically designed to provide students and staff with premises and equipment to promote and foster excellence in teaching and learning. Its facilities are allocated for teaching purpose and all other essential academic activities such as student services and academic activities as well as all general administration. New students joining Churchill Institute of Higher Education will attend the Orientation Program conducted at the beginning of each semester where details about living, getting around and about, and studying in Parramatta and Sydney are provided. The Campus is equipped with an in-house Library where students and staff have access to a number of textbooks and online databases for their reference. The library will ensure adequate computers are available for students to access online databases and the library catalogue.",
-        },
+        // {
+        //   title: "Governance and Leadership",
+        //   image: "/assets/course-c.png",
+        //   slug: "governance-and-leadership",
+        //   link: "",
+        //   subTitle: "Bachelor of Business",
+        //   description:
+        //     "Churchill Institute of Higher Education's campus is located at Level 1, 16-18 Wentworth Street Parramatta NSW 2150 a major urban area of Sydney with ample access to employment, social and accommodation opportunities. The Campus is walking distance to the main public transport located at Parramatta Station, close to business facilities with touristic locations of Sydney a short train ride away. The Campus is spacious and well-equipped. The campus pro vides facilities specifically designed to provide students and staff with premises and equipment to promote and foster excellence in teaching and learning. Its facilities are allocated for teaching purpose and all other essential academic activities such as student services and academic activities as well as all general administration. New students joining Churchill Institute of Higher Education will attend the Orientation Program conducted at the beginning of each semester where details about living, getting around and about, and studying in Parramatta and Sydney are provided. The Campus is equipped with an in-house Library where students and staff have access to a number of textbooks and online databases for their reference. The library will ensure adequate computers are available for students to access online databases and the library catalogue.",
+        // },
         {
           title: "Financial Standing, TPS & Enrolment Summary",
           image: "/assets/course-d.png",
@@ -112,7 +112,7 @@ export const navItems = [
     },
     Catagories: [
       {
-        menuTitle: "Churchill Institute of Higher Education Governance",
+        menuTitle: "Churchill Institute of Higher Education Governance Structure and Organisational Chart",
         headerIcon: "fi fi-rr-department-structure",
         slug: "CIHE-governance-structure",
         link: "",
@@ -120,15 +120,15 @@ export const navItems = [
         // redirectLink: "/assets/CIHE-Governance-Structure-December-2022.pdf",
         CatagoriesItem: [],
       },
-      {
-        menuTitle: "Churchill Institute of Higher Education Leadership",
-        headerIcon: "fi fi-rr-chart-network",
-        slug: "CIHE-organisational-chart",
-        link: "",
-        image: "/assets/course-c.png",
-        // redirectLink: "/assets/Churchill-IHE-Org-Chart_v2.1-13-Dec-2021.pdf",
-        CatagoriesItem: [],
-      },
+      // {
+      //   menuTitle: "Churchill Institute of Higher Education Leadership",
+      //   headerIcon: "fi fi-rr-chart-network",
+      //   slug: "CIHE-organisational-chart",
+      //   link: "",
+      //   image: "/assets/course-c.png",
+      //   // redirectLink: "/assets/Churchill-IHE-Org-Chart_v2.1-13-Dec-2021.pdf",
+      //   CatagoriesItem: [],
+      // },
       {
         menuTitle: "Governance and Leadership",
         headerIcon: "fi fi-rr-leadership-alt",

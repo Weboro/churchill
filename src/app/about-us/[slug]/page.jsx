@@ -5,7 +5,7 @@ import {
   GovernancePageSection,
   AccredentialSection,
   GovernanceStructure,
-  OrganisationalChartSection,
+  // OrganisationalChartSection,
   GalleryPage,
   FinancialStanding,
 } from "@/components";
@@ -27,8 +27,6 @@ const Page = ({ params }) => {
         <AccredentialSection slug={slug} />
       ) : slug === "CIHE-governance-structure" ? (
         <GovernanceStructure slug={slug} />
-      ) : slug === "CIHE-organisational-chart" ? (
-        <OrganisationalChartSection slug={slug} />
       ) : slug === "company-and-financial-documents" ? (
         <FinancialStanding />
       ) : slug === "gallery" ? (
