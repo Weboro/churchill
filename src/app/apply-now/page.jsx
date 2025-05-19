@@ -15,7 +15,7 @@ const page = () => {
               <Link
                 target="_blank"
                 href={
-                  "https://agentportal.galaxy360.com.au/application-overview"
+                  "/assets/apply-at-churchill.pdf"
                 }
               >
                 <Button btnName={"Domestic Student"} />
@@ -23,7 +23,7 @@ const page = () => {
               <Link
                 target="_blank"
                 href={
-                  "https://agentportal.galaxy360.com.au/application-overview"
+                  "/assets/apply-at-churchill.pdf"
                 }
               >
                 <Button btnName={"International Student"} />
