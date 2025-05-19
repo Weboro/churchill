@@ -28,7 +28,7 @@ const AboutSection = () => {
               alt={"use-links-icon-image"}
               width={400}
               height={400}
-              className={`w-full lg:h-[500px] rounded-md object-cover flex-1`}
+              className={`w-full aspect-[4/4] rounded-md object-cover flex-1`}
             />
           </div>
         ))}
