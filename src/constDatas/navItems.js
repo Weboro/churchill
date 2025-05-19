@@ -545,7 +545,7 @@ export const navItems = [
   },
   {
     title: "Future Students",
-    slug: "student",
+    slug: "future-students",
     headerDesc: "Quick access to access necessary links for our students. ",
     link: "",
     Catagories: [
@@ -603,7 +603,7 @@ export const navItems = [
   },
   {
     title: "Current Students",
-    slug: "student",
+    slug: "current-students",
     headerDesc: "Quick access to access necessary links for our students. ",
     link: "",
     Catagories: [

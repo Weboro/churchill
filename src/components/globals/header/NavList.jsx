@@ -103,9 +103,11 @@ const NavList = ({
                           <p className="font-[500] text-base pt-1 pb-2">
                             {item.headerDesc}
                           </p>
-                          <Link href={`/${item.slug}`}>
-                            <Button btnName="Learn More" />
-                          </Link>
+                          {!["current-students", "future-students", "login"].includes(item.slug) && (
+                            <Link href={`/${item.slug}`}>
+                              <Button btnName="Learn More" />
+                            </Link>
+                          )}
                         </div>
                         <div className="flex-[78%]">
                           {item.slug === "courses" ? (
