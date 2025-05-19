@@ -15,7 +15,7 @@ const HeroSection = () => {
         title={""}
         subTitle={`<p className="my-4"> Explore our innovative programs and transform your career. </p>`}
         link={`/courses`}
-        linkA={`/apply-now`}
+        linkA={"/assets/apply-at-churchill.pdf"}
         BtnAText={"Explore Our Courses"}
         BtnBText={"Apply Now"}
       />

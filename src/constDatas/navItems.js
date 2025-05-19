@@ -570,7 +570,7 @@ export const navItems = [
         slug: "apply-at-churchill",
         headerIcon: "fi fi-rr-chart-connected",
         image: "/assets/course-b.png",
-        link: "/apply-now",
+        link: "/assets/apply-at-churchill.pdf",
         redirectLink: "",
       },
       {

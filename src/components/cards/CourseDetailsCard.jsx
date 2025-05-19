@@ -52,7 +52,7 @@ const CourseDetailsCard = ({
             style="w-full"
           />
         </Link>
-        <Link href={"/apply-now"} className="w-full flex-1">
+        <Link href={"/assets/apply-at-churchill.pdf"} className="w-full flex-1">
           <Button
             btnName="Apply Now"
             icon={<FaArrowRight />}

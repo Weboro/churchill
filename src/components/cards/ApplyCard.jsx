@@ -18,7 +18,7 @@ const ApplyCard = ({ title, description, image }) => {
         </h2>
         <p>{description}</p>
         <div>
-          <Link href={"/apply-now"} className="w-max">
+          <Link href={"/assets/apply-at-churchill.pdf"} className="w-max">
             <Button
               btnName={"Apply Now"}
               icon={<FaArrowRight />}
