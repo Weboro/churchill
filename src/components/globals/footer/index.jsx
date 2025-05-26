@@ -42,22 +42,24 @@ const Footer = () => {
     return acc;
   }, {});
 
-  // Get Future Students and Current Students data from navItems
+  // Get Future Students, Current Students, and Login data from navItems
   const futureStudentsNavItem = navItems.find(
-    (item) => item.slug === "student" && item.title === "Future Students"
+    (item) => item.slug === "future-students"
   );
   const currentStudentsNavItem = navItems.find(
-    (item) => item.slug === "student" && item.title === "Current Students"
+    (item) => item.slug === "current-students"
   );
+  const loginNavItem = navItems.find((item) => item.slug === "login");
   const futureStudentsCategories = futureStudentsNavItem?.Catagories || [];
   const currentStudentsCategories = currentStudentsNavItem?.Catagories || [];
+  const loginCategories = loginNavItem?.Catagories || [];
 
   return (
     <div className="">
       <div
         className="bg-[#606060] py-[64px]"
         style={{
-          backgroundImage: `url(/assets/footer-watermark.svg)`,
+          backgroundImage: "url(/assets/footer-watermark.svg)",
           backgroundRepeat: "no-repeat",
           objectFit: "cover",
           width: "100%",
@@ -241,36 +243,28 @@ const Footer = () => {
                 <h3 className="text-[16px] pb-4">
                   <strong>Login</strong>
                 </h3>
-                <ul className="flex flex-col gap-1 text-[14px] pl-2">
-                  <li>
-                    <Link
-                      target="_blank"
-                      href="https://elearning.churchill.nsw.edu.au/"
-                    >
-                      Learning Management System (LMS)
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="https://agent.churchill.nsw.edu.au/">
-                      Agent Portal
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="https://churchill.softlinkhosting.com.au/">
-                      Library Portal
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="http://staff.churchill.nsw.edu.au">
-                      Staff Portal
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="https://attendance.churchill.nsw.edu.au/">
-                      Attendance Portal
-                    </Link>
-                  </li>
-                </ul>
+                {loginCategories.length === 0 ? (
+                  <p className="text-[14px]">No login links available</p>
+                ) : (
+                  <ul className="flex flex-col gap-1 text-[14px] pl-2">
+                    {loginCategories.map((item, index) => (
+                      <li key={index}>
+                        <Link
+                          href={
+                            item.redirectLink
+                              ? item.redirectLink
+                              : item.link
+                                ? item.link
+                                : `/login/${item.slug}`
+                          }
+                          target={item.redirectLink ? "_blank" : ""}
+                        >
+                          {item.menuTitle}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
               <div>
                 <h3 className="text-[16px] pb-4">
