@@ -566,11 +566,19 @@ export const navItems = [
         redirectLink: "",
       },
       {
-        menuTitle: "Apply At Churchill Institute of Higher Education",
+        menuTitle: "Apply for Course Admission",
         slug: "apply-at-churchill",
         headerIcon: "fi fi-rr-chart-connected",
         image: "/assets/course-b.png",
-        link: "/assets/apply-at-churchill.pdf",
+        link: "/apply-for-course-admission",
+        redirectLink: "",
+      },
+      {
+        menuTitle: "Apply for advanced standing",
+        slug: "apply-at-churchill",
+        headerIcon: "fi fi-rr-chart-connected",
+        image: "/assets/course-b.png",
+        link: "/apply-for-advanced-standing",
         redirectLink: "",
       },
       {
