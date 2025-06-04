@@ -47,7 +47,7 @@ const page = () => {
                 <svg className="w-5 h-5 text-orange-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span>Applications are assessed per the <a href="https://backend.churchill.nsw.edu.au/media/policy_pdfs/Admissions_Policy_CIHE_v1.0_April_2025-Web_oLAnI8C.pdf" className="text-orange-500 hover:underline" target="_blank">Admissions Policy</a>.</span>
+                <span>Applications for Admission are assessed against the course admission criteria as specified in the <a href="https://backend.churchill.nsw.edu.au/media/policy_pdfs/Admissions_Policy_CIHE_v1.0_April_2025-Web_oLAnI8C.pdf" className="text-orange-500 hover:underline" target="_blank">Admissions Policy (Admission Guidelines page 10/16)</a>  and the general provisions of this policy.</span>
               </li>
             </ul>
           </div>
@@ -79,7 +79,7 @@ const page = () => {
               </li>
             </ul>
             <p className="text-gray-600 mt-4 italic">
-              For advanced standing, apply at the time of admission (see <a href="#" className="text-orange-500 hover:underline">Advanced Standing details</a>).
+              For advanced standing, apply at the time of admission (see <a href="https://backend.churchill.nsw.edu.au/media/policy_pdfs/Advanced-Standing-Policy-and-Procedure_RLcCgHQ.pdf" className="text-orange-500 hover:underline">Advanced Standing details</a>).
             </p>
           </div>
 

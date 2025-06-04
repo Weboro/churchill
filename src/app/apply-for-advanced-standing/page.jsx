@@ -106,7 +106,7 @@ const page = () => {
             Assessment of Advanced Standing and Notification of Outcome
           </h2>
           <p className="text-gray-600 mb-4">
-            <strong>Applications are assessed</strong> based on the <a href="https-seek-a9://backend.churchill.nsw.edu.au/media/policy_pdfs/Advanced-Standing-Policy-and-Procedure_RLcCgHQ.pdf" className="text-orange-500 hover:underline" target="_blank">Advanced Standing Policy</a>
+            <strong>Applications are assessed</strong> based on the <a href="https://backend.churchill.nsw.edu.au/media/policy_pdfs/Advanced-Standing-Policy-and-Procedure_RLcCgHQ.pdf" className="text-orange-500 hover:underline" target="_blank">Advanced Standing Policy</a>
             ; and the prior learning’s AQF level and academic discipline; its relevance to the Churchill Institute course / major and the equivalency to the applicable Churchill unit / course learning outcomes.
           </p>
           <p className="text-gray-600 mb-4">
