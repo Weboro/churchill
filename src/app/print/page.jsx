@@ -42,7 +42,7 @@ export default function ChurchillPrinterPortal() {
             return;
         }
 
-        const paymentUrl = `https://cilantro.taco-tech.com/payments/412c3ac5-50b2-4e1d-b242-1b16c8e37e9d/${encodeURIComponent(trimmedStudentId)}`;
+        const paymentUrl = `https://cilantro.taco-tech.com/payments/412c3ac5-50b2-4e1d-b242-1b16c8e37e9d/${encodeURIComponent(trimmedStudentId)}@churchill.nsw.edu.au`;
 
         window.open(paymentUrl, '_blank');
         closeRechargeModal();
@@ -227,7 +227,7 @@ export default function ChurchillPrinterPortal() {
                                     value={studentId}
                                     onChange={(e) => setStudentId(e.target.value)}
                                     onKeyPress={handleKeyPress}
-                                    placeholder="Enter your Student ID"
+                                    placeholder="CIHE123456"
                                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-churchill/20 focus:border-churchill outline-none transition-colors text-sm"
                                 />
                             </div>
