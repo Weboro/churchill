@@ -14,11 +14,10 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="z-40 relative bg-white shadow-lg ">
+    <div className="header z-40 relative bg-white shadow-lg ">
       <div
-        className={`z-40 bg-white hidden lg:block shadow-lg ${
-          offset > 100 ? "fixed top-0 w-full bg-white flex" : ""
-        }`}
+        className={`z-40 bg-white hidden lg:block shadow-lg ${offset > 100 ? "fixed top-0 w-full bg-white flex" : ""
+          }`}
       >
         <div className="hidden lg:block relative">
           <DesktopNav />

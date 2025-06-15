@@ -55,7 +55,7 @@ const Footer = () => {
   const loginCategories = loginNavItem?.Catagories || [];
 
   return (
-    <div className="">
+    <div className="footer-bottom">
       <div
         className="bg-[#606060] py-[64px]"
         style={{
