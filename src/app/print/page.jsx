@@ -27,7 +27,7 @@ export default function ChurchillPrinterPortal() {
     };
 
     const handleBalanceCheck = () => {
-        window.open('https://Localhost:9192/user', '_blank');
+        window.open('https://pxeserver:9192/user', '_blank');
     };
 
     const closeBalanceModal = () => {
