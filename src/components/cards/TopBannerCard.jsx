@@ -20,6 +20,7 @@ const TopBannerCard = ({
   imageAStyle,
   courseCode,
   handleRightBtn,
+  showBtnB = true,
 }) => {
   return (
     <div
@@ -78,18 +79,19 @@ const TopBannerCard = ({
                   />
                 </Link>
               </FadeUpAnimation>
-
-              <div onClick={handleRightBtn}>
-                <FadeUpAnimation delay={0.35}>
-                  <Link href={`${linkA}`}>
-                    <Button
-                      btnName={BtnBText}
-                      icon={<FaArrowRight />}
-                      styleA={"flex items-center gap-1"}
-                    />
-                  </Link>
-                </FadeUpAnimation>
-              </div>
+              {showBtnB && (
+                <div onClick={handleRightBtn}>
+                  <FadeUpAnimation delay={0.35}>
+                    <Link href={`${linkA}`}>
+                      <Button
+                        btnName={BtnBText}
+                        icon={<FaArrowRight />}
+                        styleA={"flex items-center gap-1"}
+                      />
+                    </Link>
+                  </FadeUpAnimation>
+                </div>
+              )}
             </div>
             {titleSpan === "Major in Accounting" && (
               <Image
