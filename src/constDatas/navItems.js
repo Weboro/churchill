@@ -701,6 +701,14 @@ export const navItems = [
         link: "",
         image: "/assets/hero-image.jpeg",
       },
+      {
+        menuTitle: "Student Enrolment and Study Load Rules",
+        headerIcon: "fi fi-rr-book-alt",
+        subTitle: "Enrolment and study load rules.",
+        slug: "student-enrolment-and-study-load-rules",
+        link: "/student-enrolment-and-study-load-rules",
+        image: "/assets/hero-image.jpeg",
+      },
     ],
   },
   {
