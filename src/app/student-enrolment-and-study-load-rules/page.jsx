@@ -11,7 +11,7 @@ const page = () => {
   return (
     <div>
       <TopBannerCard
-        image="/assets/about-image.webp"
+        image="/assets/std-load.webp"
         title="Student Enrolment and Study Load Rules"
         subTitle="Semesters 1, 2 and 3 - Important Information for Current Students<br/>Understanding your academic requirements and progression policies"
         titleSpan=""
