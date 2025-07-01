@@ -78,28 +78,6 @@ const page = () => {
           </div>
         </section>
 
-        <section className="mb-12">
-          <div className="bg-primary-orange bg-opacity-10 border border-primary-orange rounded-lg p-6">
-            <h3 className="text-xl font-bold text-primary-orange mb-4">
-              📋 Important Notice
-            </h3>
-            <p className="text-gray-700">
-              All policies are in accordance with the{" "}
-              <a
-                href="https://www.legislation.gov.au/Details/F2017L01182"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary-orange hover:underline font-semibold"
-              >
-                National Code of Practice for Providers of Education and
-                Training to Overseas Students 2018 (Commonwealth)
-              </a>{" "}
-              and Churchill Institute's internal policies. Students are
-              encouraged to speak with Student Services if they have questions
-              about their enrolment or academic progress.
-            </p>
-          </div>
-        </section>
       </div>
 
       <br />
