@@ -72,8 +72,8 @@ const NavList = ({
             item?.Catagories?.length > 0
               ? true
               : item.slug === "courses"
-                ? true
-                : false;
+              ? true
+              : false;
 
           const mapData =
             item.slug === "courses" ? coursesData : item.Catagories;
@@ -87,75 +87,97 @@ const NavList = ({
                     handleOnclickA();
                   }}
                 >
-                  <div
-                    className="flex gap-1 items-center group cursor-pointer"
-                  >
-                    <p className="hover:text-[#eb9320] text-[16px] custom-1280-text">{item?.title}</p>
+                  <div className="flex gap-1 items-center group cursor-pointer">
+                    <p className="hover:text-[#eb9320] text-[16px] custom-1280-text">
+                      {item?.title}
+                    </p>
                     <span className="rotate-180 group-hover:rotate-0 transition-all">
                       <FaAngleDown />
                     </span>
                   </div>
+
                   {isDropdownActive && (
-                    <div className="z-20 hidden px-5 py-3 w-[80vw] lg:w-[100vw] border-t-4 border-t-[#eb9320] group-hover:block lg:absolute lg:left-0 top-[100%] shadow-xl whitespace-wrap transition delay-150 bg-white">
-                      <div className="flex flex-col lg:flex-row gap-4 container mx-auto py-4">
-                        <div className="flex-[20%] flex flex-col gap-5 md:flex-row lg:flex-col lg:gap-2 justify-between lg:justify-center">
-                          <h2 className="text-xl">{item.title}</h2>
-                          <p className="font-[500] text-base pt-1 pb-2">
+                    <div className="z-20 hidden px-3 py-3 w-[80vw] max-h-[14rem] overflow-y-scroll lg:w-[100vw] border-t-4 border-t-[#eb9320] group-hover:block lg:absolute lg:left-0 top-[100%] shadow-xl whitespace-wrap transition delay-150 bg-white">
+                      <div className="flex flex-col lg:flex-row gap-2 container mx-auto py-2">
+                        <div className="flex-[20%] flex flex-col gap-2 md:flex-row lg:flex-col lg:gap-2 justify-between lg:justify-center">
+                          <h2 className="text-lg md:text-xl">{item.title}</h2>
+                          <p className="font-[500] text-xs md:text-base pt-1 pb-2">
                             {item.headerDesc}
                           </p>
-                          {!["current-students", "future-students", "login"].includes(item.slug) && (
+                          {![
+                            "current-students",
+                            "future-students",
+                            "login",
+                          ].includes(item.slug) && (
                             <Link href={`/${item.slug}`}>
-                              <Button btnName="Learn More" />
+                              <Button
+                                styleA="text-xs flex items-center gap-2"
+                                btnName="Learn More"
+                              />
                             </Link>
                           )}
                         </div>
                         <div className="flex-[78%]">
                           {item.slug === "courses" ? (
                             <div className="flex flex-col gap-6">
-                              {Object.keys(groupedCourses).map((facultyName) => (
-                                <div key={facultyName}>
-                                  <h3 className="text-lg font-semibold mb-2">{facultyName}</h3>
-                                  <ul className="flex flex-col gap-4 px-2">
-                                    {groupedCourses[facultyName].map((subItem, index) => (
-                                      <Link
-                                        target={subItem?.redirectLink ? "_blank" : ""}
-                                        key={index}
-                                        href={
-                                          subItem?.redirectLink
-                                            ? subItem?.redirectLink
-                                            : subItem?.link
-                                              ? subItem?.link
-                                              : `/${item.slug}/${subItem.slug}`
-                                        }
-                                        className="w-full flex"
-                                      >
-                                        <li
-                                          className="hover:bg-[#eb9320]/20 transition-all rounded-md flex flex-1 items-center gap-2 px-2 py-1"
-                                          key={index}
-                                        >
-                                          <div className="w-10 h-10 bg-[#eb9320]/20 rounded-full grid place-items-center">
-                                            <i
-                                              className={`${subItem.headerIcon || subItem.icon} m-0 flex items-center`}
-                                            />
-                                          </div>
-                                          <div className="flex flex-1 flex-col gap-1">
-                                            <h3 className="leading-5 text-lg">
-                                              {subItem.menuTitle || subItem.course_name}
-                                            </h3>
-                                            {/* <p
+                              {Object.keys(groupedCourses).map(
+                                (facultyName) => (
+                                  <div key={facultyName}>
+                                    <h3 className="text-lg font-semibold mb-2">
+                                      {facultyName}
+                                    </h3>
+                                    <ul className="flex flex-col gap-4 px-2">
+                                      {groupedCourses[facultyName].map(
+                                        (subItem, index) => (
+                                          <Link
+                                            target={
+                                              subItem?.redirectLink
+                                                ? "_blank"
+                                                : ""
+                                            }
+                                            key={index}
+                                            href={
+                                              subItem?.redirectLink
+                                                ? subItem?.redirectLink
+                                                : subItem?.link
+                                                ? subItem?.link
+                                                : `/${item.slug}/${subItem.slug}`
+                                            }
+                                            className="w-full flex"
+                                          >
+                                            <li
+                                              className="hover:bg-[#eb9320]/20 transition-all rounded-md flex flex-1 items-center gap-2 px-2 py-1"
+                                              key={index}
+                                            >
+                                              <div className="w-10 h-10 bg-[#eb9320]/20 rounded-full grid place-items-center">
+                                                <i
+                                                  className={`${
+                                                    subItem.headerIcon ||
+                                                    subItem.icon
+                                                  } m-0 flex items-center`}
+                                                />
+                                              </div>
+                                              <div className="flex flex-1 flex-col gap-1">
+                                                <h3 className="leading-5 text-xs md:text-lg">
+                                                  {subItem.menuTitle ||
+                                                    subItem.course_name}
+                                                </h3>
+                                                {/* <p
                                               className="text-sm font-[500]"
                                               dangerouslySetInnerHTML={{ __html: subItem.headerDesc || subItem.description }}
                                             /> */}
-                                          </div>
-                                        </li>
-                                      </Link>
-                                    ))}
-                                  </ul>
-                                </div>
-                              ))}
+                                              </div>
+                                            </li>
+                                          </Link>
+                                        )
+                                      )}
+                                    </ul>
+                                  </div>
+                                )
+                              )}
                             </div>
                           ) : (
-                            <ul className="h-[110px] md:h-auto overflow-y-scroll grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-2">
+                            <ul className="h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-2">
                               {mapData.map((subItem, index) => (
                                 <Link
                                   target={subItem?.redirectLink ? "_blank" : ""}
@@ -164,8 +186,8 @@ const NavList = ({
                                     subItem?.redirectLink
                                       ? subItem?.redirectLink
                                       : subItem?.link
-                                        ? subItem?.link
-                                        : `/${item.slug}/${subItem.slug}`
+                                      ? subItem?.link
+                                      : `/${item.slug}/${subItem.slug}`
                                   }
                                   className="w-full h-full lg:max-h-[6rem] flex"
                                 >
@@ -175,12 +197,15 @@ const NavList = ({
                                   >
                                     <div className="w-10 h-10 bg-[#eb9320]/20 rounded-full grid place-items-center">
                                       <i
-                                        className={`${subItem.headerIcon || subItem.icon} m-0 flex items-center`}
+                                        className={`${
+                                          subItem.headerIcon || subItem.icon
+                                        } m-0 flex items-center`}
                                       />
                                     </div>
                                     <div className="flex flex-1 flex-col gap-1">
-                                      <h3 className="leading-5 text-lg">
-                                        {subItem.menuTitle || subItem.course_name}
+                                      <h3 className="leading-5 text-xs md:text-lg">
+                                        {subItem.menuTitle ||
+                                          subItem.course_name}
                                       </h3>
                                       <p className="text-sm font-[500]">
                                         {subItem.headerDesc}
@@ -199,9 +224,13 @@ const NavList = ({
               ) : (
                 <Link href={item?.slug || "#"}>
                   <li
-                    className={`flex gap-1 items-center ${isActive && "text-[#eb9320]"} cursor-pointer pb-5`}
+                    className={`flex gap-1 items-center ${
+                      isActive && "text-[#eb9320]"
+                    } cursor-pointer pb-5`}
                   >
-                    <p className="hover:text-[#eb9320] text-[16px] custom-1280-text">{item?.title}</p>
+                    <p className="hover:text-[#eb9320] text-[16px] custom-1280-text">
+                      {item?.title}
+                    </p>
                   </li>
                 </Link>
               )}
@@ -209,22 +238,30 @@ const NavList = ({
           );
         })}
         <li className="sm-py-10 py-[30px]">
-          <Link href={NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL} className="flex gap-1 items-center cursor-pointer hover:text-[#eb9320] text-[16px] custom-1280-text">
+          <Link
+            href={NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL}
+            className="flex gap-1 items-center cursor-pointer hover:text-[#eb9320] text-[16px] custom-1280-text"
+          >
             <span>Agent Hub</span>
           </Link>
         </li>
         <li className="sm-py-10 py-[30px]">
-          <Link href="/emergency-contact" className="flex gap-1 items-center cursor-pointer text-red-600 hover:text-[#eb9320] text-[16px] custom-1280-text">
+          <Link
+            href="/emergency-contact"
+            className="flex gap-1 items-center cursor-pointer text-red-600 hover:text-[#eb9320] text-[16px] custom-1280-text"
+          >
             <span>Emergency</span>
           </Link>
         </li>
-        <li className="flex center sm-py-10 py-[30px]"
+        <li
+          className="flex center sm-py-10 py-[30px]"
           onClick={() => {
             setOpenSearch(true);
           }}
         >
           <div className="flex gap-1 items-center cursor-pointer hover:text-[#eb9320] text-[16px] custom-1280-text">
-            <span className="hidden sm:block md:hidden lg:hidden">Search</span> <FaSearch />
+            <span className="hidden sm:block md:hidden lg:hidden">Search</span>{" "}
+            <FaSearch />
           </div>
         </li>
         {openSearch && (

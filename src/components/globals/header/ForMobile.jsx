@@ -20,7 +20,7 @@ const MobileNav = () => {
   }, [pathname]);
 
   return (
-    <div className="">
+    <>
       <div className="flex justify-between gap-8 items-center px-[24px] py-2 shadow bg-white w-full">
         <div className="py-2">
           <Link href={"/"}>
@@ -45,7 +45,7 @@ const MobileNav = () => {
           </div>
         </div>
       </div>
-      {/* </div> */}
+
       {openMenu && (
         <div className="w-full">
           <div
@@ -75,7 +75,7 @@ const MobileNav = () => {
                 <IoMdCloseCircleOutline />
               </div>
             </div>
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-2">
               <NavList
                 style={`flex flex-col gap-2`}
                 handleOnclick={() => {
@@ -90,7 +90,7 @@ const MobileNav = () => {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
