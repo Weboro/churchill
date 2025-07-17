@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
-import Lottie from "lottie-react";
 import DataNotFoundAnimation from "@/constDatas/animations/data-not-found.json";
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const DataNotFound = () => {
   return (

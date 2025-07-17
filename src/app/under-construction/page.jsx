@@ -4,9 +4,10 @@ import Button from "@/components/button";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import { NewsletterSection } from "@/components";
-import Lottie from "lottie-react";
-
 import Animation from "@/constDatas/animations/Animation.json";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const UnderConstruction = () => {
   return (

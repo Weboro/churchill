@@ -1,10 +1,11 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import Button from "@/components/button";
 import Animation from "@/constDatas/animations/PageNotFound.json";
-import Lottie from "lottie-react";
+
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function NotFound() {
   return (
@@ -21,14 +22,6 @@ export default function NotFound() {
     >
       <div className="container mx-auto px-5">
         <div className="flex flex-col items-center justify-center gap-5">
-          {/* <Image
-          
-            src={`/assets/page-not-found.png`}
-            alt={"use-links-icon-image"}
-            width={400}
-            height={400}
-            className="w-[280px] h-[280px] object-contain"
-          /> */}
           {<Lottie className="w-1/2" animationData={Animation} loop={true} />}
 
           <h3 className="font-bold text-[36px] text-center text-[#2C2B4B]">

@@ -11,8 +11,10 @@ import {
 } from "@/components";
 import { FaArrowRight } from "react-icons/fa";
 import Animation from "@/constDatas/animations/PageNotFound.json";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const Page = ({ params }) => {
   const { slug } = params;

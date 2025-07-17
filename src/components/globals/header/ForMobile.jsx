@@ -5,19 +5,19 @@ import Link from "next/link";
 import { CgMenuRight } from "react-icons/cg";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import TopInfo from "./TopInfo";
 
 const MobileNav = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [isDropdownActive, setIsDropdownActive] = useState(false);
 
-  const { slug } = useParams();
+  const pathname = usePathname();
 
   useEffect(() => {
     setIsDropdownActive(false);
     setOpenMenu(false);
-  }, [slug]);
+  }, [pathname]);
 
   return (
     <div className="">
