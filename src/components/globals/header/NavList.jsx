@@ -97,7 +97,7 @@ const NavList = ({
                   </div>
 
                   {isDropdownActive && (
-                    <div className="z-20 hidden px-3 py-3 w-[80vw] max-h-[14rem] overflow-y-scroll lg:w-[100vw] border-t-4 border-t-[#eb9320] group-hover:block lg:absolute lg:left-0 top-[100%] shadow-xl whitespace-wrap transition delay-150 bg-white">
+                    <div className="z-20 hidden px-2 md:px-3 md:py-3 w-[80vw]  overflow-y-scroll lg:w-[100vw] border-t-4 border-t-[#eb9320] group-hover:block lg:absolute lg:left-0 top-[100%] shadow-xl whitespace-wrap transition delay-150 bg-white">
                       <div className="flex flex-col lg:flex-row gap-2 container mx-auto py-2">
                         <div className="flex-[20%] flex flex-col gap-2 md:flex-row lg:flex-col lg:gap-2 justify-between lg:justify-center">
                           <h2 className="text-lg md:text-xl">{item.title}</h2>
@@ -109,11 +109,11 @@ const NavList = ({
                             "future-students",
                             "login",
                           ].includes(item.slug) && (
-                            <Link href={`/${item.slug}`}>
-                              <Button
-                                styleA="text-xs flex items-center gap-2"
-                                btnName="Learn More"
-                              />
+                            <Link
+                              className="p-2 md:p-3 rounded-lg text-xs font-semibold text-white hover:bg-orange-300 md:text-base bg-primary-orange border-2 border-black w-fit transition-all"
+                              href={`/${item.slug}`}
+                            >
+                              Learn More
                             </Link>
                           )}
                         </div>
@@ -126,7 +126,7 @@ const NavList = ({
                                     <h3 className="text-lg font-semibold mb-2">
                                       {facultyName}
                                     </h3>
-                                    <ul className="flex flex-col gap-4 px-2">
+                                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                                       {groupedCourses[facultyName].map(
                                         (subItem, index) => (
                                           <Link
@@ -203,10 +203,10 @@ const NavList = ({
                                       />
                                     </div>
                                     <div className="flex flex-1 flex-col gap-1">
-                                      <h3 className="leading-5 text-xs md:text-lg">
+                                      <p className="leading-3 line-clamp-4 text-xs md:text-base">
                                         {subItem.menuTitle ||
                                           subItem.course_name}
-                                      </h3>
+                                      </p>
                                       <p className="text-sm font-[500]">
                                         {subItem.headerDesc}
                                       </p>
@@ -237,6 +237,7 @@ const NavList = ({
             </div>
           );
         })}
+
         <li className="sm-py-10 py-[30px]">
           <Link
             href={NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL}
