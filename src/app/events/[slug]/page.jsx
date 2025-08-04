@@ -1,12 +1,8 @@
-import { IndivisualEventsPage } from "@/components";
+import IndivisualEventsPage from "@/components/sections/EventsSection/IndivisualEventsPage";
 
 const page = ({ params }) => {
   const { slug } = params;
-  return (
-    <>
-      <IndivisualEventsPage slug={slug} />
-    </>
-  );
+  return <IndivisualEventsPage slug={slug} />;
 };
 
 export default page;

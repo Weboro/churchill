@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { EventsCard } from "@/components";
+import EventsCard from "@/components/cards/EventsCard";
 import { FetchUpcomingKeyEventsData } from "@/components/utils/apiQueries";
 
 const MoreEventsSection = ({ slug }) => {

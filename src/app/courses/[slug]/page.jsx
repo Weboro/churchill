@@ -1,14 +1,9 @@
-import { CourseDetails } from "@/components";
-import React from "react";
+import CourseDetails from "@/components/sections/courseSections/CourseDetails";
 
 const page = ({ params }) => {
   const { slug } = params;
 
-  return (
-    <div>
-      <CourseDetails slug={slug} />
-    </div>
-  );
+  return <CourseDetails slug={slug} />;
 };
 
 export default page;

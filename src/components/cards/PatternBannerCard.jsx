@@ -1,5 +1,5 @@
-import { Button } from "@/components";
 import { FaArrowRight } from "react-icons/fa";
+import Button from "@/components/button";
 
 const PatternBannerCard = ({
   title,

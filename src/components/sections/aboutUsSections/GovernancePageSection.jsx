@@ -1,14 +1,10 @@
 "use client";
 import { navItems } from "@/constDatas/navItems";
 import React, { useEffect, useState } from "react";
-import {
-  GovernanceCard,
-  NewsletterSection,
-  DataNotFound,
-  PatternBannerCard,
-} from "@/components";
+import GovernanceCard from "@/components/cards/GovernanceCard";
+import NewsletterSection from "@/components/sections/commonSections/NewsletterSection";
+import PatternBannerCard from "@/components/cards/PatternBannerCard";
 import FadeUpAnimation from "@/animations/FadeUp";
-import Image from "next/image";
 
 const GovernancePageSection = ({ slug }) => {
   const [openDetails, setOpenDetails] = useState(false);

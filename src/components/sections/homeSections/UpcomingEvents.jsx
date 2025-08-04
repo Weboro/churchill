@@ -1,10 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
-import React from "react";
 import { FaArrowRight } from "react-icons/fa";
-import { eventsData } from "@/constDatas/eventsData";
 import Link from "next/link";
-import { Button, EventsCard } from "@/components";
+import Button from "@/components/button";
+import EventsCard from "@/components/cards/EventsCard";
 import FadeUpAnimation from "@/animations/FadeUp";
 import { FetchUpcomingKeyEventsData } from "@/components/utils/apiQueries";
 

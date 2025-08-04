@@ -1,5 +1,4 @@
-import React from "react";
-import { Button } from "@/components";
+import Button from "@/components/button";
 
 const page = () => {
   return (
@@ -21,7 +20,8 @@ const page = () => {
         Thankyou For Submitting Ticket to Our Churchill Representative.
       </h2>
       <p className="text-md lg:text-md w-fit mx-auto">
-        We will get back to you soon with the Update. You Must have received ticket number in your email for reference.
+        We will get back to you soon with the Update. You Must have received
+        ticket number in your email for reference.
       </p>
 
       <a href="/" className="w-fit mx-auto block">

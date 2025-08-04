@@ -1,11 +1,6 @@
-import { FaqPage } from "@/components";
-import React from "react";
+import FaqPage from "@/components/sections/contactSections/FaqPage";
 
 const ContactUsFAQ = () => {
-  return (
-    <>
-      <FaqPage />
-    </>
-  );
+  return <FaqPage />;
 };
 export default ContactUsFAQ;

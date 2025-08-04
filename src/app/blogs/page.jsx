@@ -1,14 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import {
-  Search,
-  BlogItemCard,
-  StyledHeroCard,
-  DataNotFound,
-  Button,
-  Spiner,
-} from "@/components";
 import { FetchBlogData } from "../../components/utils/apiQueries";
+import { useState, useEffect } from "react";
+import Search from "@/components/search/index";
+import BlogItemCard from "@/components/cards/BlogItemCard";
+import DataNotFound from "@/components/globals/DataNotFound/DataNotFound";
+import Button from "@/components/button";
+import Spiner from "@/components/spiner";
 
 const BlogsPage = () => {
   const [isLoading, setIsLoading] = useState(true);

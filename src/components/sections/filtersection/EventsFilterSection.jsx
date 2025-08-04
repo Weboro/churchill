@@ -1,11 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import {
-  DataNotFound,
-  EventsCard,
-  FilterComponent,
-  NewsletterSection,
-} from "@/components";
+import DataNotFound from "@/components/globals/DataNotFound/DataNotFound";
+import EventsCard from "@/components/cards/EventsCard";
+import FilterComponent from "@/components/filter/FilterComponent";
+import NewsletterSection from "@/components/sections/commonSections/NewsletterSection";
 
 const EventsFilterSection = ({ data }) => {
   const [searchQuery, setSearchQuery] = useState("");

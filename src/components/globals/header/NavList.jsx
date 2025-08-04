@@ -1,11 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { FaAngleDown, FaSearch } from "react-icons/fa";
-import TopInfo from "./TopInfo";
 import { navItems } from "@/constDatas/navItems";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Button } from "@/components";
 import { FetchCourseData } from "@/components/utils/apiQueries";
 const NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL =
   process.env.NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL;

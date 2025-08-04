@@ -1,18 +1,13 @@
 "use client";
-import {
-  NewsletterSection,
-  MoreBlogsSection,
-  Spiner,
-  ToastComponent,
-} from "@/components";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll } from "framer-motion";
 import { FetchBlogData } from "@/components/utils/apiQueries";
-
-import { BlogData } from "@/constDatas/BlogData";
-import { SlGameController } from "react-icons/sl";
+import NewsletterSection from "@/components/sections/commonSections/NewsletterSection";
+import MoreBlogsSection from "@/components/sections/blogSections/MoreBlogsSection";
+import Spiner from "@/components/spiner";
+import ToastComponent from "@/components/toast/Toast";
 
 // Date formatter function
 const formatDate = (dateString) => {

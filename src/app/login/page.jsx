@@ -1,7 +1,6 @@
-import React from "react";
-import { navItems } from "@/constDatas/navItems";
-import { PatternBannerCard, Button } from "@/components";
 import Link from "next/link";
+import { navItems } from "@/constDatas/navItems";
+import PatternBannerCard from "@/components/cards/PatternBannerCard";
 import FadeUpAnimation from "@/animations/FadeUp";
 
 const page = () => {

@@ -2,7 +2,8 @@
 import { useState, useEffect } from "react";
 import { navItems } from "@/constDatas/navItems";
 import Image from "next/image";
-import { Loading, NewsletterSection } from "@/components";
+import Loading from "@/components/globals/loading/Loading";
+import NewsletterSection from "@/components/sections/commonSections/NewsletterSection";
 
 const IndivisualMemberDetailsPage = ({ slug }) => {
   const [data, setData] = useState([]);

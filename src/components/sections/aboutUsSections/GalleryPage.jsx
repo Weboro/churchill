@@ -1,6 +1,5 @@
 "use client";
-
-import { PatternBannerCard } from "@/components";
+import PatternBannerCard from "@/components/cards/PatternBannerCard";
 import { useState } from "react";
 import Image from "next/image";
 import clsx from "clsx";
@@ -347,7 +346,9 @@ const GalleryPage = () => {
                 height={800}
                 className="w-full h-auto object-contain"
                 unoptimized
-                onError={() => console.log("Image failed to load:", fullScreenImage)}
+                onError={() =>
+                  console.log("Image failed to load:", fullScreenImage)
+                }
               />
             ) : (
               <p className="text-white">Loading image...</p>

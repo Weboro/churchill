@@ -1,7 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { DataNotFound, CourseDetailsCard, FilterComponent } from "@/components";
 import FadeUpAnimation from "@/animations/FadeUp";
+import DataNotFound from "@/components/globals/DataNotFound/DataNotFound";
+import CourseDetailsCard from "@/components/cards/CourseDetailsCard";
 
 const CoursesFilterSection = ({ data }) => {
   const [searchQuery, setSearchQuery] = useState("");

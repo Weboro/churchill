@@ -1,13 +1,12 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { navItems } from "@/constDatas/navItems";
 
-import { YoutubeSliderCard } from "@/components";
-
+import YoutubeSliderCard from "@/components/cards/YoutubeSliderCard";
 import FadeUpAnimation from "@/animations/FadeUp";
 
 const YoutubeSlider = () => {

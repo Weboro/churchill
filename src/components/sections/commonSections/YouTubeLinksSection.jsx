@@ -1,5 +1,4 @@
-import React from "react";
-import { YoutubeSlider } from "@/components";
+import YoutubeSlider from "@/components/sliders/YoutubeSlider";
 
 const YouTubeLinksSection = () => {
   return (

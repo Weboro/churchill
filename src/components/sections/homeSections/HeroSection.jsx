@@ -1,4 +1,4 @@
-import { TopBannerCard } from "@/components";
+import TopBannerCard from "@/components/cards/TopBannerCard";
 import React from "react";
 
 const HeroSection = () => {

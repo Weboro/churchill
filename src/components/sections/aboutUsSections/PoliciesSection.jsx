@@ -1,16 +1,11 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { requestList } from "@/constDatas/requestList";
-import {
-  NewsletterSection,
-  RequestFormCard,
-  Loading,
-  StyledHeroCard,
-} from "@/components";
+import NewsletterSection from "@/components/sections/commonSections/NewsletterSection";
+import RequestFormCard from "@/components/cards/RequestFormCard";
+import StyledHeroCard from "@/components/cards/StyledHeroCard";
 
 const PoliciesSection = ({ slug }) => {
-  const [notFound, setNotFound] = useState(false);
-
   const [searchText, setSearchText] = useState("");
   const query = searchText.trim().toLowerCase();
 

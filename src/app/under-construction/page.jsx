@@ -1,11 +1,10 @@
 "use client";
-import React from "react";
-import Button from "@/components/button";
 import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
-import { NewsletterSection } from "@/components";
-import Animation from "@/constDatas/animations/Animation.json";
 import dynamic from "next/dynamic";
+import Button from "@/components/button";
+import { FaArrowRight } from "react-icons/fa";
+import Animation from "@/constDatas/animations/Animation.json";
+import NewsletterSection from "@/components/sections/commonSections/NewsletterSection";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 

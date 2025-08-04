@@ -1,9 +1,6 @@
 "use client";
-import TopBannerCard from "@/components/cards/TopBannerCard";
-import React, { useEffect, useState } from "react";
-import { navItems } from "@/constDatas/navItems";
+import { useEffect, useState } from "react";
 import { requestList } from "@/constDatas/requestList";
-import { Spiner } from "@/components";
 
 const PoliciesDetails = ({ slug }) => {
   // const [isLoading, setIsLoading] = useState(true);

@@ -1,8 +1,8 @@
 "use client";
+import { useEffect, useState } from "react";
 import TopBannerCard from "@/components/cards/TopBannerCard";
-import React, { useEffect, useState } from "react";
+import Spiner from "@/components/spiner";
 import { navItems } from "@/constDatas/navItems";
-import { Spiner } from "@/components";
 
 const GuideDetails = ({ slug }) => {
   const [isLoading, setIsLoading] = useState(true);

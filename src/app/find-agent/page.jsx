@@ -1,16 +1,13 @@
 "use client";
-import {
-  PatternBannerCard,
-  AgentInfoCard,
-  Button,
-  DataNotFound,
-  Loading,
-} from "@/components";
-import { FetchAgents } from "@/components/utils/apiQueries";
-import React, { useState, useEffect } from "react";
-import { FaArrowRight, FaSearch } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import { FetchAgents } from "@/components/utils/apiQueries";
+import { useState, useEffect } from "react";
+import { FaArrowRight, FaSearch } from "react-icons/fa";
+import PatternBannerCard from "@/components/cards/PatternBannerCard";
+import Button from "@/components/button";
+import DataNotFound from "@/components/globals/DataNotFound/DataNotFound";
+import Loading from "@/components/globals/loading/Loading";
 
 function formatText(text) {
   return text ? text.toLowerCase().trim() : "";
@@ -34,7 +31,7 @@ const Page = () => {
         setIsLoading(true);
         const res = await FetchAgents();
         setPageData(res.data);
-        setFilteredData(res.data); // Initialize filteredData with all data
+        setFilteredData(res.data);
       } catch (error) {
         console.error("[E]\t Error while fetching agent data", error);
       } finally {
@@ -84,7 +81,9 @@ const Page = () => {
 
         const nameMatch =
           !filter.nameSearch ||
-          formatText(agent?.name || "").includes(formatText(filter.nameSearch)) ||
+          formatText(agent?.name || "").includes(
+            formatText(filter.nameSearch)
+          ) ||
           formatText(agent?.agent_name || "").includes(
             formatText(filter.nameSearch)
           ) ||
@@ -217,11 +216,16 @@ const Page = () => {
                                   Phone
                                 </p>
                                 <a
-                                  href={item?.phone ? `tel:${item.phone}` : undefined}
-                                  className={`text-sm ${item?.phone
+                                  href={
+                                    item?.phone
+                                      ? `tel:${item.phone}`
+                                      : undefined
+                                  }
+                                  className={`text-sm ${
+                                    item?.phone
                                       ? "text-blue-600 hover:underline"
                                       : "text-gray-500"
-                                    }`}
+                                  }`}
                                 >
                                   {item?.phone || "N/A"}
                                 </a>
@@ -236,11 +240,16 @@ const Page = () => {
                                   Email
                                 </p>
                                 <a
-                                  href={item?.email ? `mailto:${item.email}` : undefined}
-                                  className={`text-sm ${item?.email
+                                  href={
+                                    item?.email
+                                      ? `mailto:${item.email}`
+                                      : undefined
+                                  }
+                                  className={`text-sm ${
+                                    item?.email
                                       ? "text-blue-600 hover:underline"
                                       : "text-gray-500"
-                                    }`}
+                                  }`}
                                 >
                                   {item?.email || "N/A"}
                                 </a>
@@ -258,16 +267,17 @@ const Page = () => {
                                   href={
                                     item?.address
                                       ? `https://www.google.com/maps/search/${encodeURIComponent(
-                                        item.address
-                                      )}`
+                                          item.address
+                                        )}`
                                       : undefined
                                   }
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className={`text-sm ${item?.address
+                                  className={`text-sm ${
+                                    item?.address
                                       ? "text-blue-600 hover:underline"
                                       : "text-gray-500"
-                                    }`}
+                                  }`}
                                 >
                                   {item?.address || "N/A"}
                                 </a>

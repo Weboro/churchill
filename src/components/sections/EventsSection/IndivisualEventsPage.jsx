@@ -1,17 +1,13 @@
 "use client";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-// import { data } from "@/constDatas/data";
-import {
-  MoreEventsSection,
-  NewsletterSection,
-  Spiner,
-  ToastComponent,
-} from "@/components";
+import MoreEventsSection from "@/components/sections/EventsSection/MoreEventsSection";
+import NewsletterSection from "@/components/sections/commonSections/NewsletterSection";
+import Spiner from "@/components/spiner";
+import ToastComponent from "@/components/toast/Toast";
 import { motion, useScroll } from "framer-motion";
-import react, { useEffect, useRef, useState } from "react";
 import { FetchUpcomingKeyEventsData } from "@/components/utils/apiQueries";
-import { notFound } from "next/navigation";
 
 export const metadata = {
   title: "Churchill",

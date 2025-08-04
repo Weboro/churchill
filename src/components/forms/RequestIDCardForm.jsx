@@ -2,7 +2,7 @@
 import React, { useState, useRef } from "react";
 import { FaArrowRight, FaIdCard } from "react-icons/fa";
 import Button from "../button";
-import { ToastComponent } from "@/components";
+import ToastComponent from "@/components/toast/Toast";
 
 const defaultFormState = {
   id: "",

@@ -1,5 +1,4 @@
-import { AboutInfoSection } from "@/components";
-import React from "react";
+import AboutInfoSection from "@/components/sections/aboutUsSections/AboutInfoSection";
 
 const AboutUs = () => {
   return (

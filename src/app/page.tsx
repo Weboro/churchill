@@ -1,15 +1,10 @@
-import {
-  EnquirySection,
-  HeroSection,
-  NewsletterSection,
-  RequestFormSection,
-  UpcomingEvents,
-  CoursesSection,
-  UpcomingKeyDates,
-  BlogSection,
-  VideoSection,
-} from "@/components";
-import React from "react";
+import HeroSection from "@/components/sections/homeSections/HeroSection";
+import CoursesSection from "@/components/sections/homeSections/CoursesSection";
+import UpcomingKeyDates from "@/components/sections/upcomingEventsSections/UpcomingKeyDates";
+import EnquirySection from "@/components/sections/homeSections/EnquirySection";
+import BlogSection from "@/components/sections/blogSections/BlogSection";
+import VideoSection from "@/components/sections/homeSections/VideoSection";
+import NewsletterSection from "@/components/sections/commonSections/NewsletterSection";
 
 const Home = () => {
   return (
@@ -22,8 +17,6 @@ const Home = () => {
         <UpcomingKeyDates />
 
         <EnquirySection />
-
-        {/* <UpcomingEvents /> */}
 
         <BlogSection />
 

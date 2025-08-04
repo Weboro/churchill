@@ -1,14 +1,11 @@
 "use client";
-import {
-  Button,
-  PoliciesSection,
-  GovernancePageSection,
-  AccredentialSection,
-  GovernanceStructure,
-  // OrganisationalChartSection,
-  GalleryPage,
-  FinancialStanding,
-} from "@/components";
+import Button from "@/components/button";
+import PoliciesSection from "@/components/sections/aboutUsSections/PoliciesSection";
+import GovernancePageSection from "@/components/sections/aboutUsSections/GovernancePageSection";
+import AccredentialSection from "@/components/sections/courseSections/AccredentialSection";
+import GovernanceStructure from "@/components/sections/aboutUsSections/GovernanceStructure";
+import FinancialStanding from "@/components/sections/aboutUsSections/FinancialStanding";
+import GalleryPage from "@/components/sections/aboutUsSections/GalleryPage";
 import { FaArrowRight } from "react-icons/fa";
 import Animation from "@/constDatas/animations/PageNotFound.json";
 import dynamic from "next/dynamic";

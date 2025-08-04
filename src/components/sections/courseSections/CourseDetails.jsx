@@ -1,16 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import {
-  TabbedPane,
-  CourseOverviewSection,
-  EnquirySection,
-  NewsletterSection,
-  TopBannerCard,
-  CoursesSlider,
-  Spiner,
-  HalfTopBanner,
-} from "@/components";
 import { FetchCourseData } from "@/components/utils/apiQueries";
+import TabbedPane from "@/components/TabbedPane/TabbedPane";
+import CourseOverviewSection from "@/components/cards/CourseOverviewCard";
+import EnquirySection from "@/components/sections/homeSections/EnquirySection";
+import NewsletterSection from "@/components/sections/commonSections/NewsletterSection";
+import TopBannerCard from "@/components/cards/TopBannerCard";
+import CoursesSlider from "@/components/sliders/CoursesSlider";
+import Spiner from "@/components/spiner";
 
 const CourseDetails = ({ slug }) => {
   const [data, setData] = useState({});
@@ -65,7 +62,6 @@ const CourseDetails = ({ slug }) => {
         </div>
       )}
     </>
-
   );
 };
 export default CourseDetails;

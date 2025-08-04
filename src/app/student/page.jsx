@@ -1,14 +1,12 @@
-import { NewsletterSection, StyledHeroCard } from "@/components";
-import { navItems } from "@/constDatas/navItems";
 import Link from "next/link";
+import { navItems } from "@/constDatas/navItems";
+import NewsletterSection from "@/components/sections/commonSections/NewsletterSection";
 
 const page = () => {
   const data = navItems[1];
 
   return (
     <div className="flex flex-col gap-[32px] lg:gap-[64px]">
-      {/* <StyledHeroCard title="Student" /> */}
-
       <div className="container mx-auto px-5 mt-[48px]">
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
           {Array.isArray(data?.Catagories) &&
@@ -20,8 +18,8 @@ const page = () => {
                   subItem?.redirectLink
                     ? subItem?.redirectLink
                     : subItem?.link
-                      ? subItem?.link
-                      : `/${item.slug}/${subItem.slug}`
+                    ? subItem?.link
+                    : `/${item.slug}/${subItem.slug}`
                 }
                 className="w-full h-full"
               >

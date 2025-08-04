@@ -1,11 +1,9 @@
 "use client";
-import React, { useState } from "react";
-import {
-  Timer,
-  Button,
-  RequestIDCardForm,
-  NewsletterSection,
-} from "@/components";
+import { useState } from "react";
+import Timer from "@/components/timer/Timer";
+import Button from "@/components/button";
+import RequestIDCardForm from "@/components/forms/RequestIDCardForm";
+import NewsletterSection from "@/components/sections/commonSections/NewsletterSection";
 import Image from "next/image";
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -73,8 +71,9 @@ const Page = () => {
               >
                 <h2
                   onClick={() => handleToggle(item.id)}
-                  className={`text-lg md:text-2xl font-bold py-1 md:py-2 px-2 flex items-center justify-between cursor-pointer select-none hover:bg-zinc-200/20 ${isActive ? "border-b-neutral-800/25 border-b" : ""
-                    }`}
+                  className={`text-lg md:text-2xl font-bold py-1 md:py-2 px-2 flex items-center justify-between cursor-pointer select-none hover:bg-zinc-200/20 ${
+                    isActive ? "border-b-neutral-800/25 border-b" : ""
+                  }`}
                 >
                   <span>
                     Step {item.id}: {item.title}
@@ -173,7 +172,8 @@ const Page = () => {
                       <div className="my-4 px-5 flex flex-col gap-5">
                         <p>
                           Quickly Fill Out the Form and Your ID Card will Be
-                          ready to be Picked Up at Churchill Institute of Higher Education Reception Desk
+                          ready to be Picked Up at Churchill Institute of Higher
+                          Education Reception Desk
                         </p>
                         <div onClick={() => setIsIDFormShown(!isIDFormShown)}>
                           <button className="border-2 border-black px-6 py-3 bg-primary-orange rounded-md font-bold">
@@ -187,8 +187,9 @@ const Page = () => {
                       <div className="my-4 px-5 flex flex-col gap-5">
                         <p>
                           You will be Shortly Provided with Login Details For
-                          Microsoft 365 by Churchill Institute of Higher Education Staff in your Personal
-                          Email. Below is Office365 Guide that will be helpful.
+                          Microsoft 365 by Churchill Institute of Higher
+                          Education Staff in your Personal Email. Below is
+                          Office365 Guide that will be helpful.
                         </p>
 
                         <a

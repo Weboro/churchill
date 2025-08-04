@@ -1,9 +1,9 @@
-import ApplyCard from "@/components/cards/ApplyCard";
 import React from "react";
 import Link from "next/link";
+import ApplyCard from "@/components/cards/ApplyCard";
 import Button from "@/components/button";
-import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa";
 
 import FadeUpAnimation from "@/animations/FadeUp";
 

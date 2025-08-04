@@ -1,4 +1,4 @@
-import { Button } from "@/components";
+import Button from "@/components/button";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
@@ -82,9 +82,9 @@ const AIHelpSection = () => {
             </h2>
             <p>
               This policy explains Churchill Institute of Higher Education's
-              (Churchill Institute of Higher Education or 'the Institute') commitment to providing the support
-              services students need to successfully complete their studies at
-              the Institute.
+              (Churchill Institute of Higher Education or 'the Institute')
+              commitment to providing the support services students need to
+              successfully complete their studies at the Institute.
             </p>
             <Link
               href={`${NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL}/assets/Policy-and-procedure/SupportforStudentsPolicy.pdf`}

@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
 import Button from "@/components/button";
-import { BlogItemCard } from "@/components";
 import FadeUpAnimation from "@/animations/FadeUp";
 import { FetchBlogData } from "@/components/utils/apiQueries";
+import BlogItemCard from "@/components/cards/BlogItemCard";
 
 function BlogSection() {
   const [data, setData] = useState([]);

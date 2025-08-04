@@ -1,9 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { NewsletterSection, PatternBannerCard, Spiner } from "@/components";
-import { contactFaqs } from "@/constDatas/contactData";
-import { AccordionComponent } from "@/components";
 import { FetchFaqData } from "@/components/utils/apiQueries";
+import NewsletterSection from "@/components/sections/commonSections/NewsletterSection";
+import PatternBannerCard from "@/components/cards/PatternBannerCard";
+import Spiner from "@/components/spiner";
+import AccordionComponent from "@/components/accordion/AccordionComponent";
 
 const FaqPage = () => {
   const [isLoading, setIsLoading] = useState(true);

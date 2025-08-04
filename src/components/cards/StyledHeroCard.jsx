@@ -1,8 +1,5 @@
-"use client";
-import React, { useState } from "react";
+import Search from "@/components/search";
 import Image from "next/image";
-
-import { Search } from "@/components";
 
 const StyledHeroCard = ({
   title,

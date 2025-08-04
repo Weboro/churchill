@@ -1,13 +1,9 @@
 import { FaArrowRight } from "react-icons/fa";
 import { contactData, contactFaqs } from "@/constDatas/contactData";
 import Link from "next/link";
-import {
-  Button,
-  ContactUsCard,
-  EnquirySection,
-  AccordionComponent,
-  AskAQeustionForm,
-} from "@/components";
+import Button from "@/components/button";
+import ContactUsCard from "@/components/cards/ContactUsCard";
+import EnquirySection from "@/components/sections/homeSections/EnquirySection";
 
 const ContactUs = () => {
   return (
@@ -42,16 +38,6 @@ const ContactUs = () => {
                 }
               />
             </Link>
-            {/* <Link href={"/contact-us/faq"}>
-              <Button
-                btnName="FAQ"
-                icon={<FaArrowRight />}
-                styleA={"flex items-center gap-1"}
-                style={
-                  "border font-semibold text-[14px] border-2 border-[#606060] rounded-md px-4 py-3 hover:bg-[#ff9700] transition duration-200  ease-in-out hover:scale-105"
-                }
-              />
-            </Link> */}
           </div>
         </div>
       </section>

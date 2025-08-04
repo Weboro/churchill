@@ -1,5 +1,4 @@
-import { IndivisualBlogPage } from "@/components";
-import React from "react";
+import IndivisualBlogPage from "@/components/sections/blogSections/IndivisualBlogPage";
 
 const page = ({ params }) => {
   const { slug } = params;

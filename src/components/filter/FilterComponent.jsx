@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { FaSearch } from "react-icons/fa";
 import { LuSettings2 } from "react-icons/lu";
-import { Button, Search } from "@/components";
+import Button from "@/components/button";
+import Search from "@/components/search/index";
 
 const FilterComponent = ({
   children,

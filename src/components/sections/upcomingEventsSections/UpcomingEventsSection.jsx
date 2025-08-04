@@ -1,6 +1,7 @@
-import React from "react";
 import { eventsData } from "@/constDatas/eventsData";
-import { EventsCard, NewsletterSection, TopBannerCard } from "@/components";
+import EventsCard from "@/components/cards/EventsCard";
+import NewsletterSection from "@/components/sections/commonSections/NewsletterSection";
+import TopBannerCard from "@/components/cards/TopBannerCard";
 
 const UpcomingKeyDatesSection = () => {
   return (

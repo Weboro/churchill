@@ -1,5 +1,4 @@
-import React from "react";
-import { EventsPage } from "@/components";
+import EventsPage from "@/components/pages/EventsPage";
 
 const page = () => {
   return <EventsPage />;

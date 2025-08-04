@@ -1,5 +1,4 @@
-import React from "react";
-import { IndivisualMemberDetailsPage } from "@/components";
+import IndivisualMemberDetailsPage from "@/components/sections/aboutUsSections/IndivisualMemberDetailsPage";
 
 const page = ({ params }) => {
   const { slug } = params;
