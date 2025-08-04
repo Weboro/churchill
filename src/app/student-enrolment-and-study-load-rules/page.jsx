@@ -144,6 +144,7 @@ const page = () => {
               <a
                 href="https://backend.churchill.nsw.edu.au/media/policy_pdfs/Academic_Progress__Completion_Policy_v1.0_July_2025.pdf"
                 target="_blank"
+                className="text-primary-orange font-semibold underline"
               >
                 Academic Progress Completion Policy
               </a>
