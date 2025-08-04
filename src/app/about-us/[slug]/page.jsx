@@ -21,9 +21,7 @@ const Page = ({ params }) => {
 
   return (
     <>
-      {slug === "policies-and-procedures" ? (
-        <PoliciesSection slug={slug} />
-      ) : slug === "governance-and-leadership" ? (
+      {slug === "governance-and-leadership" ? (
         <GovernancePageSection slug={slug} />
       ) : slug === "accreditation" ? (
         <AccredentialSection slug={slug} />
@@ -64,18 +62,5 @@ const Page = ({ params }) => {
     </>
   );
 };
-
-//       {slug === "governance-and-leadership" ? (
-//         <GovernancePageSection slug={slug} />
-//       ) : slug === "policies-and-procedures" ? (
-//         <PoliciesSection />
-//       ) : (
-//       )}
-
-//       {/* {slug === "about" && <AboutInfoSection />}
-//       {slug === "governance-and-leadership" && (
-//         <GovernancePageSection slug={slug} />
-//       )}
-//       {slug === "policies-and-procedures" && <PoliciesSection />}
 
 export default Page;
