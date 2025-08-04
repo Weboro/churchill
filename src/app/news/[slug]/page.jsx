@@ -2,6 +2,7 @@ import React from "react";
 import { NewsData } from "@/constDatas/NewsData";
 import { NewsCategory } from "@/constDatas/NewsCategory";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
 const monthArray = [
   "January",
@@ -21,7 +22,15 @@ const monthArray = [
 const page = ({ params }) => {
   const { slug } = params;
 
+  if (!slug || typeof slug !== "string") {
+    notFound();
+  }
+
   const item = NewsData?.find((item) => item.slug === slug);
+
+  if (!item) {
+    notFound();
+  }
 
   const wordCount = item?.description.length;
   const readTime = Math.round(wordCount / 300);
