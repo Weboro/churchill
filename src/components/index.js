@@ -13,10 +13,8 @@ import HeroSection from "./sections/homeSections/HeroSection";
 import CoursesSection from "./sections/homeSections/CoursesSection";
 import HelpSection from "./sections/homeSections/HelpSection";
 import UpcomingEvents from "./sections/homeSections/UpcomingEvents";
-import RequestFormSection from "./sections/commonSections/RequestFormSection";
 import ReportFormSection from "./sections/ReportFormSections/ReportFormSection";
 import NewsletterSection from "./sections/commonSections/NewsletterSection";
-import PoliciesDetails from "./sections/policiesSections/PoliciesDetails";
 import GuideDetails from "./sections/guideSections/GuideDetails";
 import UpcomingEventsSection from "./sections/upcomingEventsSections/UpcomingEventsSection";
 import CoursesSlider from "./sliders/CoursesSlider";
@@ -42,7 +40,6 @@ import ContactUsCard from "./cards/ContactUsCard";
 import SelectComponent from "./select/SelectComponent";
 import CheckBoxList from "./CheckBoxList/CheckBoxList";
 import EventsFilterSection from "./sections/filtersection/EventsFilterSection";
-import PoliciesSection from "./sections/aboutUsSections/PoliciesSection";
 import AccreditationSection from "./sections/aboutUsSections/AccreditationSection";
 import AboutInfoSection from "./sections/aboutUsSections/AboutInfoSection";
 import StyledHeroCard from "./cards/StyledHeroSection";
@@ -78,7 +75,7 @@ import HandBookFloater from "./floater/HandBookFloater";
 import EmergencyContactFloater from "./floater/EmergencyContactFloater";
 import FinancialStanding from "./sections/aboutUsSections/FinancialStanding";
 import VideoSection from "./sections/homeSections/VideoSection";
-import HalfTopBanner from "./cards/HalfTopBannerCard"
+import HalfTopBanner from "./cards/HalfTopBannerCard";
 import HierarchyChart from "./hiearchy/HiearchyChart";
 
 export {
@@ -96,11 +93,9 @@ export {
   HeroSection,
   CoursesSection,
   HelpSection,
-  RequestFormSection,
   ReportFormSection,
   UpcomingEvents,
   NewsletterSection,
-  PoliciesDetails,
   GuideDetails,
   UpcomingEventsSection,
   CoursesSlider,
@@ -126,7 +121,6 @@ export {
   GovernancePageSection,
   GovernanceCard,
   PopUpDetailsCard,
-  PoliciesSection,
   AccreditationSection,
   AboutInfoSection,
   StyledHeroCard,
@@ -163,5 +157,5 @@ export {
   FinancialStanding,
   VideoSection,
   HalfTopBanner,
-  HierarchyChart
+  HierarchyChart,
 };

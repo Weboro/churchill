@@ -2,8 +2,6 @@ import {
   EnquirySection,
   HeroSection,
   NewsletterSection,
-  RequestFormSection,
-  UpcomingEvents,
   CoursesSection,
   UpcomingKeyDates,
   BlogSection,
