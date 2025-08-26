@@ -54,7 +54,8 @@ const Courses = () => {
               image={`/assets/maincoursepage.jpg`}
               titleSpan={
                 <span>
-                  Study Bachelor of Business at Churchill Institute of Higher Education.
+                  Study Bachelor of Business at Churchill Institute of Higher
+                  Education.
                 </span>
               }
               subTitle="Explore our innovative programs and transform your career."
@@ -117,19 +118,31 @@ const Courses = () => {
                 <ul className="list-disc list-inside space-y-4">
                   <li>
                     Comprises four (4) majors in&nbsp;
-                    <Link href="/courses/major-in-accounting" className="text-orange-600 hover:underline">
+                    <Link
+                      href="/courses/major-in-accounting"
+                      className="text-orange-600 hover:underline"
+                    >
                       Accounting
                     </Link>
                     ,&nbsp;
-                    <Link href="/courses/major-in-hospitality" className="text-orange-600 hover:underline">
+                    <Link
+                      href="/courses/major-in-hospitality"
+                      className="text-orange-600 hover:underline"
+                    >
                       Hospitality
                     </Link>
                     ,&nbsp;
-                    <Link href="/courses/major-in-information-systems" className="text-orange-600 hover:underline">
+                    <Link
+                      href="/courses/major-in-information-systems"
+                      className="text-orange-600 hover:underline"
+                    >
                       Information Systems
                     </Link>
                     &nbsp;and&nbsp;
-                    <Link href="/courses/major-in-management" className="text-orange-600 hover:underline">
+                    <Link
+                      href="/courses/major-in-management"
+                      className="text-orange-600 hover:underline"
+                    >
                       Management
                     </Link>
                     <ul className="list-disc ml-6 mt-3 space-y-2">
@@ -153,28 +166,72 @@ const Courses = () => {
                           Chartered Accountants (CA) Australia
                         </a>
                       </li>
-                      <li>Is delivered over 3 years full-time, face to face on campus over 6 semesters.</li>
-                      <li>Requires completion of 24 Units (240 credit points) that comply with the course major rules to meet graduation eligibility requirements.</li>
+                      <li>
+                        Is delivered over 3 years full-time, face to face on
+                        campus over 6 semesters.
+                      </li>
+                      <li>
+                        Requires completion of 24 Units (240 credit points) that
+                        comply with the course major rules to meet graduation
+                        eligibility requirements.
+                      </li>
                     </ul>
                   </li>
                   <li>
-                    Each semester comprises 12 weeks of class teaching (class attendance), a mid-semester break, a one (1) week study break and a two (2) week exam period. Refer to the&nbsp;
-                    <Link href="https://student.churchill.nsw.edu.au/upcoming-key-dates" className="text-orange-600 hover:underline" target="_blank">
+                    Each semester comprises 12 weeks of class teaching (class
+                    attendance), a mid-semester break, a one (1) week study
+                    break and a two (2) week exam period. Refer to the&nbsp;
+                    <Link
+                      href="https://student.churchill.nsw.edu.au/upcoming-key-dates"
+                      className="text-orange-600 hover:underline"
+                      target="_blank"
+                    >
                       key dates
                     </Link>
                     &nbsp;for details.
                   </li>
-                  <li>Attendance for each unit includes 4 face-to-face contact hours per week that are divided into lecture and tutorial components (2-hour lecture + 2-hour tutorial).</li>
-                  <li>For each contact hour, 1.5 hours of independent study is expected from students for every face-to-face hour (4 + 6 = 10 hours’ workload per unit per week).</li>
-                  <li>Full time workload: 4 Units x 10 hours per Unit = 40 hours per week.</li>
+                  <li>
+                    Attendance for each unit includes 4 face-to-face contact
+                    hours per week that are divided into lecture and tutorial
+                    components (2-hour lecture + 2-hour tutorial).
+                  </li>
+                  <li>
+                    For each contact hour, 1.5 hours of independent study is
+                    expected from students for every face-to-face hour (4 + 6 =
+                    10 hours’ workload per unit per week).
+                  </li>
+                  <li>
+                    Full time workload: 4 Units x 10 hours per Unit = 40 hours
+                    per week.
+                  </li>
+                  <li>
+                    There are usually three (3) to five (5) assessments in all
+                    units (subjects) that includes a final examination weighted
+                    at 40% of the unit total. Other assessments in most units
+                    include written assignments, reports, group or individual
+                    presentations and /or in class tests of various weightings.
+                  </li>
+                  <li>
+                    All students must additionally complete a module and quiz on
+                    Academic Integrity and ethical use of Generative Artificial
+                    Intelligence (GenAI) in their first semester of study at
+                    Churchill Institute in addition to a standard
+                    full-time study load.
+                  </li>
                 </ul>
 
-                <p>The BBus does not include a Work Integrated Learning (WIL) component.</p>
+                <p>
+                  The BBus does not include a Work Integrated Learning (WIL)
+                  component.
+                </p>
 
                 <div className="mt-10">
-                  <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-6">Learning Outcomes</h2>
+                  <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-6">
+                    Learning Outcomes
+                  </h2>
                   <p className="mb-6">
-                    The BBus has the following learning outcomes that are consistent with AQF Level 7 qualification requirements:
+                    The BBus has the following learning outcomes that are
+                    consistent with AQF Level 7 qualification requirements:
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {[
@@ -193,11 +250,9 @@ const Courses = () => {
                       </div>
                     ))}
                   </div>
-
                 </div>
               </div>
             </section>
-
 
             <span id="scrollToCourse" />
 
@@ -208,7 +263,6 @@ const Courses = () => {
         </>
       )}
     </>
-
   );
 };
 
