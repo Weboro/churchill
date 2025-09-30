@@ -347,7 +347,7 @@ const page = () => {
           </p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-8 text-center">
+        {/* <div className="bg-white rounded-lg shadow-lg p-8 text-center">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4 flex items-center justify-center">
             <svg
               className="w-6 h-6 text-orange-500 mr-2"
@@ -373,7 +373,7 @@ const page = () => {
             <i className="fi fi-rr-download"></i>
             <span>Download Application Form</span>
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
