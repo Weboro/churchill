@@ -10,9 +10,10 @@ const StyledHeroCard = ({
   searchText,
   onSearchText,
   showSearch = false,
+  subTitle,
 }) => {
   return (
-    <section className="h-[50vh] md:h-[35vh] relative mt-8 md:mt-0">
+    <section className="h-[50vh] md:h-[40vh] relative mt-8 md:mt-0">
       <Image
         width={30}
         height={30}
@@ -25,6 +26,8 @@ const StyledHeroCard = ({
         <h2 className="text-matte-purple capitalize text-2xl md:text-3xl font-bold text-center w-[90vw] md:w-[80vw] ">
           {title}
         </h2>
+        {subTitle && <p>{subTitle}</p>}
+
         {showSearch && (
           <div className="w-full sm:w-1/3">
             <Search

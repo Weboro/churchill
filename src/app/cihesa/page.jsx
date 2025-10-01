@@ -1,3 +1,4 @@
+import { StyledHeroCard } from "@/components";
 import Image from "next/image";
 
 const cihesaData = {
@@ -113,26 +114,12 @@ const cihesaData = {
 export default function CIHESAPage() {
   return (
     <>
-      <link
-        rel="stylesheet"
-        href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
-      />
-
       <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <div className="bg-gray-900 text-white py-20">
-          <div className="container mx-auto px-4 max-w-6xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              {cihesaData.hero.title}
-            </h1>
-            <p className="text-xl md:text-2xl mb-2 text-gray-300">
-              {cihesaData.hero.subtitle}
-            </p>
-            <p className="text-lg text-gray-400">
-              {cihesaData.hero.description}
-            </p>
-          </div>
-        </div>
+        <StyledHeroCard
+          title={cihesaData.hero.title}
+          breadcrumbs={cihesaData.hero.subtitle}
+          subTitle={cihesaData.hero.description}
+        />
 
         <div className="container mx-auto px-4 max-w-6xl py-16">
           {/* About CIHESA Header */}
