@@ -385,8 +385,8 @@ tr:nth-child(even) {
   line-height: 1.5rem;
 }
 .rich-text-container a {
-text-decoration: underline!important;
-color: blueviolet;
+  text-decoration: underline !important;
+  color: blueviolet;
 }
 
 .rich-text-container {
@@ -556,8 +556,8 @@ color: blueviolet;
     brightness(96%) contrast(86%);
 }
 
-.text-base a{
-  color: blue!important;
+.text-base a {
+  color: blue !important;
 }
 
 @layer utilities {
@@ -577,7 +577,6 @@ color: blueviolet;
   }
 }
 
-
 @media (max-width: 1280px) {
   .custom-1280-text {
     font-size: 11px;
@@ -588,8 +587,7 @@ color: blueviolet;
   .custom-1280-text {
     font-size: 16px;
   }
-  .sm-py-10{
+  .sm-py-10 {
     padding-block: 10px;
   }
 }
-
