@@ -169,14 +169,14 @@ export const navItems = [
             image: "/assets/staff/assoc-prof-ravi-seethamraju.jpg",
             description: `<p>Ravi teaches and researches in the areas of technology adoption and accounting systems. He has a PhD in business, Masters in Industrial Engineering and a post graduate Diploma in Adult Education. Has 24 years of teaching, curriculum design and research experience in four major Australian Universities (Uni Sydney, MGSM, University of Western Sydney and Queensland University of Technology) and 10 years of management consulting experience.</p><p>His research explores the evolving relationships between IT innovations and performance in organizations and the role of IT innovations in student learning experiences and ‘work-readiness'. Funded by national and university research grants, Ravi has so far published over 100 articles in leading journals and international conferences. His current external engagements and leadership roles include membership of education committee of the Association for Information Systems, academic boards of higher education institutions, and earlier served as chairperson for research ethics committee and Supply Chain Council ANZ. His current research projects include adoption of AI and blockchain technologies in auditing, adoption of analytics in healthcare and digital transformation. </p>`,
           },
-          {
-            title: "Professor Rebecca Mitchell",
-            slug: "professor-rebecca-mitchell",
-            email: "rebecca-mitchell@churchil.mail",
-            subTitle: "Member of Governing council",
-            image: "/assets/staff/avatar.png",
-            description: `<p>Rebecca is a Professor at the Macquarie University Business School and Director of the Macquarie University Health at Work Research Centre. Prior to this, Rebecca worked as Associate Dean Governance, Accreditation, Rankings and Business Intelligence and simultaneously as Associate Dean Postgraduate Programs and Pathways, taking a leadership role in rankings, accreditation, and curriculum governance.<p>In 2021, she secured international accreditation from the Association for MBAs, placing Macquarie University in the top 2% of business schools globally.<p>Rebecca's research interests lie in the area of organisational behaviour, including <em>health and wellbeing at work</em>, <em>team dynamics</em>, <em>leadership</em>, and <em>social identity in organizations</em>, particularly (but not exclusively) in healthcare organisations. Rebecca’s current research programs focus on <em>resilience and wellbeing at work</em>. She is also interested in the <em>impact of gender at work</em> as well as <em>team performance</em>, particularly <em>team innovation</em>.`,
-          },
+          // {
+          //   title: "Professor Rebecca Mitchell",
+          //   slug: "professor-rebecca-mitchell",
+          //   email: "rebecca-mitchell@churchil.mail",
+          //   subTitle: "Member of Governing council",
+          //   image: "/assets/staff/avatar.png",
+          //   description: `<p>Rebecca is a Professor at the Macquarie University Business School and Director of the Macquarie University Health at Work Research Centre. Prior to this, Rebecca worked as Associate Dean Governance, Accreditation, Rankings and Business Intelligence and simultaneously as Associate Dean Postgraduate Programs and Pathways, taking a leadership role in rankings, accreditation, and curriculum governance.<p>In 2021, she secured international accreditation from the Association for MBAs, placing Macquarie University in the top 2% of business schools globally.<p>Rebecca's research interests lie in the area of organisational behaviour, including <em>health and wellbeing at work</em>, <em>team dynamics</em>, <em>leadership</em>, and <em>social identity in organizations</em>, particularly (but not exclusively) in healthcare organisations. Rebecca’s current research programs focus on <em>resilience and wellbeing at work</em>. She is also interested in the <em>impact of gender at work</em> as well as <em>team performance</em>, particularly <em>team innovation</em>.`,
+          // },
           {
             title: "Ron Day",
             slug: "ron-day",
