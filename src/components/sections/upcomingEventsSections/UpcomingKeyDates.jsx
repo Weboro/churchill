@@ -19,62 +19,74 @@ const monthsList = [
 ];
 
 const UpcomingKeyDates = () => {
-  const [data, setData] = useState({}); // { year: [[], [], ...12 months] }
+  const [data, setData] = useState({}); 
   const [isLoading, setIsLoading] = useState(true);
   const [expandedMonth, setExpandedMonth] = useState(null);
   const [selectedYear, setSelectedYear] = useState(null);
   const [noDataFound, setNoDataFound] = useState(false);
 
   useEffect(() => {
-    FetchUpcomingKeyDate()
-      .then((res) => {
-        if (!res.data || res.data.length === 0) {
-          setNoDataFound(true);
-          setIsLoading(false);
-          return;
-        }
-
-        const organizedData = {};
-        const currentYear = new Date().getFullYear();
-        const currentMonth = new Date().getMonth();
-
-        res.data.forEach((item) => {
-          const eventDate = new Date(item.start_date);
-          const year = eventDate.getFullYear();
-          const month = eventDate.getMonth();
-
-          if (!organizedData[year]) {
-            organizedData[year] = Array.from({ length: 12 }, () => []);
-          }
-
-          organizedData[year][month].push(item);
-        });
-
-        setData(organizedData);
-
-        const years = Object.keys(organizedData).sort((a, b) => a - b);
-        const defaultYear = years.includes(currentYear.toString())
-          ? currentYear.toString()
-          : years[0];
-
-        setSelectedYear(defaultYear);
-
-        const defaultMonth =
-          organizedData[defaultYear].findIndex((m) => m.length > 0) >= 0
-            ? organizedData[defaultYear].findIndex((m) => m.length > 0)
-            : 0;
-
-        setExpandedMonth(`${defaultYear}-${defaultMonth}`);
-
-        setNoDataFound(years.length === 0);
-        setIsLoading(false);
-      })
-      .catch((err) => {
-        console.error(err);
+  FetchUpcomingKeyDate()
+    .then((res) => {
+      if (!res.data || res.data.length === 0) {
         setNoDataFound(true);
         setIsLoading(false);
+        return;
+      }
+
+      const organizedData = {};
+      const currentYear = new Date().getFullYear();
+      const currentMonth = new Date().getMonth();
+
+      res.data.forEach((item) => {
+        const eventDate = new Date(item.start_date);
+        const year = eventDate.getFullYear();
+        const month = eventDate.getMonth();
+
+        if (!organizedData[year]) {
+          organizedData[year] = Array.from({ length: 12 }, () => []);
+        }
+
+        organizedData[year][month].push(item);
       });
-  }, []);
+
+      setData(organizedData);
+
+      const years = Object.keys(organizedData)
+        .map(Number)
+        .sort((a, b) => a - b);
+
+      // Determine the default year
+      let defaultYear = years.includes(currentYear)
+        ? currentYear
+        : years[0];
+
+      // Determine the default month
+      let defaultMonth = currentMonth;
+      const hasEventsThisMonth =
+        organizedData[defaultYear]?.[currentMonth]?.length > 0;
+
+      if (!hasEventsThisMonth) {
+        // find the first month with events
+        const foundMonth = organizedData[defaultYear].findIndex(
+          (m) => m.length > 0
+        );
+        defaultMonth = foundMonth >= 0 ? foundMonth : 0;
+      }
+
+      setSelectedYear(defaultYear.toString());
+      setExpandedMonth(`${defaultYear}-${defaultMonth}`);
+
+      setNoDataFound(years.length === 0);
+      setIsLoading(false);
+    })
+    .catch((err) => {
+      console.error(err);
+      setNoDataFound(true);
+      setIsLoading(false);
+    });
+}, []);
+
 
   const toggleMonth = (year, month) => {
     const key = `${year}-${month}`;
