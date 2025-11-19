@@ -32,24 +32,6 @@ const campusDetails = [
   },
 ];
 
-const campusHighlights = [
-  {
-    title: "Connected Locations",
-    description:
-      "Parramatta and Melbourne locations are steps from major public transport hubs, giving you easy access to work, study and lifestyle precincts.",
-  },
-  {
-    title: "Student-Centred Spaces",
-    description:
-      "Every campus includes contemporary classrooms, computer labs, library resources and support offices designed around collaboration and wellbeing.",
-  },
-  {
-    title: "Dedicated Staff",
-    description:
-      "Academic, welfare and admissions teams are on site to help you settle in, map your study plan and stay confident throughout your journey at Churchill.",
-  },
-];
-
 const Page = () => {
   return (
     <main className="bg-[#f7f8fb]">
@@ -78,45 +60,15 @@ const Page = () => {
         </div>
       </header>
 
-      <section className="container mx-auto px-5 pb-8 mt-5 lg:pb-16">
-        <div className="grid gap-6 lg:grid-cols-3">
-          {campusHighlights.map((highlight) => (
-            <article
-              key={highlight.title}
-              className="rounded-2xl bg-white p-6 shadow-[0_10px_35px_rgba(20,23,53,0.08)] border border-white/60"
-            >
-              <h3 className="text-xl font-semibold text-zinc-900">
-                {highlight.title}
-              </h3>
-              <p className="text-sm md:text-base text-zinc-600 mt-3 leading-relaxed">
-                {highlight.description}
-              </p>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="container mx-auto px-5 pb-20">
-        <div className="bg-white rounded-3xl border border-zinc-200 shadow-[0_40px_120px_rgba(66,71,112,0.15)] p-6 md:p-10 lg:p-14 flex flex-col gap-10">
-          <div className="flex flex-col gap-4 text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-4xl font-semibold text-zinc-900">
-              Two campuses, one Churchill experience
-            </h2>
-            <p className="text-base md:text-lg text-zinc-600">
-              Both campuses are aligned to the same curriculum, technology
-              stack, academic calendar and student support services. You can
-              confidently begin at one location and engage with teams across the
-              country whenever you need help.
-            </p>
-          </div>
-
+        <div className="p-6 md:p-10 lg:p-14">
           <div className="grid gap-10 lg:grid-cols-2">
             {campusDetails.map((campus) => (
               <article
                 key={campus.id}
                 className="rounded-2xl border border-zinc-100 bg-gradient-to-b from-zinc-50 to-white p-6 md:p-8 flex flex-col gap-5 shadow-[0_25px_60px_rgba(26,31,55,0.08)]"
               >
-                <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary-orange">
+                <span className="text-md font-semibold tracking-[0.2em] uppercase text-primary-orange">
                   {campus.badge}
                 </span>
                 {campus.image && (
@@ -143,7 +95,9 @@ const Page = () => {
                 <dl className="grid grid-cols-1 gap-4 text-sm md:text-base text-zinc-700">
                   <div>
                     <dt className="font-semibold text-zinc-900">Address</dt>
-                    <dd className="mt-1">{campus.address}</dd>
+                    <dd className="mt-1 font-semibold text-zinc-900">
+                      {campus.address}
+                    </dd>
                   </div>
                   <div>
                     <dt className="font-semibold text-zinc-900">Website</dt>
