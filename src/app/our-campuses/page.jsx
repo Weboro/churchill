@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FiMapPin, FiGlobe, FiPhone, FiMail } from "react-icons/fi";
 
 const campusDetails = [
   {
@@ -50,13 +51,6 @@ const Page = () => {
           <h1 className="text-3xl md:text-5xl font-semibold text-zinc-900">
             Explore Our Campuses
           </h1>
-          <p className="max-w-4xl mx-auto text-base md:text-lg text-zinc-700 leading-relaxed">
-            Churchill Institute of Higher Education delivers the same caring,
-            career-focused experience in New South Wales and Victoria. Choose
-            the campus that suits your lifestyle and know you&apos;ll find
-            bright learning environments, helpful staff and a community of
-            motivated students wherever you study.
-          </p>
         </div>
       </header>
 
@@ -87,53 +81,72 @@ const Page = () => {
                   <h3 className="text-2xl font-semibold text-zinc-900">
                     {campus.title}
                   </h3>
-                  <p className="text-sm md:text-base text-zinc-600 mt-3 leading-relaxed">
-                    {campus.summary}
-                  </p>
                 </div>
 
-                <dl className="grid grid-cols-1 gap-4 text-sm md:text-base text-zinc-700">
-                  <div>
-                    <dt className="font-semibold text-zinc-900">Address</dt>
-                    <dd className="mt-1 font-semibold text-zinc-900">
-                      {campus.address}
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="font-semibold text-zinc-900">Website</dt>
-                    <dd className="mt-1">
+                <ul className="space-y-4 text-sm md:text-base text-zinc-700">
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 text-primary-orange">
+                      <FiMapPin />
+                    </span>
+                    <div>
+                      <p className="text-xs uppercase tracking-wide text-zinc-500">
+                        Address
+                      </p>
+                      <p className="font-semibold text-zinc-900">
+                        {campus.address}
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 text-primary-orange">
+                      <FiGlobe />
+                    </span>
+                    <div>
+                      <p className="text-xs uppercase tracking-wide text-zinc-500">
+                        Website
+                      </p>
                       <Link
                         href={campus.website}
                         target="_blank"
-                        className="text-primary-orange font-semibold hover:underline"
+                        className="font-semibold text-primary-orange hover:underline"
                       >
                         {campus.website.replace("https://www.", "www.")}
                       </Link>
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="font-semibold text-zinc-900">Phone</dt>
-                    <dd className="mt-1">
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 text-primary-orange">
+                      <FiPhone />
+                    </span>
+                    <div>
+                      <p className="text-xs uppercase tracking-wide text-zinc-500">
+                        Phone
+                      </p>
                       <Link
                         href={`tel:${campus.phone.replace(/[^0-9]/g, "")}`}
-                        className="hover:text-primary-orange transition-colors"
+                        className="font-semibold hover:text-primary-orange transition-colors"
                       >
                         {campus.phone}
                       </Link>
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="font-semibold text-zinc-900">Email</dt>
-                    <dd className="mt-1">
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 text-primary-orange">
+                      <FiMail />
+                    </span>
+                    <div>
+                      <p className="text-xs uppercase tracking-wide text-zinc-500">
+                        Email
+                      </p>
                       <Link
                         href={`mailto:${campus.email}`}
-                        className="hover:text-primary-orange transition-colors"
+                        className="font-semibold hover:text-primary-orange transition-colors"
                       >
                         {campus.email}
                       </Link>
-                    </dd>
-                  </div>
-                </dl>
+                    </div>
+                  </li>
+                </ul>
 
                 {/* <div className="flex flex-wrap items-center gap-3 pt-2">
                   <Link

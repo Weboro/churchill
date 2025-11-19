@@ -113,6 +113,17 @@ const Footer = () => {
                     Level 1, 16-18 Wentworth Street Parramatta NSW 2150
                   </p>
                 </Link>
+                <Link
+                  href="https://maps.google.com/?q=Level+8,+85+Queen+Street,+Melbourne,+VIC+3000,+Australia"
+                  target="_blank"
+                >
+                  <p className="flex gap-2 items-center text-[14px]">
+                    <span>
+                      <FaLocationDot />
+                    </span>
+                    Level 8, 85 Queen Street, Melbourne, VIC 3000, Australia
+                  </p>
+                </Link>
               </div>
             </div>
             {/* First Row: About Us, Courses, Future Students */}
