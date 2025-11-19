@@ -66,13 +66,13 @@ const Page = () => {
                   {campus.badge}
                 </span>
                 {campus.image && (
-                  <div className="relative w-full h-64 rounded-2xl overflow-hidden">
+                  <div className="relative w-full rounded-2xl overflow-hidden">
                     <Image
                       src={campus.image}
                       alt={`${campus.title} exterior`}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover"
+                      width={800}
+                      height={500}
+                      className="w-full h-full object-cover"
                       priority={campus.id === "parramatta"}
                     />
                   </div>
