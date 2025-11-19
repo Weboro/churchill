@@ -29,7 +29,7 @@ const MobileNav = () => {
               width={400}
               height={400}
               alt="Main Logo"
-              className="object-contain w-[200px]"
+              className="object-contain w-[190px]"
               priority
             />
           </Link>
@@ -60,7 +60,7 @@ const MobileNav = () => {
                 width={400}
                 height={400}
                 alt="Main Logo"
-                className="object-contain w-[200px]"
+                className="object-contain w-[190px]"
                 onClick={() => {
                   setOpenMenu(false);
                 }}

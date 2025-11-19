@@ -310,7 +310,7 @@ const Page = () => {
             . Churchill Institute will refund and/ or hold in credit fees
             already paid based on the{" "}
             <a
-              href="https://backend.churchill.nsw.edu.au/media/policy_pdfs/Student_Fees_Policy_April_2025_v1.0.pdf"
+              href="https://backend.churchill.nsw.edu.au/media/policy_pdfs/Student_Fees_Policy_Oct_2025_v1.1.pdf"
               className="text-blue-600 hover:text-blue-800 underline font-semibold hover:no-underline transition-all"
             >
               Student Fees Policy (Section 9. Refunding &amp; Crediting Tuition
@@ -337,7 +337,7 @@ const Page = () => {
             </a>
             . Churchill Institute will refund fees already paid based on the{" "}
             <a
-              href="https://backend.churchill.nsw.edu.au/media/policy_pdfs/Student_Fees_Policy_April_2025_v1.0.pdf"
+              href="https://backend.churchill.nsw.edu.au/media/policy_pdfs/Student_Fees_Policy_Oct_2025_v1.1.pdf"
               className="text-blue-600 hover:text-blue-800 underline font-semibold hover:no-underline transition-all"
             >
               Student Fees Policy (Section 9. Refunding &amp; Crediting Tuition

@@ -16,7 +16,7 @@ const DesktopNav = () => {
             width={400}
             height={400}
             alt="Main Logo"
-            className="object-contain w-[250px] h-auto"
+            className="object-contain w-[240px] h-auto"
             priority
           />
         </Link>
