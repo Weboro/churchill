@@ -150,7 +150,7 @@ export const checklist = [
     <ul class="list-disc ml-5">
       <li class="text-base">Your passport</li>
       <li class="text-base">Your student visa and login details to <a class="text-blue-500 hover:underline"  href="https://immi.homeaffairs.gov.au/visas/already-have-a-visa/check-visa-details-and-conditions/check-conditions-online/visa-holders" target="_blank">VEVO</a> to retrieve it online</li>
-      <li class="text-base">Overseas Student Health Cover (OSHC) - <a class="text-blue-500 hover:underline" href="https://oshaustralia.com.au/" target="_blank">The Osh Australia website</a> provides more information and compares various health insurance providers</li>
+      <li class="text-base">Refer to the <a class="text-blue-500 hover:underline" href="https://www.health.gov.au/sites/default/files/2025-11/overseas-student-health-cover-oshc-fact-sheet.pdf"> OSHC Factsheet (November 2025)</a> for information about health insurers for international students in Australia</li>
       <li class="text-base">A return plane ticket</li>
       <li class="text-base">Money – ensure you have access to funds until you organise a bank account in Australia</li>
       <li class="text-base">Any prescription medication you need</li>
