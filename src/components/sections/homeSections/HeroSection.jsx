@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <div>
       <TopBannerCard
-        image={`/assets/hero-person.jpg`}
+        image={`/assets/sydney-city-in-australia.jpg`}
         // image={`/assets/hero-person.jpg`}
         titleSpan={
           <span>

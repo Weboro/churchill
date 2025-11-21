@@ -32,9 +32,19 @@ const TopBannerCard = ({
         backgroundSize: "cover",
         backgroundPosition: "center top",
       }}
-      className="lg:h-[80vh] flex items-center justify-center fade-in-animation"
+      className="lg:h-[80vh] flex items-center justify-center fade-in-animation relative overflow-hidden"
     >
-      <div className="container mt-[84px] mb-[84px] lg:mt-4 lg:mb-4 mx-auto px-5">
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        src="/assets/videos/sydney-city-in-australia.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster={image}
+      />
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#616060bd] via-transparent to-transparent" />
+      <div className="container relative z-10 mt-[84px] mb-[84px] lg:mt-4 lg:mb-4 mx-auto px-5">
         <div className="grid items-center grid-cols-1 md:grid-cols-2">
           <div className="py-6 flex flex-col gap-3">
             {beforeTitle && (
