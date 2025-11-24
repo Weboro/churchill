@@ -369,7 +369,7 @@ const Page = () => {
             </a>
             ) that will be considered based on the{" "}
             <a
-              href="https://backend.churchill.nsw.edu.au/media/policy_pdfs/Student-Grievance-Management-Policy.pdf"
+              href="https://backend.churchill.nsw.edu.au/media/policy_pdfs/Student_Grievance_Management_Policy_v2.5_Nov_2025.pdf"
               className="text-blue-600 hover:text-blue-800 underline font-semibold hover:no-underline transition-all"
             >
               Student Grievance and Appeals Management Policy
