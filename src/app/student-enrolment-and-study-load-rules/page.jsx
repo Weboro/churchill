@@ -142,7 +142,7 @@ const page = () => {
               </a>{" "}
               to Overseas Students 2018 (Cth) and Churchill Institute’s{" "}
               <a
-                href="https://backend.churchill.nsw.edu.au/media/policy_pdfs/Academic_Progress__Completion_Policy_v1.0_July_2025.pdf"
+                href="https://backend.churchill.nsw.edu.au/media/policy_pdfs/Academic_Integrity_Policy_and_Procedure_v2.5_FINAL_1.pdf"
                 target="_blank"
                 className="text-primary-orange font-semibold underline"
               >
