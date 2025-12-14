@@ -6,6 +6,7 @@ import {
   EmergencyContactFloater,
   Header,
 } from "@/components";
+import ChristmasHolidayPopup from "@/components/generic/ChristmasHolidayPopup";
 
 export const metadata: Metadata = {
   title: "Churchill Institute of Higher Education",
@@ -108,6 +109,7 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
+        <ChristmasHolidayPopup />
         {children}
         {/* <EmergencyContactFloater /> */}
         <CookieBanner />
