@@ -84,7 +84,9 @@ const Page = () => {
 
         const nameMatch =
           !filter.nameSearch ||
-          formatText(agent?.name || "").includes(formatText(filter.nameSearch)) ||
+          formatText(agent?.name || "").includes(
+            formatText(filter.nameSearch)
+          ) ||
           formatText(agent?.agent_name || "").includes(
             formatText(filter.nameSearch)
           ) ||
@@ -132,11 +134,11 @@ const Page = () => {
   return (
     <div>
       <PatternBannerCard
-        title="Find a Churchill Institute of Higher Education AGENT"
+        title="Find a Churchill Institute of Higher Education Education Agent"
         description="Get in touch with one of our official Churchill Institute of Higher Education agents."
-        BtnAText="Find an Agent"
+        BtnAText="Find an Education  Agent"
         BtnALink="#search-agent"
-        BtnBText="Become an Agent"
+        BtnBText="Become an Education  Agent"
         BtnBLink="https://zfrmz.com.au/JgLxavLkXBxSFGUch5E6"
       />
 
@@ -217,11 +219,16 @@ const Page = () => {
                                   Phone
                                 </p>
                                 <a
-                                  href={item?.phone ? `tel:${item.phone}` : undefined}
-                                  className={`text-sm ${item?.phone
+                                  href={
+                                    item?.phone
+                                      ? `tel:${item.phone}`
+                                      : undefined
+                                  }
+                                  className={`text-sm ${
+                                    item?.phone
                                       ? "text-blue-600 hover:underline"
                                       : "text-gray-500"
-                                    }`}
+                                  }`}
                                 >
                                   {item?.phone || "N/A"}
                                 </a>
@@ -236,11 +243,16 @@ const Page = () => {
                                   Email
                                 </p>
                                 <a
-                                  href={item?.email ? `mailto:${item.email}` : undefined}
-                                  className={`text-sm ${item?.email
+                                  href={
+                                    item?.email
+                                      ? `mailto:${item.email}`
+                                      : undefined
+                                  }
+                                  className={`text-sm ${
+                                    item?.email
                                       ? "text-blue-600 hover:underline"
                                       : "text-gray-500"
-                                    }`}
+                                  }`}
                                 >
                                   {item?.email || "N/A"}
                                 </a>
@@ -258,16 +270,17 @@ const Page = () => {
                                   href={
                                     item?.address
                                       ? `https://www.google.com/maps/search/${encodeURIComponent(
-                                        item.address
-                                      )}`
+                                          item.address
+                                        )}`
                                       : undefined
                                   }
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className={`text-sm ${item?.address
+                                  className={`text-sm ${
+                                    item?.address
                                       ? "text-blue-600 hover:underline"
                                       : "text-gray-500"
-                                    }`}
+                                  }`}
                                 >
                                   {item?.address || "N/A"}
                                 </a>
@@ -293,7 +306,7 @@ const Page = () => {
         <div className="w-full flex flex-col md:flex-row bg-[#F3E4E4] relative hover-shadow overflow-hidden rounded-md">
           <div className="flex z-[10] flex-1 flex-col gap-6 pt-8 pl-8 md:py-20 md:pl-20">
             <h3 className="relative leading-10 font-bold text-[36px] text-[#2C2B4B]">
-              Interested in becoming an agent?
+              Interested in becoming an Education agent?
             </h3>
             <p>
               If you would like to become an authorised representative of CIHE

@@ -29,7 +29,7 @@ const AgentInfoCard = ({
       </a>
 
       <p className="font-[500] capitalize break-words">
-        Agent Name: {RepresentativeContactName}
+        Education Agent Name: {RepresentativeContactName}
       </p>
 
       <p className="font-[500] capitalize break-words">

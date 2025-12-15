@@ -140,7 +140,8 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link href="/about-us/CIHE-organisational-chart">
-                      Churchill Institute of Higher Education Governance Structure and Organisational Chart
+                      Churchill Institute of Higher Education Governance
+                      Structure and Organisational Chart
                     </Link>
                   </li>
                   <li>
@@ -171,7 +172,9 @@ const Footer = () => {
                   <div className="flex flex-col gap-4">
                     {Object.keys(groupedCourses).map((facultyName) => (
                       <div key={facultyName}>
-                        <h4 className="text-[14px] font-semibold">{facultyName}</h4>
+                        <h4 className="text-[14px] font-semibold">
+                          {facultyName}
+                        </h4>
                         <ul className="flex flex-col gap-1 text-[14px] pl-2">
                           {groupedCourses[facultyName].map((course, index) => (
                             <li key={index}>
@@ -198,7 +201,9 @@ const Footer = () => {
                   <strong>Future Students</strong>
                 </h3>
                 {futureStudentsCategories.length === 0 ? (
-                  <p className="text-[14px]">No future student links available</p>
+                  <p className="text-[14px]">
+                    No future student links available
+                  </p>
                 ) : (
                   <ul className="flex flex-col gap-1 text-[14px] pl-2">
                     {futureStudentsCategories.map((item, index) => (
@@ -208,8 +213,8 @@ const Footer = () => {
                             item.redirectLink
                               ? item.redirectLink
                               : item.link
-                                ? item.link
-                                : `/student/${item.slug}`
+                              ? item.link
+                              : `/student/${item.slug}`
                           }
                           target={item.redirectLink ? "_blank" : ""}
                         >
@@ -228,7 +233,9 @@ const Footer = () => {
                   <strong>Current Students</strong>
                 </h3>
                 {currentStudentsCategories.length === 0 ? (
-                  <p className="text-[14px]">No current student links available</p>
+                  <p className="text-[14px]">
+                    No current student links available
+                  </p>
                 ) : (
                   <ul className="flex flex-col gap-1 text-[14px] pl-2">
                     {currentStudentsCategories.map((item, index) => (
@@ -238,8 +245,8 @@ const Footer = () => {
                             item.redirectLink
                               ? item.redirectLink
                               : item.link
-                                ? item.link
-                                : `/student/${item.slug}`
+                              ? item.link
+                              : `/student/${item.slug}`
                           }
                           target={item.redirectLink ? "_blank" : ""}
                         >
@@ -265,8 +272,8 @@ const Footer = () => {
                             item.redirectLink
                               ? item.redirectLink
                               : item.link
-                                ? item.link
-                                : `/login/${item.slug}`
+                              ? item.link
+                              : `/login/${item.slug}`
                           }
                           target={item.redirectLink ? "_blank" : ""}
                         >
@@ -305,7 +312,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link href={NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL}>
-                      Agent Hub
+                      Education Agent Hub
                     </Link>
                   </li>
                   <li>
@@ -339,16 +346,16 @@ const Footer = () => {
               />
             </div>
             <p className="text-center max-w-[80ch] mx-auto">
-              Churchill Institute of Higher Education acknowledges Aboriginal and
-              Torres Strait Islander people as the Traditional Custodians of the
-              land and pays respect to their elders, past and present
+              Churchill Institute of Higher Education acknowledges Aboriginal
+              and Torres Strait Islander people as the Traditional Custodians of
+              the land and pays respect to their elders, past and present
             </p>
           </div>
           <hr className="border-neutral-950/25" />
           <p className="text-center text-[#323432] text-[14px] py-4">
-            Copyright ©{new Date().getFullYear()} Mpika Holdings Pty Ltd (ACN: 612
-            507 141) t/as Churchill Institute of Higher Education (ABN: 91 612 507
-            141).
+            Copyright ©{new Date().getFullYear()} Mpika Holdings Pty Ltd (ACN:
+            612 507 141) t/as Churchill Institute of Higher Education (ABN: 91
+            612 507 141).
           </p>
         </div>
       </div>
