@@ -223,17 +223,17 @@ const NavList = ({
                 </li>
               ) : (
                 <Link href={item?.slug || "#"}>
-              <li
-                className={`flex gap-1 items-center ${
-                  isActive && "text-[#eb9320]"
-                } cursor-pointer pb-5`}
-              >
-                <p className="hover:text-[#eb9320] text-[12px] custom-1280-text">
-                  {item?.title}
-                </p>
-              </li>
-            </Link>
-          )}
+                  <li
+                    className={`flex gap-1 items-center ${
+                      isActive && "text-[#eb9320]"
+                    } cursor-pointer pb-5`}
+                  >
+                    <p className="hover:text-[#eb9320] text-[12px] custom-1280-text">
+                      {item?.title}
+                    </p>
+                  </li>
+                </Link>
+              )}
             </div>
           );
         })}
@@ -243,7 +243,7 @@ const NavList = ({
             href={NEXT_PUBLIC_CHURCHILL_AGENT_HUB_URL}
             className="flex gap-1 items-center cursor-pointer hover:text-[#eb9320] text-[12px] custom-1280-text"
           >
-            <span>Agent Hub</span>
+            <span>Education Agent Hub</span>
           </Link>
         </li>
         <li className="sm-py-10 py-[30px]">
