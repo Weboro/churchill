@@ -97,7 +97,7 @@ const NavList = ({
                   </div>
 
                   {isDropdownActive && (
-                    <div className="z-20 hidden px-2 md:px-3 md:py-3 max-h-[18rem] lg:max-h-auto w-[80vw]  overflow-y-scroll lg:w-[100vw] border-t-4 border-t-[#eb9320] group-hover:block lg:absolute lg:left-0 top-[100%] shadow-xl whitespace-wrap transition delay-150 bg-white">
+                    <div className="z-20 hidden px-2 md:px-3 md:py-3 max-h-[20rem] lg:max-h-auto w-[80vw]  overflow-y-scroll lg:w-[100vw] border-t-4 border-t-[#eb9320] group-hover:block lg:absolute lg:left-0 top-[100%] shadow-xl whitespace-wrap transition delay-150 bg-white">
                       <div className="flex flex-col lg:flex-row gap-2 container mx-auto py-2">
                         <div className="flex-[20%] flex flex-col gap-2 md:flex-row lg:flex-col lg:gap-2 justify-between lg:justify-center">
                           <h2 className="text-lg md:text-xl">{item.title}</h2>

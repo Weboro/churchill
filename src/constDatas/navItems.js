@@ -1,11 +1,5 @@
-import { PiCourtBasketballBold, PiGenderIntersexBold } from "react-icons/pi";
+import { PiCourtBasketballBold } from "react-icons/pi";
 import { RiExchangeDollarFill, RiRefund2Fill } from "react-icons/ri";
-import { BiDollarCircle } from "react-icons/bi";
-import { IoCalendarClearOutline } from "react-icons/io5";
-import { MdOutlineGrade } from "react-icons/md";
-import { CiViewList } from "react-icons/ci";
-import { LuScanFace } from "react-icons/lu";
-import { MdOutlineAccessTime } from "react-icons/md";
 
 const NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL =
   process.env.NEXT_PUBLIC_CHURCHILL_STUDENT_HUB_URL;
@@ -82,7 +76,8 @@ export const navItems = [
             "Thank you for your interest in courses at the Churchill Institute of Higher Education. I'm delighted that you've taken the time to view our website and hope it may help you decide to make Churchill Institute of Higher Education your first choice when it comes to your future education needs. At CIHE, we believe that we are unique. The Institute is new and innovative with an enviable reputation as a provider of quality education in a caring environment. Whilst our students include individuals from many backgrounds, cultures and beliefs, our focus on universal values makes us a little different from other colleges. We pride ourselves on our ethical dealings with students and stakeholders and ensure that every student is treated as an individual. As Dean/CEO, my door is always open to students, whether to discuss their course, personal concerns or simply just to pass the time of day. At our levels of CIHE, students are our number one priority. We are all aware that today's corporate world is a very competitive place and organisations are increasingly seeking employees with ‘the right attitude'. To address this, we focus on the whole individual. Our students are encouraged to develop and demonstrate an attitude that's appealing to prospective employers based on respect for others, honesty, integrity, loyalty and a strong work ethic. These attributes are not only important in our work life but also in our personal life - they help us to be successful individuals.",
         },
         {
-          title: "Churchill Institute of Higher Education Governance Structure and Organisational Chart",
+          title:
+            "Churchill Institute of Higher Education Governance Structure and Organisational Chart",
           image: "/assets/course-b.png",
           slug: "CIHE-organisational-chart",
           link: "",
@@ -112,7 +107,8 @@ export const navItems = [
     },
     Catagories: [
       {
-        menuTitle: "Churchill Institute of Higher Education Governance Structure and Organisational Chart",
+        menuTitle:
+          "Churchill Institute of Higher Education Governance Structure and Organisational Chart",
         headerIcon: "fi fi-rr-department-structure",
         slug: "CIHE-governance-structure",
         link: "",
@@ -709,6 +705,13 @@ export const navItems = [
         link: "/student-enrolment-and-study-load-rules",
         image: "/assets/hero-image.jpeg",
       },
+      {
+        menuTitle: "Student Handbook",
+        headerIcon: "fi fi-rr-book-user",
+        subTitle: "Handbook for CIHE students.",
+        redirectLink: "/assets/docs/student-handbook.pdf",
+        image: "/assets/hero-image.jpeg",
+      },
     ],
   },
   {
@@ -780,5 +783,5 @@ export const navItems = [
         image: "/assets/hero-image.jpeg",
       },
     ],
-  }
+  },
 ];
