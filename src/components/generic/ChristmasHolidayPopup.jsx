@@ -9,7 +9,7 @@ const rows = [
   {
     date: "Wed 24 December",
     details: "Normal workday",
-    status: "CAMPUS CLOSED",
+    status: "CAMPUS OPEN",
   },
   {
     date: "Thu 25 December",
