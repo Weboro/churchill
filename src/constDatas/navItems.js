@@ -709,7 +709,8 @@ export const navItems = [
         menuTitle: "Student Handbook",
         headerIcon: "fi fi-rr-book-user",
         subTitle: "Handbook for CIHE students.",
-        redirectLink: "/assets/docs/student-handbook.pdf",
+        redirectLink:
+          "https://student.churchill.nsw.edu.au/assets/docs/Student-Handbook.pdf",
         image: "/assets/hero-image.jpeg",
       },
     ],

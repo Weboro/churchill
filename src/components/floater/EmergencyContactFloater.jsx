@@ -34,7 +34,9 @@ const EmergencyContactFloater = () => {
           >
             <div className="ico-pri grid grid-cols-1 gap-4">
               <Link
-                href={"/assets/docs/student-handbook.pdf"}
+                href={
+                  "https://student.churchill.nsw.edu.au/assets/docs/Student-Handbook.pdf"
+                }
                 target="_blank"
                 className="bg-neutral-50 p-1 rounded-md flex items-center gap-2 overflow-hidden"
               >
@@ -169,7 +171,9 @@ const EmergencyContactFloater = () => {
       <div className="ico-pri block w-98 sm:hidden fixed bottom-3 left-0 bg-white mx-2 border shadow-lg rounded-lg">
         <div className="grid w-100 grid-cols-3 gap-2 m-1 bg-primary-orange/20 rounded-md">
           <Link
-            href={"/assets/docs/student-handbook.pdf"}
+            href={
+              "https://student.churchill.nsw.edu.au/assets/docs/Student-Handbook.pdf"
+            }
             target="_blank"
             className="pl-2 rounded-md flex items-center gap-2 overflow-hidden"
           >
@@ -205,7 +209,7 @@ const EmergencyContactFloater = () => {
             </div>
             <div className="py-2">
               <p className="font-semibold text-xs break-words text-wrap">
-              Report Cyber Incident
+                Report Cyber Incident
               </p>
             </div>
           </Link>
