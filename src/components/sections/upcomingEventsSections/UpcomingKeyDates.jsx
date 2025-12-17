@@ -168,12 +168,15 @@ const UpcomingKeyDates = () => {
                           ))}
 
                           {selectedYear === "2026" && month === 1 && (
-                            <p className="text-sm italic text-primary-orange hover:underline pl-2">
+                            <p className="text-sm italic pl-2">
                               *This is an indicative timeframe only based on the
-                              Department of
-                              <Link href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-processing-times/global-visa-processing-times">
+                              Department of{" "}
+                              <Link
+                                href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-processing-times/global-visa-processing-times"
+                                className="text-primary-orange hover:underline"
+                              >
                                 Home Affairs website (visa processing times)
-                              </Link>
+                              </Link>{" "}
                               that is subject to change / may increase or
                               decrease, at any time, without notice. Churchill
                               institute has no authority / influence over
