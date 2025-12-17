@@ -2,6 +2,7 @@
 import { KeyDatesCard, Spiner, DataNotFound } from "@/components";
 import { useEffect, useState } from "react";
 import { FetchUpcomingKeyDate } from "@/components/utils/apiQueries";
+import Link from "next/link";
 
 const monthsList = [
   "January",
@@ -19,74 +20,71 @@ const monthsList = [
 ];
 
 const UpcomingKeyDates = () => {
-  const [data, setData] = useState({}); 
+  const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [expandedMonth, setExpandedMonth] = useState(null);
   const [selectedYear, setSelectedYear] = useState(null);
   const [noDataFound, setNoDataFound] = useState(false);
 
   useEffect(() => {
-  FetchUpcomingKeyDate()
-    .then((res) => {
-      if (!res.data || res.data.length === 0) {
-        setNoDataFound(true);
-        setIsLoading(false);
-        return;
-      }
-
-      const organizedData = {};
-      const currentYear = new Date().getFullYear();
-      const currentMonth = new Date().getMonth();
-
-      res.data.forEach((item) => {
-        const eventDate = new Date(item.start_date);
-        const year = eventDate.getFullYear();
-        const month = eventDate.getMonth();
-
-        if (!organizedData[year]) {
-          organizedData[year] = Array.from({ length: 12 }, () => []);
+    FetchUpcomingKeyDate()
+      .then((res) => {
+        if (!res.data || res.data.length === 0) {
+          setNoDataFound(true);
+          setIsLoading(false);
+          return;
         }
 
-        organizedData[year][month].push(item);
+        const organizedData = {};
+        const currentYear = new Date().getFullYear();
+        const currentMonth = new Date().getMonth();
+
+        res.data.forEach((item) => {
+          const eventDate = new Date(item.start_date);
+          const year = eventDate.getFullYear();
+          const month = eventDate.getMonth();
+
+          if (!organizedData[year]) {
+            organizedData[year] = Array.from({ length: 12 }, () => []);
+          }
+
+          organizedData[year][month].push(item);
+        });
+
+        setData(organizedData);
+
+        const years = Object.keys(organizedData)
+          .map(Number)
+          .sort((a, b) => a - b);
+
+        // Determine the default year
+        let defaultYear = years.includes(currentYear) ? currentYear : years[0];
+
+        // Determine the default month
+        let defaultMonth = currentMonth;
+        const hasEventsThisMonth =
+          organizedData[defaultYear]?.[currentMonth]?.length > 0;
+
+        if (!hasEventsThisMonth) {
+          // find the first month with events
+          const foundMonth = organizedData[defaultYear].findIndex(
+            (m) => m.length > 0
+          );
+          defaultMonth = foundMonth >= 0 ? foundMonth : 0;
+        }
+
+        setSelectedYear(defaultYear.toString());
+        setExpandedMonth(`${defaultYear}-${defaultMonth}`);
+
+        setNoDataFound(years.length === 0);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setNoDataFound(true);
+        setIsLoading(false);
       });
-
-      setData(organizedData);
-
-      const years = Object.keys(organizedData)
-        .map(Number)
-        .sort((a, b) => a - b);
-
-      // Determine the default year
-      let defaultYear = years.includes(currentYear)
-        ? currentYear
-        : years[0];
-
-      // Determine the default month
-      let defaultMonth = currentMonth;
-      const hasEventsThisMonth =
-        organizedData[defaultYear]?.[currentMonth]?.length > 0;
-
-      if (!hasEventsThisMonth) {
-        // find the first month with events
-        const foundMonth = organizedData[defaultYear].findIndex(
-          (m) => m.length > 0
-        );
-        defaultMonth = foundMonth >= 0 ? foundMonth : 0;
-      }
-
-      setSelectedYear(defaultYear.toString());
-      setExpandedMonth(`${defaultYear}-${defaultMonth}`);
-
-      setNoDataFound(years.length === 0);
-      setIsLoading(false);
-    })
-    .catch((err) => {
-      console.error(err);
-      setNoDataFound(true);
-      setIsLoading(false);
-    });
-}, []);
-
+  }, []);
 
   const toggleMonth = (year, month) => {
     const key = `${year}-${month}`;
@@ -155,18 +153,35 @@ const UpcomingKeyDates = () => {
                   {isActive && (
                     <div className="flex flex-col gap-4">
                       {events.length > 0 ? (
-                        events.map((item) => (
-                          <KeyDatesCard
-                            key={item.id}
-                            title={item?.title}
-                            description={item?.description}
-                            start_date={item?.start_date}
-                            end_date={item?.end_date}
-                            category={item?.category}
-                            audience={item?.audience}
-                            isFullwidth={true}
-                          />
-                        ))
+                        <>
+                          {events.map((item) => (
+                            <KeyDatesCard
+                              key={item.id}
+                              title={item?.title}
+                              description={item?.description}
+                              start_date={item?.start_date}
+                              end_date={item?.end_date}
+                              category={item?.category}
+                              audience={item?.audience}
+                              isFullwidth={true}
+                            />
+                          ))}
+
+                          {selectedYear === "2026" && month === 1 && (
+                            <p className="text-sm italic text-primary-orange hover:underline pl-2">
+                              *This is an indicative timeframe only based on the
+                              Department of
+                              <Link href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-processing-times/global-visa-processing-times">
+                                Home Affairs website (visa processing times)
+                              </Link>
+                              that is subject to change / may increase or
+                              decrease, at any time, without notice. Churchill
+                              institute has no authority / influence over
+                              student visa application assessment times and
+                              outcomes.
+                            </p>
+                          )}
+                        </>
                       ) : (
                         <p className="text-sm italic text-gray-500 pl-2">
                           No events in this month.
