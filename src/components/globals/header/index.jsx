@@ -29,7 +29,7 @@ const Header = () => {
 
   return (
     <div className="header z-40 relative bg-white shadow-lg ">
-      {showAnnouncement && (
+      {/* {showAnnouncement && (
         <div className="bg-primary-orange text-white">
           <div className="container mx-auto px-5 py-2 flex items-center gap-4">
             <div className="flex-1 flex items-center justify-center text-center overflow-hidden">
@@ -48,7 +48,7 @@ const Header = () => {
             </button>
           </div>
         </div>
-      )}
+      )} */}
       <div
         className={`z-40 bg-white hidden lg:block shadow-lg ${
           offset > 100 ? "fixed top-0 w-full bg-white flex" : ""

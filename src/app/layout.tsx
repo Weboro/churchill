@@ -109,7 +109,7 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
-        <ChristmasHolidayPopup />
+        {/* <ChristmasHolidayPopup /> */}
         {children}
         {/* <EmergencyContactFloater /> */}
         <CookieBanner />
