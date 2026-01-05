@@ -22,6 +22,7 @@ import AboutSlider from "./sliders/AboutSlider";
 import EnquirySection from "./sections/homeSections/EnquirySection";
 import UpcomingKeyDates from "./sections/upcomingEventsSections/UpcomingKeyDates";
 import BlogSection from "./sections/blogSections/BlogSection";
+import ReasonToStudy from "./sections/reasonToStudy/ReasonsToStudy";
 import RelatedSection from "./sections/aboutUsSections/RelatedSection";
 import CoreValuesSection from "./sections/aboutUsSections/CoreValuesSection";
 import MissionVisionsection from "./sections/aboutUsSections/MissionVisionsection";
@@ -78,6 +79,7 @@ import VideoSection from "./sections/homeSections/VideoSection";
 import HalfTopBanner from "./cards/HalfTopBannerCard";
 import HierarchyChart from "./hiearchy/HiearchyChart";
 
+
 export {
   Button,
   Spiner,
@@ -102,6 +104,7 @@ export {
   EnquirySection,
   UpcomingKeyDates,
   BlogSection,
+  ReasonToStudy,
   KeyDatesCard,
   CourseDetails,
   TabbedPane,

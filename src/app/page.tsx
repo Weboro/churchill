@@ -6,6 +6,7 @@ import {
   UpcomingKeyDates,
   BlogSection,
   VideoSection,
+  ReasonToStudy,
 } from "@/components";
 import React from "react";
 
@@ -24,6 +25,8 @@ const Home = () => {
         {/* <UpcomingEvents /> */}
 
         <BlogSection />
+
+        <ReasonToStudy />
 
         <VideoSection />
 
