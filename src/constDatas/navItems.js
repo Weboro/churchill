@@ -554,6 +554,14 @@ export const navItems = [
         redirectLink: "",
       },
       {
+        menuTitle: "Scholarships & Bursaries",
+        slug: "scholarships-and-bursaries",
+        headerIcon: "fi fi-rr-graduation-cap",
+        image: "/assets/course-b.png",
+        link: "/scholarships-and-bursaries",
+        redirectLink: "",
+      },
+      {
         menuTitle: "Pre-Departure Checklist & Life in Australia",
         slug: "future-students",
         headerIcon: "fi fi-rr-calendar",
