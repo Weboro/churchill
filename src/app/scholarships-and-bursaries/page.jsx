@@ -8,12 +8,14 @@ const scholarships = [
     description:
       "If you've already completed an Australian AQF Diploma (or higher) and you're currently onshore in Australia, this bursary can help you take the next step into a business degree. Eligible students receive a 20% tuition fee reduction when progressing into Churchill's Bachelor of Business (CRICOS 111749J). You may also be able to apply for advanced standing/credit separately (subject to assessment), helping you build on what you've already studied.",
     pdf: "/assets/Diploma-to-Degree-Bursary-(Onshore).pdf",
+    ctatitle: "Diploma-to-Degree Bursary PDF",
   },
   {
     title: "Global Gateway Scholarship (GGS)",
     description:
       "Designed for high-achieving international students applying from offshore, the Global Gateway Scholarship provides a 20% tuition fee reduction for 2026 intakes. It recognises strong academic performance and supports students who are ready to take on a globally relevant business qualification in Australia. Selection is based on academic merit and your supporting documents; where places are limited, eligible applicants may be ranked competitively.",
     pdf: "/assets/Churchills-Global-Gateway-Scholarship-2026.pdf",
+    ctatitle:"Global Gateway Scholarship PDF"
   },
 ];
 
@@ -55,7 +57,7 @@ const Page = () => {
                   rel="noopener noreferrer"
                   className="inline-flex"
                 >
-                  <Button btnName="Learn more (PDF)" />
+                  <Button btnName={item.ctatitle} />
                 </Link>
               </div>
             </div>
