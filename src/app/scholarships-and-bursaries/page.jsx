@@ -85,8 +85,7 @@ const Page = () => {
           </h2>
           <div className="space-y-4 text-gray-700 leading-relaxed">
             <p>
-              Scholarships and bursaries are offered in line with Churchill's
-              Scholarships and Prizes Policy and are subject to eligibility,
+              Scholarships and bursaries are offered in line with Churchill's <a className="underline text-blue-600 hover:text-blue-800" href="https://backend.churchill.nsw.edu.au/media/policy_pdfs/Scholarships_Prizes_Policy_v1.0.pdf" target="_blank">Scholarships and Prizes Policy</a> and are subject to eligibility,
               assessment and availability. Meeting the criteria does not
               guarantee an award, and Churchill may vary, suspend or withdraw an
               award in accordance with institutional requirements.
