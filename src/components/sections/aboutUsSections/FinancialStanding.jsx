@@ -16,10 +16,14 @@ const enrollments = {
   semester: "Semester 2/2025",
 };
 
+const AUDITOR_DECLARATION_PDF =
+  "https://churchill.edu.au/f/2025-auditors-declaration";
+
 const GovernanceStructure = ({ slug }) => {
   return (
     <>
       <PatternBannerCard title="Financial Standing, TPS & Enrolment Summary" />
+
       <div className="container mx-auto px-5">
         <main className="max-w-5xl mx-auto px-4 py-12 space-y-12">
           <section className="bg-white rounded-lg border p-6 fade-in">
@@ -27,11 +31,11 @@ const GovernanceStructure = ({ slug }) => {
               Financial Standing
             </h2>
             <p className="text-gray-700 leading-relaxed mb-5">
-              Refer to the Financial Auditor's Declaration from the 2024
+              Refer to the Financial Auditor's Declaration from the 2025
               Financial Year Audit of CIHE's Accounts.
             </p>
             <Link
-              href={`/assets/docs/Auditor Declaration_FY_2024.pdf`}
+              href={AUDITOR_DECLARATION_PDF}
               target="_blank"
               className="w-max "
             >
