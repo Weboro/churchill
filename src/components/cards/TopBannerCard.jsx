@@ -1,10 +1,11 @@
+import FadeUpAnimation from "@/animations/FadeUp";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import Button from "../button";
 import { FaArrowRight } from "react-icons/fa";
+import Button from "../button";
 
-import FadeUpAnimation from "@/animations/FadeUp";
+const HERO_VIDEO_URL =
+  "https://cms.churchill.edu.au/assets/a21094f6-fe55-4ff2-907b-6e0b09f2256f/hero-video.mp4";
 
 const TopBannerCard = ({
   image,
@@ -36,7 +37,7 @@ const TopBannerCard = ({
     >
       <video
         className="absolute inset-0 w-full h-full object-cover"
-        src="/assets/videos/sydney-city-in-australia.mp4"
+        src={HERO_VIDEO_URL}
         autoPlay
         muted
         loop
