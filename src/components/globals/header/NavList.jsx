@@ -72,8 +72,8 @@ const NavList = ({
             item?.Catagories?.length > 0
               ? true
               : item.slug === "courses"
-              ? true
-              : false;
+                ? true
+                : false;
 
           const mapData =
             item.slug === "courses" ? coursesData : item.Catagories;
@@ -140,8 +140,8 @@ const NavList = ({
                                               subItem?.redirectLink
                                                 ? subItem?.redirectLink
                                                 : subItem?.link
-                                                ? subItem?.link
-                                                : `/${item.slug}/${subItem.slug}`
+                                                  ? subItem?.link
+                                                  : `/${item.slug}/${subItem.slug}`
                                             }
                                             className="w-full flex"
                                           >
@@ -169,11 +169,11 @@ const NavList = ({
                                               </div>
                                             </li>
                                           </Link>
-                                        )
+                                        ),
                                       )}
                                     </ul>
                                   </div>
-                                )
+                                ),
                               )}
                             </div>
                           ) : (
@@ -186,8 +186,8 @@ const NavList = ({
                                     subItem?.redirectLink
                                       ? subItem?.redirectLink
                                       : subItem?.link
-                                      ? subItem?.link
-                                      : `/${item.slug}/${subItem.slug}`
+                                        ? subItem?.link
+                                        : `/${item.slug}/${subItem.slug}`
                                   }
                                   className="w-full h-full lg:max-h-[6rem] flex"
                                 >
@@ -251,7 +251,7 @@ const NavList = ({
             href="/our-campuses"
             className="flex gap-1 items-center cursor-pointer hover:text-[#eb9320] text-[12px] custom-1280-text"
           >
-            <span>Our Campus</span>
+            <span>Our Campuses</span>
           </Link>
         </li>
         <li className="sm-py-10 py-[30px]">
